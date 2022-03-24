@@ -1,9 +1,18 @@
+package character;
+
+import agents.Agent;
+import agents.GeneticCode;
+import equipment.Equipment;
+import field.Field;
+import game.Game;
+import movement.*;
+
 public class Character
 {
     private Agent activeAgent;
     private Agent castableAgent;
     private Inventory inventory;
-    private Equipment equipments,
+    private Equipment[] equipments;
     private Movement movement;
     private GeneticCode knownGeneticCodes;
     private Game game;
@@ -55,7 +64,7 @@ public class Character
         return 0;
     }
 
-    public void addGeneticCode(geneticCode gc)
+    public void addGeneticCode(GeneticCode gc)
     {
 
     }

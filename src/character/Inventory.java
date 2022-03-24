@@ -1,3 +1,5 @@
+package character;
+
 public class Inventory
 {
     private int aminoAcid;

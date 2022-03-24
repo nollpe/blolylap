@@ -1,4 +1,8 @@
-public class Equipment
+package agents;
+
+import agents.Agent;
+
+public class Forget extends Agent
 {
     public void takeEffect(Character c)
     {

@@ -1,4 +1,7 @@
-public class Warehouse
+package field;
+import character.Inventory;
+
+public class Warehouse extends Field
 {
     private Inventory stored;
 

@@ -1,4 +1,6 @@
-public class Invulnerable extends Agent
+package equipment;
+
+public class Equipment
 {
     public void takeEffect(Character c)
     {

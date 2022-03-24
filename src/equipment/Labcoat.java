@@ -1,4 +1,8 @@
-public class Agent
+package equipment;
+
+import equipment.Equipment;
+
+public class Labcoat extends Equipment
 {
     public void takeEffect(Character c)
     {
@@ -9,11 +13,4 @@ public class Agent
     {
 
     }
-
-    public void tick()
-    {
-
-    }
-
-
 }

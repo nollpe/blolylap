@@ -1,4 +1,6 @@
-public class Chorea extends Agent
+package agents;
+
+public class Agent
 {
     public void takeEffect(Character c)
     {
@@ -9,4 +11,11 @@ public class Chorea extends Agent
     {
 
     }
+
+    public void tick()
+    {
+
+    }
+
+
 }

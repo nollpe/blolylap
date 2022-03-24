@@ -1,4 +1,8 @@
-public class Labcoat extends Equipment
+package agents;
+
+import agents.Agent;
+
+public class Paralyzing extends Agent
 {
     public void takeEffect(Character c)
     {

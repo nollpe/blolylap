@@ -1,4 +1,7 @@
-public class Laboratory
+package field;
+import agents.GeneticCode;
+
+public class Laboratory extends Field
 {
     private GeneticCode readableGeneticCode;
 

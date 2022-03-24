@@ -1,3 +1,8 @@
+package field;
+
+import equipment.Equipment;
+import field.Field;
+
 public class Safehouse extends Field
 {
     private Equipment stored;

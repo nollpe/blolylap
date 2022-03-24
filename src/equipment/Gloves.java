@@ -1,4 +1,6 @@
-public class Paralyzing extends Agent
+package equipment;
+
+public class Gloves extends Equipment
 {
     public void takeEffect(Character c)
     {

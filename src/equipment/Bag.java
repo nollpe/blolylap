@@ -1,3 +1,8 @@
+package equipment;
+import character.Inventory;
+
+import equipment.Equipment;
+
 public class Bag extends Equipment
 {
     private Inventory inventory;
