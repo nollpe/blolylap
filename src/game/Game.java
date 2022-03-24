@@ -25,7 +25,7 @@ public class Game
     }
 
 }
-/**
+/*
  Azért, hogy singleton legyen:
  privát a konstruktora,
  egy statickus változóban tároljuk az egyetlen egyedet és azt udjuk lekérdezni egy szintén statikus függvénnyel
