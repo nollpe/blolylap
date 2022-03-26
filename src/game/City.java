@@ -1,6 +1,7 @@
 package game;
 
 import field.Field;
+import tester.testerClass;
 
 public class City
 {
@@ -8,11 +9,16 @@ public class City
 
     public void tick()
     {
+        testerClass.print();
+    }
 
+    public void showCity()
+    {
+        testerClass.print();
     }
 
     public void generateMap()
     {
-
+        testerClass.print();
     }
 }

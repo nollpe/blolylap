@@ -1,5 +1,7 @@
 package game;
 
+import tester.testerClass;
+
 public class Game
 {
     private Timer timer;
@@ -17,6 +19,7 @@ public class Game
     //ezzel tudjuk lekérni az egyedet
     public static Game getInstance()
     {
+        testerClass.print();
         //ha még nem létezik létrehozzuk
         if (singleInstance == null)
             singleInstance = new Game();
