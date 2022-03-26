@@ -2,6 +2,7 @@ package equipment;
 import character.Inventory;
 
 import equipment.Equipment;
+import tester.testerClass;
 
 public class Bag extends Equipment
 {
@@ -9,12 +10,12 @@ public class Bag extends Equipment
 
     public void takeEffect(Character c)
     {
-
+        testerClass.print();
     }
 
     public void loseEffect(Character c)
     {
-
+        testerClass.print();
     }
 
     public int addNucleotide(int added)

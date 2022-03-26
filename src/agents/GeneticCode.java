@@ -2,6 +2,7 @@ package agents;
 import character.Inventory;
 
 import agents.Agent;
+import tester.testerClass;
 
 public class GeneticCode
 {
@@ -11,6 +12,6 @@ public class GeneticCode
 
     public Agent makeAgent(Inventory i)
     {
-        return this.agent;
+        testerClass.print();return this.agent;
     }
 }

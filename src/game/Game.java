@@ -10,7 +10,7 @@ public class Game
     //privát konstruktor
     private Game()
     {
-
+        testerClass.print();
     }
 
     //ebben tároljuk az egyedet
