@@ -6,6 +6,12 @@ public class Laboratory extends Field
 {
     private GeneticCode readableGeneticCode;
 
+    public Laboratory()
+    {
+        super();
+        testerClass.print();
+    }
+
     public void showLoot()
     {
         testerClass.print();

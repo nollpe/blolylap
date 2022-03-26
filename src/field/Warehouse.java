@@ -6,6 +6,12 @@ public class Warehouse extends Field
 {
     private Inventory stored;
 
+    public Warehouse()
+    {
+        super();
+        testerClass.print();
+    }
+
     public void showLoot()
     {
         testerClass.print();

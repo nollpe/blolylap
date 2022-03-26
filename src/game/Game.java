@@ -1,5 +1,6 @@
 package game;
 
+import field.City;
 import tester.testerClass;
 
 public class Game
@@ -11,6 +12,7 @@ public class Game
     private Game()
     {
         testerClass.print();
+        this.city=new City();
     }
 
     //ebben tároljuk az egyedet

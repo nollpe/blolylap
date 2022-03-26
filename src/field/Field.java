@@ -2,9 +2,23 @@ package field;
 
 import tester.testerClass;
 
+import java.util.LinkedList;
+
 public class Field
 {
-    private Field[] neighbours;
+    private LinkedList<Field> neighbours;
+
+    public Field()
+    {
+        testerClass.print();
+        this.neighbours=new LinkedList<Field>();
+    }
+
+    protected void addNeighbour(Field added)
+    {
+        testerClass.print();
+        neighbours.add(added);
+    }
 
     public void enter(Character c)
     {

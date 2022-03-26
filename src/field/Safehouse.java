@@ -8,6 +8,12 @@ public class Safehouse extends Field
 {
     private Equipment stored;
 
+    public Safehouse()
+    {
+        super();
+        testerClass.print();
+    }
+
     public void showLoot()
     {
         testerClass.print();
