@@ -1,22 +1,23 @@
 package field;
 
+import character.Character;
 import tester.testerClass;
-
 import java.util.LinkedList;
 
 public class Field
 {
     private LinkedList<Field> neighbours;
+    private LinkedList<Character> inhabitants;
 
     public Field()
     {
         testerClass.print();
         this.neighbours=new LinkedList<Field>();
+        this.inhabitants=new LinkedList<Character>();
     }
 
     protected void addNeighbour(Field added)
     {
-        testerClass.print();
         neighbours.add(added);
     }
 
@@ -38,6 +39,10 @@ public class Field
     public void tick()
     {
         testerClass.print();
+        for(Character character:inhabitants)
+        {
+            character.tick();
+        }
     }
 
     public void takeLoot()

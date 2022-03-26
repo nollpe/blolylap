@@ -9,11 +9,13 @@ public class Timer
     public void tick()
     {
         testerClass.print();
+        game.Tick();
     }
 
     private Timer()
     {
         testerClass.print();
+        game=Game.getInstance();
     }
 
     private static Timer singleInstance =null;

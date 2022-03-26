@@ -1,5 +1,6 @@
 package game;
 
+import agents.GeneticCode;
 import field.City;
 import tester.testerClass;
 
@@ -7,12 +8,20 @@ public class Game
 {
     private Timer timer;
     private City city;
+    private GeneticCode[] AllGeneticCodes;
 
     //privát konstruktor
     private Game()
     {
-        testerClass.print();
+        this.AllGeneticCodes=new GeneticCode[1];//mert egyenlőre csak 1 lesz ha akartok többet írjátok meg ^^
+        this.timer=Timer.getInstance();
         this.city=new City();
+    }
+
+    public void Tick()
+    {
+        testerClass.print();
+        city.tick();
     }
 
     //ebben tároljuk az egyedet

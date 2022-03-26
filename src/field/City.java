@@ -1,6 +1,7 @@
 package field;
 
 import field.Field;
+import game.Timer;
 import tester.testerClass;
 
 import java.util.LinkedList;
@@ -8,7 +9,6 @@ import java.util.LinkedList;
 public class City
 {
     private LinkedList<Field> map;
-
 
     /*
     * egyenlőre legyen egy egyszerű 4 elemből álló teljes gráf amiben mindenféle field létezik egyszer
@@ -50,7 +50,6 @@ public class City
 
     private void makeNeighbours(Field f1,Field f2)
     {
-        testerClass.print();
         f1.addNeighbour(f2);
         f2.addNeighbour(f1);
     }
@@ -58,6 +57,10 @@ public class City
     public void tick()
     {
         testerClass.print();
+        for(Field f:map)
+        {
+            f.tick();
+        }
     }
 
     public void showCity()

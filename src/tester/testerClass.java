@@ -36,6 +36,7 @@ public class testerClass {
     {
         testerClass ts= new testerClass();
         ts.startGame();
+        ts.wiewCity();
 
     }
 }
