@@ -2,6 +2,7 @@ package tester;
 
 import field.City;
 import game.Game;
+import game.Timer;
 
 public class testerClass {
 
@@ -29,14 +30,17 @@ public class testerClass {
     public void startGame()
     {
         Game game= Game.getInstance();
+    }
 
+    public void end_turn()
+    {
+        Timer timer= Timer.getInstance();
+        timer.tick();
     }
 
     public static void main(String[] args)
     {
-        testerClass ts= new testerClass();
-        ts.startGame();
-        ts.wiewCity();
+
 
     }
 }

@@ -12,41 +12,11 @@ public class City
 {
     private LinkedList<Field> map;
 
-    /*
-    * egyenlőre legyen egy egyszerű 4 elemből álló teljes gráf amiben mindenféle field létezik egyszer
-    * véletlenül sem azért mert még foggalmam sincs hogy hogyan kéne kinéznie
-    * vagy hogyan kéne megcsinálni...
-    * ha van ötlet pls mindjátok
-    * ja igen és nemtudom mondanom kell-e
-    * de kurvaronda
-    * kettőspont nagyDé
-    * ...
-    *  */
+
     public City()
     {
         testerClass.print();
-        map=new LinkedList<Field>();
-
-        //létrehozzuk a fieldeket
-        Field basicField=new Field();
-        Laboratory laboratory= new Laboratory();
-        Safehouse safehouse= new Safehouse();
-        Warehouse warehouse = new Warehouse();
-
-        //belerakjuk a mappba
-        map.add(basicField);
-        map.add(laboratory);
-        map.add(safehouse);
-        map.add(warehouse);
-
-        //szomszédok lettek
-        makeNeighbours(basicField,laboratory);
-        makeNeighbours(basicField,safehouse);
-        makeNeighbours(basicField,warehouse);
-        makeNeighbours(laboratory,safehouse);
-        makeNeighbours(laboratory,warehouse);
-        makeNeighbours(safehouse,warehouse);
-
+        map=null;
 
     }
 
@@ -70,8 +40,40 @@ public class City
         testerClass.print();
     }
 
+    /*
+     * egyenlőre legyen egy egyszerű 4 elemből álló teljes gráf amiben mindenféle field létezik egyszer
+     * véletlenül sem azért mert még foggalmam sincs hogy hogyan kéne kinéznie
+     * vagy hogyan kéne megcsinálni...
+     * ha van ötlet pls mindjátok
+     * ja igen és nemtudom mondanom kell-e
+     * de kurvaronda
+     * kettőspont nagyDé
+     * ...
+     *  */
     public void generateMap()
     {
+        map=new LinkedList<Field>();
+
+        //létrehozzuk a fieldeket
+        Field basicField=new Field();
+        Laboratory laboratory= new Laboratory();
+        Safehouse safehouse= new Safehouse();
+        Warehouse warehouse = new Warehouse();
+
+        //belerakjuk a mappba
+        map.add(basicField);
+        map.add(laboratory);
+        map.add(safehouse);
+        map.add(warehouse);
+
+        //szomszédok lettek
+        makeNeighbours(basicField,laboratory);
+        makeNeighbours(basicField,safehouse);
+        makeNeighbours(basicField,warehouse);
+        makeNeighbours(laboratory,safehouse);
+        makeNeighbours(laboratory,warehouse);
+        makeNeighbours(safehouse,warehouse);
+
         testerClass.print();
     }
 

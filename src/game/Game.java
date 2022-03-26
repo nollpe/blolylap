@@ -15,10 +15,7 @@ public class Game
     //privát konstruktor
     private Game()
     {
-        this.AllGeneticCodes=new GeneticCode[1];//mert egyenlőre csak 1 lesz ha akartok többet írjátok meg ^^
-        AllGeneticCodes[0]=new GeneticCode();
-        this.timer=Timer.getInstance();
-        this.city=new City();
+
     }
 
     public void Tick()

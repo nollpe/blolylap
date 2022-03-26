@@ -2,9 +2,17 @@ package character;
 
 import agents.Agent;
 import agents.GeneticCode;
+import cast.Cast;
+import cast.CastNormal;
 import equipment.Equipment;
 import field.Field;
 import game.Game;
+import getCastOn.GetCastOn;
+import getCastOn.GetCastOnNormal;
+import getLootTakenFrom.GetLootTakenFrom;
+import getLootTakenFrom.LootTakenNormal;
+import loot.Loot;
+import loot.LootNormal;
 import movement.*;
 import tester.testerClass;
 
@@ -17,10 +25,15 @@ public class Player
     private Inventory inventory;
     private Equipment[] equipments;
     private Movement movement;
+    private Cast cast;
+    private GetCastOn getCastOn;
+    private GetLootTakenFrom getLootTakenFrom;
+    private Loot loot;
     private LinkedList<GeneticCode> knownGeneticCodes;
     private Game game;
     private Field location;
 
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     public Player()
     {
         activeAgents=new LinkedList<Agent>();
@@ -28,6 +41,10 @@ public class Player
         inventory=new Inventory(10);
         equipments=new Equipment[3];
         movement=new MovementNormal();
+        cast=new CastNormal();
+        getCastOn=new GetCastOnNormal();
+        getLootTakenFrom=new LootTakenNormal();
+        loot=new LootNormal();
         knownGeneticCodes=new LinkedList<GeneticCode>();
         game=Game.getInstance();
         location=game.spawnPlayer(this);
@@ -51,7 +68,10 @@ public class Player
     public void tick()
     {
         testerClass.print();
-
+        for(Agent agent:activeAgents)
+        {
+            agent.tick();
+        }
     }
 
     public boolean takeLoot(Equipment e)
@@ -93,4 +113,5 @@ public class Player
     {
         /*?????*/testerClass.print();
     }
+
 }

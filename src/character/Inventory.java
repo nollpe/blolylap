@@ -10,6 +10,7 @@ public class Inventory
 
     public Inventory(int max)
     {
+        testerClass.print();
         aminoAcid=0;
         nucleotide=0;
         maxResource=max;
