@@ -1,21 +1,26 @@
 package field;
 
+import equipment.Bag;
 import equipment.Equipment;
+import equipment.Gloves;
+import equipment.Labcoat;
 import field.Field;
 import tester.testerClass;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
 
 public class Safehouse extends Field
 {
-    private Equipment stored;
+    private LinkedList<Equipment> stored;
 
     public Safehouse()
     {
         super();
         testerClass.print();
+        stored=new LinkedList<Equipment>();
     }
 
     public void showLoot()
@@ -26,7 +31,8 @@ public class Safehouse extends Field
     public void tick()
     {
         super.tick();
-        System.out.println("1 generate:");
+        System.out.println("melyik generálódjon?");
+        System.out.println("1 Gloves:");
         System.out.println("2 Labcoat");
         System.out.println("3 Bag");
 
@@ -44,13 +50,13 @@ public class Safehouse extends Field
         switch(chosen)
         {
             case(1):
-
+                stored.add(new Gloves());
                 break;
             case(2):
-
+                stored.add(new Labcoat());
                 break;
             case(3):
-
+                stored.add(new Bag());
                 break;
             default:
 

@@ -4,6 +4,12 @@ import tester.testerClass;
 
 public class Agent
 {
+    public Agent()
+    {
+        testerClass.print();
+
+    }
+
     public void takeEffect(Character c)
     {
         testerClass.print();

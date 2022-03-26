@@ -18,6 +18,11 @@ public class Bag extends Equipment
         testerClass.print();
     }
 
+    public Bag()
+    {
+        inventory=new Inventory(5);
+    }
+
     public int addNucleotide(int added)
     {
         return added;

@@ -14,4 +14,17 @@ public class GeneticCode
     {
         testerClass.print();return this.agent;
     }
+
+    public GeneticCode()
+    {
+        testerClass.print();
+    }
+
+    public GeneticCode(Agent a,int ami,int nuc)
+    {
+        testerClass.print();
+        agent=a;
+        requiredNucleotide=nuc;
+        requiredAminoAcid=ami;
+    }
 }

@@ -8,29 +8,42 @@ import game.Game;
 import movement.*;
 import tester.testerClass;
 
-public class Character
+import java.util.LinkedList;
+
+public class Player
 {
-    private Agent activeAgent;
-    private Agent castableAgent;
+    private LinkedList<Agent> activeAgents;
+    private LinkedList<Agent> castableAgents;
     private Inventory inventory;
     private Equipment[] equipments;
     private Movement movement;
-    private GeneticCode knownGeneticCodes;
+    private LinkedList<GeneticCode> knownGeneticCodes;
     private Game game;
     private Field location;
 
+    public Player()
+    {
+        activeAgents=new LinkedList<Agent>();
+        castableAgents=new LinkedList<Agent>();
+        inventory=new Inventory(10);
+        equipments=new Equipment[3];
+        movement=new MovementNormal();
+        knownGeneticCodes=new LinkedList<GeneticCode>();
+        game=Game.getInstance();
+        location=game.spawnPlayer(this);
+    }
 
     public void move(/*fielnek kéne itt lennie nem?*/)
     {
         testerClass.print();
     }
 
-    public void castSpell(Character c,Agent a)
+    public void castSpell(Player c, Agent a)
     {
         testerClass.print();
     }
 
-    public void getCastOn(Agent a,Character c)
+    public void getCastOn(Agent a, Player c)
     {
         testerClass.print();
     }
@@ -38,6 +51,7 @@ public class Character
     public void tick()
     {
         testerClass.print();
+
     }
 
     public boolean takeLoot(Equipment e)

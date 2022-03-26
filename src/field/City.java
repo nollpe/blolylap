@@ -1,10 +1,12 @@
 package field;
 
+import character.Player;
 import field.Field;
 import game.Timer;
 import tester.testerClass;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 public class City
 {
@@ -71,5 +73,13 @@ public class City
     public void generateMap()
     {
         testerClass.print();
+    }
+
+    public Field spawnPlayer(Player character)
+    {
+        Random rand=new Random();
+        int randint=rand.nextInt(map.size());
+        map.get(randint).enter(character);
+        return map.get(randint);
     }
 }

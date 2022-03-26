@@ -8,6 +8,13 @@ public class Inventory
     private int nucleotide;
     private int maxResource;
 
+    public Inventory(int max)
+    {
+        aminoAcid=0;
+        nucleotide=0;
+        maxResource=max;
+    }
+
     public int addNucleotide(int added)
     {
         testerClass.print();
