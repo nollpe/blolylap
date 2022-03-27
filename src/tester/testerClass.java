@@ -1,15 +1,13 @@
 package tester;
 
-import agents.Agent;
-import agents.Chorea;
-import agents.Forget;
-import agents.Invulnerable;
+import agents.*;
+import character.Inventory;
 import character.Player;
 import equipment.Bag;
+import equipment.Equipment;
 import equipment.Gloves;
 import equipment.Labcoat;
-import field.City;
-import field.Field;
+import field.*;
 import game.Game;
 import game.Timer;
 import getLootTakenFrom.LootTakenStunned;
@@ -150,6 +148,141 @@ public class testerClass {
         character2.setGetLootTakenFrom(lts);
 
     }
+
+    //region Tarnay testcase
+
+    /**
+     * A TakeNukleotideFromWarehouse TestCase inicializálása és lefutása
+     */
+    private void Test_TakeNukleotideFromWarehouse() {
+        //init
+        Player c = new Player();
+        Warehouse location = new Warehouse();
+        Inventory inventory = new Inventory(10);
+        c.setInventory(inventory);
+        c.setLocation(location);
+        location.enter(c);
+        location.getStored().addNucleotide(2);
+        //test
+        c.takeNukleotide(1);
+    }
+
+    /**
+     * A TakeAminoacidFromWarehouse TestCase inicializálása és lefutása
+     */
+    private void Test_TakeAminoacidFromWarehouse() {
+        //init
+        Player c = new Player();
+        Warehouse location = new Warehouse();
+        Inventory inventory = new Inventory(10);
+        c.setInventory(inventory);
+        c.setLocation(location);
+        location.enter(c);
+        location.getStored().addAminoAcid(2);
+        //test
+        c.takeAminoAcid(1);
+    }
+
+    /**
+     * A ViewLootOfWarehouse TestCase inicializálása és lefutása
+     */
+    private void Test_ViewLootOfWarehouse() {
+        //init
+        Warehouse location = new Warehouse();
+        Inventory inventory = new Inventory(10);
+        location.setStored(inventory);
+        //test
+        location.showLoot();
+    }
+
+    /**
+     * A ViewGeneticCodeOfLaboratory TestCase inicializálása és lefutása
+     */
+    private void Test_ViewGeneticCodeOfLaboratory() {
+        //init
+        Laboratory location = new Laboratory();
+        location.init(new GeneticCode(new Forget(), 1,1));
+        //test
+        location.showLoot();
+    }
+
+    /**
+     * A LearnGeneticCodeOfLaboratory TestCase inicializálása és lefutása
+     */
+    private void Test_LearnGeneticCodeOfLaboratory() {
+        //init
+        Player c = new Player();
+        Laboratory location = new Laboratory();
+        GeneticCode readableGeneticCode = new GeneticCode();
+        location.init(readableGeneticCode);
+        location.enter(c);
+        //test
+        //c.message1
+        GeneticCode gc = location.readGeneticCode();
+        c.addGeneticCode(gc);
+    }
+
+    /**
+     * A ViewLootOfSafehouse TestCase inicializálása és lefutása
+     */
+    private void Test_ViewLootOfSafehouse() {
+        //init
+        Safehouse location = new Safehouse();
+        //test
+        location.showLoot();
+    }
+
+    /**
+     * A TakeBagFromSafehouse TestCase inicializálása és lefutása
+     */
+    private void Test_TakeBagFromSafehouse() {
+        //init
+        Player c = new Player();
+        Bag stored = new Bag();
+        Safehouse location = new Safehouse();
+        Inventory inventory = new Inventory(10);
+        c.setInventory(inventory);
+        c.setLocation(location);
+        location.enter(c);
+        location.setStored(stored);
+        //test
+        Equipment eq = ((Safehouse)location).getStored();
+        c.takeLoot(eq);
+    }
+
+    /**
+     * A TakeLabcoatFromSafehouse TestCase inicializálása és lefutása
+     */
+    private void TestInit_TakeLabcoatFromSafehouse() {
+        //init
+        Player c = new Player();
+        Labcoat stored = new Labcoat();
+        Safehouse location = new Safehouse();
+        c.setLocation(location);
+        location.enter(c);
+        location.setStored(stored);
+        //test
+        Equipment eq = ((Safehouse)location).getStored();
+        c.takeLoot(eq);
+
+    }
+
+    /**
+     * A TakeGlovesFromSafehouse TestCase inicializálása és lefutása
+     */
+    private void TestInit_TakeGlovesFromSafehouse() {
+        //init
+        Player c = new Player();
+        Gloves stored = new Gloves();
+        Safehouse location = new Safehouse();
+        c.setLocation(location);
+        location.enter(c);
+        location.setStored(stored);
+        //test
+        Equipment eq = ((Safehouse)location).getStored();
+        c.takeLoot(eq);
+    }
+    //endregion
 
     private void Test1(){
 

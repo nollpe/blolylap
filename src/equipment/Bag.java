@@ -13,6 +13,7 @@ public class Bag extends Equipment
     public void takeEffect(Player c)
     {
         testerClass.print();
+        c.getInventory().addContents(this);
     }
 
     public void loseEffect(Player c)
