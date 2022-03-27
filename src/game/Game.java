@@ -43,10 +43,12 @@ public class Game
         return city.spawnPlayer(character);
     }
 
-    public void setCity(City c){
+    public void setCity(City c)
+    {
         testerClass.print();
         city = c;
     }
+
 }
 /*
  Azért, hogy singleton legyen:
