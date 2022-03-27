@@ -53,51 +53,56 @@ public class Player {
 
     public Loot getLoot()
     {
+        testerClass.print();
         return loot;
     }
     public GetLootTakenFrom getGetLootTakenFrom()
     {
+        testerClass.print();
         return getLootTakenFrom;
     }
 
     public GetCastOn getGetCastOn()
     {
+        testerClass.print();
         return getCastOn;
     }
     public Cast getCase()
     {
+        testerClass.print();
         return cast;
     }
     public Movement getMovement()
     {
+        testerClass.print();
         return movement;
     }
     public void setGetLootTakenFrom(GetLootTakenFrom g)
     {
+        testerClass.print();
         getLootTakenFrom=g;
     }
     public void setGetCastOn(GetCastOn g)
     {
+        testerClass.print();
         getCastOn=g;
     }
     public void setLoot(Loot l)
     {
+        testerClass.print();
         loot=l;
     }
     public void setMovement(Movement m)
     {
+        testerClass.print();
         movement=m;
     }
     public void setCast(Cast c)
     {
+        testerClass.print();
         cast=c;
     }
     //endregion
-
-    public void move(/*fielnek kéne itt lennie nem?*/)
-    {
-        testerClass.print();
-    }
 
     //region spellcasting
     public void castSpell(Player Caster, Agent agent)
@@ -165,4 +170,20 @@ public class Player {
         equipments.add(eq);
     }
 
+    public void move(/*fielnek kéne itt lennie nem?*/)
+    {
+        testerClass.print();
+    }
+
+    //region adderek removerek
+    public void addActiveAgent(Agent agent)
+    {
+        activeAgents.add(agent);
+    }
+
+    public void removeActiveAgent(Agent agent)
+    {
+        activeAgents.remove(agent);
+    }
+    //endregion
 }
