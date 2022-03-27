@@ -36,7 +36,7 @@ public class testerClass {
     }
 
     //region norbi tesztek
-    public void wiewCity()
+    public void viewCity()
     {
         City c= new City();
         c.showCity();
@@ -318,7 +318,7 @@ public class testerClass {
     {
         testerClass ts=new testerClass();
         ts.agentExpires();
-        ts.wiewCity();
+        ts.viewCity();
         ts.startGame();
         ts.endTurn();
     }
