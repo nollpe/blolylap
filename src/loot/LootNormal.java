@@ -40,7 +40,7 @@ public class LootNormal implements Loot
          */
         if(s.compareTo("I")==0) {
             /**
-             * Megkérdezi a mezőtől, hogy milyen játéko sok állnak rajta.
+             * Megkérdezi a mezőtől, hogy milyen játékosok állnak rajta.
              */
             LinkedList<Player> targetlist = player.getLocation().getInhabitants();
 

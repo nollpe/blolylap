@@ -105,15 +105,16 @@ public class Player {
     //endregion
 
     //region spellcasting
-    public void castSpell(Player Caster, Agent agent)
+    public void castSpell()
     {
         testerClass.print();
-        Caster.getCastOn(agent,this);
+        cast.cast(this);
     }
 
     public void getCastOn(Agent a, Player c)
     {
         testerClass.print();
+        getCastOn.getCastOn(a, this, c);
     }
     //endregion
 
@@ -199,6 +200,7 @@ public class Player {
     {
         testerClass.print();
         equipments.add(eq);
+        eq.takeEffect(this);
     }
 
     public void move(/*fielnek kéne itt lennie nem?*/)
@@ -265,5 +267,16 @@ public class Player {
     public Inventory getInventory(){
         return inventory;
     }
+
+    public LinkedList<Agent> getCastableAgents(){
+        return castableAgents;
+    }
+
+    public void addCastableAgents(Agent castableAgent) {
+        testerClass.print();
+        castableAgents.add(castableAgent);
+        castableAgent.takeEffect(this);
+    }
+
     //endregion
 }

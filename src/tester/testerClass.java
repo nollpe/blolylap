@@ -4,6 +4,7 @@ import agents.Agent;
 import agents.Chorea;
 import agents.Forget;
 import agents.Invulnerable;
+import cast.CastImpared;
 import character.Inventory;
 import character.Player;
 import equipment.Bag;
@@ -13,6 +14,7 @@ import field.City;
 import field.Field;
 import game.Game;
 import game.Timer;
+import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.LootTakenStunned;
 import loot.LootImpared;
 
@@ -107,12 +109,15 @@ public class testerClass {
     static Player character1;
     static Player character2;
     static Player character3;
+    static Player character4;
     static Game game;
+    Invulnerable invulnerable;
+    Forget forget;
 
     /**
-     * A másik játékostól való ágens lootolásának a tesztjei
+     * A virológusok közötti interakciókat teszteli
      */
-    private void InteractWithOtherVirologist(){
+    private void interactWithOtherVirologist(){
         /**
          * Megkérdezi a felhasználót, hogy melyik esetet szeretné tesztelni.
          * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
@@ -120,7 +125,7 @@ public class testerClass {
         int n = 0;
         boolean valid = false;
         while(!valid){
-            System.out.println("Kérlek válassz egy tesztesetet: \n1-Lootolás karaktertől\n2-idk");
+            System.out.println("Kérlek válassz egy tesztesetet: \n1-Lootolás karaktertől\n2-Varázslás");
             Scanner input = new Scanner(System.in);
             n = Integer.parseInt(input.nextLine());
             /**
@@ -134,11 +139,12 @@ public class testerClass {
          */
         switch (n){
             case 1:
-                LootFromCharacterInit();
-                LootFromCharacterTest();
+                lootFromCharacterInit();
+                lootFromCharacterTest();
                 break;
             case 2:
-
+                castAgentInit();
+                castAgentTest();
                 break;
             default:
                 System.out.println("Ilyen  teszteset nincs");
@@ -146,10 +152,10 @@ public class testerClass {
     }
 
     /**
-     * Equipment lootoláshoz tartozó tesztekhez.
+     * Inicializálás lootoláshoz tartozó tesztekhez.
      * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
      */
-    private void LootFromCharacterInit() {
+    private void lootFromCharacterInit() {
         /**
          * létrehozása a játékot és a várost  illetve összekapcsolja őket.
          */
@@ -214,9 +220,62 @@ public class testerClass {
     }
 
     /**
+     * Inicializálás ágens keneséhez tartozó tesztesetekhez
+     * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
+     */
+    private void castAgentInit() {
+        /**
+         * létrehozása a játékot és a várost  illetve összekapcsolja őket.
+         */
+        Game game = Game.getInstance();
+        City city = new City();
+        game.setCity(city);
+        city.generateMap();
+
+        /**
+         * A karaktereket létrehozza és egy mezőre helyezi őket, hogy tudjanak interaktálni.
+         * Azért van 3 karakter, hogy mind a sikeres, mind a sikertelen lootolási kísérleteket tesztelni tudjuk.
+         */
+        character1 = new Player();
+        character2 = new Player();
+        character3 = new Player();
+        character4 = new Player();
+        Field field = new Field();
+        field.enter(character1);
+        field.enter(character2);
+        field.enter(character3);
+        field.enter(character4);
+        character1.setLocation(field);
+        character2.setLocation(field);
+        character3.setLocation(field);
+        character4.setLocation(field);
+
+        /**
+         * Létrehozza a védőfelszereléseket és a karakterekhez rendeleli
+         * Két karakterhez is hozzáadja őket, hogy a lebénult és a nem lebénult eseteket is telsztelni lehessen.
+         */
+        Gloves gloves = new Gloves();
+        Labcoat labcoat = new Labcoat();
+        character2.addEquipment(gloves);
+        character3.addEquipment(labcoat);
+
+
+        /**
+         * A negyedik karaktert megbénítja
+         * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
+         */
+        character4.setCast(new CastImpared());
+
+        invulnerable = new Invulnerable();
+        forget = new Forget();
+        character1.addCastableAgents(invulnerable);
+        character1.addCastableAgents(forget);
+    }
+
+    /**
      * A karaktertől való lootolás tesztje
      */
-    private void LootFromCharacterTest(){
+    private void lootFromCharacterTest(){
         /**
          * Megkérdezi a felhasználótol, hogy lebénult vagy nem lebénult karakterrel szeretne tesztelni.
          * A lebénult karatker tud lootolni, a nem lebénult nem.
@@ -247,11 +306,46 @@ public class testerClass {
         }
     }
 
+    /**
+     * Az ágens kenés tesztje
+     */
+    private void castAgentTest(){
+        /**
+         * Megkérdezi a felhasználótol, hogy lebénult vagy nem lebénult karakterrel szeretne ágenst kenni.
+         * A lebénult karatker tud lootolni, a nem lebénult nem.
+         * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
+         */
+        int n = 0;
+        boolean valid = false;
+        while(!valid){
+            System.out.println("Milyen karakterrel szeretnél castolni?: \n1-Nem lebénult\n2-Lebénult");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if(n>0 && n <3) valid = true;
+        }
+        /**
+         * A felhasználó által választott tesztet futtatja.
+         * Első: nem lebénult.
+         * Második: lebénult.
+         */
+        switch (n){
+            case 1:
+                character1.castSpell();
+                break;
+            case 2:
+                character4.castSpell();
+                break;
+            default:
+                System.out.println("Ilyen nincsen. ");
+        }
+    }
+
 
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();
         ts.agentExpires();
-        ts.InteractWithOtherVirologist();
+        ts.interactWithOtherVirologist();
+
     }
 }
