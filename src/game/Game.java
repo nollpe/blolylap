@@ -43,6 +43,10 @@ public class Game
         return city.spawnPlayer(character);
     }
 
+    /**
+     * Beállítja a játékhoz tartoó várost
+     * @param c A várost, ami a játékhoz tartozik.
+     */
     public void setCity(City c){
         testerClass.print();
         city = c;

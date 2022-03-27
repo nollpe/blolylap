@@ -6,20 +6,33 @@ import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import tester.testerClass;
 
+/**
+ * A táska védőfelszerelés osztálya.
+ * Hatására több dolog lehet a játékosnál.
+ */
 public class Bag extends Equipment
 {
+    /**
+     * Az inventory, amiben a táskában lévő dolgokat lehet tárolni.
+     */
     private Inventory inventory;
 
+    /**
+     * A táska megszerzésekor hívodik meg a függvény.
+     * @param c A karakter, aki megszerezte a táskát.
+     */
     public void takeEffect(Player c)
     {
         testerClass.print();
     }
 
+    /**
+     * A táska elvesztésekor hívodik meg.
+     * @param c A karakter, aki elveszített a tásktát.
+     */
     public void loseEffect(Player c)
     {
         testerClass.print();
-        GetCastOnNormal gcon = new GetCastOnNormal();
-        c.setGetCastOn(gcon);
     }
 
     public Bag()

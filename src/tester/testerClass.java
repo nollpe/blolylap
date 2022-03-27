@@ -13,6 +13,7 @@ import field.Field;
 import game.Game;
 import game.Timer;
 import getLootTakenFrom.LootTakenStunned;
+import loot.LootImpared;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -52,6 +53,7 @@ public class testerClass {
         Timer timer= Timer.getInstance();
         timer.tick();
     }
+
 
     public void agentExpires()
     {
@@ -98,34 +100,67 @@ public class testerClass {
 
     }
 
-
+    /**
+     * Karakterek a teszteléshez
+     */
     static Player character1;
     static Player character2;
     static Player character3;
-    private void lootEquipment(){
-        System.out.println("Válassz gec: \n1-Védőfelszerelést ellopása karaktertől\n2-idk");
-        Scanner input = new Scanner(System.in);
-        String s = input.nextLine();
-        switch (s){
-            case "1":
+
+    /**
+     * A másik játékostól való ágens lootolásának a tesztjei
+     */
+    private void InteractWithOtherVirologist(){
+        /**
+         * Megkérdezi a felhasználót, hogy melyik esetet szeretné tesztelni.
+         * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
+         */
+        int n = 0;
+        boolean valid = false;
+        while(!valid){
+            System.out.println("Kérlek válassz egy : \n1-Védőfelszerelést ellopása karaktertől\n2-idk");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            /**
+             * Ellenőrzi, hogy értelmes választ adott-e a felhasználó
+             */
+            if(n>0 && n <3) valid = true;
+        }
+
+        /**
+         * A felhasználó által választott tesztet futtatja.
+         */
+        switch (n){
+            case 1:
                 TestInit1();
-                Test1();
+                LootEquipmentFromCharacterTest();
                 break;
-            case "2":
+            case 2:
                 TestInit1();
                 Test2();
                 break;
             default:
-                System.out.println("Ilyen nincs is fogykos");
+                System.out.println("Ilyen  teszteset nincs");
         }
     }
 
+    /**
+     * Equipment lootoláshoz tartozó tesztekhez.
+     * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
+     */
     private void TestInit1() {
+        /**
+         * létrehozása a játékot és a várost  illetve összekapcsolja őket.
+         */
         Game game = Game.getInstance();
         City city = new City();
         game.setCity(city);
         city.generateMap();
 
+        /**
+         * A karaktereket létrehozza és egy mezőre helyezi őket, hogy tudjanak interaktálni.
+         * Azért van 3 karakter, hogy mind a sikeres, mind a sikertelen lootolási kísérleteket tesztelni tudjuk.
+         */
         character1 = new Player();
         character2 = new Player();
         character3 = new Player();
@@ -137,36 +172,72 @@ public class testerClass {
         character2.setLocation(field);
         character3.setLocation(field);
 
-
+        /**
+         * Létrehozza a védőfelszereléseket és a karakterekhez rendeleli
+         * Két karakterhez is hozzáadja őket, hogy a lebénult és a nem lebénult eseteket is telsztelni lehessen.
+         */
         Gloves gloves = new Gloves();
         Bag bag = new Bag();
         Labcoat labcoat = new Labcoat();
-
         character2.addEquipment(gloves);
         character2.addEquipment(labcoat);
         character2.addEquipment(bag);
+        character3.addEquipment(gloves);
+        character3.addEquipment(labcoat);
+        character3.addEquipment(bag);
 
+        /**
+         * A második karaktert megbénítja
+         * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
+         */
         LootTakenStunned lts = new LootTakenStunned();
         character2.setGetLootTakenFrom(lts);
-
+        LootImpared li = new LootImpared();
+        character2.setLoot(li);
     }
 
-    private void Test1(){
-
-        character1.loot();
+    /**
+     * A karaktertől való lootolás tesztje
+     */
+    private void LootEquipmentFromCharacterTest(){
+        /**
+         * Megkérdezi a felhasználótol, hogy lebénult vagy nem lebénult karakterrel szeretne tesztelni.
+         * A lebénult karatker tud lootolni, a nem lebénult nem.
+         * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
+         */
+        int n = 0;
+        boolean valid = false;
+        while(!valid){
+            System.out.println("Milyen karakterrel szeretnél lootolni?: \n1-Nem lebénult\n2-Lebénult");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if(n>0 && n <3) valid = true;
+        }
+        /**
+         * A felhasználó által választott tesztet futtatja.
+         * Első: nem lebénult.
+         * Második: lebénult.
+         */
+        switch (n){
+            case 1:
+                character1.loot();
+                break;
+            case 2:
+                character2.loot();
+                break;
+            default:
+                System.out.println("Ilyen nincsen. ");
+        }
     }
 
     private void Test2(){
-        character1.loot();
+
     }
-
-
-
 
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();
         ts.agentExpires();
-        ts.lootEquipment();
+        ts.InteractWithOtherVirologist();
     }
 }

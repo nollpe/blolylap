@@ -127,10 +127,26 @@ public class Player {
     }
 
     //region lootolnak tole
+
+    /**
+     * A játékostól elvesznek egy védőfelszerelést, ezért törli mgaáról a hatását és kitörli az felszerelései közül.
+     * @param e A védőfelszerelést amit elvettek.
+     * @return Az elvétel sikeressége.
+     */
     public boolean takeLoot(Equipment e)
     {
-        return false;
+        testerClass.print();
+        e.loseEffect(this);
+        equipments.remove(e);
+        return true;
     }
+
+
+    /**
+     * A karaktertől lootolni akarnak. Meghívja a lootolás eszenvedéséért felelős osztályt.
+     * @param e A védőfelszerelést amit el akarnak venni.
+     * @return Az elvétel sikeressége.
+     */
     public boolean getLootTakenFrom(Equipment e)
     {
         testerClass.print();
@@ -138,6 +154,9 @@ public class Player {
         return succes;
     }
 
+    /**
+     * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt. 
+     */
     public void loot()
     {
         testerClass.print();
@@ -196,16 +215,28 @@ public class Player {
         knownGeneticCodes=new LinkedList<GeneticCode>();
     }
 
+    /**
+     * Megadja, hogy melyik mezőn áll a játékos
+     * @return A mező
+     */
     public Field getLocation(){
         testerClass.print();
         return location;
     }
 
+    /**
+     * Beállítja a játékosban, hogy melyik mezőn áll
+     * @param f A mező
+     */
     public void setLocation(Field f){
         testerClass.print();
         location = f;
     }
 
+    /**
+     * Megadja, hogy milyen védőfelszerelések vannak a karakternél.
+     * @return A védőfelszerlések listája.
+     */
     public LinkedList<Equipment> getStored(){
         testerClass.print();
         return equipments;
