@@ -1,5 +1,6 @@
 package agents;
 
+import character.Player;
 import tester.testerClass;
 
 public class Agent
@@ -10,12 +11,12 @@ public class Agent
 
     }
 
-    public void takeEffect(Character c)
+    public void takeEffect(Player c)
     {
         testerClass.print();
     }
 
-    public void loseEffect(Character c)
+    public void loseEffect(Player c)
     {
         testerClass.print();
     }
