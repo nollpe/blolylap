@@ -177,6 +177,7 @@ public class testerClass {
         character2.setGetLootTakenFrom(lts);
 
     }
+    //endregion
 
     //region Tarnay testcase
     private void Test_TakeNukleotideFromWarehouse() {
