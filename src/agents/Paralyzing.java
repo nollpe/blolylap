@@ -15,6 +15,12 @@ import tester.testerClass;
 
 public class Paralyzing extends Agent
 {
+    public Paralyzing()
+    {
+        super();
+        testerClass.print();
+    }
+
     public void takeEffect(Player player)
     {
         testerClass.print();
@@ -31,5 +37,6 @@ public class Paralyzing extends Agent
         player.setMovement(new MovementNormal());
         player.setCast(new CastNormal());
         player.setGetLootTakenFrom(new LootTakenNormal());
+        player.removeActiveAgent(this);
     }
 }

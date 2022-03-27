@@ -13,10 +13,16 @@ public class Invulnerable extends Agent
         player.setGetCastOn(new GetCastOnInvulnerable());
         testerClass.print();
     }
+    public Invulnerable()
+    {
+        super();
+        testerClass.print();
+    }
 
     public void loseEffect(Player player)
     {
-        player.setGetCastOn(new GetCastOnNormal());
         testerClass.print();
+        player.setGetCastOn(new GetCastOnNormal());
+        player.removeActiveAgent(this);
     }
 }

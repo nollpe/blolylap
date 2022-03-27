@@ -20,6 +20,11 @@ public class City
 
     }
 
+    public void setMap(LinkedList<Field> ll)
+    {
+        map=ll;
+    }
+
     private void makeNeighbours(Field f1,Field f2)
     {
         f1.addNeighbour(f2);
