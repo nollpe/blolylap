@@ -5,8 +5,17 @@ import tester.testerClass;
 
 import java.util.Scanner;
 
+/**
+ * Az ágens kenés elszenvedését kezelő osztály védett (köpenyes) esetben
+ */
 public class GetCastOnResistant implements GetCastOn
 {
+    /**
+     * Az ágens kenés elszenvedését végző függvény  védett esete, a kenés valamekkora valószínűséggel sikerül
+     * @param a Ágens, amit felkennek a karakterre.
+     * @param player A játékos, akire kenik az ágenst.
+     * @param attacker A játékos, aki keni az ágenst.
+     */
     @Override
     public void getCastOn(Agent a, Player player, Player attacker)
     {

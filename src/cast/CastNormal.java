@@ -2,15 +2,21 @@ package cast;
 
 import agents.Agent;
 import character.Player;
-import equipment.Gloves;
-import equipment.Labcoat;
 import tester.testerClass;
 
 import java.util.LinkedList;
 import java.util.Scanner;
 
+/**
+ * Az ágens kenés vezéréléséért felelős osztály normál állapotban. Ilyenkor az ágens felkenése lehetséges.
+ */
 public class CastNormal implements Cast
 {
+    /**
+     * Az ágens kenés függvénye lebénult esetben.
+     * @param player A játékos aki a kenést csinálja
+     * @return A kenés sikeressége.
+     */
     @Override
     public boolean cast(Player player)
     {
@@ -32,7 +38,7 @@ public class CastNormal implements Cast
             int n = 0;
             Scanner input = new Scanner(System.in);
             while(!valid){
-                System.out.println("Melyik játékosra szeretnél ágenst kenni?\n1-Önmaga \n2-Másik kesztyűs játékos \n3-Másik köpenyes játékos");
+                System.out.println("Melyik játékosra szeretnél ágenst kenni?\n1-Önmaga \n2-Kesztyűs játékos \n3-Köpenyes játékos \n4-Normál játékos \n5-Sebezhetetlen játékos");
                 n = Integer.parseInt(input.nextLine())-1;
                 if(n>=0 && n <targetlist.size()) valid = true;
             }
@@ -41,31 +47,6 @@ public class CastNormal implements Cast
              * A kiválasztott karakter lesz a célpont.
              */
             Player target = targetlist.get(n);
-
-            if(n==0){
-                valid = false;
-                while(!valid){
-                    System.out.println("Mi legyen rajtad?\n1-Kesztyű \n2-Köpeny \n3-Semelyik \n4-Mindegyik");
-                    n = Integer.parseInt(input.nextLine());
-                    if(n>=0 && n <4) valid = true;
-                }
-
-                switch (n){
-                    case 1:
-                        player.addEquipment(new Gloves());
-                        break;
-                    case 2:
-                        player.addEquipment(new Labcoat());
-                        break;
-                    case 4:
-                        player.addEquipment(new Gloves());
-                        player.addEquipment(new Labcoat());
-                        break;
-                    default:
-                        break;
-                }
-            }
-
 
             /**
              * Megkérdezi a felhasználót, hogy mit szeretne kenni (felejtő vagy sebezhetetlenséget okozó)
@@ -76,7 +57,6 @@ public class CastNormal implements Cast
                 n = Integer.parseInt(input.nextLine())-1;
                 if(n>=0 && n <2) valid = true;
             }
-
             LinkedList<Agent> castableAgents = player.getCastableAgents();
             Agent agent = castableAgents.get(n);
 

@@ -14,6 +14,7 @@ import field.City;
 import field.Field;
 import game.Game;
 import game.Timer;
+import getCastOn.GetCastOnInvulnerable;
 import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.LootTakenStunned;
 import loot.LootImpared;
@@ -110,6 +111,7 @@ public class testerClass {
     static Player character2;
     static Player character3;
     static Player character4;
+    static Player character5;
     static Game game;
     Invulnerable invulnerable;
     Forget forget;
@@ -240,15 +242,18 @@ public class testerClass {
         character2 = new Player();
         character3 = new Player();
         character4 = new Player();
+        character5 = new Player();
         Field field = new Field();
         field.enter(character1);
         field.enter(character2);
         field.enter(character3);
         field.enter(character4);
+        field.enter(character5);
         character1.setLocation(field);
         character2.setLocation(field);
         character3.setLocation(field);
         character4.setLocation(field);
+        character5.setLocation(field);
 
         /**
          * Létrehozza a védőfelszereléseket és a karakterekhez rendeleli
@@ -270,6 +275,11 @@ public class testerClass {
         forget = new Forget();
         character1.addCastableAgents(invulnerable);
         character1.addCastableAgents(forget);
+
+        /**
+         * Sebezhetetlenné teszi az 5. játékost
+         */
+        character5.setGetCastOn(new GetCastOnInvulnerable());
     }
 
     /**
