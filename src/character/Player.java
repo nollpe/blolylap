@@ -136,6 +136,8 @@ public class Player {
         e.takeEffect(this);
         return false;
     }
+
+
     public boolean getLootTakenFrom(Equipment e)
     {
         testerClass.print();
