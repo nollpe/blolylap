@@ -8,8 +8,11 @@ public class Inventory
     private int aminoAcid;
     private int nucleotide;
     private int maxResource;
-    private Bag contents;
 
+    /**
+     *
+     * @param max a maximum tárolási kapacitás, összesen ennyi alapanyag fér bele
+     */
     public Inventory(int max)
     {
         testerClass.print();
@@ -18,6 +21,11 @@ public class Inventory
         maxResource=max;
     }
 
+    /**
+     *
+     * @param added ennyi nucleotidot akarunk belerakni
+     * @return ennyi nukleotidot sikerült belerakni
+     */
     public int addNucleotide(int added)
     {
         testerClass.print();
@@ -34,11 +42,11 @@ public class Inventory
         }
     }
 
-    public void addContents(Bag e) {
-        testerClass.print();
-        contents = e;
-    }
-
+    /**
+     *
+     * @param added ennyi aminosavat akarunk belerakni
+     * @return ennyi aminosavat sikerült belerakni
+     */
     public int addAminoAcid(int added)
     {
         testerClass.print();
@@ -55,6 +63,11 @@ public class Inventory
         }
     }
 
+    /**
+     *
+     * @param take ennyi amiosavat akarunk kivenni
+     * @return ennyi aminosavat sikerült kivenni
+     */
     public int takeAminoAcid(int take)
     {
         testerClass.print();
@@ -71,6 +84,11 @@ public class Inventory
         }
     }
 
+    /**
+     *
+     * @param take ennyi nukleotidot akarunk kivenni
+     * @return ennyi nukleotidot sikerült kivenni
+     */
     public int takeNucleotide(int take)
     {
         testerClass.print();

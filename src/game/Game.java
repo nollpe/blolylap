@@ -38,6 +38,11 @@ public class Game
         return singleInstance;
     }
 
+    /**
+     * Egy karaktert lerak a pályára egy random helyre
+     * @param character a player akit le kell rakni a pályán
+     * @return a mező ahova lerakta
+     */
     public Field spawnPlayer(Player character)
     {
         return city.spawnPlayer(character);

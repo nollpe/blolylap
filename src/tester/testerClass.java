@@ -36,12 +36,19 @@ public class testerClass {
     }
 
     //region norbi tesztek
+
+    /**
+     * A viewCity testcase megvalósítása
+     */
     public void viewCity()
     {
         City c= new City();
         c.showCity();
     }
 
+    /**
+     * A startGame testCase megvalósítása
+     */
     public void startGame()
     {
         Game game= Game.getInstance();
@@ -50,6 +57,9 @@ public class testerClass {
         game.setCity(city);
     }
 
+    /**
+     * az endTurn testCase megvalósítása
+     */
     public void endTurn()
     {
         Timer timer=Timer.getInstance();
@@ -72,6 +82,9 @@ public class testerClass {
         timer.tick();
     }
 
+    /**
+     * Az agentExires megvalósítja bármely ágens lejárását mind felkent és felkenhető állapotban
+     */
     public void agentExpires()
     {
         //region változó deklarációk

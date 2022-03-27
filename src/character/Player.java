@@ -140,7 +140,13 @@ public class Player {
         }
     }
 
-    //region lootolnak tole
+    //region lootolás
+
+    /**
+     *
+     * @param e ezt a felszerelést szeretné felvenni a játékos
+     * @return sikerült-e neki
+     */
     public boolean takeLoot(Equipment e)
     {
         testerClass.print();
@@ -149,7 +155,11 @@ public class Player {
         return false;
     }
 
-
+    /**
+     * A játékostól el akarnak venni egy felszerelést
+     * @param e az elvenni kívánt felszerelés
+     * @return sikerült-e elvenni tőle
+     */
     public boolean getLootTakenFrom(Equipment e)
     {
         testerClass.print();
@@ -163,10 +173,23 @@ public class Player {
         loot.loot(this);
 
     }
+
+    /**
+     * A játékos megpróbál levenni egy felszerelést
+     * @param e ezt a felszerelés próbálja meg levenni
+     * @return visszaadja, hogy sikerült-e
+     */
     public boolean removeLoot(Equipment e)
     {
-        testerClass.print();return false;
+        testerClass.print();
+        return false;
     }
+
+    /**
+     * A játékos nukleotidot vesz fel egy raktárból
+     * @param d1 ennyit nukleotidot tevez elvenni
+     * @return mennyit tudott elvenni
+     */
     public int takeNukleotide(int d1)
     {
         testerClass.print();
@@ -175,6 +198,11 @@ public class Player {
         int d3 = inventory.addNucleotide(d2);
         return d3;
     }
+    /**
+     * A játékos aminosavat vesz fel egy raktárból
+     * @param d1 ennyit aminosavat tevez elvenni
+     * @return mennyit tudott elvenni
+     */
     public int takeAminoAcid(int d1)
     {
         testerClass.print();
@@ -192,22 +220,7 @@ public class Player {
     }
     //endregion
 
-    public void addGeneticCode(GeneticCode gc)
-    {
-        testerClass.print();
-        knownGeneticCodes.add(gc);
-    }
 
-    public void addCastableAgent(Agent agent)
-    {
-        castableAgents.add(agent);
-    }
-
-    public void addEquipment(Equipment eq)
-    {
-        testerClass.print();
-        equipments.add(eq);
-    }
 
     public void move(/*fielnek kéne itt lennie nem?*/)
     {
@@ -230,27 +243,49 @@ public class Player {
         knownGeneticCodes=new LinkedList<GeneticCode>();
     }
 
-    public Field getLocation(){
+    public void addGeneticCode(GeneticCode gc)
+    {
+        testerClass.print();
+        knownGeneticCodes.add(gc);
+    }
+
+    public void addCastableAgent(Agent agent)
+    {
+        castableAgents.add(agent);
+    }
+
+    public void addEquipment(Equipment eq)
+    {
+        testerClass.print();
+        equipments.add(eq);
+    }
+
+    public Field getLocation()
+    {
         testerClass.print();
         return location;
     }
 
-    public void setLocation(Field f){
+    public void setLocation(Field f)
+    {
         testerClass.print();
         location = f;
     }
 
-    public Inventory getInventory(){
+    public Inventory getInventory()
+    {
         testerClass.print();
         return inventory;
     }
 
-    public void setInventory(Inventory i){
+    public void setInventory(Inventory i)
+    {
         testerClass.print();
         inventory = i;
     }
 
-    public LinkedList<Equipment> getStored(){
+    public LinkedList<Equipment> getStored()
+    {
         testerClass.print();
         return equipments;
     }
