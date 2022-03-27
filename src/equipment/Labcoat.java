@@ -32,7 +32,6 @@ public class Labcoat extends Equipment
     public void loseEffect(Player c)
     {
         testerClass.print();
-        GetCastOnNormal gcon = new GetCastOnNormal();
-        c.setGetCastOn(gcon);
+        c.setGetCastOn(new GetCastOnNormal());
     }
 }

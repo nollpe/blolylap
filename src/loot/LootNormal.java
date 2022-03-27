@@ -39,7 +39,7 @@ public class LootNormal implements Loot
          */
         if(s.compareTo("I")==0) {
             /**
-             * Megkérdezi a mezőtől, hogy milyen játékosok állnak rajta.
+             * Megkérdezi a mezőtől, hogy milyen játéko sok állnak rajta.
              */
             LinkedList<Player> targetlist = player.getLocation().getInhabitants();
 
@@ -59,6 +59,17 @@ public class LootNormal implements Loot
                     n = Integer.parseInt(input.nextLine());
                     if(n>0 && n <targetlist.size()) valid = true;
                 }
+
+                /**
+                 * Megkérdezi a felhasználót, hogy mit szeretne lootolni.
+                 */
+                valid = false;
+                while(!valid){
+                    System.out.println("Mit szeretnél lootolni??\n1-Feszereléstt \n2-Anyagot");
+                    n = Integer.parseInt(input.nextLine())-1;
+                    if(n>=0 && n <3) valid = true;
+                }
+                if(n == 1){}
 
                 /**
                  * Lekérdezi, hogy a felhasználó által választott karakternél milyen védőfelszerelések vannak.

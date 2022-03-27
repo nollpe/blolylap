@@ -19,8 +19,7 @@ public class Gloves extends Equipment
     public void takeEffect(Player c)
     {
         testerClass.print();
-        GetCastOnGloves gcog = new GetCastOnGloves();
-        c.setGetCastOn(gcog);
+        c.setGetCastOn(new GetCastOnGloves());
     }
 
     /**
@@ -31,7 +30,6 @@ public class Gloves extends Equipment
     public void loseEffect(Player c)
     {
         testerClass.print();
-        GetCastOnNormal gcon = new GetCastOnNormal();
-        c.setGetCastOn(gcon);
+        c.setGetCastOn(new GetCastOnNormal());
     }
 }

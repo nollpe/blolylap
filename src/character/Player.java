@@ -155,10 +155,11 @@ public class Player {
     }
 
     /**
-     * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt. 
+     * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt.
      */
     public void loot()
     {
+
         testerClass.print();
         loot.loot(this);
 
@@ -240,6 +241,10 @@ public class Player {
     public LinkedList<Equipment> getStored(){
         testerClass.print();
         return equipments;
+    }
+
+    public void setInventory(Inventory i){
+        inventory = i;
     }
     //endregion
 }

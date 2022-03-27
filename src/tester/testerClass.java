@@ -4,6 +4,7 @@ import agents.Agent;
 import agents.Chorea;
 import agents.Forget;
 import agents.Invulnerable;
+import character.Inventory;
 import character.Player;
 import equipment.Bag;
 import equipment.Gloves;
@@ -106,6 +107,7 @@ public class testerClass {
     static Player character1;
     static Player character2;
     static Player character3;
+    static Game game;
 
     /**
      * A másik játékostól való ágens lootolásának a tesztjei
@@ -118,7 +120,7 @@ public class testerClass {
         int n = 0;
         boolean valid = false;
         while(!valid){
-            System.out.println("Kérlek válassz egy : \n1-Védőfelszerelést ellopása karaktertől\n2-idk");
+            System.out.println("Kérlek válassz egy : \n1-Lootolás karaktertől\n2-idk");
             Scanner input = new Scanner(System.in);
             n = Integer.parseInt(input.nextLine());
             /**
@@ -132,12 +134,12 @@ public class testerClass {
          */
         switch (n){
             case 1:
-                TestInit1();
-                LootEquipmentFromCharacterTest();
+                LootEquipmentFromCharacterInit();
+                LootFromCharacterTest();
                 break;
             case 2:
-                TestInit1();
-                Test2();
+               // LootEquipmentFromCharacterInit();
+                //LootAminoAndNukletoideFromCharacterTest();
                 break;
             default:
                 System.out.println("Ilyen  teszteset nincs");
@@ -148,7 +150,7 @@ public class testerClass {
      * Equipment lootoláshoz tartozó tesztekhez.
      * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
      */
-    private void TestInit1() {
+    private void LootEquipmentFromCharacterInit() {
         /**
          * létrehozása a játékot és a várost  illetve összekapcsolja őket.
          */
@@ -187,19 +189,35 @@ public class testerClass {
         character3.addEquipment(bag);
 
         /**
+         * Létrehozza az intentorykat és hozzárendeli a karakterekhez
+         */
+        Inventory inventory1 = new Inventory(10);
+        Inventory inventory2 = new Inventory(10);
+        Inventory inventory3 = new Inventory(10);
+        character1.setInventory(inventory1);
+        character2.setInventory(inventory2);
+        character3.setInventory(inventory3);
+
+        /**
+         * Feltölti az intentorykat nukleotiddal és aminosavval
+         */
+        inventory2.addAminoAcid(5);
+        inventory2.addNucleotide(5);
+        inventory3.addAminoAcid(5);
+        inventory3.addNucleotide(5);
+
+        /**
          * A második karaktert megbénítja
          * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
          */
-        LootTakenStunned lts = new LootTakenStunned();
-        character2.setGetLootTakenFrom(lts);
-        LootImpared li = new LootImpared();
-        character2.setLoot(li);
+        character2.setGetLootTakenFrom(new LootTakenStunned());
+        character2.setLoot(new LootImpared());
     }
 
     /**
      * A karaktertől való lootolás tesztje
      */
-    private void LootEquipmentFromCharacterTest(){
+    private void LootFromCharacterTest(){
         /**
          * Megkérdezi a felhasználótol, hogy lebénult vagy nem lebénult karakterrel szeretne tesztelni.
          * A lebénult karatker tud lootolni, a nem lebénult nem.
@@ -230,9 +248,6 @@ public class testerClass {
         }
     }
 
-    private void Test2(){
-
-    }
 
     public static void main(String[] args)
     {

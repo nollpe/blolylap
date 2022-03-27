@@ -3,28 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenStunned.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenStunned.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/loot/LootImpared.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/loot/LootImpared.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/loot/LootNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/loot/LootNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Equipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/GetLootTakenFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/GetLootTakenFrom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loot/Loot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/Loot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loot/LootImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootImpared.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
@@ -101,7 +82,7 @@
       <workItem from="1648121177402" duration="16000" />
       <workItem from="1648148305918" duration="1039000" />
       <workItem from="1648313729031" duration="16589000" />
-      <workItem from="1648394554077" duration="8072000" />
+      <workItem from="1648394554077" duration="9832000" />
     </task>
     <servers />
   </component>
