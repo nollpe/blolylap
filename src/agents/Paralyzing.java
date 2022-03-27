@@ -1,18 +1,35 @@
 package agents;
 
 import agents.Agent;
+import cast.CastImpared;
+import cast.CastNormal;
 import character.Player;
+import getCastOn.GetCastOnNormal;
+import getLootTakenFrom.LootTakenNormal;
+import getLootTakenFrom.LootTakenStunned;
+import loot.LootImpared;
+import loot.LootNormal;
+import movement.MovementNormal;
+import movement.MovementParalyzed;
 import tester.testerClass;
 
 public class Paralyzing extends Agent
 {
-    public void takeEffect(Player c)
+    public void takeEffect(Player player)
     {
         testerClass.print();
+        player.setLoot(new LootImpared());
+        player.setMovement(new MovementParalyzed());
+        player.setCast(new CastImpared());
+        player.setGetLootTakenFrom(new LootTakenStunned());
     }
 
-    public void loseEffect(Player c)
+    public void loseEffect(Player player)
     {
         testerClass.print();
+        player.setLoot(new LootNormal());
+        player.setMovement(new MovementNormal());
+        player.setCast(new CastNormal());
+        player.setGetLootTakenFrom(new LootTakenNormal());
     }
 }
