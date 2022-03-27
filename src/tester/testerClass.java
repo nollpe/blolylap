@@ -150,6 +150,13 @@ public class testerClass {
     }
 
     //region Tarnay testcase
+
+    /**
+     * A TakeNukleotideFromWarehouse TestCase inicializálása és lefutása
+     * A játékos felvesz valamennyi nukleotide-ot egy raktárból.
+     * Forgatókönyv
+     * A játékos felvesz annyi nukleotid-ot, amennyit képes/akar egy raktárból.
+     */
     private void Test_TakeNukleotideFromWarehouse() {
         //init
         Player c = new Player();
@@ -163,6 +170,12 @@ public class testerClass {
         c.takeNukleotide(1);
     }
 
+    /**
+     * A TakeAminoacidFromWarehouse TestCase inicializálása és lefutása
+     * A játékos felvesz valamennyi aminoacid-ot egy raktárból.
+     * Forgatókönyv
+     * A játékos felvesz annyi aminoacid-ot, ammenyit képes/akar egy raktárból.
+     */
     private void Test_TakeAminoacidFromWarehouse() {
         //init
         Player c = new Player();
@@ -176,6 +189,12 @@ public class testerClass {
         c.takeAminoAcid(1);
     }
 
+    /**
+     * A ViewLootOfWarehouse TestCase inicializálása és lefutása
+     * A játékos megtekinti a raktár tartalmát.
+     * Forgatókönyv
+     * A játékos megtekinti a raktár tartalmát.
+     */
     private void Test_ViewLootOfWarehouse() {
         //init
         Warehouse location = new Warehouse();
@@ -185,7 +204,13 @@ public class testerClass {
         location.showLoot();
     }
 
-    private void TestInit_ViewGeneticCodeOfLaboratory() {
+    /**
+     * A ViewGeneticCodeOfLaboratory TestCase inicializálása és lefutása
+     * A játékos megtekinti a laboratórium tartalmazott genetikus kódját.
+     * Forgatókönyv
+     * A játékos megtekinti a laboratórium tartalmazott genetikus kódját.
+     */
+    private void Test_ViewGeneticCodeOfLaboratory() {
         //init
         Laboratory location = new Laboratory();
         location.init(new GeneticCode(new Forget(), 1,1));
@@ -193,7 +218,13 @@ public class testerClass {
         location.showLoot();
     }
 
-    private void TestInit_LearnGeneticCodeOfLaboratory() {
+    /**
+     * A LearnGeneticCodeOfLaboratory TestCase inicializálása és lefutása
+     * A játékos megtanulja a laboratórium genetikus kódját.
+     * Forgatókönyv
+     * A játékos megtanulja a laboratórium genetikus kódját.
+     */
+    private void Test_LearnGeneticCodeOfLaboratory() {
         //init
         Player c = new Player();
         Laboratory location = new Laboratory();
@@ -206,14 +237,27 @@ public class testerClass {
         c.addGeneticCode(gc);
     }
 
-    private void TestInit_ViewLootOfSafehouse() {
+    /**
+     * A ViewLootOfSafehouse TestCase inicializálása és lefutása
+     * A játékos megtekinti a óvóhelyen lévő védőfelszerelést.
+     * Forgatókönyv
+     * A játékos megtekinti a óvóhelyen lévő védőfelszerelést.
+     */
+    private void Test_ViewLootOfSafehouse() {
         //init
         Safehouse location = new Safehouse();
         //test
         location.showLoot();
     }
 
-    private void TestInit_TakeBagFromSafehouse() {
+    /**
+     * A TakeBagFromSafehouse TestCase inicializálása és lefutása
+     * A játékos felvesz egy zsákot óvóhelyről
+     * Forgatókönyv
+     * A játékos felvesz egy zsákot
+     * A játékos inventoryjába beépül a zsák
+     */
+    private void Test_TakeBagFromSafehouse() {
         //init
         Player c = new Player();
         Bag stored = new Bag();
@@ -228,6 +272,13 @@ public class testerClass {
         c.takeLoot(eq);
     }
 
+    /**
+     * A TakeLabcoatFromSafehouse TestCase inicializálása és lefutása
+     * A játékos felvesz egy köpenyt óvóhelyről
+     * Forgatókönyv
+     * A játékos felvesz egy köpenyt óvóhelyről
+     * A játékos GetCastOnContoller strategy patternje megváltozik, GetCastOnResistant-ra
+     */
     private void TestInit_TakeLabcoatFromSafehouse() {
         //init
         Player c = new Player();
@@ -242,6 +293,13 @@ public class testerClass {
 
     }
 
+    /**
+     * A TakeGlovesFromSafehouse TestCase inicializálása és lefutása
+     * A játékos felvesz egy pár kesztyűt óvóhelyről
+     * Forgatókönyv:
+     * A játékos felvesz egy pár kesztyűt óvóhelyről
+     * A játékos GetCastOnContoller strategy patternje megváltozik, GetCastOnGloves-ra
+     */
     private void TestInit_TakeGlovesFromSafehouse() {
         //init
         Player c = new Player();
