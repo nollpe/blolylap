@@ -1,9 +1,6 @@
 package tester;
 
-import agents.Agent;
-import agents.Chorea;
-import agents.Forget;
-import agents.Invulnerable;
+import agents.*;
 import cast.CastImpared;
 import character.Inventory;
 import character.Player;
@@ -115,6 +112,9 @@ public class testerClass {
     static Game game;
     Invulnerable invulnerable;
     Forget forget;
+    Chorea chorea;
+    Paralyzing paralyzing;
+
 
     /**
      * A virológusok közötti interakciókat teszteli
@@ -273,8 +273,12 @@ public class testerClass {
 
         invulnerable = new Invulnerable();
         forget = new Forget();
+        chorea = new Chorea();
+        paralyzing = new Paralyzing();
         character1.addCastableAgents(invulnerable);
         character1.addCastableAgents(forget);
+        character1.addCastableAgents(chorea);
+        character1.addCastableAgents(paralyzing);
 
         /**
          * Sebezhetetlenné teszi az 5. játékost
