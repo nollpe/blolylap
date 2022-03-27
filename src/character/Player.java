@@ -236,6 +236,11 @@ public class Player {
         equipments.add(eq);
     }
 
+    /**
+     * Elmozdítja a játékost a megadott égtáj felé
+     *
+     * @param dir a megadott égtáj
+     */
     public void move(Direction dir) {
         testerClass.print();
         getMovement().move(dir, this);
@@ -266,6 +271,12 @@ public class Player {
         return equipments;
     }
 
+    /**
+     * Létrehoz egy ágenst
+     *
+     * @param gc a genetikai kód, amiből az ágenst létrehozzuk
+     * @return visszaadja a létrehozott ágenst
+     */
     public Agent makeAgent(GeneticCode gc) {
         testerClass.print();
         return gc.makeAgent(inventory);

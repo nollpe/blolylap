@@ -24,6 +24,10 @@ public class Field {
         return neighbours.get(dir);
     }
 
+    public EnumMap<Direction, Field> getNeighbours() {
+        return neighbours;
+    }
+
     public void enter(Player c) {
         testerClass.print();
         inhabitants.add(c);

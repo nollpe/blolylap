@@ -299,7 +299,11 @@ public class testerClass {
 
     //region Zsolti tesztesetei
 
+    /**
+     * A játékos mozgását teszteli, ha a játékoson nincsen semmilyen mozgást befolyásoló hatás
+     */
     public void normalCharacterMoves() {
+        //inicializálunk
         Player player = new Player();
         MovementNormal movementNormal = new MovementNormal();
         player.setMovement(movementNormal);
@@ -310,6 +314,7 @@ public class testerClass {
         int n = 0;
         Field field2;
 
+        //megkérdezzük, milyen mezőre szeretnénk lépni
         while (!valid) {
             System.out.println("1: Empty Field, 2: Laboratory, 3: Warehouse, 4: Safehouse");
             Scanner input = new Scanner(System.in);
@@ -327,16 +332,22 @@ public class testerClass {
         field1.addNeighbour(field2, Direction.NORTH);
         field2.addNeighbour(field1, Direction.SOUTH);
 
+        //elmozdítjuk a játékost
         player.move(Direction.NORTH);
     }
 
+    /**
+     * A játékos mozgását teszteli, ha a játékos vírustánc alatt áll
+     */
     public void choreaCharacterMoves() {
+        //inicializálunk
         Player player = new Player();
         MovementChorea movementChorea = new MovementChorea();
         player.setMovement(movementChorea);
         Field field1 = new Field();
         player.setLocation(field1);
 
+        //a mezőnek minden irányba rakunk szomszédot, hogy bármelyikbe lépést lehessen tesztelni
         Safehouse field2 = new Safehouse();
         field1.addNeighbour(field2, Direction.NORTH);
         field2.addNeighbour(field1, Direction.SOUTH);
@@ -353,10 +364,15 @@ public class testerClass {
         field1.addNeighbour(field5, Direction.SOUTH);
         field5.addNeighbour(field1, Direction.NORTH);
 
+        //elmozdítjuk a játékost
         player.move(Direction.NORTH);
     }
 
+    /**
+     * A játékos mozgását teszteli, ha a játékos le van bénulva
+     */
     public void paralyzedCharacterMoves() {
+        //inicializálunk
         Player player = new Player();
         MovementParalyzed movementParalyzed = new MovementParalyzed();
         player.setMovement(movementParalyzed);
@@ -364,9 +380,13 @@ public class testerClass {
         Field field1 = new Field();
         player.setLocation(field1);
 
+        //elmozdítjuk a játékost
         player.move(Direction.NORTH);
     }
 
+    /**
+     * Az ágens létrehozását teszteli
+     */
     public void createAgent() {
         Player player = new Player();
         Agent agent;
