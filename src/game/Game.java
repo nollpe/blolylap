@@ -6,30 +6,26 @@ import field.City;
 import field.Field;
 import tester.testerClass;
 
-public class Game
-{
+public class Game {
     private Timer timer;
     private City city;
     private GeneticCode[] AllGeneticCodes;
 
     //privát konstruktor
-    private Game()
-    {
+    private Game() {
 
     }
 
-    public void Tick()
-    {
+    public void Tick() {
         testerClass.print();
         city.tick();
     }
 
     //ebben tároljuk az egyedet
-    private static Game singleInstance=null;
+    private static Game singleInstance = null;
 
     //ezzel tudjuk lekérni az egyedet
-    public static Game getInstance()
-    {
+    public static Game getInstance() {
         testerClass.print();
         //ha még nem létezik létrehozzuk
         if (singleInstance == null)
@@ -38,15 +34,15 @@ public class Game
         return singleInstance;
     }
 
-    public Field spawnPlayer(Player character)
-    {
+    public Field spawnPlayer(Player character) {
         return city.spawnPlayer(character);
     }
 
-    public void setCity(City c){
+    public void setCity(City c) {
         testerClass.print();
         city = c;
     }
+
 }
 /*
  Azért, hogy singleton legyen:

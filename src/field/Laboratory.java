@@ -1,41 +1,37 @@
 package field;
+
 import agents.GeneticCode;
 import tester.testerClass;
 
-public class Laboratory extends Field
-{
+public class Laboratory extends Field {
     private GeneticCode readableGeneticCode;
 
-    public Laboratory()
-    {
+    public Laboratory() {
         super();
         testerClass.print();
     }
 
-    public void showLoot()
-    {
+    public void showLoot() {
         testerClass.print();
     }
 
-    public void tick()
-    {
+    public void tick() {
+        super.tick();
+        testerClass.print();
+
+    }
+
+    public void takeLoot() {
         testerClass.print();
     }
 
-    public void takeLoot()
-    {
-        testerClass.print();
-    }
-
-    public GeneticCode readGeneticCode()
-    {
+    public GeneticCode readGeneticCode() {
         testerClass.print();
         GeneticCode gc = readableGeneticCode.clone();
         return readableGeneticCode;
     }
 
-    public void init(GeneticCode gc)
-    {
+    public void init(GeneticCode gc) {
         testerClass.print();
     }
 }

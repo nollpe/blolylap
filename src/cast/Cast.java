@@ -1,6 +1,5 @@
 package cast;
 
-public interface Cast
-{
+public interface Cast {
     boolean cast();
 }

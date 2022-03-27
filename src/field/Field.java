@@ -2,23 +2,21 @@ package field;
 
 import character.Player;
 import tester.testerClass;
+
 import java.util.LinkedList;
 import java.util.EnumMap;
 
-public class Field
-{
-    private EnumMap<Direction,Field> neighbours;
+public class Field {
+    private EnumMap<Direction, Field> neighbours;
     private LinkedList<Player> inhabitants;
 
-    public Field()
-    {
+    public Field() {
         testerClass.print();
-        this.neighbours=new EnumMap<Direction, Field>(Direction.class);
-        this.inhabitants=new LinkedList<Player>();
+        this.neighbours = new EnumMap<Direction, Field>(Direction.class);
+        this.inhabitants = new LinkedList<Player>();
     }
 
-    public void addNeighbour(Field added, Direction dir)
-    {
+    public void addNeighbour(Field added, Direction dir) {
         neighbours.put(dir, added);
     }
 
@@ -26,37 +24,31 @@ public class Field
         return neighbours.get(dir);
     }
 
-    public void enter(Player c)
-    {
+    public void enter(Player c) {
         testerClass.print();
         inhabitants.add(c);
     }
 
-    public void leave(Player c)
-    {
+    public void leave(Player c) {
         testerClass.print();
     }
 
-    public void showLoot()
-    {
+    public void showLoot() {
         testerClass.print();
     }
 
-    public void tick()
-    {
+    public void tick() {
         testerClass.print();
-        for(Player character:inhabitants)
-        {
+        for (Player character : inhabitants) {
             character.tick();
         }
     }
 
-    public void takeLoot()
-    {
+    public void takeLoot() {
         testerClass.print();
     }
 
-    public LinkedList<Player> getInhabitants(){
+    public LinkedList<Player> getInhabitants() {
         testerClass.print();
         return inhabitants;
     }

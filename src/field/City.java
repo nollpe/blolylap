@@ -8,40 +8,33 @@ import tester.testerClass;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class City
-{
+public class City {
     private LinkedList<Field> map;
 
 
-    public City()
-    {
+    public City() {
         testerClass.print();
-        map=null;
+        map = null;
 
     }
 
-    public void setMap(LinkedList<Field> ll)
-    {
-        map=ll;
+    public void setMap(LinkedList<Field> ll) {
+        map = ll;
     }
 
-    private void makeNeighbours(Field f1,Field f2, Direction dir)
-    {
+    private void makeNeighbours(Field f1, Field f2, Direction dir) {
         f1.addNeighbour(f2, dir);
         f2.addNeighbour(f1, dir.oppositeDirection());
     }
 
-    public void tick()
-    {
+    public void tick() {
         testerClass.print();
-        for(Field f:map)
-        {
+        for (Field f : map) {
             f.tick();
         }
     }
 
-    public void showCity()
-    {
+    public void showCity() {
         testerClass.print();
     }
 
@@ -54,15 +47,16 @@ public class City
      * de kurvaronda
      * kettőspont nagyDé
      * ...
+     *
+     * zsolti: mivel négyzetrácsos a map, ezért teljes gráf már nem lehet, szóval egy kicsit megváltoztattam
      *  */
-    public void generateMap()
-    {
-        map=new LinkedList<Field>();
+    public void generateMap() {
+        map = new LinkedList<Field>();
 
         //létrehozzuk a fieldeket
-        Field basicField=new Field();
-        Laboratory laboratory= new Laboratory();
-        Safehouse safehouse= new Safehouse();
+        Field basicField = new Field();
+        Laboratory laboratory = new Laboratory();
+        Safehouse safehouse = new Safehouse();
         Warehouse warehouse = new Warehouse();
 
         //belerakjuk a mappba
@@ -72,18 +66,18 @@ public class City
         map.add(warehouse);
 
         //szomszédok lettek
-        makeNeighbours(basicField,laboratory, Direction.NORTH);
-        makeNeighbours(basicField,safehouse, Direction.WEST);;
-        makeNeighbours(laboratory,warehouse, Direction.WEST);
-        makeNeighbours(safehouse,warehouse, Direction.NORTH);
+        makeNeighbours(basicField, laboratory, Direction.NORTH);
+        makeNeighbours(basicField, safehouse, Direction.WEST);
+
+        makeNeighbours(laboratory, warehouse, Direction.WEST);
+        makeNeighbours(safehouse, warehouse, Direction.NORTH);
 
         testerClass.print();
     }
 
-    public Field spawnPlayer(Player character)
-    {
-        Random rand=new Random();
-        int randint=rand.nextInt(map.size());
+    public Field spawnPlayer(Player character) {
+        Random rand = new Random();
+        int randint = rand.nextInt(map.size());
         map.get(randint).enter(character);
         return map.get(randint);
     }

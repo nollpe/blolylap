@@ -24,6 +24,7 @@ public enum Direction {
             }
         }
     }
+
     public Direction randomDirection() {
         Random random = new Random();
         return values()[random.nextInt(values().length)];

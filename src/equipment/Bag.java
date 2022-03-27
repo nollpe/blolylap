@@ -1,4 +1,5 @@
 package equipment;
+
 import character.Inventory;
 
 import character.Player;
@@ -6,45 +7,37 @@ import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import tester.testerClass;
 
-public class Bag extends Equipment
-{
+public class Bag extends Equipment {
     private Inventory inventory;
 
-    public void takeEffect(Player c)
-    {
+    public void takeEffect(Player c) {
         testerClass.print();
         c.getInventory().addContents(this);
     }
 
-    public void loseEffect(Player c)
-    {
+    public void loseEffect(Player c) {
         testerClass.print();
         GetCastOnNormal gcon = new GetCastOnNormal();
         c.setGetCastOn(gcon);
     }
 
-    public Bag()
-    {
-        inventory=new Inventory(5);
+    public Bag() {
+        inventory = new Inventory(5);
     }
 
-    public int addNucleotide(int added)
-    {
+    public int addNucleotide(int added) {
         return added;
     }
 
-    public int addAminoAcid(int added)
-    {
+    public int addAminoAcid(int added) {
         return added;
     }
 
-    public int takeAminoAcid(int take)
-    {
+    public int takeAminoAcid(int take) {
         return take;
     }
 
-    public int takeNucleotide(int take)
-    {
+    public int takeNucleotide(int take) {
         return take;
     }
 }

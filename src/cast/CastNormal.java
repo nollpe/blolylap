@@ -2,11 +2,9 @@ package cast;
 
 import tester.testerClass;
 
-public class CastNormal implements Cast
-{
+public class CastNormal implements Cast {
     @Override
-    public boolean cast()
-    {
+    public boolean cast() {
         testerClass.print();
         return true;
     }

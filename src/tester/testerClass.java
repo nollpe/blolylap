@@ -37,17 +37,36 @@ public class testerClass {
     }
 
     //region norbi tesztek
-    public void wiewCity() {
+    public void viewCity() {
         City c = new City();
         c.showCity();
     }
 
     public void startGame() {
         Game game = Game.getInstance();
+        City city = new City();
+        city.generateMap();
+        game.setCity(city);
     }
 
     public void endTurn() {
         Timer timer = Timer.getInstance();
+        Game game = Game.getInstance();
+        City city = new City();
+        city.generateMap();
+        game.setCity(city);
+        Player player = new Player();
+        game.spawnPlayer(player);
+
+        Agent chorea = new Chorea();
+        Agent forget = new Forget();
+        Agent invulnerable = new Invulnerable();
+        Agent paralyzing = new Paralyzing();
+        player.addCastableAgent(chorea);
+        player.addCastableAgent(forget);
+        player.addCastableAgent(invulnerable);
+        player.addCastableAgent(paralyzing);
+
         timer.tick();
     }
 
@@ -173,7 +192,6 @@ public class testerClass {
         character2.setGetLootTakenFrom(lts);
 
     }
-
     //endregion
 
     //region Tarnay testcase
@@ -373,10 +391,11 @@ public class testerClass {
     }
     //endregion
 
-
     public static void main(String[] args) {
         testerClass ts = new testerClass();
         ts.agentExpires();
-        ts.lootEquipment();
+        ts.viewCity();
+        ts.startGame();
+        ts.endTurn();
     }
 }

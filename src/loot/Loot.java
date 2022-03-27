@@ -2,7 +2,6 @@ package loot;
 
 import character.Player;
 
-public interface Loot
-{
+public interface Loot {
     boolean loot(Player p1);
 }
