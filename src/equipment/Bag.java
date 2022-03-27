@@ -11,7 +11,7 @@ public class Bag extends Equipment {
 
     public void takeEffect(Player c) {
         testerClass.print();
-        c.getInventory().addContents(this);
+        c.addEquipment(this);
     }
 
     public void loseEffect(Player c) {
