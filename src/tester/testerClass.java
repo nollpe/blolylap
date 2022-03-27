@@ -5,13 +5,19 @@ import agents.Chorea;
 import agents.Forget;
 import agents.Invulnerable;
 import character.Player;
+import equipment.Bag;
+import equipment.Gloves;
+import equipment.Labcoat;
 import field.City;
+import field.Field;
 import game.Game;
 import game.Timer;
+import getLootTakenFrom.LootTakenStunned;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class testerClass {
 
@@ -92,10 +98,75 @@ public class testerClass {
 
     }
 
+
+    static Player character1;
+    static Player character2;
+    static Player character3;
+    private void lootEquipment(){
+        System.out.println("Válassz gec: \n1-Védőfelszerelést ellopása karaktertől\n2-idk");
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        switch (s){
+            case "1":
+                TestInit1();
+                Test1();
+                break;
+            case "2":
+                TestInit1();
+                Test2();
+                break;
+            default:
+                System.out.println("Ilyen nincs is fogykos");
+        }
+    }
+
+    private void TestInit1() {
+        Game game = Game.getInstance();
+        City city = new City();
+        game.setCity(city);
+        city.generateMap();
+
+        character1 = new Player();
+        character2 = new Player();
+        character3 = new Player();
+        Field field = new Field();
+        field.enter(character1);
+        field.enter(character2);
+        field.enter(character3);
+        character1.setLocation(field);
+        character2.setLocation(field);
+        character3.setLocation(field);
+
+
+        Gloves gloves = new Gloves();
+        Bag bag = new Bag();
+        Labcoat labcoat = new Labcoat();
+
+        character2.addEquipment(gloves);
+        character2.addEquipment(labcoat);
+        character2.addEquipment(bag);
+
+        LootTakenStunned lts = new LootTakenStunned();
+        character2.setGetLootTakenFrom(lts);
+
+    }
+
+    private void Test1(){
+
+        character1.loot();
+    }
+
+    private void Test2(){
+        character1.loot();
+    }
+
+
+
+
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();
         ts.agentExpires();
-
+        ts.lootEquipment();
     }
 }

@@ -1,6 +1,8 @@
 package loot;
 
+import character.Player;
+
 public interface Loot
 {
-    boolean loot();
+    boolean loot(Player p1);
 }
