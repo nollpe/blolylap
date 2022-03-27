@@ -1,4 +1,5 @@
 package getLootTakenFrom;
+import character.Inventory;
 import character.Player;
 import equipment.Equipment;
 import tester.testerClass;
@@ -22,17 +23,35 @@ public class LootTakenStunned implements GetLootTakenFrom
         return succes;
     }
 
+    /**
+     * Nukleotide elvétele a karaktertől.
+     * @param takenTry Ennyit próbálnak meg elvenni tőle
+     * @param player A karakter, akitől elveszik az anyagot.
+     * @return Amennyit sikerült elvenni tőle (ha többet próbálnak elvenni tőle, mint amennyi van nála, akkor annyit ad
+     * oda, amennyi van neki).
+     */
     @Override
-    public int getNucleotideTakenFrom(int taken)
+    public int getNucleotideTakenFrom(int takenTry, Player player)
     {
         testerClass.print();
-        return taken;
+        Inventory inventory = player.getInventory();
+        int takenActual = inventory.takeNucleotide(takenTry);
+        return takenActual;
     }
 
+    /**
+     * Aminosav elvétele a karaktertől.
+     * @param takenTry Ennyit próbálnak meg elvenni tőle
+     * @param player A karakter, akitől elveszik az anyagot.
+     * @return Amennyit sikerült elvenni tőle (ha többet próbálnak elvenni tőle, mint amennyi van nála, akkor annyit ad
+     * oda, amennyi van neki).
+     */
     @Override
-    public int getAminoAcidTakenFrom(int taken)
+    public int getAminoAcidTakenFrom(int takenTry, Player player)
     {
         testerClass.print();
-        return taken;
+        Inventory inventory = player.getInventory();
+        int takenActual = inventory.takeAminoAcid(takenTry);
+        return takenActual;
     }
 }

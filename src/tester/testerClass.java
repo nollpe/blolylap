@@ -120,7 +120,7 @@ public class testerClass {
         int n = 0;
         boolean valid = false;
         while(!valid){
-            System.out.println("Kérlek válassz egy : \n1-Lootolás karaktertől\n2-idk");
+            System.out.println("Kérlek válassz egy tesztesetet: \n1-Lootolás karaktertől\n2-idk");
             Scanner input = new Scanner(System.in);
             n = Integer.parseInt(input.nextLine());
             /**
@@ -134,12 +134,11 @@ public class testerClass {
          */
         switch (n){
             case 1:
-                LootEquipmentFromCharacterInit();
+                LootFromCharacterInit();
                 LootFromCharacterTest();
                 break;
             case 2:
-               // LootEquipmentFromCharacterInit();
-                //LootAminoAndNukletoideFromCharacterTest();
+
                 break;
             default:
                 System.out.println("Ilyen  teszteset nincs");
@@ -150,7 +149,7 @@ public class testerClass {
      * Equipment lootoláshoz tartozó tesztekhez.
      * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
      */
-    private void LootEquipmentFromCharacterInit() {
+    private void LootFromCharacterInit() {
         /**
          * létrehozása a játékot és a várost  illetve összekapcsolja őket.
          */

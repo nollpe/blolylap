@@ -3,7 +3,7 @@ import character.Player;
 import equipment.Equipment;
 
 /**
- * A lootolás elszenvedésének absztrakt ősosztálya.
+ * A lootolás elszenvedésének ősosztálya.
  * Az osztály leszármazottjai valósítják meg a lootolás elszenvedését  a különböző állapotokban.
  */
 public interface GetLootTakenFrom
@@ -15,6 +15,6 @@ public interface GetLootTakenFrom
      * @return A lootolás sikeressége.
      */
     boolean getEquipmentTakenFrom(Equipment e, Player player);
-    int getNucleotideTakenFrom(int taken);
-    int getAminoAcidTakenFrom(int taken);
+    int getNucleotideTakenFrom(int taken, Player player);
+    int getAminoAcidTakenFrom(int taken, Player player);
 }

@@ -4,8 +4,9 @@
     <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/GetLootTakenFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/GetLootTakenFrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
@@ -82,7 +83,8 @@
       <workItem from="1648121177402" duration="16000" />
       <workItem from="1648148305918" duration="1039000" />
       <workItem from="1648313729031" duration="16589000" />
-      <workItem from="1648394554077" duration="9832000" />
+      <workItem from="1648394554077" duration="9928000" />
+      <workItem from="1648404630823" duration="4026000" />
     </task>
     <servers />
   </component>

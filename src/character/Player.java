@@ -168,13 +168,19 @@ public class Player {
     {
         testerClass.print();return false;
     }
+
     public int takeNukleotide(int i)
     {
-        testerClass.print();return 0;
+        testerClass.print();
+        int taken = getLootTakenFrom.getNucleotideTakenFrom(i,this);
+        return taken;
+
     }
     public int takeAminoAcid(int i)
     {
-        testerClass.print();return 0;
+        testerClass.print();
+        int taken = getLootTakenFrom.getAminoAcidTakenFrom(i,this);
+        return taken;
     }
     public LinkedList<Equipment> showLoot()
     {
@@ -243,8 +249,21 @@ public class Player {
         return equipments;
     }
 
+    /**
+     * Beállítja a karakterhez tartozó inventoryt.
+     * @param i A karakterhez tartozó inventory.
+     */
     public void setInventory(Inventory i){
+        testerClass.print();
         inventory = i;
+    }
+
+    /**
+     * Megadja karakterhez tartozó inventoryt.
+     * @returni A karakterhez tartozó inventory.
+     */
+    public Inventory getInventory(){
+        return inventory;
     }
     //endregion
 }

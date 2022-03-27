@@ -22,16 +22,27 @@ public class LootTakenNormal implements GetLootTakenFrom
         return false;
     }
 
-
+    /**
+     * Nukleotide elvétele karaktertől normál állapotban. Mivel nincs lebénulva, nem lehet tőle lootolni.
+     * @param takenTry Ennyit próbálnak meg elvenni tőle
+     * @param player A karakter, akitől elveszik az anyagot.
+     * @return Amennyit sikerült elvenni tőle. Ebben az esetben 0.
+     */
     @Override
-    public int getNucleotideTakenFrom(int taken)
+    public int getNucleotideTakenFrom(int takenTry, Player player)
     {
         testerClass.print();
         return 0;
     }
 
+    /**
+     * Aminosav elvétele karaktertől normál állapotban. Mivel nincs lebénulva, nem lehet tőle lootolni.
+     * @param takenTry Ennyit próbálnak meg elvenni tőle
+     * @param player A karakter, akitől elveszik az anyagot.
+     * @return Amennyit sikerült elvenni tőle. Ebben az esetben 0.
+     */
     @Override
-    public int getAminoAcidTakenFrom(int taken)
+    public int getAminoAcidTakenFrom(int takenTry, Player player)
     {
         testerClass.print();
         return 0;
