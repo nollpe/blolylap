@@ -19,6 +19,7 @@ public class Safehouse extends Field
     public Safehouse()
     {
         super();
+        stored=null;
         testerClass.print();
     }
 
@@ -31,6 +32,34 @@ public class Safehouse extends Field
     {
         testerClass.print();
         super.tick();
+
+        if(stored==null)
+        {
+            System.out.println("Mit generáljon a safehouse?\n1:kesztyű\n2:köpeny\n3:tatyó\n0:semmit");
+            int chosen=0;
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            try {
+                chosen=Integer.parseInt(br.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            switch (chosen)
+            {
+                case(1):
+                    stored=new Gloves();
+                    break;
+                case(2):
+                    stored=new Gloves();
+                    break;
+                case(3):
+                    stored=new Bag();
+                    break;
+                case(0):
+                    break;
+                default:
+                    System.out.println("ez nem jött be bruhtyókám");
+            }
+        }
     }
 
     public void takeLoot()

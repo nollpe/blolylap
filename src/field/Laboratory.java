@@ -19,7 +19,9 @@ public class Laboratory extends Field
 
     public void tick()
     {
+        super.tick();
         testerClass.print();
+
     }
 
     public void takeLoot()
