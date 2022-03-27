@@ -36,7 +36,7 @@ public class testerClass {
     }
 
     //region norbi tesztek
-    public void wiewCity()
+    public void viewCity()
     {
         City c= new City();
         c.showCity();
@@ -314,13 +314,11 @@ public class testerClass {
     }
     //endregion
 
-
-
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();
         ts.agentExpires();
-        ts.wiewCity();
+        ts.viewCity();
         ts.startGame();
         ts.endTurn();
     }

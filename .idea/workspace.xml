@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
-    </list>
+    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +33,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.testerClass">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
