@@ -379,6 +379,10 @@ public class testerClass {
         player.move(Direction.NORTH);
     }
 
+    public void createAgent() {
+        Player player = new Player();
+    }
+
     //endregion
 
     private void Test1() {

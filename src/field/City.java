@@ -38,8 +38,8 @@ public class City {
         testerClass.print();
     }
 
-    /*
-     * egyenlőre legyen egy egyszerű 4 elemből álló teljes gráf amiben mindenféle field létezik egyszer
+    /**
+     * egyelőre legyen egy egyszerű 4 elemből álló teljes gráf amiben mindenféle field létezik egyszer
      * véletlenül sem azért mert még foggalmam sincs hogy hogyan kéne kinéznie
      * vagy hogyan kéne megcsinálni...
      * ha van ötlet pls mindjátok
@@ -47,9 +47,9 @@ public class City {
      * de kurvaronda
      * kettőspont nagyDé
      * ...
-     *
+     * <p>
      * zsolti: mivel négyzetrácsos a map, ezért teljes gráf már nem lehet, szóval egy kicsit megváltoztattam
-     *  */
+     */
     public void generateMap() {
         map = new LinkedList<Field>();
 

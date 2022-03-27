@@ -3,41 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="idk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/GetLootTakenFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/GetLootTakenFrom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loot/Loot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/Loot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loot/LootImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootImpared.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementChorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementChorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648417743428</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="idk">
+      <created>1648418846218</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648418846218</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

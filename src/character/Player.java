@@ -210,6 +210,20 @@ public class Player {
     }
     //endregion
 
+
+    //region adderek removerek
+    public void addActiveAgent(Agent agent) {
+        activeAgents.add(agent);
+    }
+
+    public void removeActiveAgent(Agent agent) {
+        activeAgents.remove(agent);
+    }
+
+    public void forgetAllGeneticCodes() {
+        knownGeneticCodes = new LinkedList<GeneticCode>();
+    }
+
     public void addGeneticCode(GeneticCode gc) {
         testerClass.print();
         knownGeneticCodes.add(gc);
@@ -227,19 +241,6 @@ public class Player {
     public void move(Direction dir) {
         testerClass.print();
         getMovement().move(dir, this);
-    }
-
-    //region adderek removerek
-    public void addActiveAgent(Agent agent) {
-        activeAgents.add(agent);
-    }
-
-    public void removeActiveAgent(Agent agent) {
-        activeAgents.remove(agent);
-    }
-
-    public void forgetAllGeneticCodes() {
-        knownGeneticCodes = new LinkedList<GeneticCode>();
     }
 
     public Field getLocation() {
