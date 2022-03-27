@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a2296cf8-8e43-4d96-9911-f99976c5b246" name="Changes" comment="én már nem is">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementChorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementChorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648422005170</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="én már nem is">
+      <created>1648423463663</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648423463663</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

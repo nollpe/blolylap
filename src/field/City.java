@@ -20,6 +20,13 @@ public class City {
         map = ll;
     }
 
+    /**
+     * Beállít két mezőt szomszédosnak
+     *
+     * @param f1  az egyik mező
+     * @param f2  a másik mező
+     * @param dir megadja, hogy a második mező milyen irányban van az első mezőhöz képest
+     */
     private void makeNeighbours(Field f1, Field f2, Direction dir) {
         f1.addNeighbour(f2, dir);
         f2.addNeighbour(f1, dir.oppositeDirection());
