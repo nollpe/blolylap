@@ -4,14 +4,18 @@ import agents.Agent;
 import character.Player;
 import tester.testerClass;
 
+import java.util.LinkedList;
+
 public class Forget extends Agent
 {
-    public void takeEffect(Player c)
+    //LinkedList<GeneticCode> forgotten;
+    public void takeEffect(Player player)
     {
         testerClass.print();
+        player.forgetAllGeneticCodes();
     }
 
-    public void loseEffect(Player c)
+    public void loseEffect(Player player)
     {
         testerClass.print();
     }

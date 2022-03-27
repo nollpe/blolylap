@@ -185,5 +185,10 @@ public class Player {
     {
         activeAgents.remove(agent);
     }
+
+    public void forgetAllGeneticCodes()
+    {
+        knownGeneticCodes=new LinkedList<GeneticCode>();
+    }
     //endregion
 }
