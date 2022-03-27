@@ -1,6 +1,5 @@
 package agents;
 
-import agents.Agent;
 import cast.CastImpared;
 import cast.CastNormal;
 import character.Player;

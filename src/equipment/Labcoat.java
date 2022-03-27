@@ -1,7 +1,6 @@
 package equipment;
 
 import character.Player;
-import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import getCastOn.GetCastOnResistant;
 import tester.testerClass;

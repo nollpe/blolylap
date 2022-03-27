@@ -39,16 +39,16 @@ public class Player {
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     public Player() {
-        activeAgents = new LinkedList<Agent>();
-        castableAgents = new LinkedList<Agent>();
+        activeAgents = new LinkedList<>();
+        castableAgents = new LinkedList<>();
         inventory = new Inventory(10);
-        equipments = new LinkedList<Equipment>();
+        equipments = new LinkedList<>();
         movement = new MovementNormal();
         cast = new CastNormal();
         getCastOn = new GetCastOnNormal();
         getLootTakenFrom = new LootTakenNormal();
         loot = new LootNormal();
-        knownGeneticCodes = new LinkedList<GeneticCode>();
+        knownGeneticCodes = new LinkedList<>();
         game = Game.getInstance();
         //location=game.spawnPlayer(this);
     }
@@ -154,8 +154,7 @@ public class Player {
      */
     public boolean getLootTakenFrom(Equipment e) {
         testerClass.print();
-        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e, this);
-        return succes;
+        return getLootTakenFrom.getEquipmentTakenFrom(e, this);
     }
 
     public void loot() {
@@ -185,8 +184,7 @@ public class Player {
         testerClass.print();
         Warehouse wh = (Warehouse) location;
         int d2 = wh.getStored().takeNucleotide(d1);
-        int d3 = inventory.addNucleotide(d2);
-        return d3;
+        return inventory.addNucleotide(d2);
     }
 
     /**
@@ -221,7 +219,7 @@ public class Player {
     }
 
     public void forgetAllGeneticCodes() {
-        knownGeneticCodes = new LinkedList<GeneticCode>();
+        knownGeneticCodes = new LinkedList<>();
     }
 
     public void addGeneticCode(GeneticCode gc) {

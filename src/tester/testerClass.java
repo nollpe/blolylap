@@ -80,7 +80,7 @@ public class testerClass {
         Agent agent = null;
 
         timer.setGame();
-        LinkedList<Field> map = new LinkedList<Field>();
+        LinkedList<Field> map = new LinkedList<>();
         map.add(field);
         city.setMap(map);
         game.setCity(city);
@@ -104,10 +104,10 @@ public class testerClass {
                     agent = new Invulnerable();
                     break;
                 case (2):
-                    agent = new Invulnerable();
+                    agent = new Chorea();
                     break;
                 case (3):
-                    agent = new Chorea();
+                    agent = new Paralyzing();
                     break;
                 case (4):
                     agent = new Forget();
@@ -127,11 +127,8 @@ public class testerClass {
             e.printStackTrace();
         }
         switch (chosen) {
-            case (2):
-                player.addActiveAgent(agent);
-                break;
-            case (1):
-                player.addCastableAgent(agent);
+            case (2) -> player.addActiveAgent(agent);
+            case (1) -> player.addCastableAgent(agent);
         }
         timer.tick();
 
@@ -149,16 +146,15 @@ public class testerClass {
         Scanner input = new Scanner(System.in);
         String s = input.nextLine();
         switch (s) {
-            case "1":
+            case "1" -> {
                 TestInit1();
                 Test1();
-                break;
-            case "2":
+            }
+            case "2" -> {
                 TestInit1();
                 Test2();
-                break;
-            default:
-                System.out.println("Ilyen nincs is fogykos");
+            }
+            default -> System.out.println("Ilyen nincs is fogykos");
         }
     }
 
@@ -269,7 +265,7 @@ public class testerClass {
         location.enter(c);
         location.setStored(stored);
         //test
-        Equipment eq = ((Safehouse) location).getStored();
+        Equipment eq = location.getStored();
         c.takeLoot(eq);
     }
 
@@ -282,7 +278,7 @@ public class testerClass {
         location.enter(c);
         location.setStored(stored);
         //test
-        Equipment eq = ((Safehouse) location).getStored();
+        Equipment eq = location.getStored();
         c.takeLoot(eq);
 
     }
@@ -296,7 +292,7 @@ public class testerClass {
         location.enter(c);
         location.setStored(stored);
         //test
-        Equipment eq = ((Safehouse) location).getStored();
+        Equipment eq = location.getStored();
         c.takeLoot(eq);
     }
     //endregion
@@ -322,18 +318,10 @@ public class testerClass {
         }
 
         switch (n) {
-            case 2 -> {
-                field2 = new Laboratory();
-            }
-            case 3 -> {
-                field2 = new Warehouse();
-            }
-            case 4 -> {
-                field2 = new Safehouse();
-            }
-            default -> {
-                field2 = new Field();
-            }
+            case 2 -> field2 = new Laboratory();
+            case 3 -> field2 = new Warehouse();
+            case 4 -> field2 = new Safehouse();
+            default -> field2 = new Field();
         }
 
         field1.addNeighbour(field2, Direction.NORTH);
@@ -381,6 +369,31 @@ public class testerClass {
 
     public void createAgent() {
         Player player = new Player();
+        Agent agent;
+
+        boolean valid = false;
+        int n = 0;
+
+        while (!valid) {
+            System.out.println("1: Chorea, 2: Forget, 3: Invulnerable, 4: Paralyzing");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if (n > 0 && n < 5) valid = true;
+        }
+
+        switch (n) {
+            case 2 -> agent = new Forget();
+            case 3 -> agent = new Invulnerable();
+            case 4 -> agent = new Paralyzing();
+            default -> agent = new Chorea();
+        }
+
+
+        GeneticCode geneticCode = new GeneticCode(agent, 5, 5);
+        player.getInventory().addAminoAcid(5);
+        player.getInventory().addNucleotide(5);
+
+        player.makeAgent(geneticCode);
     }
 
     //endregion

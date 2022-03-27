@@ -12,8 +12,8 @@ public class Field {
 
     public Field() {
         testerClass.print();
-        this.neighbours = new EnumMap<Direction, Field>(Direction.class);
-        this.inhabitants = new LinkedList<Player>();
+        this.neighbours = new EnumMap<>(Direction.class);
+        this.inhabitants = new LinkedList<>();
     }
 
     public void addNeighbour(Field added, Direction dir) {

@@ -1,6 +1,5 @@
 package agents;
 
-import agents.Agent;
 import character.Player;
 import tester.testerClass;
 

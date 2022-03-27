@@ -4,13 +4,11 @@ import equipment.Bag;
 import equipment.Equipment;
 import equipment.Gloves;
 import equipment.Labcoat;
-import field.Field;
 import tester.testerClass;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 
 public class Safehouse extends Field {
     private Equipment stored;
@@ -43,7 +41,7 @@ public class Safehouse extends Field {
                     stored = new Gloves();
                     break;
                 case (2):
-                    stored = new Gloves();
+                    stored = new Labcoat();
                     break;
                 case (3):
                     stored = new Bag();

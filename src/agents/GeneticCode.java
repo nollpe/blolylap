@@ -2,7 +2,6 @@ package agents;
 
 import character.Inventory;
 
-import agents.Agent;
 import tester.testerClass;
 
 /**

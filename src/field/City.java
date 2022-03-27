@@ -1,8 +1,6 @@
 package field;
 
 import character.Player;
-import field.Field;
-import game.Timer;
 import tester.testerClass;
 
 import java.util.LinkedList;
@@ -51,7 +49,7 @@ public class City {
      * zsolti: mivel négyzetrácsos a map, ezért teljes gráf már nem lehet, szóval egy kicsit megváltoztattam
      */
     public void generateMap() {
-        map = new LinkedList<Field>();
+        map = new LinkedList<>();
 
         //létrehozzuk a fieldeket
         Field basicField = new Field();

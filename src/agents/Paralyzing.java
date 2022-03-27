@@ -1,10 +1,8 @@
 package agents;
 
-import agents.Agent;
 import cast.CastImpared;
 import cast.CastNormal;
 import character.Player;
-import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.LootTakenNormal;
 import getLootTakenFrom.LootTakenStunned;
 import loot.LootImpared;

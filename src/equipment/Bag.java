@@ -3,7 +3,6 @@ package equipment;
 import character.Inventory;
 
 import character.Player;
-import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import tester.testerClass;
 
