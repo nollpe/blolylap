@@ -55,6 +55,10 @@ public class City
      * kettőspont nagyDé
      * ...
      *  */
+
+    /**
+     * generál egy 4 mezőből álló pályát amiben mindenféle mező megjelenik és mindegyik szomszédja mindegyiknek
+     */
     public void generateMap()
     {
         map=new LinkedList<Field>();
@@ -82,6 +86,11 @@ public class City
         testerClass.print();
     }
 
+    /**
+     * Egy karaktert lerak a pályára egy random helyre
+     * @param character a player akit le kell rakni a pályán
+     * @return a mező ahova lerakta
+     */
     public Field spawnPlayer(Player character)
     {
         Random rand=new Random();
