@@ -30,7 +30,7 @@ public class Warehouse extends Field
         testerClass.print();
         super.tick();
 
-        System.out.println("mennyi amino acid és nucleotide termelődjön(1-5)?: \n <int>\n<int>");
+        System.out.println("mennyi amino acid és nucleotide termelődjön(1-5)?: \n<int>\n<int>");
 
         int nuc=0;
         int ami=0;
@@ -41,10 +41,10 @@ public class Warehouse extends Field
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stored.addAminoAcid(ami);
-        stored.addNucleotide(nuc);
         //mAgAS sZInTű nYElv
         //chosen=getchar();
+        stored.addAminoAcid(ami);
+        stored.addNucleotide(nuc);
 
 
     }

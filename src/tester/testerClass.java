@@ -45,11 +45,30 @@ public class testerClass {
     public void startGame()
     {
         Game game= Game.getInstance();
+        City city=new City();
+        city.generateMap();
+        game.setCity(city);
     }
 
     public void endTurn()
     {
-        Timer timer= Timer.getInstance();
+        Timer timer=Timer.getInstance();
+        Game game= Game.getInstance();
+        City city=new City();
+        city.generateMap();
+        game.setCity(city);
+        Player player=new Player();
+        game.spawnPlayer(player);
+
+        Agent chorea=new Chorea();
+        Agent forget=new Forget();
+        Agent invulnerable=new Invulnerable();
+        Agent paralyzing=new Paralyzing();
+        player.addCastableAgent(chorea);
+        player.addCastableAgent(forget);
+        player.addCastableAgent(invulnerable);
+        player.addCastableAgent(paralyzing);
+
         timer.tick();
     }
 
@@ -177,6 +196,7 @@ public class testerClass {
         character2.setGetLootTakenFrom(lts);
 
     }
+    //endregion
 
     //region Tarnay testcase
     private void Test_TakeNukleotideFromWarehouse() {
@@ -283,7 +303,6 @@ public class testerClass {
         Equipment eq = ((Safehouse)location).getStored();
         c.takeLoot(eq);
     }
-    //endregion
 
     private void Test1(){
 
@@ -301,6 +320,8 @@ public class testerClass {
     {
         testerClass ts=new testerClass();
         ts.agentExpires();
-        ts.lootEquipment();
+        ts.wiewCity();
+        ts.startGame();
+        ts.endTurn();
     }
 }
