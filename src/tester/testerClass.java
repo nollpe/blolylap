@@ -38,6 +38,11 @@ public class testerClass {
         timer.tick();
     }
 
+    public void agentExpires()
+    {
+        System.out.println("");
+    }
+
     public static void main(String[] args)
     {
 

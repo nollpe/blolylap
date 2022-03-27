@@ -19,24 +19,64 @@ public class Inventory
     public int addNucleotide(int added)
     {
         testerClass.print();
-        return added;
+        if(aminoAcid+nucleotide+added<=maxResource)
+        {
+            nucleotide+=added;
+            return added;
+        }
+        else
+        {
+            int actuallyAdded=maxResource-aminoAcid-nucleotide;
+            nucleotide+=actuallyAdded;
+            return actuallyAdded;
+        }
     }
 
     public int addAminoAcid(int added)
     {
         testerClass.print();
-        return added;
+        if(aminoAcid+nucleotide+added<=maxResource)
+        {
+            aminoAcid+=added;
+            return added;
+        }
+        else
+        {
+            int actuallyAdded=maxResource-aminoAcid-nucleotide;
+            aminoAcid+=actuallyAdded;
+            return actuallyAdded;
+        }
     }
 
     public int takeAminoAcid(int take)
     {
         testerClass.print();
-        return take;
+        if(take<=aminoAcid)
+        {
+            aminoAcid-=take;
+            return take;
+        }
+        else
+        {
+            int temp=aminoAcid;
+            aminoAcid=0;
+            return temp;
+        }
     }
 
     public int takeNucleotide(int take)
     {
         testerClass.print();
-        return take;
+        if(take<=nucleotide)
+        {
+            nucleotide-=take;
+            return take;
+        }
+        else
+        {
+            int temp=nucleotide;
+            nucleotide=0;
+            return temp;
+        }
     }
 }
