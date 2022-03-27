@@ -14,7 +14,7 @@ public class Chorea extends Agent
 {
     public void takeEffect(Player player)
     {
-        testerClass.print();
+       testerClass.print();
         player.setCast(new CastImpared());
         player.setMovement(new MovementChorea());
         player.setLoot(new LootImpared());

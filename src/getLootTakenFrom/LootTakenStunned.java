@@ -1,15 +1,16 @@
 package getLootTakenFrom;
+import character.Player;
 import equipment.Equipment;
 import tester.testerClass;
 
 public class LootTakenStunned implements GetLootTakenFrom
 {
     @Override
-    public boolean getEquipmentTakenFrom(Equipment e)
+    public boolean getEquipmentTakenFrom(Equipment e, Player player)
     {
-
+        player.takeLoot(e);
         testerClass.print();
-        return false;
+        return true;
     }
 
     @Override

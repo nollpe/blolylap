@@ -24,6 +24,7 @@ public class Field
     public void enter(Player c)
     {
         testerClass.print();
+        inhabitants.add(c);
     }
 
     public void leave(Player c)
@@ -48,5 +49,10 @@ public class Field
     public void takeLoot()
     {
         testerClass.print();
+    }
+
+    public LinkedList<Player> getInhabitants(){
+        testerClass.print();
+        return inhabitants;
     }
 }

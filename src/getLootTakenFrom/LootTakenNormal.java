@@ -1,4 +1,5 @@
 package getLootTakenFrom;
+import character.Player;
 import equipment.Equipment;
 import tester.testerClass;
 
@@ -6,7 +7,7 @@ public class LootTakenNormal implements GetLootTakenFrom
 {
 
     @Override
-    public boolean getEquipmentTakenFrom(Equipment e)
+    public boolean getEquipmentTakenFrom(Equipment e, Player player)
     {
         testerClass.print();
         return false;
