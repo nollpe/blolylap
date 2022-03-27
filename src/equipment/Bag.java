@@ -13,7 +13,7 @@ public class Bag extends Equipment
     public void takeEffect(Player c)
     {
         testerClass.print();
-        c.getInventory().addContents(this);
+        c.addEquipment(this);
     }
 
     public void loseEffect(Player c)
@@ -28,23 +28,42 @@ public class Bag extends Equipment
         inventory=new Inventory(5);
     }
 
+    /**
+     *
+     * @param added ennyi nucleotidot akarunk belerakni
+     * @return ennyi nukleotidot sikerült belerakni
+     */
     public int addNucleotide(int added)
     {
-        return added;
+        return inventory.addNucleotide(added);
     }
-
+    /**
+     *
+     * @param added ennyi aminosavat akarunk belerakni
+     * @return ennyi aminosavat sikerült belerakni
+     */
     public int addAminoAcid(int added)
     {
-        return added;
+        return inventory.addAminoAcid(added);
     }
 
+    /**
+     *
+     * @param take ennyi amiosavat akarunk kivenni
+     * @return ennyi aminosavat sikerült kivenni
+     */
     public int takeAminoAcid(int take)
     {
-        return take;
+        return inventory.takeAminoAcid(take);
     }
 
+    /**
+     *
+     * @param take ennyi nukleotidot akarunk kivenni
+     * @return ennyi nukleotidot sikerült kivenni
+     */
     public int takeNucleotide(int take)
     {
-        return take;
+        return inventory.takeNucleotide(take);
     }
 }
