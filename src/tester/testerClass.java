@@ -314,8 +314,6 @@ public class testerClass {
     }
     //endregion
 
-
-
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();
