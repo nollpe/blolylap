@@ -15,6 +15,7 @@ import getLootTakenFrom.LootTakenStunned;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class testerClass {
@@ -34,6 +35,7 @@ public class testerClass {
         System.out.println(filler + className + " " + methodName1);
     }
 
+    //region norbi tesztek
     public void wiewCity()
     {
         City c= new City();
@@ -45,7 +47,7 @@ public class testerClass {
         Game game= Game.getInstance();
     }
 
-    public void end_turn()
+    public void endTurn()
     {
         Timer timer= Timer.getInstance();
         timer.tick();
@@ -53,14 +55,26 @@ public class testerClass {
 
     public void agentExpires()
     {
-        Player ribanc=new Player();
+        //region változó deklarációk
+        Timer timer=Timer.getInstance();
+        Game game=Game.getInstance();
+        City city=new City();
+        Field field=new Field();
+        Player player=new Player();
         Agent agent=null;
-        System.out.println("melyik agens?\n1:Invulnerable\n2:Chorea\n3:Paralyzing\n4:Forget\n0:kilép");
+
+        timer.setGame();
+        LinkedList<Field> map=new LinkedList<Field>();map.add(field);
+        city.setMap(map);
+        game.setCity(city);
+        field.enter(player);
+
+        //endregion
+
         int chosen=0;
-
-
         while(agent==null)
         {
+            System.out.println("melyik agens?\n1:Invulnerable\n2:Chorea\n3:Paralyzing\n4:Forget\n0:kilép");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
                 chosen=Integer.parseInt(br.readLine());
@@ -89,14 +103,29 @@ public class testerClass {
                     break;
             }
         }
-
-        agent.takeEffect(ribanc);
-        System.out.println("lose effect:");
-        agent.loseEffect(ribanc);
+        agent.setTimeToLive(1);
+        System.out.println("felkenhető(1) vagy felkent(2) ágens legyen?");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            chosen=Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        switch (chosen)
+        {
+            case (2):
+                player.addActiveAgent(agent);
+                break;
+            case(1):
+                player.addCastableAgent(agent);
+        }
+        timer.tick();
 
     }
 
+    //endregion
 
+    //region szusi tesztek
     static Player character1;
     static Player character2;
     static Player character3;
@@ -264,7 +293,7 @@ public class testerClass {
     private void Test2(){
         character1.loot();
     }
-
+    //endregion
 
 
 

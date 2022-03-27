@@ -8,6 +8,11 @@ import java.util.LinkedList;
 
 public class Forget extends Agent
 {
+    public Forget()
+    {
+        super();
+        testerClass.print();
+    }
     //LinkedList<GeneticCode> forgotten;
     public void takeEffect(Player player)
     {
@@ -18,5 +23,6 @@ public class Forget extends Agent
     public void loseEffect(Player player)
     {
         testerClass.print();
+        player.removeActiveAgent(this);
     }
 }

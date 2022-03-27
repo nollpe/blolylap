@@ -125,6 +125,18 @@ public class Player {
         for(Agent agent:activeAgents)
         {
             agent.tick();
+            if(agent.getTimeToLive()==0)
+            {
+                agent.loseEffect(this);
+            }
+        }
+        for(Agent agent:castableAgents)
+        {
+            agent.tick();
+            if(agent.getTimeToLive()==0)
+            {
+                agent.loseEffect(this);
+            }
         }
     }
 
@@ -184,6 +196,11 @@ public class Player {
     {
         testerClass.print();
         knownGeneticCodes.add(gc);
+    }
+
+    public void addCastableAgent(Agent agent)
+    {
+        castableAgents.add(agent);
     }
 
     public void addEquipment(Equipment eq)

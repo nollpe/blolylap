@@ -18,6 +18,11 @@ public class Timer
         game=Game.getInstance();
     }
 
+    public void setGame()
+    {
+        game=Game.getInstance();
+    }
+
     private static Timer singleInstance =null;
 
     public static Timer getInstance()

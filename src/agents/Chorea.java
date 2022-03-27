@@ -12,6 +12,12 @@ import tester.testerClass;
 
 public class Chorea extends Agent
 {
+    public Chorea()
+    {
+        super();
+        testerClass.print();
+    }
+
     public void takeEffect(Player player)
     {
        testerClass.print();
@@ -28,5 +34,6 @@ public class Chorea extends Agent
         player.setMovement(new MovementNormal());
         player.setLoot(new LootNormal());
         player.removeActiveAgent(this);
+
     }
 }
