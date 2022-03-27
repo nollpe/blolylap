@@ -20,6 +20,8 @@ public class Warehouse extends Field
     public void showLoot()
     {
         testerClass.print();
+        int AminoAcids = stored.getAminoAcid();
+        int Nukleotides = stored.getNukleotide();
     }
 
 
@@ -64,4 +66,13 @@ public class Warehouse extends Field
         testerClass.print();
         return taken;
     }
+
+    public void setStored(Inventory stored) {
+        this.stored = stored;
+    }
+
+    public Inventory getStored() {
+        return stored;
+    }
 }
+

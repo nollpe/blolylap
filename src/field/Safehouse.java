@@ -14,13 +14,12 @@ import java.util.LinkedList;
 
 public class Safehouse extends Field
 {
-    private LinkedList<Equipment> stored;
+    private Equipment stored;
 
     public Safehouse()
     {
         super();
         testerClass.print();
-        stored=new LinkedList<Equipment>();
     }
 
     public void showLoot()
@@ -43,5 +42,13 @@ public class Safehouse extends Field
     {
         testerClass.print();
         //ez miert void?
+    }
+
+    public void setStored(Equipment newStored) {
+        stored =newStored;
+    }
+
+    public Equipment getStored() {
+        return stored;
     }
 }

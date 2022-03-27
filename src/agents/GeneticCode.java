@@ -49,4 +49,8 @@ public class GeneticCode
         requiredNucleotide=nuc;
         requiredAminoAcid=ami;
     }
+
+    public GeneticCode clone() {
+        return new GeneticCode(agent, requiredAminoAcid, requiredNucleotide);
+    }
 }

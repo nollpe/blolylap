@@ -1,5 +1,6 @@
 package character;
 
+import equipment.Bag;
 import tester.testerClass;
 
 public class Inventory
@@ -7,6 +8,7 @@ public class Inventory
     private int aminoAcid;
     private int nucleotide;
     private int maxResource;
+    private Bag contents;
 
     public Inventory(int max)
     {
@@ -30,6 +32,11 @@ public class Inventory
             nucleotide+=actuallyAdded;
             return actuallyAdded;
         }
+    }
+
+    public void addContents(Bag e) {
+        testerClass.print();
+        contents = e;
     }
 
     public int addAminoAcid(int added)
@@ -78,5 +85,13 @@ public class Inventory
             nucleotide=0;
             return temp;
         }
+    }
+
+    public int getNukleotide() {
+        return nucleotide;
+    }
+
+    public int getAminoAcid() {
+        return aminoAcid;
     }
 }

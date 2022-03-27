@@ -30,6 +30,7 @@ public class Laboratory extends Field
     public GeneticCode readGeneticCode()
     {
         testerClass.print();
+        GeneticCode gc = readableGeneticCode.clone();
         return readableGeneticCode;
     }
 
