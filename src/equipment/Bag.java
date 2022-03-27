@@ -25,21 +25,21 @@ public class Bag extends Equipment
 
     public int addNucleotide(int added)
     {
-        return added;
+        return inventory.addNucleotide(added);
     }
 
     public int addAminoAcid(int added)
     {
-        return added;
+        return inventory.addAminoAcid(added);
     }
 
     public int takeAminoAcid(int take)
     {
-        return take;
+        return inventory.takeAminoAcid(take);
     }
 
     public int takeNucleotide(int take)
     {
-        return take;
+        return inventory.takeNucleotide(take);
     }
 }
