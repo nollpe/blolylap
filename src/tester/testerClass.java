@@ -150,10 +150,6 @@ public class testerClass {
     }
 
     //region Tarnay testcase
-
-    /**
-     * A TakeNukleotideFromWarehouse TestCase inicializálása és lefutása
-     */
     private void Test_TakeNukleotideFromWarehouse() {
         //init
         Player c = new Player();
@@ -167,9 +163,6 @@ public class testerClass {
         c.takeNukleotide(1);
     }
 
-    /**
-     * A TakeAminoacidFromWarehouse TestCase inicializálása és lefutása
-     */
     private void Test_TakeAminoacidFromWarehouse() {
         //init
         Player c = new Player();
@@ -183,9 +176,6 @@ public class testerClass {
         c.takeAminoAcid(1);
     }
 
-    /**
-     * A ViewLootOfWarehouse TestCase inicializálása és lefutása
-     */
     private void Test_ViewLootOfWarehouse() {
         //init
         Warehouse location = new Warehouse();
@@ -195,10 +185,7 @@ public class testerClass {
         location.showLoot();
     }
 
-    /**
-     * A ViewGeneticCodeOfLaboratory TestCase inicializálása és lefutása
-     */
-    private void Test_ViewGeneticCodeOfLaboratory() {
+    private void TestInit_ViewGeneticCodeOfLaboratory() {
         //init
         Laboratory location = new Laboratory();
         location.init(new GeneticCode(new Forget(), 1,1));
@@ -206,10 +193,7 @@ public class testerClass {
         location.showLoot();
     }
 
-    /**
-     * A LearnGeneticCodeOfLaboratory TestCase inicializálása és lefutása
-     */
-    private void Test_LearnGeneticCodeOfLaboratory() {
+    private void TestInit_LearnGeneticCodeOfLaboratory() {
         //init
         Player c = new Player();
         Laboratory location = new Laboratory();
@@ -222,20 +206,14 @@ public class testerClass {
         c.addGeneticCode(gc);
     }
 
-    /**
-     * A ViewLootOfSafehouse TestCase inicializálása és lefutása
-     */
-    private void Test_ViewLootOfSafehouse() {
+    private void TestInit_ViewLootOfSafehouse() {
         //init
         Safehouse location = new Safehouse();
         //test
         location.showLoot();
     }
 
-    /**
-     * A TakeBagFromSafehouse TestCase inicializálása és lefutása
-     */
-    private void Test_TakeBagFromSafehouse() {
+    private void TestInit_TakeBagFromSafehouse() {
         //init
         Player c = new Player();
         Bag stored = new Bag();
@@ -250,9 +228,6 @@ public class testerClass {
         c.takeLoot(eq);
     }
 
-    /**
-     * A TakeLabcoatFromSafehouse TestCase inicializálása és lefutása
-     */
     private void TestInit_TakeLabcoatFromSafehouse() {
         //init
         Player c = new Player();
@@ -267,9 +242,6 @@ public class testerClass {
 
     }
 
-    /**
-     * A TakeGlovesFromSafehouse TestCase inicializálása és lefutása
-     */
     private void TestInit_TakeGlovesFromSafehouse() {
         //init
         Player c = new Player();
