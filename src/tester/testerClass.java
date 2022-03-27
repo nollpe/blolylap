@@ -388,12 +388,14 @@ public class testerClass {
      * Az ágens létrehozását teszteli
      */
     public void createAgent() {
+        //inicializálunk
         Player player = new Player();
         Agent agent;
 
         boolean valid = false;
         int n = 0;
 
+        //megkérdezzük, hogy milyen ágenst szeretnénk létrehozni
         while (!valid) {
             System.out.println("1: Chorea, 2: Forget, 3: Invulnerable, 4: Paralyzing");
             Scanner input = new Scanner(System.in);
@@ -413,6 +415,7 @@ public class testerClass {
         player.getInventory().addAminoAcid(5);
         player.getInventory().addNucleotide(5);
 
+        //létrehozzuk az ágenst
         player.makeAgent(geneticCode);
     }
 
