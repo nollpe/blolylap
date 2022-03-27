@@ -6,6 +6,8 @@ import cast.Cast;
 import cast.CastNormal;
 import equipment.Equipment;
 import field.Field;
+import field.Safehouse;
+import field.Warehouse;
 import game.Game;
 import getCastOn.GetCastOn;
 import getCastOn.GetCastOnNormal;
@@ -129,6 +131,9 @@ public class Player {
     //region lootolnak tole
     public boolean takeLoot(Equipment e)
     {
+        testerClass.print();
+        ((Safehouse)location).takeEquipment(e);
+        e.takeEffect(this);
         return false;
     }
     public boolean getLootTakenFrom(Equipment e)
@@ -148,14 +153,24 @@ public class Player {
     {
         testerClass.print();return false;
     }
-    public int takeNukleotide(int i)
+    public int takeNukleotide(int d1)
     {
-        testerClass.print();return 0;
+        testerClass.print();
+        Warehouse wh = (Warehouse) location;
+        int d2 = wh.getStored().takeNucleotide(d1);
+        int d3 = inventory.addNucleotide(d2);
+        return d3;
     }
-    public int takeAminoAcid(int i)
+    public int takeAminoAcid(int d1)
     {
-        testerClass.print();return 0;
+        testerClass.print();
+        Warehouse wh = (Warehouse) location;
+        int d2 = wh.getStored().takeAminoAcid(d1);
+        int d3 = inventory.addAminoAcid(d2);
+        testerClass.print();
+        return d3;
     }
+
     public LinkedList<Equipment> showLoot()
     {
         testerClass.print();
@@ -204,6 +219,16 @@ public class Player {
     public void setLocation(Field f){
         testerClass.print();
         location = f;
+    }
+
+    public Inventory getInventory(){
+        testerClass.print();
+        return inventory;
+    }
+
+    public void setInventory(Inventory i){
+        testerClass.print();
+        inventory = i;
     }
 
     public LinkedList<Equipment> getStored(){
