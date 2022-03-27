@@ -131,13 +131,18 @@ public class Player {
     {
         return false;
     }
-    public void getLootTakenFrom()
+    public boolean getLootTakenFrom(Equipment e)
     {
         testerClass.print();
+        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e, this);
+        return succes;
     }
+
     public void loot()
     {
-        /*?????*/testerClass.print();
+        testerClass.print();
+        loot.loot(this);
+
     }
     public boolean removeLoot(Equipment e)
     {
@@ -189,6 +194,21 @@ public class Player {
     public void forgetAllGeneticCodes()
     {
         knownGeneticCodes=new LinkedList<GeneticCode>();
+    }
+
+    public Field getLocation(){
+        testerClass.print();
+        return location;
+    }
+
+    public void setLocation(Field f){
+        testerClass.print();
+        location = f;
+    }
+
+    public LinkedList<Equipment> getStored(){
+        testerClass.print();
+        return equipments;
     }
     //endregion
 }
