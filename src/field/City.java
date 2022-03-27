@@ -25,10 +25,10 @@ public class City
         map=ll;
     }
 
-    private void makeNeighbours(Field f1,Field f2)
+    private void makeNeighbours(Field f1,Field f2, Direction dir)
     {
-        f1.addNeighbour(f2);
-        f2.addNeighbour(f1);
+        f1.addNeighbour(f2, dir);
+        f2.addNeighbour(f1, dir.oppositeDirection());
     }
 
     public void tick()
@@ -72,12 +72,10 @@ public class City
         map.add(warehouse);
 
         //szomszédok lettek
-        makeNeighbours(basicField,laboratory);
-        makeNeighbours(basicField,safehouse);
-        makeNeighbours(basicField,warehouse);
-        makeNeighbours(laboratory,safehouse);
-        makeNeighbours(laboratory,warehouse);
-        makeNeighbours(safehouse,warehouse);
+        makeNeighbours(basicField,laboratory, Direction.NORTH);
+        makeNeighbours(basicField,safehouse, Direction.WEST);;
+        makeNeighbours(laboratory,warehouse, Direction.WEST);
+        makeNeighbours(safehouse,warehouse, Direction.NORTH);
 
         testerClass.print();
     }

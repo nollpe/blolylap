@@ -11,6 +11,9 @@ import field.*;
 import game.Game;
 import game.Timer;
 import getLootTakenFrom.LootTakenStunned;
+import movement.MovementChorea;
+import movement.MovementNormal;
+import movement.MovementParalyzed;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,84 +23,77 @@ import java.util.Scanner;
 
 public class testerClass {
 
-    public testerClass()
-    {
+    public testerClass() {
 
     }
 
-    public static void print()
-    {
-        String className=new Exception().getStackTrace()[1].getClassName();
-        String methodName1=new Exception().getStackTrace()[1].getMethodName();
-        int depth1=new Exception().getStackTrace().length;
-        String filler="\t".repeat(depth1-3);
+    public static void print() {
+        String className = new Exception().getStackTrace()[1].getClassName();
+        String methodName1 = new Exception().getStackTrace()[1].getMethodName();
+        int depth1 = new Exception().getStackTrace().length;
+        String filler = "\t".repeat(depth1 - 3);
 
         System.out.println(filler + className + " " + methodName1);
     }
 
     //region norbi tesztek
-    public void wiewCity()
-    {
-        City c= new City();
+    public void wiewCity() {
+        City c = new City();
         c.showCity();
     }
 
-    public void startGame()
-    {
-        Game game= Game.getInstance();
+    public void startGame() {
+        Game game = Game.getInstance();
     }
 
-    public void endTurn()
-    {
-        Timer timer= Timer.getInstance();
+    public void endTurn() {
+        Timer timer = Timer.getInstance();
         timer.tick();
     }
 
-    public void agentExpires()
-    {
+    public void agentExpires() {
         //region változó deklarációk
-        Timer timer=Timer.getInstance();
-        Game game=Game.getInstance();
-        City city=new City();
-        Field field=new Field();
-        Player player=new Player();
-        Agent agent=null;
+        Timer timer = Timer.getInstance();
+        Game game = Game.getInstance();
+        City city = new City();
+        Field field = new Field();
+        Player player = new Player();
+        Agent agent = null;
 
         timer.setGame();
-        LinkedList<Field> map=new LinkedList<Field>();map.add(field);
+        LinkedList<Field> map = new LinkedList<Field>();
+        map.add(field);
         city.setMap(map);
         game.setCity(city);
         field.enter(player);
 
         //endregion
 
-        int chosen=0;
-        while(agent==null)
-        {
+        int chosen = 0;
+        while (agent == null) {
             System.out.println("melyik agens?\n1:Invulnerable\n2:Chorea\n3:Paralyzing\n4:Forget\n0:kilép");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
-                chosen=Integer.parseInt(br.readLine());
+                chosen = Integer.parseInt(br.readLine());
             } catch (IOException e) {
                 e.printStackTrace();
             }
             //mAgAS sZInTű nYElv
             //chosen=getchar();
-            switch(chosen)
-            {
-                case(1):
-                    agent=new Invulnerable();
+            switch (chosen) {
+                case (1):
+                    agent = new Invulnerable();
                     break;
-                case(2):
-                    agent=new Invulnerable();
+                case (2):
+                    agent = new Invulnerable();
                     break;
-                case(3):
-                    agent=new Chorea();
+                case (3):
+                    agent = new Chorea();
                     break;
-                case(4):
-                    agent=new Forget();
+                case (4):
+                    agent = new Forget();
                     break;
-                case(0):
+                case (0):
                     return;
                 default:
                     break;
@@ -107,16 +103,15 @@ public class testerClass {
         System.out.println("felkenhető(1) vagy felkent(2) ágens legyen?");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
-            chosen=Integer.parseInt(br.readLine());
+            chosen = Integer.parseInt(br.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        switch (chosen)
-        {
+        switch (chosen) {
             case (2):
                 player.addActiveAgent(agent);
                 break;
-            case(1):
+            case (1):
                 player.addCastableAgent(agent);
         }
         timer.tick();
@@ -129,11 +124,12 @@ public class testerClass {
     static Player character1;
     static Player character2;
     static Player character3;
-    private void lootEquipment(){
+
+    private void lootEquipment() {
         System.out.println("Válassz gec: \n1-Védőfelszerelést ellopása karaktertől\n2-idk");
         Scanner input = new Scanner(System.in);
         String s = input.nextLine();
-        switch (s){
+        switch (s) {
             case "1":
                 TestInit1();
                 Test1();
@@ -178,6 +174,8 @@ public class testerClass {
 
     }
 
+    //endregion
+
     //region Tarnay testcase
     private void Test_TakeNukleotideFromWarehouse() {
         //init
@@ -217,7 +215,7 @@ public class testerClass {
     private void TestInit_ViewGeneticCodeOfLaboratory() {
         //init
         Laboratory location = new Laboratory();
-        location.init(new GeneticCode(new Forget(), 1,1));
+        location.init(new GeneticCode(new Forget(), 1, 1));
         //test
         location.showLoot();
     }
@@ -253,7 +251,7 @@ public class testerClass {
         location.enter(c);
         location.setStored(stored);
         //test
-        Equipment eq = ((Safehouse)location).getStored();
+        Equipment eq = ((Safehouse) location).getStored();
         c.takeLoot(eq);
     }
 
@@ -266,7 +264,7 @@ public class testerClass {
         location.enter(c);
         location.setStored(stored);
         //test
-        Equipment eq = ((Safehouse)location).getStored();
+        Equipment eq = ((Safehouse) location).getStored();
         c.takeLoot(eq);
 
     }
@@ -280,26 +278,104 @@ public class testerClass {
         location.enter(c);
         location.setStored(stored);
         //test
-        Equipment eq = ((Safehouse)location).getStored();
+        Equipment eq = ((Safehouse) location).getStored();
         c.takeLoot(eq);
     }
     //endregion
 
-    private void Test1(){
+    //region Zsolti tesztesetei
+
+    public void normalCharacterMoves() {
+        Player player = new Player();
+        MovementNormal movementNormal = new MovementNormal();
+        player.setMovement(movementNormal);
+        Field field1 = new Field();
+        player.setLocation(field1);
+
+        boolean valid = false;
+        int n = 0;
+        Field field2;
+
+        while (!valid) {
+            System.out.println("1: Empty Field, 2: Laboratory, 3: Warehouse, 4: Safehouse");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if (n > 0 && n < 5) valid = true;
+        }
+
+        switch (n) {
+            case 2 -> {
+                field2 = new Laboratory();
+            }
+            case 3 -> {
+                field2 = new Warehouse();
+            }
+            case 4 -> {
+                field2 = new Safehouse();
+            }
+            default -> {
+                field2 = new Field();
+            }
+        }
+
+        field1.addNeighbour(field2, Direction.NORTH);
+        field2.addNeighbour(field1, Direction.SOUTH);
+
+        player.move(Direction.NORTH);
+    }
+
+    public void choreaCharacterMoves() {
+        Player player = new Player();
+        MovementChorea movementChorea = new MovementChorea();
+        player.setMovement(movementChorea);
+        Field field1 = new Field();
+        player.setLocation(field1);
+
+        Safehouse field2 = new Safehouse();
+        field1.addNeighbour(field2, Direction.NORTH);
+        field2.addNeighbour(field1, Direction.SOUTH);
+
+        Warehouse field3 = new Warehouse();
+        field1.addNeighbour(field3, Direction.EAST);
+        field3.addNeighbour(field1, Direction.WEST);
+
+        Laboratory field4 = new Laboratory();
+        field1.addNeighbour(field4, Direction.WEST);
+        field4.addNeighbour(field1, Direction.EAST);
+
+        Field field5 = new Field();
+        field1.addNeighbour(field5, Direction.SOUTH);
+        field5.addNeighbour(field1, Direction.NORTH);
+
+        player.move(Direction.NORTH);
+    }
+
+    public void paralyzedCharacterMoves() {
+        Player player = new Player();
+        MovementParalyzed movementParalyzed = new MovementParalyzed();
+        player.setMovement(movementParalyzed);
+
+        Field field1 = new Field();
+        player.setLocation(field1);
+
+        player.move(Direction.NORTH);
+    }
+
+    //endregion
+
+    private void Test1() {
 
         character1.loot();
     }
 
-    private void Test2(){
+    private void Test2() {
         character1.loot();
     }
     //endregion
 
 
-
-    public static void main(String[] args)
-    {
-        testerClass ts=new testerClass();
+    public static void main(String[] args) {
+        testerClass ts = new testerClass();
         ts.agentExpires();
         ts.lootEquipment();
     }

@@ -3,22 +3,27 @@ package field;
 import character.Player;
 import tester.testerClass;
 import java.util.LinkedList;
+import java.util.EnumMap;
 
 public class Field
 {
-    private LinkedList<Field> neighbours;
+    private EnumMap<Direction,Field> neighbours;
     private LinkedList<Player> inhabitants;
 
     public Field()
     {
         testerClass.print();
-        this.neighbours=new LinkedList<Field>();
+        this.neighbours=new EnumMap<Direction, Field>(Direction.class);
         this.inhabitants=new LinkedList<Player>();
     }
 
-    protected void addNeighbour(Field added)
+    public void addNeighbour(Field added, Direction dir)
     {
-        neighbours.add(added);
+        neighbours.put(dir, added);
+    }
+
+    public Field getNeighbour(Direction dir) {
+        return neighbours.get(dir);
     }
 
     public void enter(Player c)

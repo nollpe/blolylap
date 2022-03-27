@@ -5,6 +5,7 @@ import agents.GeneticCode;
 import cast.Cast;
 import cast.CastNormal;
 import equipment.Equipment;
+import field.Direction;
 import field.Field;
 import field.Safehouse;
 import field.Warehouse;
@@ -209,9 +210,10 @@ public class Player {
         equipments.add(eq);
     }
 
-    public void move(/*fielnek kéne itt lennie nem?*/)
+    public void move(Direction dir)
     {
         testerClass.print();
+        getMovement().move(dir, this);
     }
 
     //region adderek removerek
@@ -253,6 +255,11 @@ public class Player {
     public LinkedList<Equipment> getStored(){
         testerClass.print();
         return equipments;
+    }
+
+    public Agent makeAgent (GeneticCode gc) {
+        testerClass.print();
+        return gc.makeAgent(inventory);
     }
     //endregion
 }
