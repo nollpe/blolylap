@@ -30,40 +30,8 @@ public class Safehouse extends Field
 
     public void tick()
     {
-        super.tick();
-        System.out.println("melyik generálódjon?");
-        System.out.println("1 Gloves:");
-        System.out.println("2 Labcoat");
-        System.out.println("3 Bag");
-
-        int chosen=0;
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            chosen=Integer.parseInt(br.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        //mAgAS sZInTű nYElv
-        //chosen=getchar();
-
-        switch(chosen)
-        {
-            case(1):
-                stored.add(new Gloves());
-                break;
-            case(2):
-                stored.add(new Labcoat());
-                break;
-            case(3):
-                stored.add(new Bag());
-                break;
-            default:
-
-                break;
-        }
-
         testerClass.print();
+        super.tick();
     }
 
     public void takeLoot()
