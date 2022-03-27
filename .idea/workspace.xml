@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.testerClass">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game_classes.main" />
       <module name="blolylap" />
@@ -62,8 +64,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
         <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>

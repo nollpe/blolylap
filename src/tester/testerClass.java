@@ -53,17 +53,18 @@ public class testerClass {
         Agent agent=null;
         System.out.println("melyik agens?\n1:Invulnerable\n2:Chorea\n3:Paralyzing\n4:Forget\n0:kilép");
         int chosen=0;
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            chosen=Integer.parseInt(br.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        //mAgAS sZInTű nYElv
-        //chosen=getchar();
+
 
         while(agent==null)
         {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            try {
+                chosen=Integer.parseInt(br.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //mAgAS sZInTű nYElv
+            //chosen=getchar();
             switch(chosen)
             {
                 case(1):
@@ -86,12 +87,15 @@ public class testerClass {
         }
 
         agent.takeEffect(ribanc);
+        System.out.println("lose effect:");
+        agent.loseEffect(ribanc);
 
     }
 
     public static void main(String[] args)
     {
-
+        testerClass ts=new testerClass();
+        ts.agentExpires();
 
     }
 }

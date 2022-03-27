@@ -8,6 +8,10 @@ public class Chorea extends Agent
 {
     public void takeEffect(Player c)
     {
+
+
+
+
         testerClass.print();
     }
 

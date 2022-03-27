@@ -18,12 +18,12 @@ import tester.testerClass;
 
 import java.util.LinkedList;
 
-public class Player
-{
+public class Player {
+    //region variables
     private LinkedList<Agent> activeAgents;
     private LinkedList<Agent> castableAgents;
+    private LinkedList<Equipment> equipments;
     private Inventory inventory;
-    private Equipment[] equipments;
     private Movement movement;
     private Cast cast;
     private GetCastOn getCastOn;
@@ -32,38 +32,85 @@ public class Player
     private LinkedList<GeneticCode> knownGeneticCodes;
     private Game game;
     private Field location;
-
+    //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    public Player()
-    {
-        activeAgents=new LinkedList<Agent>();
-        castableAgents=new LinkedList<Agent>();
-        inventory=new Inventory(10);
-        equipments=new Equipment[3];
-        movement=new MovementNormal();
-        cast=new CastNormal();
-        getCastOn=new GetCastOnNormal();
-        getLootTakenFrom=new LootTakenNormal();
-        loot=new LootNormal();
-        knownGeneticCodes=new LinkedList<GeneticCode>();
-        game=Game.getInstance();
-        location=game.spawnPlayer(this);
+    public Player() {
+        activeAgents = new LinkedList<Agent>();
+        castableAgents = new LinkedList<Agent>();
+        inventory = new Inventory(10);
+        equipments = new LinkedList<Equipment>();
+        movement = new MovementNormal();
+        cast = new CastNormal();
+        getCastOn = new GetCastOnNormal();
+        getLootTakenFrom = new LootTakenNormal();
+        loot = new LootNormal();
+        knownGeneticCodes = new LinkedList<GeneticCode>();
+        game = Game.getInstance();
+        //location=game.spawnPlayer(this);
     }
+
+    //region strategy pattern setter getter
+
+    public Loot getLoot()
+    {
+        return loot;
+    }
+    public GetLootTakenFrom getGetLootTakenFrom()
+    {
+        return getLootTakenFrom;
+    }
+
+    public GetCastOn getGetCastOn()
+    {
+        return getCastOn;
+    }
+    public Cast getCase()
+    {
+        return cast;
+    }
+    public Movement getMovement()
+    {
+        return movement;
+    }
+    public void setGetLootTakenFrom(GetLootTakenFrom g)
+    {
+        getLootTakenFrom=g;
+    }
+    public void setGetCastOn(GetCastOn g)
+    {
+        getCastOn=g;
+    }
+    public void setLoot(Loot l)
+    {
+        loot=l;
+    }
+    public void setMovement(Movement m)
+    {
+        movement=m;
+    }
+    public void setCast(Cast c)
+    {
+        cast=c;
+    }
+    //endregion
 
     public void move(/*fielnek kéne itt lennie nem?*/)
     {
         testerClass.print();
     }
 
-    public void castSpell(Player c, Agent a)
+    //region spellcasting
+    public void castSpell(Player Caster, Agent agent)
     {
         testerClass.print();
+        Caster.getCastOn(agent,this);
     }
 
     public void getCastOn(Agent a, Player c)
     {
         testerClass.print();
     }
+    //endregion
 
     public void tick()
     {
@@ -74,44 +121,48 @@ public class Player
         }
     }
 
+    //region lootolnak tole
     public boolean takeLoot(Equipment e)
     {
         return false;
     }
-
     public void getLootTakenFrom()
     {
         testerClass.print();
     }
-
+    public void loot()
+    {
+        /*?????*/testerClass.print();
+    }
     public boolean removeLoot(Equipment e)
     {
         testerClass.print();return false;
     }
-
     public int takeNukleotide(int i)
     {
         testerClass.print();return 0;
     }
-
     public int takeAminoAcid(int i)
     {
         testerClass.print();return 0;
     }
+    public LinkedList<Equipment> showLoot()
+    {
+        testerClass.print();
+        return equipments;
+    }
+    //endregion
 
     public void addGeneticCode(GeneticCode gc)
     {
         testerClass.print();
+        knownGeneticCodes.add(gc);
     }
 
-    public Equipment[] showLoot()
+    public void addEquipment(Equipment eq)
     {
-        testerClass.print();return equipments;
-    }
-
-    public void loot()
-    {
-        /*?????*/testerClass.print();
+        testerClass.print();
+        equipments.add(eq);
     }
 
 }
