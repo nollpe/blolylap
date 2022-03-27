@@ -1,56 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/field/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="finally zsolti branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Chorea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Chorea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Forget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Forget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/GeneticCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/GeneticCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Invulnerable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Invulnerable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Paralyzing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Paralyzing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/cast/Cast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/cast/Cast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/cast/CastImpared.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/cast/CastImpared.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/cast/CastNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/cast/CastNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Laboratory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Laboratory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Safehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Safehouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Warehouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Timer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Timer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnGloves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnGloves.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnInvulnerable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnInvulnerable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnResistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOnResistant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/GetLootTakenFrom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/GetLootTakenFrom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenStunned.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getLootTakenFrom/LootTakenStunned.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/loot/Loot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/loot/Loot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/loot/LootImpared.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/loot/LootImpared.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/loot/LootNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/loot/LootNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/movement/Movement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/movement/Movement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/movement/MovementChorea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/movement/MovementChorea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/movement/MovementNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/movement/MovementNormal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/movement/MovementParalyzed.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/movement/MovementParalyzed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementChorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementChorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -128,10 +85,29 @@
       <workItem from="1648313729031" duration="16589000" />
       <workItem from="1648394554077" duration="2074000" />
     </task>
+    <task id="LOCAL-00001" summary="finally zsolti branch">
+      <created>1648417305953</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648417305953</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -143,6 +119,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finally zsolti branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally zsolti branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
