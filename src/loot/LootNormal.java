@@ -4,16 +4,17 @@ import character.Inventory;
 import character.Player;
 import equipment.Equipment;
 import tester.testerClass;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
  * Lootolás osztálya alapesetben, amikor nincsen lebénulva a játékos.
  */
-public class LootNormal implements Loot
-{
+public class LootNormal implements Loot {
     /**
      * A lootolást végző függvény
+     *
      * @param player A játékos, aki lootol
      * @return A lootolás sikeressége. Igazat ad vissza, ha sikerült a lootlás, hamisat, ha nem.
      */
@@ -26,19 +27,19 @@ public class LootNormal implements Loot
         Scanner input = new Scanner(System.in);
         boolean valid = false;
         String s = "";
-        while(!valid) {
+        while (!valid) {
             System.out.println("Játékostól szeretnél lootolni? (I/N)");
             s = input.nextLine();
             /**
              * Ellenőrzi, hogy értelmes választ adott-e a felhasználó
              */
-            if(s.compareTo("I")==0 || s.compareTo("N")==0) valid = true;
+            if (s.compareTo("I") == 0 || s.compareTo("N") == 0) valid = true;
         }
 
         /**
          * Ha játékostól szeretne:
          */
-        if(s.compareTo("I")==0) {
+        if (s.compareTo("I") == 0) {
             /**
              * Megkérdezi a mezőtől, hogy milyen játékosok állnak rajta.
              */
@@ -55,10 +56,10 @@ public class LootNormal implements Loot
                  */
                 valid = false;
                 int n = 0;
-                while(!valid){
+                while (!valid) {
                     System.out.println("Melyik játékostól szeretnél lootolni?\n1-Lebénult karakter \n2-Nem lebénult karakter");
                     n = Integer.parseInt(input.nextLine());
-                    if(n>0 && n <targetlist.size()) valid = true;
+                    if (n > 0 && n < targetlist.size()) valid = true;
                 }
 
                 /**
@@ -70,10 +71,10 @@ public class LootNormal implements Loot
                  * Megkérdezi a felhasználót, hogy mit szeretne lootolni (felszerelés vagy anyag)
                  */
                 valid = false;
-                while(!valid){
+                while (!valid) {
                     System.out.println("Mit szeretnél lootolni?\n1-Feszereléstt \n2-Anyagot");
                     n = Integer.parseInt(input.nextLine());
-                    if(n>=0 && n <3) valid = true;
+                    if (n >= 0 && n < 3) valid = true;
                 }
 
 
@@ -83,11 +84,10 @@ public class LootNormal implements Loot
                  * Második: anyag lootolása.
                  * Ha a lootolás sikerült, igazzal tér vissza.
                  */
-                if(n == 1){
+                if (n == 1) {
                     boolean succes = lootEquipment(target, player);
                     return true;
-                }
-                else{
+                } else {
                     boolean succes = lootAminoAndNucleotide(target, player);
                     return true;
                 }
@@ -102,11 +102,12 @@ public class LootNormal implements Loot
 
     /**
      * Felszerelés lootolása
+     *
      * @param target A célpont, akitől elveszik a felszerelést.
      * @param player A  játékos, aki a lootolás kezdeményezte.
      * @return A lootolás sikeressége. Igaz ha sikerült (azaz le volt bénulva a másik karakter és volt mit elvenni tőle)
      */
-    private boolean lootEquipment(Player target, Player player){
+    private boolean lootEquipment(Player target, Player player) {
         Scanner input = new Scanner(System.in);
         boolean valid = false;
         int n = 0;
@@ -118,22 +119,22 @@ public class LootNormal implements Loot
         /**
          * Ha van a karatkernél nincsen egy felszerelés sem, a lootolás sikertelen volt.
          */
-        if(equipmentlist.size() == 0){
+        if (equipmentlist.size() == 0) {
             return false;
         }
         /**
          * Különben lehet lootolni:
          */
-        else{
+        else {
             /**
              * Megkérdezi a felhasználót, hogy a másik karakternél lévő védőfelszerelések  közül melyiket szeretné elvenni
              * (kesztyű, köpeny vagy táska)
              */
             valid = false;
-            while(!valid){
+            while (!valid) {
                 System.out.println("Hanyadik eszközt szeretnéd elvenni?\n1-Kesztyű \n2-Köpeny \n3-Táska");
-                n = Integer.parseInt(input.nextLine())-1;
-                if(n>=0 && n <equipmentlist.size()) valid = true;
+                n = Integer.parseInt(input.nextLine()) - 1;
+                if (n >= 0 && n < equipmentlist.size()) valid = true;
             }
 
             /**
@@ -155,11 +156,12 @@ public class LootNormal implements Loot
 
     /**
      * Anyag lootolása
+     *
      * @param target A célpont, akitől elveszik a anyagot.
      * @param player A  játékos, aki a lootolás kezdeményezte.
      * @return A lootolás sikeressége. Igaz ha sikerült (azaz le volt bénulva a másik karakter és volt mit elvenni tőle)
      */
-    private boolean lootAminoAndNucleotide(Player target, Player player){
+    private boolean lootAminoAndNucleotide(Player target, Player player) {
         Scanner input = new Scanner(System.in);
         boolean valid = false;
         int n = 0;
@@ -168,10 +170,10 @@ public class LootNormal implements Loot
          * (aminosav vagy nukleotide)
          */
         valid = false;
-        while(!valid){
+        while (!valid) {
             System.out.println("Melyik anyagot szeretnéd elvenni?\n1-Aminosav \n2-Nukleotide");
             n = Integer.parseInt(input.nextLine());
-            if(n>=0 && n <3) valid = true;
+            if (n >= 0 && n < 3) valid = true;
         }
         /**
          * A célpontnak szól, hogy elvettek tőle anyagot.
@@ -180,7 +182,7 @@ public class LootNormal implements Loot
          */
         int lootedN = 0;
         Inventory inventory = player.getInventory();
-        switch (n){
+        switch (n) {
             case 1:
                 lootedN = target.takeAminoAcid(3);
                 inventory.addAminoAcid(lootedN);

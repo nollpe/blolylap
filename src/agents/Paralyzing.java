@@ -13,20 +13,18 @@ import movement.MovementNormal;
 import movement.MovementParalyzed;
 import tester.testerClass;
 
-public class Paralyzing extends Agent
-{
-    public Paralyzing()
-    {
+public class Paralyzing extends Agent {
+    public Paralyzing() {
         super();
         testerClass.print();
     }
 
     /**
      * Az ágens fel lett kenve valakire elkezdi kifejeteni hatását
+     *
      * @param player A játékos akinek a karakterére rákenték az ágenst
      */
-    public void takeEffect(Player player)
-    {
+    public void takeEffect(Player player) {
         testerClass.print();
         player.setLoot(new LootImpared());
         player.setMovement(new MovementParalyzed());
@@ -36,10 +34,10 @@ public class Paralyzing extends Agent
 
     /**
      * Az ágens hatása lejár
+     *
      * @param player A játékos akinek a karakterén van az ágens
      */
-    public void loseEffect(Player player)
-    {
+    public void loseEffect(Player player) {
         testerClass.print();
         player.setLoot(new LootNormal());
         player.setMovement(new MovementNormal());

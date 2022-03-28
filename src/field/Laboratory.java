@@ -1,9 +1,9 @@
 package field;
+
 import agents.GeneticCode;
 import tester.testerClass;
 
-public class Laboratory extends Field
-{
+public class Laboratory extends Field {
     /**
      * A labor által tartalmazott genetikus kód
      * Ezt tudják megtanulni a playerek
@@ -14,8 +14,7 @@ public class Laboratory extends Field
     /**
      * Konstruktor
      */
-    public Laboratory()
-    {
+    public Laboratory() {
         super();
         testerClass.print();
     }
@@ -23,16 +22,14 @@ public class Laboratory extends Field
     /**
      * Megmutatja a laborban található lootot
      */
-    public void showLoot()
-    {
+    public void showLoot() {
         testerClass.print();
     }
 
     /**
      * Időben lépteti a labort
      */
-    public void tick()
-    {
+    public void tick() {
         super.tick();
         testerClass.print();
 
@@ -41,17 +38,16 @@ public class Laboratory extends Field
     /**
      * Loot elvétele a laboratóriumból
      */
-    public void takeLoot()
-    {
+    public void takeLoot() {
         testerClass.print();
     }
 
     /**
      * A genetikus kód megtanulása
+     *
      * @return labor genetikus kódjának klónja
      */
-    public GeneticCode readGeneticCode()
-    {
+    public GeneticCode readGeneticCode() {
         testerClass.print();
         GeneticCode gc = readableGeneticCode.clone();
         return readableGeneticCode;
@@ -60,10 +56,10 @@ public class Laboratory extends Field
     /**
      * A labor inicializálása
      * megadja a genetikus kódot amit tartalmaz
+     *
      * @param gc a laborhoz tartozó genetikus kód
      */
-    public void init(GeneticCode gc)
-    {
+    public void init(GeneticCode gc) {
         readableGeneticCode = gc;
         testerClass.print();
     }

@@ -10,16 +10,15 @@ import java.util.Scanner;
 /**
  * Az ágens kenés vezéréléséért felelős osztály normál állapotban. Ilyenkor az ágens felkenése lehetséges.
  */
-public class CastNormal implements Cast
-{
+public class CastNormal implements Cast {
     /**
      * Az ágens kenés függvénye lebénult esetben.
+     *
      * @param player A játékos aki a kenést csinálja
      * @return A kenés sikeressége.
      */
     @Override
-    public boolean cast(Player player)
-    {
+    public boolean cast(Player player) {
         testerClass.print();
         /**
          * Megkérdezi a mezőtől, hogy milyen játékosok állnak rajta.
@@ -37,10 +36,10 @@ public class CastNormal implements Cast
             boolean valid = false;
             int n = 0;
             Scanner input = new Scanner(System.in);
-            while(!valid){
+            while (!valid) {
                 System.out.println("Melyik játékosra szeretnél ágenst kenni?\n1-Önmaga \n2-Kesztyűs játékos \n3-Köpenyes játékos \n4-Normál játékos \n5-Sebezhetetlen játékos");
-                n = Integer.parseInt(input.nextLine())-1;
-                if(n>=0 && n <targetlist.size()) valid = true;
+                n = Integer.parseInt(input.nextLine()) - 1;
+                if (n >= 0 && n < targetlist.size()) valid = true;
             }
 
             /**
@@ -52,10 +51,10 @@ public class CastNormal implements Cast
              * Megkérdezi a felhasználót, hogy mit szeretne kenni (felejtő vagy sebezhetetlenséget okozó)
              */
             valid = false;
-            while(!valid){
+            while (!valid) {
                 System.out.println("Mit szeretnél rákenni?\n1-Sebezhetetlenséget okozó ágenst\n2-Felejtést okozó ágenst");
-                n = Integer.parseInt(input.nextLine())-1;
-                if(n>=0 && n <2) valid = true;
+                n = Integer.parseInt(input.nextLine()) - 1;
+                if (n >= 0 && n < 2) valid = true;
             }
             LinkedList<Agent> castableAgents = player.getCastableAgents();
             Agent agent = castableAgents.get(n);

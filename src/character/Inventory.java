@@ -3,110 +3,88 @@ package character;
 import equipment.Bag;
 import tester.testerClass;
 
-public class Inventory
-{
+public class Inventory {
     private int aminoAcid;
     private int nucleotide;
     private int maxResource;
 
     /**
-     *
      * @param max a maximum tárolási kapacitás, összesen ennyi alapanyag fér bele
      */
-    public Inventory(int max)
-    {
+    public Inventory(int max) {
         testerClass.print();
-        aminoAcid=0;
-        nucleotide=0;
-        maxResource=max;
+        aminoAcid = 0;
+        nucleotide = 0;
+        maxResource = max;
     }
 
     /**
-     *
      * @param added ennyi nucleotidot akarunk belerakni
      * @return ennyi nukleotidot sikerült belerakni
      */
-    public int addNucleotide(int added)
-    {
+    public int addNucleotide(int added) {
         testerClass.print();
-        if(aminoAcid+nucleotide+added<=maxResource)
-        {
-            nucleotide+=added;
+        if (aminoAcid + nucleotide + added <= maxResource) {
+            nucleotide += added;
             return added;
-        }
-        else
-        {
-            int actuallyAdded=maxResource-aminoAcid-nucleotide;
-            nucleotide+=actuallyAdded;
+        } else {
+            int actuallyAdded = maxResource - aminoAcid - nucleotide;
+            nucleotide += actuallyAdded;
             return actuallyAdded;
         }
     }
 
     /**
-     *
      * @param added ennyi aminosavat akarunk belerakni
      * @return ennyi aminosavat sikerült belerakni
      */
-    public int addAminoAcid(int added)
-    {
+    public int addAminoAcid(int added) {
         testerClass.print();
-        if(aminoAcid+nucleotide+added<=maxResource)
-        {
-            aminoAcid+=added;
+        if (aminoAcid + nucleotide + added <= maxResource) {
+            aminoAcid += added;
             return added;
-        }
-        else
-        {
-            int actuallyAdded=maxResource-aminoAcid-nucleotide;
-            aminoAcid+=actuallyAdded;
+        } else {
+            int actuallyAdded = maxResource - aminoAcid - nucleotide;
+            aminoAcid += actuallyAdded;
             return actuallyAdded;
         }
     }
 
     /**
-     *
      * @param take ennyi amiosavat akarunk kivenni
      * @return ennyi aminosavat sikerült kivenni
      */
-    public int takeAminoAcid(int take)
-    {
+    public int takeAminoAcid(int take) {
         testerClass.print();
-        if(take<=aminoAcid)
-        {
-            aminoAcid-=take;
+        if (take <= aminoAcid) {
+            aminoAcid -= take;
             return take;
-        }
-        else
-        {
-            int temp=aminoAcid;
-            aminoAcid=0;
+        } else {
+            int temp = aminoAcid;
+            aminoAcid = 0;
             return temp;
         }
     }
 
     /**
-     *
      * @param take ennyi nukleotidot akarunk kivenni
      * @return ennyi nukleotidot sikerült kivenni
      */
-    public int takeNucleotide(int take)
-    {
+    public int takeNucleotide(int take) {
         testerClass.print();
-        if(take<=nucleotide)
-        {
-            nucleotide-=take;
+        if (take <= nucleotide) {
+            nucleotide -= take;
             return take;
-        }
-        else
-        {
-            int temp=nucleotide;
-            nucleotide=0;
+        } else {
+            int temp = nucleotide;
+            nucleotide = 0;
             return temp;
         }
     }
 
     /**
      * Megmondja hány nukleotid van az inventoryban
+     *
      * @return Nukleotidok száma
      */
     public int getNukleotide() {
@@ -116,6 +94,7 @@ public class Inventory
 
     /**
      * Megmondja hány aminó acid van az inventoryban
+     *
      * @return Amino acidok száma
      */
     public int getAminoAcid() {

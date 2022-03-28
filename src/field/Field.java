@@ -6,8 +6,7 @@ import tester.testerClass;
 import java.util.EnumMap;
 import java.util.LinkedList;
 
-public class Field
-{
+public class Field {
     private EnumMap<Direction, Field> neighbours;
     private LinkedList<Player> inhabitants;
 
@@ -46,37 +45,31 @@ public class Field
         return neighbours;
     }
 
-    public void enter(Player c)
-    {
+    public void enter(Player c) {
         testerClass.print();
         inhabitants.add(c);
     }
 
-    public void leave(Player c)
-    {
+    public void leave(Player c) {
         testerClass.print();
     }
 
-    public void showLoot()
-    {
+    public void showLoot() {
         testerClass.print();
     }
 
-    public void tick()
-    {
+    public void tick() {
         testerClass.print();
-        for(Player character:inhabitants)
-        {
+        for (Player character : inhabitants) {
             character.tick();
         }
     }
 
-    public void takeLoot()
-    {
+    public void takeLoot() {
         testerClass.print();
     }
 
-    public LinkedList<Player> getInhabitants(){
+    public LinkedList<Player> getInhabitants() {
         testerClass.print();
         return inhabitants;
     }

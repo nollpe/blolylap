@@ -10,15 +10,14 @@ import tester.testerClass;
  * A védőköpeny védőfelszerelés osztálya.
  * Hatására a játékosra valamekkora eséllyel nem hatnak az ágensek.
  */
-public class Labcoat extends Equipment
-{
+public class Labcoat extends Equipment {
     /**
      * A védőköpeny megszerzését (aktiválását) kezeli.
      * Beállítja a karakternek a castolás elszenvedésének állapotát.
+     *
      * @param c A karakter, aki megszerezte a védőköpenyt.
      */
-    public void takeEffect(Player c)
-    {
+    public void takeEffect(Player c) {
         testerClass.print();
         GetCastOnResistant gcor = new GetCastOnResistant();
         c.setGetCastOn(gcor);
@@ -27,10 +26,10 @@ public class Labcoat extends Equipment
     /**
      * A védőköpeny elvesztésekor (deaktiválódásakor) hívódik meg.
      * Visszaállítja a karakter állapotát a kesztyű nélküli állapotba.
+     *
      * @param c A karakter, aki elvesztette a védőköpenyt.
      */
-    public void loseEffect(Player c)
-    {
+    public void loseEffect(Player c) {
         testerClass.print();
         c.setGetCastOn(new GetCastOnNormal());
     }

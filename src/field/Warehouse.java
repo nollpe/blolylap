@@ -1,4 +1,5 @@
 package field;
+
 import character.Inventory;
 import tester.testerClass;
 
@@ -6,22 +7,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Warehouse extends Field
-{
+public class Warehouse extends Field {
     private Inventory stored;
 
-    public Warehouse()
-    {
+    public Warehouse() {
         super();
-        stored=new Inventory(50);   //igazából mindegy mekkora
+        stored = new Inventory(50);   //igazából mindegy mekkora
         testerClass.print();             //csajse
     }
 
     /**
      * Megmutatja melyik alapanyagból mennyi található itt
      */
-    public void showLoot()
-    {
+    public void showLoot() {
         testerClass.print();
         System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNukleotide());
         /*int AminoAcids = stored.getAminoAcid();
@@ -32,19 +30,18 @@ public class Warehouse extends Field
     /**
      * minden körben van esély, hogy "termelődik" új aminosav és nukleotid
      */
-    public void tick()
-    {
+    public void tick() {
         testerClass.print();
         super.tick();
 
         System.out.println("mennyi amino acid és nucleotide termelődjön(1-5)?: \n<int>\n<int>");
 
-        int nuc=0;
-        int ami=0;
+        int nuc = 0;
+        int ami = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
-            nuc=Integer.parseInt(br.readLine());
-            ami=Integer.parseInt(br.readLine());
+            nuc = Integer.parseInt(br.readLine());
+            ami = Integer.parseInt(br.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -54,8 +51,7 @@ public class Warehouse extends Field
 
     }
 
-    public void takeLoot()
-    {
+    public void takeLoot() {
         testerClass.print();
     }
 
@@ -64,23 +60,19 @@ public class Warehouse extends Field
     }
 
     /**
-     *
      * @param taken ennyi nukleotidot akarunk kivenni
      * @return ennyi nukleotidot sikerült kivenni
      */
-    public int takeNucleotide(int taken)
-    {
+    public int takeNucleotide(int taken) {
         testerClass.print();
         return stored.takeNucleotide(taken);
     }
 
     /**
-     *
      * @param taken ennyi amiosavat akarunk kivenni
      * @return ennyi aminosavat sikerült kivenni
      */
-    public int takeAminoAcid(int taken)
-    {
+    public int takeAminoAcid(int taken) {
         testerClass.print();
         return stored.takeAminoAcid(taken);
     }

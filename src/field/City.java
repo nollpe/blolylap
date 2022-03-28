@@ -8,21 +8,18 @@ import tester.testerClass;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class City
-{
+public class City {
     private LinkedList<Field> map;
 
 
-    public City()
-    {
+    public City() {
         testerClass.print();
-        map=null;
+        map = null;
 
     }
 
-    public void setMap(LinkedList<Field> ll)
-    {
-        map=ll;
+    public void setMap(LinkedList<Field> ll) {
+        map = ll;
     }
 
     /**
@@ -37,17 +34,14 @@ public class City
         f2.addNeighbour(f1, dir.oppositeDirection());
     }
 
-    public void tick()
-    {
+    public void tick() {
         testerClass.print();
-        for(Field f:map)
-        {
+        for (Field f : map) {
             f.tick();
         }
     }
 
-    public void showCity()
-    {
+    public void showCity() {
         testerClass.print();
     }
 
@@ -92,13 +86,13 @@ public class City
 
     /**
      * Egy karaktert lerak a pályára egy random helyre
+     *
      * @param character a player akit le kell rakni a pályán
      * @return a mező ahova lerakta
      */
-    public Field spawnPlayer(Player character)
-    {
-        Random rand=new Random();
-        int randint=rand.nextInt(map.size());
+    public Field spawnPlayer(Player character) {
+        Random rand = new Random();
+        int randint = rand.nextInt(map.size());
         map.get(randint).enter(character);
         return map.get(randint);
     }

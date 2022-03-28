@@ -34,6 +34,7 @@ public class Player {
     private LinkedList<GeneticCode> knownGeneticCodes;
     private Game game;
     private Field location;
+
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     public Player() {
@@ -53,89 +54,80 @@ public class Player {
 
     //region strategy pattern setter getter
 
-    public Loot getLoot()
-    {
+    public Loot getLoot() {
         testerClass.print();
         return loot;
     }
-    public GetLootTakenFrom getGetLootTakenFrom()
-    {
+
+    public GetLootTakenFrom getGetLootTakenFrom() {
         testerClass.print();
         return getLootTakenFrom;
     }
 
-    public GetCastOn getGetCastOn()
-    {
+    public GetCastOn getGetCastOn() {
         testerClass.print();
         return getCastOn;
     }
-    public Cast getCase()
-    {
+
+    public Cast getCase() {
         testerClass.print();
         return cast;
     }
-    public Movement getMovement()
-    {
+
+    public Movement getMovement() {
         testerClass.print();
         return movement;
     }
-    public void setGetLootTakenFrom(GetLootTakenFrom g)
-    {
+
+    public void setGetLootTakenFrom(GetLootTakenFrom g) {
         testerClass.print();
-        getLootTakenFrom=g;
+        getLootTakenFrom = g;
     }
-    public void setGetCastOn(GetCastOn g)
-    {
+
+    public void setGetCastOn(GetCastOn g) {
         testerClass.print();
-        getCastOn=g;
+        getCastOn = g;
     }
-    public void setLoot(Loot l)
-    {
+
+    public void setLoot(Loot l) {
         testerClass.print();
-        loot=l;
+        loot = l;
     }
-    public void setMovement(Movement m)
-    {
+
+    public void setMovement(Movement m) {
         testerClass.print();
-        movement=m;
+        movement = m;
     }
-    public void setCast(Cast c)
-    {
+
+    public void setCast(Cast c) {
         testerClass.print();
-        cast=c;
+        cast = c;
     }
     //endregion
 
     //region spellcasting
-    public void castSpell()
-    {
+    public void castSpell() {
         testerClass.print();
         cast.cast(this);
     }
 
-    public void getCastOn(Agent a, Player c)
-    {
+    public void getCastOn(Agent a, Player c) {
         testerClass.print();
         getCastOn.getCastOn(a, this, c);
     }
     //endregion
 
-    public void tick()
-    {
+    public void tick() {
         testerClass.print();
-        for(Agent agent:activeAgents)
-        {
+        for (Agent agent : activeAgents) {
             agent.tick();
-            if(agent.getTimeToLive()==0)
-            {
+            if (agent.getTimeToLive() == 0) {
                 agent.loseEffect(this);
             }
         }
-        for(Agent agent:castableAgents)
-        {
+        for (Agent agent : castableAgents) {
             agent.tick();
-            if(agent.getTimeToLive()==0)
-            {
+            if (agent.getTimeToLive() == 0) {
                 agent.loseEffect(this);
             }
         }
@@ -145,11 +137,11 @@ public class Player {
 
     /**
      * A játékostól elvesznek egy védőfelszerelést, ezért törli mgaáról a hatását és kitörli az felszerelései közül.
+     *
      * @param e A védőfelszerelést amit elvettek.
      * @return Az elvétel sikeressége.
      */
-    public boolean takeLoot(Equipment e)
-    {
+    public boolean takeLoot(Equipment e) {
         testerClass.print();
         e.loseEffect(this);
         equipments.remove(e);
@@ -159,11 +151,11 @@ public class Player {
 
     /**
      * A karaktertől lootolni akarnak. Meghívja a lootolás eszenvedéséért felelős osztályt.
+     *
      * @param e A védőfelszerelést amit el akarnak venni.
      * @return Az elvétel sikeressége.
      */
-    public boolean getLootTakenFrom(Equipment e)
-    {
+    public boolean getLootTakenFrom(Equipment e) {
         testerClass.print();
         boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e, this);
         return succes;
@@ -172,8 +164,7 @@ public class Player {
     /**
      * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt.
      */
-    public void loot()
-    {
+    public void loot() {
 
         testerClass.print();
         loot.loot(this);
@@ -182,21 +173,22 @@ public class Player {
 
     /**
      * Eltávolít egy védőfelszerelést
+     *
      * @param e Eltávolítandó védőfelszerelés
      * @return Sikeres volt-e
      */
-    public boolean removeLoot(Equipment e)
-    {
-        testerClass.print();return false;
+    public boolean removeLoot(Equipment e) {
+        testerClass.print();
+        return false;
     }
 
     /**
      * Elvesz valamennyi nukleotidot a karaktertől
+     *
      * @param d1 - hányat akarunk elvenni
      * @return - hányat tudtunk elvenni
      */
-    public int takeNukleotide(int d1)
-    {
+    public int takeNukleotide(int d1) {
         testerClass.print();
         Warehouse wh = (Warehouse) location;
         int d2 = wh.getStored().takeNucleotide(d1);
@@ -207,11 +199,11 @@ public class Player {
 
     /**
      * Elveszünk amino acidot
+     *
      * @param d1 ennyit akarunk elvenni
      * @return ennyit tudunk elvenni
      */
-    public int takeAminoAcid(int d1)
-    {
+    public int takeAminoAcid(int d1) {
         testerClass.print();
         Warehouse wh = (Warehouse) location;
         int d2 = wh.getStored().takeAminoAcid(d1);
@@ -222,10 +214,10 @@ public class Player {
 
     /**
      * Megmutatja milyen equipmentjei vannak a playernek
+     *
      * @return Védőfelszerelések listája
      */
-    public LinkedList<Equipment> showLoot()
-    {
+    public LinkedList<Equipment> showLoot() {
         testerClass.print();
         return equipments;
     }
@@ -233,14 +225,13 @@ public class Player {
 
     /**
      * Hozzáadunk egy GeneticCode-ot
+     *
      * @param gc GeneticCode
      */
-    public void addGeneticCode(GeneticCode gc)
-    {
+    public void addGeneticCode(GeneticCode gc) {
         testerClass.print();
         knownGeneticCodes.add(gc);
     }
-
 
 
     /**
@@ -257,94 +248,101 @@ public class Player {
 
     /**
      * Hozzáadunk egy védőfelszerelést
+     *
      * @param eq védőfelszerelés
      */
-    public void addEquipment(Equipment eq)
-    {
+    public void addEquipment(Equipment eq) {
         testerClass.print();
         equipments.add(eq);
         eq.takeEffect(this);
     }
+
     /**
      * ActiveAgent hozzáadása
+     *
      * @param agent új aktív agent
      */
-    public void addActiveAgent(Agent agent)
-    {
+    public void addActiveAgent(Agent agent) {
         activeAgents.add(agent);
     }
 
     /**
      * AkticeAgent eltávolítása
+     *
      * @param agent eltávolítandó aktív agent
      */
-    public void removeActiveAgent(Agent agent)
-    {
+    public void removeActiveAgent(Agent agent) {
         activeAgents.remove(agent);
     }
 
     /**
      * Minden genetikus kódot elfelejtett a játékossal
      */
-    public void forgetAllGeneticCodes()
-    {
-        knownGeneticCodes=new LinkedList<GeneticCode>();
+    public void forgetAllGeneticCodes() {
+        knownGeneticCodes = new LinkedList<GeneticCode>();
     }
 
     /**
      * Megadja, hogy melyik mezőn áll a játékos
+     *
      * @return A mező
      */
-    public Field getLocation(){
+    public Field getLocation() {
         testerClass.print();
         return location;
     }
 
     /**
      * Beállítja a játékosban, hogy melyik mezőn áll
+     *
      * @param f A mező
      */
-    public void setLocation(Field f){
+    public void setLocation(Field f) {
         testerClass.print();
         location = f;
     }
 
     /**
      * Megadja, hogy milyen védőfelszerelések vannak a karakternél.
+     *
      * @return A védőfelszerlések listája.
      */
-    public LinkedList<Equipment> getStored(){
+    public LinkedList<Equipment> getStored() {
         testerClass.print();
         return equipments;
     }
 
     /**
      * Beállítja a karakterhez tartozó inventoryt.
+     *
      * @param i A karakterhez tartozó inventory.
      */
-    public void setInventory(Inventory i){
+    public void setInventory(Inventory i) {
         testerClass.print();
         inventory = i;
     }
 
     /**
      * Megadja karakterhez tartozó inventoryt.
+     *
      * @returni A karakterhez tartozó inventory.
      */
-    public Inventory getInventory(){
+    public Inventory getInventory() {
         return inventory;
     }
 
     /**
      * Megmutatja milyen kenhető ágenseink vannak
+     *
      * @return kenhető ágensek listája
      */
-    public LinkedList<Agent> getCastableAgents(){
+    public LinkedList<Agent> getCastableAgents() {
         return castableAgents;
     }
 
     /**
      * Kenhető ágens hozzáadása
+     *
      * @param castableAgent kenhető ágens
      */
     public void addCastableAgent(Agent castableAgent) {
@@ -353,8 +351,7 @@ public class Player {
         //castableAgent.takeEffect(this);
     }
 
-    public void makeAgent(GeneticCode geneticCode)
-    {
+    public void makeAgent(GeneticCode geneticCode) {
         geneticCode.makeAgent(this.inventory);
     }
 
