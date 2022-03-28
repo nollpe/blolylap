@@ -38,34 +38,78 @@ public class testerClass {
         System.out.println(filler + className + " " + methodName1);
     }
 
-    public void wiewCity()
+    //region norbi tesztek
+
+    /**
+     * A viewCity testcase megvalósítása
+     */
+    public void viewCity()
     {
         City c= new City();
         c.showCity();
     }
 
+    /**
+     * A startGame testCase megvalósítása
+     */
     public void startGame()
     {
         Game game= Game.getInstance();
+        City city=new City();
+        city.generateMap();
+        game.setCity(city);
     }
 
-    public void end_turn()
+    /**
+     * az endTurn testCase megvalósítása
+     */
+    public void endTurn()
     {
-        Timer timer= Timer.getInstance();
+        Timer timer=Timer.getInstance();
+        Game game= Game.getInstance();
+        City city=new City();
+        city.generateMap();
+        game.setCity(city);
+        Player player=new Player();
+        game.spawnPlayer(player);
+
+        Agent chorea=new Chorea();
+        Agent forget=new Forget();
+        Agent invulnerable=new Invulnerable();
+        Agent paralyzing=new Paralyzing();
+        player.addCastableAgent(chorea);
+        player.addCastableAgent(forget);
+        player.addCastableAgent(invulnerable);
+        player.addCastableAgent(paralyzing);
+
         timer.tick();
     }
 
-
+    /**
+     * Az agentExires megvalósítja bármely ágens lejárását mind felkent és felkenhető állapotban
+     */
     public void agentExpires()
     {
-        Player ribanc=new Player();
+        //region változó deklarációk
+        Timer timer=Timer.getInstance();
+        Game game=Game.getInstance();
+        City city=new City();
+        Field field=new Field();
+        Player player=new Player();
         Agent agent=null;
-        System.out.println("melyik agens?\n1:Invulnerable\n2:Chorea\n3:Paralyzing\n4:Forget\n0:kilép");
+
+        timer.setGame();
+        LinkedList<Field> map=new LinkedList<Field>();map.add(field);
+        city.setMap(map);
+        game.setCity(city);
+        field.enter(player);
+
+        //endregion
+
         int chosen=0;
-
-
         while(agent==null)
         {
+            System.out.println("melyik agens?\n1:Invulnerable\n2:Chorea\n3:Paralyzing\n4:Forget\n0:kilép");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
                 chosen=Integer.parseInt(br.readLine());
@@ -94,13 +138,29 @@ public class testerClass {
                     break;
             }
         }
-
-        agent.takeEffect(ribanc);
-        System.out.println("lose effect:");
-        agent.loseEffect(ribanc);
+        agent.setTimeToLive(1);
+        System.out.println("felkenhető(1) vagy felkent(2) ágens legyen?");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            chosen=Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        switch (chosen)
+        {
+            case (2):
+                player.addActiveAgent(agent);
+                break;
+            case(1):
+                player.addCastableAgent(agent);
+        }
+        timer.tick();
 
     }
 
+    //endregion
+
+    //region szushi tesztek
     /**
      * Karakterek a teszteléshez
      */
@@ -353,7 +413,181 @@ public class testerClass {
                 System.out.println("Ilyen nincsen. ");
         }
     }
+    //endregion
 
+    //region Tarnay testcase
+
+    /**
+     * A TakeNukleotideFromWarehouse TestCase inicializálása és lefutása
+     * A játékos felvesz valamennyi nukleotide-ot egy raktárból.
+     * Forgatókönyv
+     * A játékos felvesz annyi nukleotid-ot, amennyit képes/akar egy raktárból.
+     */
+    private void Test_TakeNukleotideFromWarehouse() {
+        //init
+        Player c = new Player();
+        Warehouse location = new Warehouse();
+        Inventory inventory = new Inventory(10);
+        c.setInventory(inventory);
+        c.setLocation(location);
+        location.enter(c);
+        location.getStored().addNucleotide(2);
+        //test
+        c.takeNukleotide(1);
+    }
+
+    /**
+     * A TakeAminoacidFromWarehouse TestCase inicializálása és lefutása
+     * A játékos felvesz valamennyi aminoacid-ot egy raktárból.
+     * Forgatókönyv
+     * A játékos felvesz annyi aminoacid-ot, ammenyit képes/akar egy raktárból.
+     */
+    private void Test_TakeAminoacidFromWarehouse() {
+        //init
+        Player c = new Player();
+        Warehouse location = new Warehouse();
+        Inventory inventory = new Inventory(10);
+        c.setInventory(inventory);
+        c.setLocation(location);
+        location.enter(c);
+        location.getStored().addAminoAcid(2);
+        //test
+        c.takeAminoAcid(1);
+    }
+
+    /**
+     * A ViewLootOfWarehouse TestCase inicializálása és lefutása
+     * A játékos megtekinti a raktár tartalmát.
+     * Forgatókönyv
+     * A játékos megtekinti a raktár tartalmát.
+     */
+    private void Test_ViewLootOfWarehouse() {
+        //init
+        Warehouse location = new Warehouse();
+        Inventory inventory = new Inventory(10);
+        location.setStored(inventory);
+        //test
+        location.showLoot();
+    }
+
+    /**
+     * A ViewGeneticCodeOfLaboratory TestCase inicializálása és lefutása
+     * A játékos megtekinti a laboratórium tartalmazott genetikus kódját.
+     * Forgatókönyv
+     * A játékos megtekinti a laboratórium tartalmazott genetikus kódját.
+     */
+    private void Test_ViewGeneticCodeOfLaboratory() {
+        //init
+        Laboratory location = new Laboratory();
+        location.init(new GeneticCode(new Forget(), 1,1));
+        //test
+        location.showLoot();
+    }
+
+    /**
+     * A LearnGeneticCodeOfLaboratory TestCase inicializálása és lefutása
+     * A játékos megtanulja a laboratórium genetikus kódját.
+     * Forgatókönyv
+     * A játékos megtanulja a laboratórium genetikus kódját.
+     */
+    private void Test_LearnGeneticCodeOfLaboratory() {
+        //init
+        Player c = new Player();
+        Laboratory location = new Laboratory();
+        GeneticCode readableGeneticCode = new GeneticCode();
+        location.init(readableGeneticCode);
+        location.enter(c);
+        //test
+        //c.message1
+        GeneticCode gc = location.readGeneticCode();
+        c.addGeneticCode(gc);
+    }
+
+    /**
+     * A ViewLootOfSafehouse TestCase inicializálása és lefutása
+     * A játékos megtekinti a óvóhelyen lévő védőfelszerelést.
+     * Forgatókönyv
+     * A játékos megtekinti a óvóhelyen lévő védőfelszerelést.
+     */
+    private void Test_ViewLootOfSafehouse() {
+        //init
+        Safehouse location = new Safehouse();
+        //test
+        location.showLoot();
+    }
+
+    /**
+     * A TakeBagFromSafehouse TestCase inicializálása és lefutása
+     * A játékos felvesz egy zsákot óvóhelyről
+     * Forgatókönyv
+     * A játékos felvesz egy zsákot
+     * A játékos inventoryjába beépül a zsák
+     */
+    private void Test_TakeBagFromSafehouse() {
+        //init
+        Player c = new Player();
+        Bag stored = new Bag();
+        Safehouse location = new Safehouse();
+        Inventory inventory = new Inventory(10);
+        c.setInventory(inventory);
+        c.setLocation(location);
+        location.enter(c);
+        location.setStored(stored);
+        //test
+        Equipment eq = ((Safehouse)location).getStored();
+        c.takeLoot(eq);
+    }
+
+    /**
+     * A TakeLabcoatFromSafehouse TestCase inicializálása és lefutása
+     * A játékos felvesz egy köpenyt óvóhelyről
+     * Forgatókönyv
+     * A játékos felvesz egy köpenyt óvóhelyről
+     * A játékos GetCastOnContoller strategy patternje megváltozik, GetCastOnResistant-ra
+     */
+    private void TestInit_TakeLabcoatFromSafehouse() {
+        //init
+        Player c = new Player();
+        Labcoat stored = new Labcoat();
+        Safehouse location = new Safehouse();
+        c.setLocation(location);
+        location.enter(c);
+        location.setStored(stored);
+        //test
+        Equipment eq = ((Safehouse)location).getStored();
+        c.takeLoot(eq);
+
+    }
+
+    /**
+     * A TakeGlovesFromSafehouse TestCase inicializálása és lefutása
+     * A játékos felvesz egy pár kesztyűt óvóhelyről
+     * Forgatókönyv:
+     * A játékos felvesz egy pár kesztyűt óvóhelyről
+     * A játékos GetCastOnContoller strategy patternje megváltozik, GetCastOnGloves-ra
+     */
+    private void TestInit_TakeGlovesFromSafehouse() {
+        //init
+        Player c = new Player();
+        Gloves stored = new Gloves();
+        Safehouse location = new Safehouse();
+        c.setLocation(location);
+        location.enter(c);
+        location.setStored(stored);
+        //test
+        Equipment eq = ((Safehouse)location).getStored();
+        c.takeLoot(eq);
+    }
+
+    private void Test1(){
+
+        character1.loot();
+    }
+
+    private void Test2(){
+        character1.loot();
+    }
+    //endregion
 
     public static void main(String[] args)
     {
