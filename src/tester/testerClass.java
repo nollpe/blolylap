@@ -1,6 +1,7 @@
 package tester;
 
 import agents.*;
+import cast.CastImpared;
 import character.Inventory;
 import character.Player;
 import equipment.Bag;
@@ -10,10 +11,12 @@ import equipment.Labcoat;
 import field.*;
 import game.Game;
 import game.Timer;
+import getCastOn.GetCastOnInvulnerable;
 import getLootTakenFrom.LootTakenStunned;
 import movement.MovementChorea;
 import movement.MovementNormal;
 import movement.MovementParalyzed;
+import loot.LootImpared;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -160,34 +163,76 @@ public class testerClass {
 
     //endregion
 
-    //region szusi tesztek
+    //region szushi tesztek
+    /**
+     * Karakterek a teszteléshez
+     */
     static Player character1;
     static Player character2;
     static Player character3;
-    private void lootEquipment(){
-        System.out.println("Válassz gec: \n1-Védőfelszerelést ellopása karaktertől\n2-idk");
-        Scanner input = new Scanner(System.in);
-        String s = input.nextLine();
-        switch (s){
-            case "1":
-                TestInit1();
-                Test1();
+    static Player character4;
+    static Player character5;
+    static Game game;
+    Invulnerable invulnerable;
+    Forget forget;
+    Chorea chorea;
+    Paralyzing paralyzing;
+
+
+    /**
+     * A virológusok közötti interakciókat teszteli
+     */
+    private void interactWithOtherVirologist(){
+        /**
+         * Megkérdezi a felhasználót, hogy melyik esetet szeretné tesztelni.
+         * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
+         */
+        int n = 0;
+        boolean valid = false;
+        while(!valid){
+            System.out.println("Kérlek válassz egy tesztesetet: \n1-Lootolás karaktertől\n2-Varázslás");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            /**
+             * Ellenőrzi, hogy értelmes választ adott-e a felhasználó
+             */
+            if(n>0 && n <3) valid = true;
+        }
+
+        /**
+         * A felhasználó által választott tesztet futtatja.
+         */
+        switch (n){
+            case 1:
+                lootFromCharacterInit();
+                lootFromCharacterTest();
                 break;
-            case "2":
-                TestInit1();
-                Test2();
+            case 2:
+                castAgentInit();
+                castAgentTest();
                 break;
             default:
-                System.out.println("Ilyen nincs is fogykos");
+                System.out.println("Ilyen  teszteset nincs");
         }
     }
 
-    private void TestInit1() {
+    /**
+     * Inicializálás lootoláshoz tartozó tesztekhez.
+     * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
+     */
+    private void lootFromCharacterInit() {
+        /**
+         * létrehozása a játékot és a várost  illetve összekapcsolja őket.
+         */
         Game game = Game.getInstance();
         City city = new City();
         game.setCity(city);
         city.generateMap();
 
+        /**
+         * A karaktereket létrehozza és egy mezőre helyezi őket, hogy tudjanak interaktálni.
+         * Azért van 3 karakter, hogy mind a sikeres, mind a sikertelen lootolási kísérleteket tesztelni tudjuk.
+         */
         character1 = new Player();
         character2 = new Player();
         character3 = new Player();
@@ -199,18 +244,177 @@ public class testerClass {
         character2.setLocation(field);
         character3.setLocation(field);
 
-
+        /**
+         * Létrehozza a védőfelszereléseket és a karakterekhez rendeleli
+         * Két karakterhez is hozzáadja őket, hogy a lebénult és a nem lebénult eseteket is telsztelni lehessen.
+         */
         Gloves gloves = new Gloves();
         Bag bag = new Bag();
         Labcoat labcoat = new Labcoat();
-
         character2.addEquipment(gloves);
         character2.addEquipment(labcoat);
         character2.addEquipment(bag);
+        character3.addEquipment(gloves);
+        character3.addEquipment(labcoat);
+        character3.addEquipment(bag);
 
-        LootTakenStunned lts = new LootTakenStunned();
-        character2.setGetLootTakenFrom(lts);
+        /**
+         * Létrehozza az intentorykat és hozzárendeli a karakterekhez
+         */
+        Inventory inventory1 = new Inventory(10);
+        Inventory inventory2 = new Inventory(10);
+        Inventory inventory3 = new Inventory(10);
+        character1.setInventory(inventory1);
+        character2.setInventory(inventory2);
+        character3.setInventory(inventory3);
 
+        /**
+         * Feltölti az intentorykat nukleotiddal és aminosavval
+         */
+        inventory2.addAminoAcid(5);
+        inventory2.addNucleotide(5);
+        inventory3.addAminoAcid(5);
+        inventory3.addNucleotide(5);
+
+        /**
+         * A második karaktert megbénítja
+         * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
+         */
+        character2.setGetLootTakenFrom(new LootTakenStunned());
+        character2.setLoot(new LootImpared());
+    }
+
+    /**
+     * Inicializálás ágens keneséhez tartozó tesztesetekhez
+     * Létrehozza és inicializálja a teszteléshez szükséges példányokat.
+     */
+    private void castAgentInit() {
+        /**
+         * létrehozása a játékot és a várost  illetve összekapcsolja őket.
+         */
+        Game game = Game.getInstance();
+        City city = new City();
+        game.setCity(city);
+        city.generateMap();
+
+        /**
+         * A karaktereket létrehozza és egy mezőre helyezi őket, hogy tudjanak interaktálni.
+         * Azért van 3 karakter, hogy mind a sikeres, mind a sikertelen lootolási kísérleteket tesztelni tudjuk.
+         */
+        character1 = new Player();
+        character2 = new Player();
+        character3 = new Player();
+        character4 = new Player();
+        character5 = new Player();
+        Field field = new Field();
+        field.enter(character1);
+        field.enter(character2);
+        field.enter(character3);
+        field.enter(character4);
+        field.enter(character5);
+        character1.setLocation(field);
+        character2.setLocation(field);
+        character3.setLocation(field);
+        character4.setLocation(field);
+        character5.setLocation(field);
+
+        /**
+         * Létrehozza a védőfelszereléseket és a karakterekhez rendeleli
+         * Két karakterhez is hozzáadja őket, hogy a lebénult és a nem lebénult eseteket is telsztelni lehessen.
+         */
+        Gloves gloves = new Gloves();
+        Labcoat labcoat = new Labcoat();
+        character2.addEquipment(gloves);
+        character3.addEquipment(labcoat);
+
+
+        /**
+         * A negyedik karaktert megbénítja
+         * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
+         */
+        character4.setCast(new CastImpared());
+
+        invulnerable = new Invulnerable();
+        forget = new Forget();
+        chorea = new Chorea();
+        paralyzing = new Paralyzing();
+        character1.addCastableAgents(invulnerable);
+        character1.addCastableAgents(forget);
+        character1.addCastableAgents(chorea);
+        character1.addCastableAgents(paralyzing);
+
+        /**
+         * Sebezhetetlenné teszi az 5. játékost
+         */
+        character5.setGetCastOn(new GetCastOnInvulnerable());
+    }
+
+    /**
+     * A karaktertől való lootolás tesztje
+     */
+    private void lootFromCharacterTest(){
+        /**
+         * Megkérdezi a felhasználótol, hogy lebénult vagy nem lebénult karakterrel szeretne tesztelni.
+         * A lebénult karatker tud lootolni, a nem lebénult nem.
+         * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
+         */
+        int n = 0;
+        boolean valid = false;
+        while(!valid){
+            System.out.println("Milyen karakterrel szeretnél lootolni?: \n1-Nem lebénult\n2-Lebénult");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if(n>0 && n <3) valid = true;
+        }
+        /**
+         * A felhasználó által választott tesztet futtatja.
+         * Első: nem lebénult.
+         * Második: lebénult.
+         */
+        switch (n){
+            case 1:
+                character1.loot();
+                break;
+            case 2:
+                character2.loot();
+                break;
+            default:
+                System.out.println("Ilyen nincsen. ");
+        }
+    }
+
+    /**
+     * Az ágens kenés tesztje
+     */
+    private void castAgentTest(){
+        /**
+         * Megkérdezi a felhasználótol, hogy lebénult vagy nem lebénult karakterrel szeretne ágenst kenni.
+         * A lebénult karatker tud lootolni, a nem lebénult nem.
+         * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
+         */
+        int n = 0;
+        boolean valid = false;
+        while(!valid){
+            System.out.println("Milyen karakterrel szeretnél castolni?: \n1-Nem lebénult\n2-Lebénult");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if(n>0 && n <3) valid = true;
+        }
+        /**
+         * A felhasználó által választott tesztet futtatja.
+         * Első: nem lebénult.
+         * Második: lebénult.
+         */
+        switch (n){
+            case 1:
+                character1.castSpell();
+                break;
+            case 2:
+                character4.castSpell();
+                break;
+            default:
+                System.out.println("Ilyen nincsen. ");
+        }
     }
     //endregion
 
