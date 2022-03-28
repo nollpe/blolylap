@@ -5,6 +5,7 @@ import agents.GeneticCode;
 import cast.Cast;
 import cast.CastNormal;
 import equipment.Equipment;
+import field.Direction;
 import field.Field;
 import field.Warehouse;
 import game.Game;
@@ -240,6 +241,20 @@ public class Player {
         knownGeneticCodes.add(gc);
     }
 
+
+
+    /**
+     * Elmozdítja a játékost a megadott égtáj felé
+     *
+     * @param dir a megadott égtáj
+     */
+    public void move(Direction dir) {
+        testerClass.print();
+        getMovement().move(dir, this);
+    }
+
+    //region adderek removerek
+
     /**
      * Hozzáadunk egy védőfelszerelést
      * @param eq védőfelszerelés
@@ -250,14 +265,6 @@ public class Player {
         equipments.add(eq);
         eq.takeEffect(this);
     }
-
-    public void move(/*fielnek kéne itt lennie nem?*/)
-    {
-        testerClass.print();
-    }
-
-    //region adderek removerek
-
     /**
      * ActiveAgent hozzáadása
      * @param agent új aktív agent
@@ -344,6 +351,11 @@ public class Player {
         testerClass.print();
         castableAgents.add(castableAgent);
         //castableAgent.takeEffect(this);
+    }
+
+    public void makeAgent(GeneticCode geneticCode)
+    {
+        geneticCode.makeAgent(this.inventory);
     }
 
     //endregion
