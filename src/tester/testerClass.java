@@ -11,6 +11,9 @@ import field.*;
 import game.Game;
 import game.Timer;
 import getLootTakenFrom.LootTakenStunned;
+import movement.MovementChorea;
+import movement.MovementNormal;
+import movement.MovementParalyzed;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -383,6 +386,130 @@ public class testerClass {
     private void Test2(){
         character1.loot();
     }
+    //endregion
+
+    //region Zsolti tesztesetei
+
+    /**
+     * A játékos mozgását teszteli, ha a játékoson nincsen semmilyen mozgást befolyásoló hatás
+     */
+    public void normalCharacterMoves() {
+        //inicializálunk
+        Player player = new Player();
+        MovementNormal movementNormal = new MovementNormal();
+        player.setMovement(movementNormal);
+        Field field1 = new Field();
+        player.setLocation(field1);
+
+        boolean valid = false;
+        int n = 0;
+        Field field2;
+
+        //megkérdezzük, milyen mezőre szeretnénk lépni
+        while (!valid) {
+            System.out.println("1: Empty Field, 2: Laboratory, 3: Warehouse, 4: Safehouse");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if (n > 0 && n < 5) valid = true;
+        }
+
+        switch (n) {
+            case 2 -> field2 = new Laboratory();
+            case 3 -> field2 = new Warehouse();
+            case 4 -> field2 = new Safehouse();
+            default -> field2 = new Field();
+        }
+
+        field1.addNeighbour(field2, Direction.NORTH);
+        field2.addNeighbour(field1, Direction.SOUTH);
+
+        //elmozdítjuk a játékost
+        player.move(Direction.NORTH);
+    }
+
+    /**
+     * A játékos mozgását teszteli, ha a játékos vírustánc alatt áll
+     */
+    public void choreaCharacterMoves() {
+        //inicializálunk
+        Player player = new Player();
+        MovementChorea movementChorea = new MovementChorea();
+        player.setMovement(movementChorea);
+        Field field1 = new Field();
+        player.setLocation(field1);
+
+        //a mezőnek minden irányba rakunk szomszédot, hogy bármelyikbe lépést lehessen tesztelni
+        Safehouse field2 = new Safehouse();
+        field1.addNeighbour(field2, Direction.NORTH);
+        field2.addNeighbour(field1, Direction.SOUTH);
+
+        Warehouse field3 = new Warehouse();
+        field1.addNeighbour(field3, Direction.EAST);
+        field3.addNeighbour(field1, Direction.WEST);
+
+        Laboratory field4 = new Laboratory();
+        field1.addNeighbour(field4, Direction.WEST);
+        field4.addNeighbour(field1, Direction.EAST);
+
+        Field field5 = new Field();
+        field1.addNeighbour(field5, Direction.SOUTH);
+        field5.addNeighbour(field1, Direction.NORTH);
+
+        //elmozdítjuk a játékost
+        player.move(Direction.NORTH);
+    }
+
+    /**
+     * A játékos mozgását teszteli, ha a játékos le van bénulva
+     */
+    public void paralyzedCharacterMoves() {
+        //inicializálunk
+        Player player = new Player();
+        MovementParalyzed movementParalyzed = new MovementParalyzed();
+        player.setMovement(movementParalyzed);
+
+        Field field1 = new Field();
+        player.setLocation(field1);
+
+        //elmozdítjuk a játékost
+        player.move(Direction.NORTH);
+    }
+
+    /**
+     * Az ágens létrehozását teszteli
+     */
+    public void createAgent() {
+        //inicializálunk
+        Player player = new Player();
+        Agent agent;
+
+        boolean valid = false;
+        int n = 0;
+
+        //megkérdezzük, hogy milyen ágenst szeretnénk létrehozni
+        while (!valid) {
+            System.out.println("1: Chorea, 2: Forget, 3: Invulnerable, 4: Paralyzing");
+            Scanner input = new Scanner(System.in);
+            n = Integer.parseInt(input.nextLine());
+            if (n > 0 && n < 5) valid = true;
+        }
+
+        switch (n) {
+            case 2 -> agent = new Forget();
+            case 3 -> agent = new Invulnerable();
+            case 4 -> agent = new Paralyzing();
+            default -> agent = new Chorea();
+        }
+
+
+        GeneticCode geneticCode = new GeneticCode(agent, 5, 5);
+        player.getInventory().addAminoAcid(5);
+        player.getInventory().addNucleotide(5);
+
+        //létrehozzuk az ágenst
+        player.makeAgent(geneticCode);
+    }
+
     //endregion
 
     public static void main(String[] args)

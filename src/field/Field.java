@@ -2,23 +2,48 @@ package field;
 
 import character.Player;
 import tester.testerClass;
+
+import java.util.EnumMap;
 import java.util.LinkedList;
 
 public class Field
 {
-    private LinkedList<Field> neighbours;
+    private EnumMap<Direction, Field> neighbours;
     private LinkedList<Player> inhabitants;
 
-    public Field()
-    {
+    public Field() {
         testerClass.print();
-        this.neighbours=new LinkedList<Field>();
-        this.inhabitants=new LinkedList<Player>();
+        this.neighbours = new EnumMap<>(Direction.class);
+        this.inhabitants = new LinkedList<>();
     }
 
-    protected void addNeighbour(Field added)
-    {
-        neighbours.add(added);
+    /**
+     * Hozzáad egy új szomszédot a mezőhöz
+     *
+     * @param added az új szomszéd
+     * @param dir   megadja, hogy az új szomszéd milyen irányban van a mezőhöz képest
+     */
+    public void addNeighbour(Field added, Direction dir) {
+        neighbours.put(dir, added);
+    }
+
+    /**
+     * Megadja, hogy az adott irányban melyik mező van
+     *
+     * @param dir a keresett irány
+     * @return a keresett mezőt adja vissza
+     */
+    public Field getNeighbour(Direction dir) {
+        return neighbours.get(dir);
+    }
+
+    /**
+     * Visszaadja a mező szomszédjait
+     *
+     * @return a mező szomszédjai
+     */
+    public EnumMap<Direction, Field> getNeighbours() {
+        return neighbours;
     }
 
     public void enter(Player c)

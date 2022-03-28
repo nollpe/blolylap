@@ -25,10 +25,16 @@ public class City
         map=ll;
     }
 
-    private void makeNeighbours(Field f1,Field f2)
-    {
-        f1.addNeighbour(f2);
-        f2.addNeighbour(f1);
+    /**
+     * Beállít két mezőt szomszédosnak
+     *
+     * @param f1  az egyik mező
+     * @param f2  a másik mező
+     * @param dir megadja, hogy a második mező milyen irányban van az első mezőhöz képest
+     */
+    private void makeNeighbours(Field f1, Field f2, Direction dir) {
+        f1.addNeighbour(f2, dir);
+        f2.addNeighbour(f1, dir.oppositeDirection());
     }
 
     public void tick()
@@ -59,14 +65,13 @@ public class City
     /**
      * generál egy 4 mezőből álló pályát amiben mindenféle mező megjelenik és mindegyik szomszédja mindegyiknek
      */
-    public void generateMap()
-    {
-        map=new LinkedList<Field>();
+    public void generateMap() {
+        map = new LinkedList<>();
 
         //létrehozzuk a fieldeket
-        Field basicField=new Field();
-        Laboratory laboratory= new Laboratory();
-        Safehouse safehouse= new Safehouse();
+        Field basicField = new Field();
+        Laboratory laboratory = new Laboratory();
+        Safehouse safehouse = new Safehouse();
         Warehouse warehouse = new Warehouse();
 
         //belerakjuk a mappba
@@ -76,12 +81,11 @@ public class City
         map.add(warehouse);
 
         //szomszédok lettek
-        makeNeighbours(basicField,laboratory);
-        makeNeighbours(basicField,safehouse);
-        makeNeighbours(basicField,warehouse);
-        makeNeighbours(laboratory,safehouse);
-        makeNeighbours(laboratory,warehouse);
-        makeNeighbours(safehouse,warehouse);
+        makeNeighbours(basicField, laboratory, Direction.NORTH);
+        makeNeighbours(basicField, safehouse, Direction.WEST);
+
+        makeNeighbours(laboratory, warehouse, Direction.WEST);
+        makeNeighbours(safehouse, warehouse, Direction.NORTH);
 
         testerClass.print();
     }
