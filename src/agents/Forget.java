@@ -14,9 +14,9 @@ public class Forget extends Agent {
     //LinkedList<GeneticCode> forgotten;
 
     /**
-     * Az ágens fel lett kenve valakire elkezdi kifejeteni hatását
+     * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
      *
-     * @param player A játékos akinek a karakterére rákenték az ágenst
+     * @param player A jatekos akinek a karakterere rekentek az agenst
      */
     public void takeEffect(Player player) {
         testerClass.print();
@@ -24,9 +24,9 @@ public class Forget extends Agent {
     }
 
     /**
-     * Az ágens hatása lejár
+     * Az agens hatasa lejar
      *
-     * @param player A játékos akinek a karakterén van az ágens
+     * @param player A jatekos akinek a karakteren van az agens
      */
     public void loseEffect(Player player) {
         testerClass.print();

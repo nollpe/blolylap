@@ -5,15 +5,15 @@ import tester.testerClass;
 import character.Player;
 
 /**
- * Az ágens kenés elszenvedését kezelő osztály kesztyűs esetben
+ * Az agens kenes elszenvedeset kezelo osztaly sebezhetetlen esetben
  */
 public class GetCastOnGloves implements GetCastOn {
     /**
-     * Az ágen kenés elszenvedését végző függvény kesztyűs esete. Az ágens visszapattan a támadóra.
+     * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
      *
-     * @param a        Ágens, amit felkennek a karakterre.
-     * @param player   A játékos, akire kenik az ágenst.
-     * @param attacker A játékos, aki keni az ágenst.
+     * @param a        Agens, amit felkennek a karakterre.
+     * @param player   A jatekos, akire kenik az agenst.
+     * @param attacker A jatekos, aki keni az agenst.
      */
     @Override
     public void getCastOn(Agent a, Player player, Player attacker) {
