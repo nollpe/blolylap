@@ -105,10 +105,19 @@ public class Inventory
         }
     }
 
+    /**
+     * Megmondja hány nukleotid van az inventoryban
+     * @return Nukleotidok száma
+     */
     public int getNukleotide() {
         return nucleotide;
     }
 
+
+    /**
+     * Megmondja hány aminó acid van az inventoryban
+     * @return Amino acidok száma
+     */
     public int getAminoAcid() {
         return aminoAcid;
     }

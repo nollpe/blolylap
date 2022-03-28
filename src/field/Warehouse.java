@@ -41,7 +41,6 @@ public class Warehouse extends Field
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //mAgAS sZInTű nYElv
         //chosen=getchar();
         stored.addAminoAcid(ami);
         stored.addNucleotide(nuc);

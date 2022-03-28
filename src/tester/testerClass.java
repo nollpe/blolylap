@@ -581,6 +581,11 @@ public class testerClass {
     }
     //endregion
 
+    /**
+     * Main függvény
+     * Innen vezéreljük a konzolon kersztüli tesztelést
+     * @param args bemeneti argumentumok (nem használt)
+     */
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();

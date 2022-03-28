@@ -178,11 +178,22 @@ public class Player {
         loot.loot(this);
 
     }
+
+    /**
+     * Eltávolít egy védőfelszerelést
+     * @param e Eltávolítandó védőfelszerelés
+     * @return Sikeres volt-e
+     */
     public boolean removeLoot(Equipment e)
     {
         testerClass.print();return false;
     }
 
+    /**
+     * Elvesz valamennyi nukleotidot a karaktertől
+     * @param d1 - hányat akarunk elvenni
+     * @return - hányat tudtunk elvenni
+     */
     public int takeNukleotide(int d1)
     {
         testerClass.print();
@@ -246,16 +257,28 @@ public class Player {
     }
 
     //region adderek removerek
+
+    /**
+     * ActiveAgent hozzáadása
+     * @param agent új aktív agent
+     */
     public void addActiveAgent(Agent agent)
     {
         activeAgents.add(agent);
     }
 
+    /**
+     * AkticeAgent eltávolítása
+     * @param agent eltávolítandó aktív agent
+     */
     public void removeActiveAgent(Agent agent)
     {
         activeAgents.remove(agent);
     }
 
+    /**
+     * Minden genetikus kódot elfelejtett a játékossal
+     */
     public void forgetAllGeneticCodes()
     {
         knownGeneticCodes=new LinkedList<GeneticCode>();

@@ -14,8 +14,15 @@ import java.util.LinkedList;
 
 public class Safehouse extends Field
 {
+    /**
+     * Tárolt védőfelszerelés
+     */
     private Equipment stored;
 
+    /**
+     * Konstruktor
+     * Alapból nullra állítja a tárolt védőfelszerelést
+     */
     public Safehouse()
     {
         super();
@@ -23,11 +30,17 @@ public class Safehouse extends Field
         testerClass.print();
     }
 
+    /**
+     * Megmutatja a tartalmazott lootot
+     */
     public void showLoot()
     {
         testerClass.print();
     }
 
+    /**
+     * Időben lépteti a safehouset
+     */
     public void tick()
     {
         testerClass.print();
@@ -62,21 +75,35 @@ public class Safehouse extends Field
         }
     }
 
+    /**
+     * Elvesz valamilyen lootot a safehouseból
+     */
     public void takeLoot()
     {
         testerClass.print();
     }
 
+    /**
+     * Elvesz egy védőfelszerelést a safehouseból
+     * @param e elvevendő védőfelszerelés
+     */
     public void takeEquipment(Equipment e)
     {
         testerClass.print();
-        //ez miert void?
     }
 
+    /**
+     * Megadja a safehouse által tárolt védőfelszerelést
+     * @param newStored Tárolandó védőfelszerelés
+     */
     public void setStored(Equipment newStored) {
         stored =newStored;
     }
 
+    /**
+     * Visszaadja a tárolt védőfelszerelést
+     * @return tárolt védőfelszerelés
+     */
     public Equipment getStored() {
         return stored;
     }
