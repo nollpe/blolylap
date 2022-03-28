@@ -24,7 +24,6 @@ public class Bag extends Equipment
     public void takeEffect(Player c)
     {
         testerClass.print();
-        c.addEquipment(this);
     }
 
     /**

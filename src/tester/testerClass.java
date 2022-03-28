@@ -356,7 +356,7 @@ public class testerClass {
          * A lebénult karatker tud lootolni, a nem lebénult nem.
          * Addig kéri a bemenetet újra, amíg értelmes választ nem kap.
          */
-        int n = 0;
+        int n = 1;
         boolean valid = false;
         while(!valid){
             System.out.println("Milyen karakterrel szeretnél lootolni?: \n1-Nem lebénult\n2-Lebénult");
@@ -546,7 +546,7 @@ public class testerClass {
      * A játékos felvesz egy köpenyt óvóhelyről
      * A játékos GetCastOnContoller strategy patternje megváltozik, GetCastOnResistant-ra
      */
-    private void TestInit_TakeLabcoatFromSafehouse() {
+    private void Test_TakeLabcoatFromSafehouse() {
         //init
         Player c = new Player();
         Labcoat stored = new Labcoat();
@@ -567,7 +567,7 @@ public class testerClass {
      * A játékos felvesz egy pár kesztyűt óvóhelyről
      * A játékos GetCastOnContoller strategy patternje megváltozik, GetCastOnGloves-ra
      */
-    private void TestInit_TakeGlovesFromSafehouse() {
+    private void Test_TakeGlovesFromSafehouse() {
         //init
         Player c = new Player();
         Gloves stored = new Gloves();
@@ -579,22 +579,89 @@ public class testerClass {
         Equipment eq = ((Safehouse)location).getStored();
         c.takeLoot(eq);
     }
-
-    private void Test1(){
-
-        character1.loot();
-    }
-
-    private void Test2(){
-        character1.loot();
-    }
     //endregion
 
     public static void main(String[] args)
     {
         testerClass ts=new testerClass();
-        ts.agentExpires();
-        ts.interactWithOtherVirologist();
+        boolean quit = false;
+        while(!quit) {
+            System.out.println("Melyik teszteset?: " +
+                    "\n0-Kilép" +
+                    "\n1-viewCity" +
+                    "\n2-startGame" +
+                    "\n3-endTurn" +
+                    "\n4-agentExpires" +
+                    "\n5-interactWithOtherVirologist" +
+                    "\n6-lootFromCharacterTest" +
+                    "\n7-castAgentTest" +
+                    "\n8-Test_takeNukleotideFromWarehouse" +
+                    "\n9-Test_TakeAminoacidFromWarehouse" +
+                    "\n10-Test_ViewLootOfWarehouse" +
+                    "\n11-Test_ViewGeneticCodeOfLaboratory" +
+                    "\n12-Test_LearnGeneticCodeOfLaboratory" +
+                    "\n13-Test_ViewLootOfSafehouse" +
+                    "\n14-Test_TakeBagFromSafehouse" +
+                    "\n15-Test_TakeLabcoatFromSafehouse" +
+                    "\n16-Test_TakeGlovesFromSafehouse"
+                    );
+            Scanner input = new Scanner(System.in);
+            int n = Integer.parseInt(input.nextLine());
+            switch (n) {
+                case 0:
+                    quit = true;
+                    break;
+                case 1:
+                    ts.viewCity();
+                    break;
+                case 2:
+                    ts.startGame();
+                    break;
+                case 3:
+                    ts.endTurn();
+                    break;
+                case 4:
+                    ts.agentExpires();
+                    break;
+                case 5:
+                    ts.interactWithOtherVirologist();
+                    break;
+                case 6:
+                    ts.lootFromCharacterInit();
+                    ts.lootFromCharacterTest();
+                    break;
+                case 7:
+                    ts.castAgentInit();
+                    ts.castAgentTest();
+                    break;
+                case 8:
+                    ts.Test_TakeNukleotideFromWarehouse();
+                    break;
+                case 9:
+                    ts.Test_TakeAminoacidFromWarehouse();
+                    break;
+                case 10:
+                    ts.Test_ViewLootOfWarehouse();
+                    break;
+                case 11:
+                    ts.Test_ViewGeneticCodeOfLaboratory();
+                    break;
+                case 12:
+                    ts.Test_LearnGeneticCodeOfLaboratory();
+                    break;
+                case 13:
+                    ts.Test_ViewLootOfSafehouse();
+                case 14:
+                    ts.Test_TakeBagFromSafehouse();
+                    break;
+                case 15:
+                    ts.Test_TakeLabcoatFromSafehouse();
+                    break;
+                case 16:
+                    ts.Test_TakeGlovesFromSafehouse();
+                    break;
+            }
 
+        }
     }
 }

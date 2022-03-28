@@ -38,6 +38,7 @@ public class Laboratory extends Field
 
     public void init(GeneticCode gc)
     {
+        readableGeneticCode = gc;
         testerClass.print();
     }
 }
