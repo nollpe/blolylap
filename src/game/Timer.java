@@ -2,6 +2,9 @@ package game;
 
 import tester.testerClass;
 
+/**
+ * A játékban körökért felelős osztály
+ */
 public class Timer
 {
     private Game game;
@@ -25,6 +28,10 @@ public class Timer
 
     private static Timer singleInstance =null;
 
+    /**
+     * visszaadja az egyetlen timer egyedet a programban, ha nem létezik létrehozza
+     * @return az egyetlen Timer egyed
+     */
     public static Timer getInstance()
     {
         if(singleInstance == null)

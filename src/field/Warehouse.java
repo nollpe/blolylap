@@ -17,14 +17,21 @@ public class Warehouse extends Field
         testerClass.print();             //csajse
     }
 
+    /**
+     * Megmutatja melyik alapanyagból mennyi található itt
+     */
     public void showLoot()
     {
         testerClass.print();
-        int AminoAcids = stored.getAminoAcid();
-        int Nukleotides = stored.getNukleotide();
+        System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNukleotide());
+        /*int AminoAcids = stored.getAminoAcid();
+        int Nukleotides = stored.getNukleotide();*/
     }
 
 
+    /**
+     * minden körben van esély, hogy "termelődik" új aminosav és nukleotid
+     */
     public void tick()
     {
         testerClass.print();
@@ -41,7 +48,6 @@ public class Warehouse extends Field
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //chosen=getchar();
         stored.addAminoAcid(ami);
         stored.addNucleotide(nuc);
 
@@ -57,17 +63,26 @@ public class Warehouse extends Field
         return stored;
     }
 
+    /**
+     *
+     * @param taken ennyi nukleotidot akarunk kivenni
+     * @return ennyi nukleotidot sikerült kivenni
+     */
     public int takeNucleotide(int taken)
     {
-
         testerClass.print();
-        return taken;
+        return stored.takeNucleotide(taken);
     }
 
+    /**
+     *
+     * @param taken ennyi amiosavat akarunk kivenni
+     * @return ennyi aminosavat sikerült kivenni
+     */
     public int takeAminoAcid(int taken)
     {
         testerClass.print();
-        return taken;
+        return stored.takeAminoAcid(taken);
     }
 
     public void setStored(Inventory stored) {

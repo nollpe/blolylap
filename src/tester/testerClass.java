@@ -752,7 +752,11 @@ public class testerClass {
                     "\n13-Test_ViewLootOfSafehouse" +
                     "\n14-Test_TakeBagFromSafehouse" +
                     "\n15-Test_TakeLabcoatFromSafehouse" +
-                    "\n16-Test_TakeGlovesFromSafehouse"
+                    "\n16-Test_TakeGlovesFromSafehouse" +
+                    "\n17-normalCharacterMoves" +
+                    "\n18-choreaCharacterMoves" +
+                    "\n19-paralyzedCharacterMoves" +
+                    "\n20-createAgent"
                     );
             Scanner input = new Scanner(System.in);
             int n = Integer.parseInt(input.nextLine());
@@ -808,6 +812,18 @@ public class testerClass {
                     break;
                 case 16:
                     ts.Test_TakeGlovesFromSafehouse();
+                    break;
+                case 17:
+                    ts.normalCharacterMoves();
+                    break;
+                case 18:
+                    ts.choreaCharacterMoves();
+                    break;
+                case 19:
+                    ts.paralyzedCharacterMoves();
+                    break;
+                case 20:
+                    ts.createAgent();
                     break;
             }
 
