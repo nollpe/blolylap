@@ -4,7 +4,7 @@ import character.Player;
 import tester.testerClass;
 
 /**
- * Ágens amit a játékosok egymásra kenhetnek
+ * Agens amit a jatekosok egymasra kenhetnek
  */
 
 public class Agent {
