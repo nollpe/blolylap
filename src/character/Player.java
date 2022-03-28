@@ -107,10 +107,10 @@ public class Player {
     //endregion
 
     //region spellcasting
-    public void castSpell(Player Caster, Agent agent)
+    public void castSpell()
     {
         testerClass.print();
-        Caster.getCastOn(agent,this);
+        cast.cast(this);
     }
 
     public void getCastOn(Agent a, Player c)
@@ -228,6 +228,12 @@ public class Player {
     }
 
     //region adderek removerek
+    public void addCastableAgents(Agent castableAgent) {
+        testerClass.print();
+        castableAgents.add(castableAgent);
+        castableAgent.takeEffect(this);
+    }
+
     public void addActiveAgent(Agent agent)
     {
         activeAgents.add(agent);
@@ -282,6 +288,10 @@ public class Player {
     {
         testerClass.print();
         inventory = i;
+    }
+
+    public LinkedList<Agent> getCastableAgents(){
+        return castableAgents;
     }
 
     public LinkedList<Equipment> getStored()
