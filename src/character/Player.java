@@ -6,6 +6,7 @@ import cast.Cast;
 import cast.CastNormal;
 import equipment.Equipment;
 import field.Field;
+import field.Warehouse;
 import game.Game;
 import getCastOn.GetCastOn;
 import getCastOn.GetCastOnNormal;
@@ -124,6 +125,18 @@ public class Player {
         for(Agent agent:activeAgents)
         {
             agent.tick();
+            if(agent.getTimeToLive()==0)
+            {
+                agent.loseEffect(this);
+            }
+        }
+        for(Agent agent:castableAgents)
+        {
+            agent.tick();
+            if(agent.getTimeToLive()==0)
+            {
+                agent.loseEffect(this);
+            }
         }
     }
 
@@ -170,18 +183,23 @@ public class Player {
         testerClass.print();return false;
     }
 
-    public int takeNukleotide(int i)
+    public int takeNukleotide(int d1)
     {
         testerClass.print();
-        int taken = getLootTakenFrom.getNucleotideTakenFrom(i,this);
-        return taken;
+        Warehouse wh = (Warehouse) location;
+        int d2 = wh.getStored().takeNucleotide(d1);
+        int d3 = inventory.addNucleotide(d2);
+        return d3;
 
     }
-    public int takeAminoAcid(int i)
+    public int takeAminoAcid(int d1)
     {
         testerClass.print();
-        int taken = getLootTakenFrom.getAminoAcidTakenFrom(i,this);
-        return taken;
+        Warehouse wh = (Warehouse) location;
+        int d2 = wh.getStored().takeAminoAcid(d1);
+        int d3 = inventory.addAminoAcid(d2);
+        testerClass.print();
+        return d3;
     }
     public LinkedList<Equipment> showLoot()
     {
