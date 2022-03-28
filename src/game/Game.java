@@ -38,22 +38,19 @@ public class Game
         return singleInstance;
     }
 
-    /**
-     * Egy karaktert lerak a pályára egy random helyre
-     * @param character a player akit le kell rakni a pályán
-     * @return a mező ahova lerakta
-     */
     public Field spawnPlayer(Player character)
     {
         return city.spawnPlayer(character);
     }
 
-    public void setCity(City c)
-    {
+    /**
+     * Beállítja a játékhoz tartoó várost
+     * @param c A várost, ami a játékhoz tartozik.
+     */
+    public void setCity(City c){
         testerClass.print();
         city = c;
     }
-
 }
 /*
  Azért, hogy singleton legyen:

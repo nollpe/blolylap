@@ -54,6 +54,10 @@ public class Warehouse extends Field
         testerClass.print();
     }
 
+    public Inventory getStored() {
+        return stored;
+    }
+
     public int takeNucleotide(int taken)
     {
 

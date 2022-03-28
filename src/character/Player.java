@@ -5,9 +5,7 @@ import agents.GeneticCode;
 import cast.Cast;
 import cast.CastNormal;
 import equipment.Equipment;
-import field.Direction;
 import field.Field;
-import field.Safehouse;
 import field.Warehouse;
 import game.Game;
 import getCastOn.GetCastOn;
@@ -117,6 +115,7 @@ public class Player {
     public void getCastOn(Agent a, Player c)
     {
         testerClass.print();
+        getCastOn.getCastOn(a, this, c);
     }
     //endregion
 
@@ -141,25 +140,26 @@ public class Player {
         }
     }
 
-    //region lootolás
+    //region lootolnak tole
 
     /**
-     *
-     * @param e ezt a felszerelést szeretné felvenni a játékos
-     * @return sikerült-e neki
+     * A játékostól elvesznek egy védőfelszerelést, ezért törli mgaáról a hatását és kitörli az felszerelései közül.
+     * @param e A védőfelszerelést amit elvettek.
+     * @return Az elvétel sikeressége.
      */
     public boolean takeLoot(Equipment e)
     {
         testerClass.print();
-        ((Safehouse)location).takeEquipment(e);
-        e.takeEffect(this);
-        return false;
+        e.loseEffect(this);
+        equipments.remove(e);
+        return true;
     }
 
+
     /**
-     * A játékostól el akarnak venni egy felszerelést
-     * @param e az elvenni kívánt felszerelés
-     * @return sikerült-e elvenni tőle
+     * A karaktertől lootolni akarnak. Meghívja a lootolás eszenvedéséért felelős osztályt.
+     * @param e A védőfelszerelést amit el akarnak venni.
+     * @return Az elvétel sikeressége.
      */
     public boolean getLootTakenFrom(Equipment e)
     {
@@ -168,29 +168,21 @@ public class Player {
         return succes;
     }
 
+    /**
+     * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt.
+     */
     public void loot()
     {
+
         testerClass.print();
         loot.loot(this);
 
     }
-
-    /**
-     * A játékos megpróbál levenni egy felszerelést
-     * @param e ezt a felszerelés próbálja meg levenni
-     * @return visszaadja, hogy sikerült-e
-     */
     public boolean removeLoot(Equipment e)
     {
-        testerClass.print();
-        return false;
+        testerClass.print();return false;
     }
 
-    /**
-     * A játékos nukleotidot vesz fel egy raktárból
-     * @param d1 ennyit nukleotidot tevez elvenni
-     * @return mennyit tudott elvenni
-     */
     public int takeNukleotide(int d1)
     {
         testerClass.print();
@@ -198,12 +190,8 @@ public class Player {
         int d2 = wh.getStored().takeNucleotide(d1);
         int d3 = inventory.addNucleotide(d2);
         return d3;
+
     }
-    /**
-     * A játékos aminosavat vesz fel egy raktárból
-     * @param d1 ennyit aminosavat tevez elvenni
-     * @return mennyit tudott elvenni
-     */
     public int takeAminoAcid(int d1)
     {
         testerClass.print();
@@ -213,7 +201,6 @@ public class Player {
         testerClass.print();
         return d3;
     }
-
     public LinkedList<Equipment> showLoot()
     {
         testerClass.print();
@@ -221,25 +208,25 @@ public class Player {
     }
     //endregion
 
-
-
-    /**
-     * Elmozdítja a játékost a megadott égtáj felé
-     *
-     * @param dir a megadott égtáj
-     */
-    public void move(Direction dir) {
+    public void addGeneticCode(GeneticCode gc)
+    {
         testerClass.print();
-        getMovement().move(dir, this);
+        knownGeneticCodes.add(gc);
+    }
+
+    public void addEquipment(Equipment eq)
+    {
+        testerClass.print();
+        equipments.add(eq);
+        eq.takeEffect(this);
+    }
+
+    public void move(/*fielnek kéne itt lennie nem?*/)
+    {
+        testerClass.print();
     }
 
     //region adderek removerek
-    public void addCastableAgents(Agent castableAgent) {
-        testerClass.print();
-        castableAgents.add(castableAgent);
-        castableAgent.takeEffect(this);
-    }
-
     public void addActiveAgent(Agent agent)
     {
         activeAgents.add(agent);
@@ -255,66 +242,59 @@ public class Player {
         knownGeneticCodes=new LinkedList<GeneticCode>();
     }
 
-    public void addGeneticCode(GeneticCode gc)
-    {
-        testerClass.print();
-        knownGeneticCodes.add(gc);
-    }
-
-    public void addCastableAgent(Agent agent)
-    {
-        castableAgents.add(agent);
-    }
-
-    public void addEquipment(Equipment eq)
-    {
-        testerClass.print();
-        equipments.add(eq);
-    }
-
-    public Field getLocation()
-    {
+    /**
+     * Megadja, hogy melyik mezőn áll a játékos
+     * @return A mező
+     */
+    public Field getLocation(){
         testerClass.print();
         return location;
     }
 
-    public void setLocation(Field f)
-    {
+    /**
+     * Beállítja a játékosban, hogy melyik mezőn áll
+     * @param f A mező
+     */
+    public void setLocation(Field f){
         testerClass.print();
         location = f;
     }
 
-    public Inventory getInventory()
-    {
+    /**
+     * Megadja, hogy milyen védőfelszerelések vannak a karakternél.
+     * @return A védőfelszerlések listája.
+     */
+    public LinkedList<Equipment> getStored(){
         testerClass.print();
-        return inventory;
+        return equipments;
     }
 
-    public void setInventory(Inventory i)
-    {
+    /**
+     * Beállítja a karakterhez tartozó inventoryt.
+     * @param i A karakterhez tartozó inventory.
+     */
+    public void setInventory(Inventory i){
         testerClass.print();
         inventory = i;
+    }
+
+    /**
+     * Megadja karakterhez tartozó inventoryt.
+     * @returni A karakterhez tartozó inventory.
+     */
+    public Inventory getInventory(){
+        return inventory;
     }
 
     public LinkedList<Agent> getCastableAgents(){
         return castableAgents;
     }
 
-    public LinkedList<Equipment> getStored()
-    {
+    public void addCastableAgents(Agent castableAgent) {
         testerClass.print();
-        return equipments;
+        castableAgents.add(castableAgent);
+        castableAgent.takeEffect(this);
     }
 
-    /**
-     * Létrehoz egy ágenst
-     *
-     * @param gc a genetikai kód, amiből az ágenst létrehozzuk
-     * @return visszaadja a létrehozott ágenst
-     */
-    public Agent makeAgent(GeneticCode gc) {
-        testerClass.print();
-        return gc.makeAgent(inventory);
-    }
     //endregion
 }
