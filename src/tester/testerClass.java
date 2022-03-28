@@ -5,10 +5,10 @@ import cast.CastImpared;
 import character.Inventory;
 import character.Player;
 import equipment.Bag;
+import equipment.Equipment;
 import equipment.Gloves;
 import equipment.Labcoat;
-import field.City;
-import field.Field;
+import field.*;
 import game.Game;
 import game.Timer;
 import getCastOn.GetCastOnInvulnerable;
@@ -19,6 +19,7 @@ import loot.LootImpared;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class testerClass {
@@ -335,10 +336,10 @@ public class testerClass {
         forget = new Forget();
         chorea = new Chorea();
         paralyzing = new Paralyzing();
-        character1.addCastableAgents(invulnerable);
-        character1.addCastableAgents(forget);
-        character1.addCastableAgents(chorea);
-        character1.addCastableAgents(paralyzing);
+        character1.addCastableAgent(invulnerable);
+        character1.addCastableAgent(forget);
+        character1.addCastableAgent(chorea);
+        character1.addCastableAgent(paralyzing);
 
         /**
          * Sebezhetetlenné teszi az 5. játékost

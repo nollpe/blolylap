@@ -75,8 +75,5 @@ public class Warehouse extends Field
         this.stored = stored;
     }
 
-    public Inventory getStored() {
-        return stored;
-    }
 }
 

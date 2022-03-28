@@ -192,6 +192,12 @@ public class Player {
         return d3;
 
     }
+
+    /**
+     * Elveszünk amino acidot
+     * @param d1 ennyit akarunk elvenni
+     * @return ennyit tudunk elvenni
+     */
     public int takeAminoAcid(int d1)
     {
         testerClass.print();
@@ -201,6 +207,11 @@ public class Player {
         testerClass.print();
         return d3;
     }
+
+    /**
+     * Megmutatja milyen equipmentjei vannak a playernek
+     * @return Védőfelszerelések listája
+     */
     public LinkedList<Equipment> showLoot()
     {
         testerClass.print();
@@ -208,12 +219,20 @@ public class Player {
     }
     //endregion
 
+    /**
+     * Hozzáadunk egy GeneticCode-ot
+     * @param gc GeneticCode
+     */
     public void addGeneticCode(GeneticCode gc)
     {
         testerClass.print();
         knownGeneticCodes.add(gc);
     }
 
+    /**
+     * Hozzáadunk egy védőfelszerelést
+     * @param eq védőfelszerelés
+     */
     public void addEquipment(Equipment eq)
     {
         testerClass.print();
@@ -286,14 +305,22 @@ public class Player {
         return inventory;
     }
 
+    /**
+     * Megmutatja milyen kenhető ágenseink vannak
+     * @return kenhető ágensek listája
+     */
     public LinkedList<Agent> getCastableAgents(){
         return castableAgents;
     }
 
-    public void addCastableAgents(Agent castableAgent) {
+    /**
+     * Kenhető ágens hozzáadása
+     * @param castableAgent kenhető ágens
+     */
+    public void addCastableAgent(Agent castableAgent) {
         testerClass.print();
         castableAgents.add(castableAgent);
-        castableAgent.takeEffect(this);
+        //castableAgent.takeEffect(this);
     }
 
     //endregion
