@@ -26,7 +26,7 @@ public class GeneticCode {
         int aminoTaken = i.takeAminoAcid(requiredAminoAcid);
         int nucleTaken = i.takeNucleotide(requiredNucleotide);
         if (aminoTaken == requiredAminoAcid && nucleTaken == requiredNucleotide) {
-            return this.agent;
+            return new Agent(this.agent);
         } else {
             i.addAminoAcid(aminoTaken);
             i.addNucleotide(nucleTaken);

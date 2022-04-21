@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="én már nem is">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +119,7 @@
       <workItem from="1649316195397" duration="2488000" />
       <workItem from="1649576257327" duration="5443000" />
       <workItem from="1649585564627" duration="1462000" />
+      <workItem from="1650539425536" duration="361000" />
     </task>
     <servers />
   </component>

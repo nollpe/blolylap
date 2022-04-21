@@ -21,6 +21,11 @@ public class Agent {
     public void setTimeToLive(int i) {
         timeToLive = i;
     }
+    
+    public Agent(Agent cp)
+    {
+        this.timeToLive=cp.getTimeToLive();
+    }
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
