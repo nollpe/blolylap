@@ -21,6 +21,7 @@ public class GetCastOnGloves implements GetCastOn {
     public GetCastOnGloves(Player p) {
         owner = p;
     }
+
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
      *

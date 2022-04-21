@@ -8,16 +8,16 @@ import equipment.Equipment;
  * Az osztály leszármazottjai valósítják meg a lootolás elszenvedését  a különböző állapotokban.
  */
 public interface GetLootTakenFrom {
+
     /**
      * A lootolást elszenveédésnek függvénye.
      *
-     * @param e      A védőfelszerlés amit el akarnak venni a karaktertől.
-     * @param player A játékos akitől el akarják venni a védőfelszerlést.
+     * @param e A védőfelszerlés amit el akarnak venni a karaktertől.
      * @return A lootolás sikeressége.
      */
-    boolean getEquipmentTakenFrom(Equipment e, Player player);
+    boolean getEquipmentTakenFrom(Equipment e);
 
-    int getNucleotideTakenFrom(int taken, Player player);
+    int getNucleotideTakenFrom(int taken);
 
-    int getAminoAcidTakenFrom(int taken, Player player);
+    int getAminoAcidTakenFrom(int taken);
 }

@@ -45,7 +45,7 @@ public class Player {
         movement = new MovementNormal(this);
         cast = new CastNormal();
         getCastOn = new GetCastOnNormal(this);
-        getLootTakenFrom = new LootTakenNormal();
+        getLootTakenFrom = new LootTakenNormal(this);
         loot = new LootNormal();
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
@@ -157,7 +157,7 @@ public class Player {
      */
     public boolean getLootTakenFrom(Equipment e) {
         testerClass.print();
-        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e, this);
+        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e);
         return succes;
     }
 
