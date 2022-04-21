@@ -12,7 +12,7 @@ public interface Movement {
     /**
      * A mozgást végző függvény, különböző hatások alatt mást csinál
      *
-     * @param field    a mező amibe a játékost mozgatni akarjuk
+     * @param field a mező amibe a játékost mozgatni akarjuk
      */
     void move(Field field);
 }

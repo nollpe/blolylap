@@ -672,6 +672,7 @@ public class testerClass {
         player.move(Direction.NORTH);
     }
 */
+
     /**
      * Az ágens létrehozását teszteli
      */

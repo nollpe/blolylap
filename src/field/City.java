@@ -25,8 +25,8 @@ public class City {
     /**
      * Beállít két mezőt szomszédosnak
      *
-     * @param f1  az egyik mező
-     * @param f2  a másik mező
+     * @param f1 az egyik mező
+     * @param f2 a másik mező
      */
     private void makeNeighbours(Field f1, Field f2) {
         f1.addNeighbour(f2);

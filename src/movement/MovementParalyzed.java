@@ -12,19 +12,21 @@ public class MovementParalyzed implements Movement {
     /**
      * A játékos, aki stratégiája ez
      */
-    private final Player owner;
+    protected final Player owner;
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public MovementParalyzed(Player p) {
         owner = p;
     }
+
     /**
      * Nem csinál semmit, nem mozdítja el a játékost
      *
-     * @param field    a mező amibe a játékost mozgatni akarjuk
+     * @param field a mező amibe a játékost mozgatni akarjuk
      */
     @Override
     public void move(Field field) {
