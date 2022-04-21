@@ -1,6 +1,6 @@
 package game;
 
-import agents.GeneticCode;
+import agents.*;
 import character.Player;
 import equipment.*;
 import field.*;
@@ -26,7 +26,7 @@ public class Game {
         AllGeneticCodes = new GeneticCode[4];
         allPlayers = new LinkedList<Player>();
         city = new City();
-
+        vezerles();
 
     }
 
@@ -76,6 +76,26 @@ public class Game {
         }
     }
 
+    public Agent vezerles_determineAgent(String agentName)
+    {
+        switch(agentName)
+        {
+            case("chorea"):
+                return new Chorea();
+            case("Bear"):
+                return new Bear();
+            case("Forget"):
+                return new Forget();
+            case("Invulnerable"):
+                return new Invulnerable();
+            case("Paralyzing"):
+                return new Paralyzing();
+            default:
+                return null;
+
+        }
+    }
+
     public void vezerles_addLoot(String[] split)
     {
         Field ribancoskifli=vezerles_determineField(split[1]);
@@ -95,7 +115,8 @@ public class Game {
                 }
                 break;
             case('l'):
-
+                //TODO: meg kéne oldani hogy mindegyik genetikai kód annyi ágenst kérjen amennyit meghatároztunk
+                laboratories.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).init(new GeneticCode(vezerles_determineAgent(split[2]),2,2));
             default:
                 return;
         }
@@ -157,6 +178,13 @@ public class Game {
                             break;
                         case("addloot"):
                             vezerles_addLoot(split);
+                            break;
+                        case("spawnplayer"):
+                            Player tempPlayer=new Player(split[2]);
+                            Field location=vezerles_determineField(split[1]);
+                            location.enter(tempPlayer);
+                            tempPlayer.setLocation(location);
+
                             break;
                     }
             }
