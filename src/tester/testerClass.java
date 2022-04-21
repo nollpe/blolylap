@@ -339,7 +339,7 @@ public class testerClass {
         /**
          * Sebezhetetlenné teszi az 5. játékost
          */
-        character5.setGetCastOn(new GetCastOnInvulnerable());
+        character5.setGetCastOn(new GetCastOnInvulnerable(character5));
     }
 
     /**

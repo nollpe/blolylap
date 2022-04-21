@@ -13,7 +13,7 @@ public class Invulnerable extends Agent {
      * @param player A jatekos akinek a karakterere rekentek az agenst
      */
     public void takeEffect(Player player) {
-        player.setGetCastOn(new GetCastOnInvulnerable());
+        player.setGetCastOn(new GetCastOnInvulnerable(player));
         testerClass.print();
     }
 
@@ -29,7 +29,7 @@ public class Invulnerable extends Agent {
      */
     public void loseEffect(Player player) {
         testerClass.print();
-        player.setGetCastOn(new GetCastOnNormal());
+        player.setGetCastOn(new GetCastOnNormal(player));
         player.removeActiveAgent(this);
     }
 }

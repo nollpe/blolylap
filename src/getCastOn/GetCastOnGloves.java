@@ -9,16 +9,28 @@ import character.Player;
  */
 public class GetCastOnGloves implements GetCastOn {
     /**
+     * A játékos, aki stratégiája ez
+     */
+    protected final Player owner;
+
+    /**
+     * Alap konstruktor
+     *
+     * @param p a játékos, aki stratégiája ez
+     */
+    public GetCastOnGloves(Player p) {
+        owner = p;
+    }
+    /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
      *
      * @param a        Agens, amit felkennek a karakterre.
-     * @param player   A jatekos, akire kenik az agenst.
      * @param attacker A jatekos, aki keni az agenst.
      */
     @Override
-    public void getCastOn(Agent a, Player player, Player attacker) {
+    public void getCastOn(Agent a, Player attacker) {
         testerClass.print();
-        player.setGetCastOn(new GetCastOnNormal());
-        attacker.getCastOn(a, player);
+        owner.setGetCastOn(new GetCastOnNormal(owner));
+        attacker.getCastOn(a, owner);
     }
 }

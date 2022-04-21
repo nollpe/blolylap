@@ -6,15 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="juhuu">
-      <change afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/movement/MovementBear.java" afterDir="false" />
+    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="movementbear added, minor fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementChorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementChorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650555243571</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="movementbear added, minor fixes">
+      <created>1650556114802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650556114802</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="juhuu" />
-    <option name="LAST_COMMIT_MESSAGE" value="juhuu" />
+    <MESSAGE value="movementbear added, minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="movementbear added, minor fixes" />
   </component>
 </project>

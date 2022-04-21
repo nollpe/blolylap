@@ -19,7 +19,7 @@ public class Labcoat extends Equipment {
      */
     public void takeEffect(Player c) {
         testerClass.print();
-        GetCastOnResistant gcor = new GetCastOnResistant();
+        GetCastOnResistant gcor = new GetCastOnResistant(c);
         c.setGetCastOn(gcor);
     }
 
@@ -31,6 +31,6 @@ public class Labcoat extends Equipment {
      */
     public void loseEffect(Player c) {
         testerClass.print();
-        c.setGetCastOn(new GetCastOnNormal());
+        c.setGetCastOn(new GetCastOnNormal(c));
     }
 }
