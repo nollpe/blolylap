@@ -60,9 +60,10 @@ public class Field {
 
     public void tick() {
         testerClass.print();
-        for (Player character : inhabitants) {
+        //ne hívja meg a játékosokét mart jobb ha a game csinálja azt mert akkor a tick a játékos köre
+        /*for (Player character : inhabitants) {
             character.tick();
-        }
+        }*/
     }
 
     public void takeLoot() {

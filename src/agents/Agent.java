@@ -21,7 +21,8 @@ public class Agent {
     public void setTimeToLive(int i) {
         timeToLive = i;
     }
-    
+
+    //TODO: kéne egy normális copykonstruktor
     public Agent(Agent cp)
     {
         this.timeToLive=cp.getTimeToLive();
