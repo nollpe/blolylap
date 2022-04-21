@@ -44,7 +44,7 @@ public class Player {
         equipments = new LinkedList<Equipment>();
         movement = new MovementNormal(this);
         cast = new CastNormal();
-        getCastOn = new GetCastOnNormal();
+        getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal();
         loot = new LootNormal();
         knownGeneticCodes = new LinkedList<GeneticCode>();
@@ -113,7 +113,7 @@ public class Player {
 
     public void getCastOn(Agent a, Player c) {
         testerClass.print();
-        getCastOn.getCastOn(a, this, c);
+        getCastOn.getCastOn(a, c);
     }
     //endregion
 
