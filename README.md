@@ -1,3 +1,2 @@
 # blolylap
-# https://www.youtube.com/watch?v=tas0O586t80
-# https://youtu.be/umvgwXINJBE
+az input alapjait a game konstruktorban kezdem el, és ott is terveztem befejezni max átrakjuk, és a main csak meghívná a konstuktorát a gamenek.
