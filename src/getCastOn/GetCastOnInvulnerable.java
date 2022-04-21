@@ -21,6 +21,7 @@ public class GetCastOnInvulnerable implements GetCastOn {
     public GetCastOnInvulnerable(Player p) {
         owner = p;
     }
+
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
      *

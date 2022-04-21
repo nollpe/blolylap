@@ -273,7 +273,7 @@ public class testerClass {
          * A második karaktert megbénítja
          * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
          */
-        character2.setGetLootTakenFrom(new LootTakenStunned());
+        character2.setGetLootTakenFrom(new LootTakenStunned(character2));
         character2.setLoot(new LootImpared());
     }
 
