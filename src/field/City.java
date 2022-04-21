@@ -96,4 +96,5 @@ public class City {
         map.get(randint).enter(character);
         return map.get(randint);
     }
+
 }
