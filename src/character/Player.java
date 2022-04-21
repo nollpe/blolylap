@@ -34,6 +34,7 @@ public class Player {
     private LinkedList<GeneticCode> knownGeneticCodes;
     private Game game;
     private Field location;
+    private String Name;
 
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -50,6 +51,12 @@ public class Player {
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
         //location=game.spawnPlayer(this);
+    }
+
+    public Player(String name)
+    {
+        this();
+        Name=name;
     }
 
     //region strategy pattern setter getter
