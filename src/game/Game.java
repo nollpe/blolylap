@@ -6,10 +6,13 @@ import field.City;
 import field.Field;
 import tester.testerClass;
 
+import java.util.LinkedList;
+
 public class Game {
     private Timer timer;
     private City city;
     private GeneticCode[] AllGeneticCodes;
+    private LinkedList<Player> allPlayers;
 
     //privát konstruktor
     private Game() {
