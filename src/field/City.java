@@ -27,11 +27,10 @@ public class City {
      *
      * @param f1  az egyik mező
      * @param f2  a másik mező
-     * @param dir megadja, hogy a második mező milyen irányban van az első mezőhöz képest
      */
-    private void makeNeighbours(Field f1, Field f2, Direction dir) {
-        f1.addNeighbour(f2, dir);
-        f2.addNeighbour(f1, dir.oppositeDirection());
+    private void makeNeighbours(Field f1, Field f2) {
+        f1.addNeighbour(f2);
+        f2.addNeighbour(f1);
     }
 
     public void tick() {
@@ -60,6 +59,7 @@ public class City {
      * generál egy 4 mezőből álló pályát amiben mindenféle mező megjelenik és mindegyik szomszédja mindegyiknek
      */
     public void generateMap() {
+        /*
         map = new LinkedList<>();
 
         //létrehozzuk a fieldeket
@@ -82,6 +82,7 @@ public class City {
         makeNeighbours(safehouse, warehouse, Direction.NORTH);
 
         testerClass.print();
+        */
     }
 
     /**

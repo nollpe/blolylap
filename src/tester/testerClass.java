@@ -581,10 +581,10 @@ public class testerClass {
     /**
      * A játékos mozgását teszteli, ha a játékoson nincsen semmilyen mozgást befolyásoló hatás
      */
-    public void normalCharacterMoves() {
+/*    public void normalCharacterMoves() {
         //inicializálunk
         Player player = new Player();
-        MovementNormal movementNormal = new MovementNormal();
+        MovementNormal movementNormal = new MovementNormal(player);
         player.setMovement(movementNormal);
         Field field1 = new Field();
         player.setLocation(field1);
@@ -623,14 +623,14 @@ public class testerClass {
         //elmozdítjuk a játékost
         player.move(Direction.NORTH);
     }
-
+*/
     /**
      * A játékos mozgását teszteli, ha a játékos vírustánc alatt áll
      */
-    public void choreaCharacterMoves() {
+/*    public void choreaCharacterMoves() {
         //inicializálunk
         Player player = new Player();
-        MovementChorea movementChorea = new MovementChorea();
+        MovementChorea movementChorea = new MovementChorea(player);
         player.setMovement(movementChorea);
         Field field1 = new Field();
         player.setLocation(field1);
@@ -655,14 +655,14 @@ public class testerClass {
         //elmozdítjuk a játékost
         player.move(Direction.NORTH);
     }
-
+*/
     /**
      * A játékos mozgását teszteli, ha a játékos le van bénulva
      */
-    public void paralyzedCharacterMoves() {
+/*    public void paralyzedCharacterMoves() {
         //inicializálunk
         Player player = new Player();
-        MovementParalyzed movementParalyzed = new MovementParalyzed();
+        MovementParalyzed movementParalyzed = new MovementParalyzed(player);
         player.setMovement(movementParalyzed);
 
         Field field1 = new Field();
@@ -671,7 +671,7 @@ public class testerClass {
         //elmozdítjuk a játékost
         player.move(Direction.NORTH);
     }
-
+*/
     /**
      * Az ágens létrehozását teszteli
      */
@@ -805,7 +805,7 @@ public class testerClass {
                 case 16:
                     ts.Test_TakeGlovesFromSafehouse();
                     break;
-                case 17:
+                /*case 17:
                     ts.normalCharacterMoves();
                     break;
                 case 18:
@@ -813,7 +813,7 @@ public class testerClass {
                     break;
                 case 19:
                     ts.paralyzedCharacterMoves();
-                    break;
+                    break;*/
                 case 20:
                     ts.createAgent();
                     break;

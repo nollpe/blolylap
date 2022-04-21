@@ -24,7 +24,7 @@ public class Chorea extends Agent {
     public void takeEffect(Player player) {
         testerClass.print();
         player.setCast(new CastImpared());
-        player.setMovement(new MovementChorea());
+        player.setMovement(new MovementChorea(player));
         player.setLoot(new LootImpared());
         player.addActiveAgent(this);
     }
@@ -37,7 +37,7 @@ public class Chorea extends Agent {
     public void loseEffect(Player player) {
         testerClass.print();
         player.setCast(new CastNormal());
-        player.setMovement(new MovementNormal());
+        player.setMovement(new MovementNormal(player));
         player.setLoot(new LootNormal());
         player.removeActiveAgent(this);
 
