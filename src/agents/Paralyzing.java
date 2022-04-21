@@ -27,7 +27,7 @@ public class Paralyzing extends Agent {
     public void takeEffect(Player player) {
         testerClass.print();
         player.setLoot(new LootImpared());
-        player.setMovement(new MovementParalyzed());
+        player.setMovement(new MovementParalyzed(player));
         player.setCast(new CastImpared());
         player.setGetLootTakenFrom(new LootTakenStunned());
     }
@@ -40,7 +40,7 @@ public class Paralyzing extends Agent {
     public void loseEffect(Player player) {
         testerClass.print();
         player.setLoot(new LootNormal());
-        player.setMovement(new MovementNormal());
+        player.setMovement(new MovementNormal(player));
         player.setCast(new CastNormal());
         player.setGetLootTakenFrom(new LootTakenNormal());
         player.removeActiveAgent(this);

@@ -2,25 +2,38 @@ package movement;
 
 import character.Player;
 import field.Direction;
+import field.Field;
 import tester.testerClass;
 
 /**
  * A mozgást kezelő osztály, ha a játékoson nincs semmi hatás
  */
 public class MovementNormal implements Movement {
+    /**
+     * A játékos, aki stratégiája ez
+     */
+    private final Player owner;
+
+    /**
+     * Alap konstruktor
+     * @param p a játékos, aki stratégiája ez
+     */
+    public MovementNormal(Player p) {
+        owner = p;
+    }
 
     /**
      * A mozgást végző függvény, elmozdítja a játékost a megadott irányba
      *
-     * @param dir    az irány amibe a játékost mozgatni akarjuk
-     * @param player a mozgatandó játékos
+     * @param field    a mező amibe a játékost mozgatni akarjuk
      */
     @Override
-    public void move(Direction dir, Player player) {
+    public void move(Field field) {
         testerClass.print();
-        if (player.getLocation().getNeighbours().size() == 0) {
+        if (!owner.getLocation().getNeighbours().contains(field)) {
             return;
         }
-        player.setLocation(player.getLocation().getNeighbour(dir));
+        owner.getLocation().leave(owner);
+        field.enter(owner);
     }
 }

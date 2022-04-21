@@ -42,7 +42,7 @@ public class Player {
         castableAgents = new LinkedList<Agent>();
         inventory = new Inventory(10);
         equipments = new LinkedList<Equipment>();
-        movement = new MovementNormal();
+        movement = new MovementNormal(this);
         cast = new CastNormal();
         getCastOn = new GetCastOnNormal();
         getLootTakenFrom = new LootTakenNormal();
@@ -235,13 +235,13 @@ public class Player {
 
 
     /**
-     * Elmozdítja a játékost a megadott égtáj felé
+     * Elmozdítja a játékost a megadott mezőre
      *
-     * @param dir a megadott égtáj
+     * @param field a megadott égtáj
      */
-    public void move(Direction dir) {
+    public void move(Field field) {
         testerClass.print();
-        getMovement().move(dir, this);
+        getMovement().move(field);
     }
 
     //region adderek removerek

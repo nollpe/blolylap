@@ -7,12 +7,12 @@ import java.util.EnumMap;
 import java.util.LinkedList;
 
 public class Field {
-    private EnumMap<Direction, Field> neighbours;
+    private LinkedList<Field> neighbours;
     private LinkedList<Player> inhabitants;
 
     public Field() {
         testerClass.print();
-        this.neighbours = new EnumMap<>(Direction.class);
+        this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedList<>();
     }
 
@@ -20,10 +20,9 @@ public class Field {
      * Hozzáad egy új szomszédot a mezőhöz
      *
      * @param added az új szomszéd
-     * @param dir   megadja, hogy az új szomszéd milyen irányban van a mezőhöz képest
      */
-    public void addNeighbour(Field added, Direction dir) {
-        neighbours.put(dir, added);
+    public void addNeighbour(Field added) {
+        neighbours.add(added);
     }
 
     /**
@@ -32,26 +31,28 @@ public class Field {
      * @param dir a keresett irány
      * @return a keresett mezőt adja vissza
      */
-    public Field getNeighbour(Direction dir) {
+/*    public Field getNeighbour(Direction dir) {
         return neighbours.get(dir);
-    }
+    }*/
 
     /**
      * Visszaadja a mező szomszédjait
      *
      * @return a mező szomszédjai
      */
-    public EnumMap<Direction, Field> getNeighbours() {
+    public LinkedList<Field> getNeighbours() {
         return neighbours;
     }
 
     public void enter(Player c) {
         testerClass.print();
         inhabitants.add(c);
+        c.setLocation(this);
     }
 
     public void leave(Player c) {
         testerClass.print();
+        inhabitants.remove(c);
     }
 
     public void showLoot() {
