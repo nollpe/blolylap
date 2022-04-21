@@ -12,10 +12,11 @@ public class MovementNormal implements Movement {
     /**
      * A játékos, aki stratégiája ez
      */
-    private final Player owner;
+    protected final Player owner;
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public MovementNormal(Player p) {
@@ -25,7 +26,7 @@ public class MovementNormal implements Movement {
     /**
      * A mozgást végző függvény, elmozdítja a játékost a megadott irányba
      *
-     * @param field    a mező amibe a játékost mozgatni akarjuk
+     * @param field a mező amibe a játékost mozgatni akarjuk
      */
     @Override
     public void move(Field field) {

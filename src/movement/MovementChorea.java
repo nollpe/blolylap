@@ -3,6 +3,7 @@ package movement;
 import character.Player;
 import field.Field;
 import tester.testerClass;
+
 import java.util.Random;
 
 /**
@@ -12,10 +13,11 @@ public class MovementChorea implements Movement {
     /**
      * A játékos, aki stratégiája ez
      */
-    private final Player owner;
+    protected final Player owner;
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public MovementChorea(Player p) {
@@ -25,7 +27,7 @@ public class MovementChorea implements Movement {
     /**
      * A mozgást végző függvény, egy véletlenszerű irányba mozgatja a játékost
      *
-     * @param field  a mező, ahova mozgatni akarjuk
+     * @param field a mező, ahova mozgatni akarjuk
      */
     @Override
     public void move(Field field) {
