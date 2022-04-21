@@ -28,7 +28,7 @@ public class City {
      * @param f1 az egyik mező
      * @param f2 a másik mező
      */
-    private void makeNeighbours(Field f1, Field f2) {
+    public void makeNeighbours(Field f1, Field f2) {
         f1.addNeighbour(f2);
         f2.addNeighbour(f1);
     }
