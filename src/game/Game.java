@@ -23,33 +23,29 @@ public class Game {
      * ide rakom be a menüt is ami a bemeneti nyelvet kezeli(kinda)
      */
     private Game() {
-        AllGeneticCodes=new GeneticCode[4];
-        allPlayers=new LinkedList<Player>();
-        city=new City();
-        String input="ribancos kifli";
-        while(input!="exit")
-        {
+        AllGeneticCodes = new GeneticCode[4];
+        allPlayers = new LinkedList<Player>();
+        city = new City();
+        String input = "ribancos kifli";
+        while (input != "exit") {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
                 input = br.readLine();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            switch(input)
-            {
-                case("createmap"):
-                    String[] split=new String[1];//placeholder
-                    while(input!="done")
-                    {
+            switch (input) {
+                case ("createmap"):
+                    String[] split = new String[1];//placeholder
+                    while (input != "done") {
                         try {
                             input = br.readLine();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        split=input.split(" ");
+                        split = input.split(" ");
                     }
-                    switch (split[0])
-                    {
+                    switch (split[0]) {
                         //TODO: a különböző commandok lehet külön függvényben kéne
                     }
             }
@@ -59,8 +55,7 @@ public class Game {
 
     public void Tick() {
 
-        for(int i=0;i<allPlayers.size();i++)
-        {
+        for (int i = 0; i < allPlayers.size(); i++) {
             allPlayers.get(i).tick();
         }
         city.tick();
@@ -92,11 +87,11 @@ public class Game {
 
     /**
      * Lerak egy játékost a pályára
+     *
      * @param player a játékos akir le akarunk rakni
-     * @param field a mező ahová le akarjuk rakni
+     * @param field  a mező ahová le akarjuk rakni
      */
-    public void spawnPlayer(Player player,Field field)
-    {
+    public void spawnPlayer(Player player, Field field) {
         field.enter(player);
     }
 

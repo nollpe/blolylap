@@ -23,9 +23,8 @@ public class Agent {
     }
 
     //TODO: kéne egy normális copykonstruktor
-    public Agent(Agent cp)
-    {
-        this.timeToLive=cp.getTimeToLive();
+    public Agent(Agent cp) {
+        this.timeToLive = cp.getTimeToLive();
     }
 
     /**

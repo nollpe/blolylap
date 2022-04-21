@@ -1,31 +1,44 @@
 package movement;
 
 import character.Player;
-import field.Direction;
 import field.Field;
 import tester.testerClass;
+
+import java.util.Random;
 
 /**
  * A mozgást kezelő osztály vírustánc esetén
  */
 public class MovementChorea implements Movement {
+    /**
+     * A játékos, aki stratégiája ez
+     */
+    protected final Player owner;
+
+    /**
+     * Alap konstruktor
+     *
+     * @param p a játékos, aki stratégiája ez
+     */
+    public MovementChorea(Player p) {
+        owner = p;
+    }
 
     /**
      * A mozgást végző függvény, egy véletlenszerű irányba mozgatja a játékost
      *
-     * @param dir    az irány amibe a játékost mozgatni akarjuk
-     * @param player a mozgatandó játékos
+     * @param field a mező, ahova mozgatni akarjuk
      */
     @Override
-    public void move(Direction dir, Player player) {
+    public void move(Field field) {
         testerClass.print();
-        if (player.getLocation().getNeighbours().size() == 0) {
+        if (!owner.getLocation().getNeighbours().contains(field)) {
             return;
         }
-        Field newField = null;
-        while (newField == null) {
-            newField = player.getLocation().getNeighbour(dir.randomDirection());
-        }
-        player.setLocation(newField);
+        Random rand = new Random();
+        int newIndex = rand.nextInt(owner.getLocation().getNeighbours().size());
+        Field newField = owner.getLocation().getNeighbours().get(newIndex);
+        owner.getLocation().leave(owner);
+        newField.enter(owner);
     }
 }

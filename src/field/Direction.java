@@ -2,6 +2,8 @@ package field;
 
 import java.util.Random;
 
+// jelenleg nincs használva
+
 /**
  * Irányokat tároló enumeráció
  */

@@ -42,10 +42,10 @@ public class Player {
         castableAgents = new LinkedList<Agent>();
         inventory = new Inventory(10);
         equipments = new LinkedList<Equipment>();
-        movement = new MovementNormal();
+        movement = new MovementNormal(this);
         cast = new CastNormal();
-        getCastOn = new GetCastOnNormal();
-        getLootTakenFrom = new LootTakenNormal();
+        getCastOn = new GetCastOnNormal(this);
+        getLootTakenFrom = new LootTakenNormal(this);
         loot = new LootNormal();
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
@@ -113,7 +113,7 @@ public class Player {
 
     public void getCastOn(Agent a, Player c) {
         testerClass.print();
-        getCastOn.getCastOn(a, this, c);
+        getCastOn.getCastOn(a, c);
     }
     //endregion
 
@@ -157,7 +157,7 @@ public class Player {
      */
     public boolean getLootTakenFrom(Equipment e) {
         testerClass.print();
-        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e, this);
+        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e);
         return succes;
     }
 
@@ -235,13 +235,13 @@ public class Player {
 
 
     /**
-     * Elmozdítja a játékost a megadott égtáj felé
+     * Elmozdítja a játékost a megadott mezőre
      *
-     * @param dir a megadott égtáj
+     * @param field a megadott égtáj
      */
-    public void move(Direction dir) {
+    public void move(Field field) {
         testerClass.print();
-        getMovement().move(dir, this);
+        getMovement().move(field);
     }
 
     //region adderek removerek
