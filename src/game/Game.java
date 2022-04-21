@@ -122,6 +122,11 @@ public class Game {
         }
     }
 
+    public void vezerles_playerCommands()
+    {
+        //TODO:ez a geci maj playerturn ami valójába na player tickje ami asszem nem az én dolgom
+    }
+
     public void vezerles()
     {
         String input = "ribancos kifli";
@@ -142,7 +147,7 @@ public class Game {
                             e.printStackTrace();
                         }
                         split = input.split(" ");
-                    }
+
                     int temp;
                     switch (split[0]) {
                         case("Field"):
@@ -184,8 +189,10 @@ public class Game {
                             Field location=vezerles_determineField(split[1]);
                             location.enter(tempPlayer);
                             tempPlayer.setLocation(location);
-
                             break;
+                        default:
+
+                    }
                     }
             }
 
