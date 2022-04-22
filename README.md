@@ -1,4 +1,3 @@
 # blolylap
 
-az input alapjait a game konstruktorban kezdem el, és ott is terveztem befejezni max átrakjuk, és a main csak meghívná a
-konstuktorát a gamenek.
+minden inputhoz tartozó függvénynek a nevében benne van a vezérlés ammikel kapcsolatban pls: https://i.imgflip.com/4ve4nq.png
