@@ -1,12 +1,14 @@
 package field;
 
+import agents.GeneticCode;
 import character.Player;
 import tester.testerClass;
+import equipment.Equipment;
 
 import java.util.EnumMap;
 import java.util.LinkedList;
 
-public class Field {
+public abstract class Field {
     private LinkedList<Field> neighbours;
     private LinkedList<Player> inhabitants;
     private String Name;
@@ -76,4 +78,13 @@ public class Field {
         testerClass.print();
         return inhabitants;
     }
+    public int takeNukleotide(int n) {
+        return 0;
+    }
+    public int takeAminoAcid(int n){
+        return 0;
+    }
+    public void takeEquipment(Equipment e){}
+    public GeneticCode readGeneticCode(){return null;}
+
 }

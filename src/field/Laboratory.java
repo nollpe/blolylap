@@ -1,6 +1,7 @@
 package field;
 
 import agents.GeneticCode;
+import equipment.Equipment;
 import tester.testerClass;
 
 public class Laboratory extends Field {
@@ -24,6 +25,7 @@ public class Laboratory extends Field {
      */
     public void showLoot() {
         testerClass.print();
+        System.out.println(readableGeneticCode.ToString());
     }
 
     /**
@@ -63,4 +65,6 @@ public class Laboratory extends Field {
         readableGeneticCode = gc;
         testerClass.print();
     }
+
+
 }

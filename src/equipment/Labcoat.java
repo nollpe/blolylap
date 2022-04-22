@@ -18,9 +18,7 @@ public class Labcoat extends Equipment {
      * @param c A karakter, aki megszerezte a védőköpenyt.
      */
     public void takeEffect(Player c) {
-        testerClass.print();
-        GetCastOnResistant gcor = new GetCastOnResistant(c);
-        c.setGetCastOn(gcor);
+        c.setGetCastOn(new GetCastOnResistant(c));
     }
 
     /**
@@ -30,7 +28,16 @@ public class Labcoat extends Equipment {
      * @param c A karakter, aki elvesztette a védőköpenyt.
      */
     public void loseEffect(Player c) {
-        testerClass.print();
         c.setGetCastOn(new GetCastOnNormal(c));
     }
+
+    /**
+     * Használja a felszerelést egy játékoson
+     * Nincs Hatása
+     *
+     * @param p A megcélzott játékos
+     */
+    public void useOn(Player p) {
+    }
+    public String ToString(){return "Labcoat";}
 }

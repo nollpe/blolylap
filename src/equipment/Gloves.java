@@ -17,7 +17,6 @@ public class Gloves extends Equipment {
      * @param c A karakter, aki megszerezte a kesztyűt.
      */
     public void takeEffect(Player c) {
-        testerClass.print();
         c.setGetCastOn(new GetCastOnGloves(c));
     }
 
@@ -28,7 +27,17 @@ public class Gloves extends Equipment {
      * @param c A karakter, aki elvesztette a kesztyűt.
      */
     public void loseEffect(Player c) {
-        testerClass.print();
         c.setGetCastOn(new GetCastOnNormal(c));
     }
+
+
+    /**
+     * Használja a felszerelést egy játékoson
+     * Nincs Hatása
+     *
+     * @param p A megcélzott játékos
+     */
+    public void useOn(Player p) {
+    }
+    public String ToString(){return "Gloves";}
 }
