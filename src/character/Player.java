@@ -406,6 +406,10 @@ public class Player {
         //castableAgent.takeEffect(this);
     }
 
+    public void removeCastableAgent(Agent castableAgent) {
+        castableAgents.remove(castableAgent);
+    }
+
     public void makeAgent(GeneticCode geneticCode) {
         geneticCode.makeAgent(this.inventory);
     }

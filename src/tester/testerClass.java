@@ -321,7 +321,7 @@ public class testerClass {
          * A negyedik karaktert megbénítja
          * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
          */
-        character4.setCast(new CastImpared());
+        character4.setCast(new CastImpared(character4));
 
         invulnerable = new Invulnerable();
         forget = new Forget();
