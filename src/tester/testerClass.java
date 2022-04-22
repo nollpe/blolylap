@@ -725,7 +725,7 @@ public class testerClass {
      * @param args bemeneti argumentumok (nem használt)
      */
     public static void main(String[] args) {
-        Game C=Game.getInstance();
+        Game C = Game.getInstance();
         /*
         testerClass ts = new testerClass();
         boolean quit = false;

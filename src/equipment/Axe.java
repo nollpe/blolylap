@@ -1,9 +1,7 @@
 package equipment;
 
-public class Axe extends Equipment
-{
-    public Axe()
-    {
+public class Axe extends Equipment {
+    public Axe() {
         super();
     }
 }
