@@ -2,9 +2,15 @@ package getCastOn;
 
 import agents.Agent;
 import character.Player;
-import tester.testerClass;
 
+
+/**
+ * Az agens kenes elszenvedeset kezelo osztaly medvevírusos esetben
+ */
 public class GetCastOnBear implements GetCastOn{
+    /**
+     * A játékos, akihez a stratégia tartozik
+     */
     protected final Player owner;
 
     /**

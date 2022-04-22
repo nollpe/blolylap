@@ -1,11 +1,11 @@
 package agents;
 
-import agents.Agent;
 import character.Player;
 import tester.testerClass;
 
-import java.util.LinkedList;
-
+/**
+ * A felejtést okozó ágens osztálya
+ */
 public class Forget extends Agent {
     /**
      * Forget agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.

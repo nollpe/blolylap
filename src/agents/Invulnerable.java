@@ -1,11 +1,13 @@
 package agents;
 
-import agents.Agent;
 import character.Player;
 import getCastOn.GetCastOnInvulnerable;
 import getCastOn.GetCastOnNormal;
 import tester.testerClass;
 
+/**
+ * A sebezhetetetlenséget okozó ágens osztálya
+ */
 public class Invulnerable extends Agent {
     /**
      * Forget agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.

@@ -6,11 +6,11 @@ import tester.testerClass;
 import character.Player;
 
 /**
- * Az agens kenes elszenvedeset kezelo osztaly sebezhetetlen esetben
+ * Az agens kenes elszenvedeset kezelo osztaly kesztyűs esetben
  */
 public class GetCastOnGloves implements GetCastOn {
     /**
-     * A játékos, aki stratégiája ez
+     * A játékos, akihez a stratégia tartozik
      */
     protected final Player owner;
     private Gloves gloves;
@@ -25,8 +25,7 @@ public class GetCastOnGloves implements GetCastOn {
     }
 
     /**
-     * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
-     *
+     * Az agens kenes elszenvedeset vegzo fuggveny kesztyűs esete, a kenes nem sikerul és a kesztyű élettartama csökken
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */

@@ -1,17 +1,14 @@
 package agents;
 
-import cast.CastImpared;
 import cast.CastNormal;
 import character.Player;
-import getCastOn.GetCastOn;
 import getCastOn.GetCastOnBear;
-import loot.LootImpared;
-import loot.LootNormal;
 import movement.MovementBear;
-import movement.MovementChorea;
 import movement.MovementNormal;
-import tester.testerClass;
 
+/**
+ * A medve ágens osztálya
+ */
 public class Bear extends Agent {
 
     /**

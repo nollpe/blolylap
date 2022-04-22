@@ -9,13 +9,12 @@ import character.Player;
  */
 public class GetCastOnInvulnerable implements GetCastOn {
     /**
-     * A játékos, aki stratégiája ez
+     * A játékos, akihez a stratégia tartozik
      */
     protected final Player owner;
 
     /**
      * Alap konstruktor
-     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnInvulnerable(Player p) {

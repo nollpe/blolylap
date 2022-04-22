@@ -1,10 +1,8 @@
 package agents;
 
-import agents.Agent;
 import cast.CastImpared;
 import cast.CastNormal;
 import character.Player;
-import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.LootTakenNormal;
 import getLootTakenFrom.LootTakenStunned;
 import loot.LootImpared;
@@ -13,6 +11,9 @@ import movement.MovementNormal;
 import movement.MovementParalyzed;
 import tester.testerClass;
 
+/**
+ * A bénulást okozó ágens osztálya
+ */
 public class Paralyzing extends Agent {
     /**
      * Forget agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
