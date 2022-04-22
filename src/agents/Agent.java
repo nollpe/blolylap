@@ -58,8 +58,7 @@ public class Agent {
                 loseEffect(player);
             }
             else{
-                //nincs meg implementalva
-                //player.deleteCastableAgent(this);
+                player.deleteCastableAgent(this);
             }
         }
     }

@@ -36,23 +36,24 @@ public class Player {
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     public Player() {
-        activeAgents = new LinkedList<>();
-        castableAgents = new LinkedList<>();
+        activeAgents = new LinkedList<Agent>();
+        castableAgents = new LinkedList<Agent>();
         inventory = new Inventory(10);
-        equipments = new LinkedList<>();
+        equipments = new LinkedList<Equipment>();
         movement = new MovementNormal(this);
         //cast = new CastNormal(this);
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
         //loot = new LootNormal(this);
-        knownGeneticCodes = new LinkedList<>();
+        knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
         //location=game.spawnPlayer(this);
     }
 
-    public Player(String name) {
+    public Player(String name)
+    {
         this();
-        Name = name;
+        Name=name;
     }
 
     //region strategy pattern setter getter
@@ -110,18 +111,20 @@ public class Player {
 
     //region spellcasting
     public void castSpell() {
-        //cast.cast();  // jelenleg errort dob, de ha meg lesz írva a cast, akkor nem fog
-        // TODO kikomentellni
+        testerClass.print();
+        cast.cast(this);
     }
 
     public void getCastOn(Agent a, Player c) {
+        testerClass.print();
         getCastOn.getCastOn(a, c);
     }
     //endregion
 
     //region sima getter setterek
 
-    public String getName() {
+    public String getName()
+    {
         return Name;
     }
 
@@ -129,13 +132,14 @@ public class Player {
 
     //region vezerles, player kore
 
-    public void vezerles_playerTurn(BufferedReader br) {
+    public void vezerles_playerTurn(BufferedReader br)
+    {
         String input = "ribancos kifli";
-        boolean canMove = true;
-        boolean canCast = true;
-        boolean canMake = true;
-        boolean canAttack = true;
-        boolean canLoot = true;
+        boolean canMove=true;
+        boolean canCast=true;
+        boolean canMake=true;
+        boolean canAttack=true;
+        boolean canLoot=true;
         while (!input.equals("exit")) {
             String[] split = new String[1];//placeholder a new String
             try {
@@ -143,35 +147,40 @@ public class Player {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            switch (split[0]) {
+            switch(split[0]) {
                 case ("moveto"):
-                    if (canMove) {
+                    if(canMove)
+                    {
                         this.move(game.vezerles_determineField(split[1]));
                     }
                     break;
-                case ("loot"):
-                    if (canLoot)
+                case("loot"):
+                    if(canLoot)
                         //TODO: azt meg tudom adni, hogy mit és honnan lootol de foggalmam sincs hogyan lehet mgoldani
-                        break;
-                case ("makeagent"):
-                    if (canMake)
+                    break;
+                case("makeagent"):
+                    if(canMake)
                         /*
-                         * TODO: azt meg tudom adni, hogy mit akar csinálni
-                         *  ahoz genetic code ot nem tudom még hogyan tudok rendelni
-                         * */
-                        break;
-                case ("castagent"):
-                    if (canCast) {
-                        LinkedList<Player> temp = this.location.getInhabitants();
-                        for (Player p : temp) {
-                            if (p.getName().equals(split[1])) {
+                        * TODO: azt meg tudom adni, hogy mit akar csinálni
+                        *  ahoz genetic code ot nem tudom még hogyan tudok rendelni
+                        * */
+                    break;
+                case("castagent"):
+                    if(canCast)
+                    {
+                        LinkedList<Player> temp=this.location.getInhabitants();
+                        for(Player p:temp)
+                        {
+                            if(p.getName().equals(split[1]))
+                            {
                                 //TODO: itt meg tudom adni, hogy mit akar castolni de azt hogy van-e neki azt nem
                             }
                         }
                     }
                     break;
-                case ("slay"):
-                    if (canAttack) {
+                case("slay"):
+                    if(canAttack)
+                    {
                         //TODO: van-e baltája? nemtudom hogy meg tudom-e nézni hogy van-e neki baltája
                     }
 
@@ -202,26 +211,16 @@ public class Player {
     //region lootolnak tole
 
     /**
-     * Eltávolít egy védőfelszerelést
+     * A játékostól elvesznek egy védőfelszerelést, ezért törli mgaáról a hatását és kitörli az felszerelései közül.
      *
-     * @param e Eltávolítandó védőfelszerelés
-     * @return Sikeres volt-e
+     * @param e A védőfelszerelést amit elvettek.
+     * @return Az elvétel sikeressége.
      */
-    public boolean removeLoot(Equipment e) {
+    public boolean takeLoot(Equipment e) {
         testerClass.print();
         e.loseEffect(this);
         equipments.remove(e);
         return true;
-    }
-
-    /**
-     * Felvesz egy védőfelszerelést
-     *
-     * @param e Felvevendő védőfelszerelés
-     */
-    public void takeEquipment(Equipment e) {
-        //location.takeEuipment(e); // jelenleg errort dob
-        e.takeEffect(this);
     }
 
 
@@ -232,17 +231,31 @@ public class Player {
      * @return Az elvétel sikeressége.
      */
     public boolean getLootTakenFrom(Equipment e) {
-        return getLootTakenFrom.getEquipmentTakenFrom(e);
+        testerClass.print();
+        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e);
+        return succes;
     }
 
     /**
      * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt.
      */
     public void loot() {
+
+        testerClass.print();
         loot.loot(this);
 
     }
 
+    /**
+     * Eltávolít egy védőfelszerelést
+     *
+     * @param e Eltávolítandó védőfelszerelés
+     * @return Sikeres volt-e
+     */
+    public boolean removeLoot(Equipment e) {
+        testerClass.print();
+        return false;
+    }
 
     /**
      * Elvesz valamennyi nukleotidot a karaktertől
@@ -251,8 +264,12 @@ public class Player {
      * @return - hányat tudtunk elvenni
      */
     public int takeNukleotide(int d1) {
-        //return location.takeNukleotide(d1); // jelenleg errort dob
-        return d1; // placeholder megoldás, amíg nincs megírva a field
+        testerClass.print();
+        Warehouse wh = (Warehouse) location;
+        int d2 = wh.getStored().takeNucleotide(d1);
+        int d3 = inventory.addNucleotide(d2);
+        return d3;
+
     }
 
     /**
@@ -262,8 +279,12 @@ public class Player {
      * @return ennyit tudunk elvenni
      */
     public int takeAminoAcid(int d1) {
-        //return location.takeAminoAcid(d1); // jelenleg errort dob
-        return d1;  // placeholder megoldás, amíg nincs megírva a field
+        testerClass.print();
+        Warehouse wh = (Warehouse) location;
+        int d2 = wh.getStored().takeAminoAcid(d1);
+        int d3 = inventory.addAminoAcid(d2);
+        testerClass.print();
+        return d3;
     }
 
     /**
@@ -272,6 +293,7 @@ public class Player {
      * @return Védőfelszerelések listája
      */
     public LinkedList<Equipment> showLoot() {
+        testerClass.print();
         return equipments;
     }
     //endregion
@@ -282,6 +304,7 @@ public class Player {
      * @param gc GeneticCode
      */
     public void addGeneticCode(GeneticCode gc) {
+        testerClass.print();
         knownGeneticCodes.add(gc);
     }
 
@@ -292,7 +315,8 @@ public class Player {
      * @param field a megadott égtáj
      */
     public void move(Field field) {
-        movement.move(field);
+        testerClass.print();
+        getMovement().move(field);
     }
 
     //region adderek removerek
@@ -376,7 +400,7 @@ public class Player {
     /**
      * Megadja karakterhez tartozó inventoryt.
      *
-     * @return A karakterhez tartozó inventory.
+     * @returni A karakterhez tartozó inventory.
      */
     public Inventory getInventory() {
         return inventory;
@@ -403,31 +427,24 @@ public class Player {
     }
 
     /**
-     * Kenhető ágens eltávolítása
-     *
-     * @param castableAgent kenhető ágens
+     * Kitörli az castolható ágensek közül a kapott ágenset
+     * @param a az ágens, amit ki kell törölni
      */
-    public void removeCastableAgent(Agent castableAgent) {
-        castableAgents.remove(castableAgent);
+    public void deleteCastableAgent(Agent a){
+        castableAgents.remove(a);
     }
 
     /**
-     * Létrehoz egy ágenst
-     *
-     * @param geneticCode a genetikai kód, amiből az ágenst létrehozzuk
+     * Kitörli az aktív ágensek közül a kapott ágenset
+     * @param a az ágens, amit ki kell törölni
      */
+    public void deleteActiveAgent(Agent a){
+        activeAgents.remove(a);
+    }
+
     public void makeAgent(GeneticCode geneticCode) {
         geneticCode.makeAgent(this.inventory);
     }
 
-    /**
-     * A játékos meghalásáért felel
-     */
-    public void die() {
-        location.leave(this);
-        game.removePlayer(this);
-    }
-
     //endregion
-    public String ToString(){return "Wizard";}
 }
