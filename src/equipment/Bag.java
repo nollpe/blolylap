@@ -23,7 +23,6 @@ public class Bag extends Equipment {
      * @param c A karakter, aki megszerezte a táskát.
      */
     public void takeEffect(Player c) {
-        testerClass.print();
     }
 
     /**
@@ -32,7 +31,6 @@ public class Bag extends Equipment {
      * @param c A karakter, aki elveszített a tásktát.
      */
     public void loseEffect(Player c) {
-        testerClass.print();
     }
 
     public Bag() {
@@ -69,5 +67,15 @@ public class Bag extends Equipment {
      */
     public int takeNucleotide(int take) {
         return inventory.takeNucleotide(take);
+    }
+
+
+    /**
+     * Használja a felszerelést egy játékoson
+     * Nincs Hatása
+     *
+     * @param p A megcélzott játékos
+     */
+    public void useOn(Player p) {
     }
 }

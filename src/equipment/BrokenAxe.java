@@ -2,10 +2,10 @@ package equipment;
 
 import character.Player;
 
-public class Axe extends Equipment {
+public class BrokenAxe extends Equipment {
     private Player owner;
 
-    public Axe() {
+    public BrokenAxe() {
         super();
     }
 
@@ -35,9 +35,6 @@ public class Axe extends Equipment {
      * @param p A megcélzott játékos
      */
     public void useOn(Player p) {
-        owner.removeLoot(this);
-        //owner.getLoot(). add broken axe
-        p.die();
     }
 
 }
