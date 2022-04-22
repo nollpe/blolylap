@@ -131,9 +131,13 @@ public class Player {
     //endregion
 
     //region vezerles, player kore
+
+
+
     public void vezerles_playerTurn(BufferedReader br)
     {
         String input = "ribancos kifli";
+        boolean 
         while (!input.equals("exit")) {
             String[] split = new String[1];//placeholder a new String
             try {
