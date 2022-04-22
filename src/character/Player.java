@@ -202,12 +202,12 @@ public class Player {
     //region lootolnak tole
 
     /**
-     * A játékostól elvesznek egy védőfelszerelést, ezért törli mgaáról a hatását és kitörli az felszerelései közül.
+     * Eltávolít egy védőfelszerelést
      *
-     * @param e A védőfelszerelést amit elvettek.
-     * @return Az elvétel sikeressége.
+     * @param e Eltávolítandó védőfelszerelés
+     * @return Sikeres volt-e
      */
-    public boolean takeLoot(Equipment e) {
+    public boolean removeLoot(Equipment e) {
         testerClass.print();
         e.loseEffect(this);
         equipments.remove(e);
@@ -237,16 +237,6 @@ public class Player {
 
     }
 
-    /**
-     * Eltávolít egy védőfelszerelést
-     *
-     * @param e Eltávolítandó védőfelszerelés
-     * @return Sikeres volt-e
-     */
-    public boolean removeLoot(Equipment e) {
-        testerClass.print();
-        return false;
-    }
 
     /**
      * Elvesz valamennyi nukleotidot a karaktertől
