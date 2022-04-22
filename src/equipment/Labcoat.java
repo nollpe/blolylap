@@ -39,4 +39,5 @@ public class Labcoat extends Equipment {
      */
     public void useOn(Player p) {
     }
+    public String ToString(){return "Labcoat";}
 }

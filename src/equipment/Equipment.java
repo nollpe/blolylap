@@ -33,4 +33,7 @@ public class Equipment {
      */
     public void useOn(Player p) {
     }
+
+
+    public String ToString(){return null;}
 }

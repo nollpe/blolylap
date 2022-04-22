@@ -42,4 +42,5 @@ public class Chorea extends Agent {
         player.removeActiveAgent(this);
 
     }
+    public String ToString(){return "Chorea";}
 }

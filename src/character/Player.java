@@ -214,6 +214,16 @@ public class Player {
         return true;
     }
 
+    /**
+     * Felvesz egy védőfelszerelést
+     *
+     * @param e Felvevendő védőfelszerelés
+     */
+    public void takeEquipment(Equipment e) {
+        //location.takeEuipment(e); // jelenleg errort dob
+        e.takeEffect(this);
+    }
+
 
     /**
      * A karaktertől lootolni akarnak. Meghívja a lootolás eszenvedéséért felelős osztályt.
@@ -222,17 +232,13 @@ public class Player {
      * @return Az elvétel sikeressége.
      */
     public boolean getLootTakenFrom(Equipment e) {
-        testerClass.print();
-        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e);
-        return succes;
+        return getLootTakenFrom.getEquipmentTakenFrom(e);
     }
 
     /**
      * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt.
      */
     public void loot() {
-
-        testerClass.print();
         loot.loot(this);
 
     }
@@ -245,12 +251,8 @@ public class Player {
      * @return - hányat tudtunk elvenni
      */
     public int takeNukleotide(int d1) {
-        testerClass.print();
-        Warehouse wh = (Warehouse) location;
-        int d2 = wh.getStored().takeNucleotide(d1);
-        int d3 = inventory.addNucleotide(d2);
-        return d3;
-
+        //return location.takeNukleotide(d1); // jelenleg errort dob
+        return d1; // placeholder megoldás, amíg nincs megírva a field
     }
 
     /**
@@ -260,12 +262,8 @@ public class Player {
      * @return ennyit tudunk elvenni
      */
     public int takeAminoAcid(int d1) {
-        testerClass.print();
-        Warehouse wh = (Warehouse) location;
-        int d2 = wh.getStored().takeAminoAcid(d1);
-        int d3 = inventory.addAminoAcid(d2);
-        testerClass.print();
-        return d3;
+        //return location.takeAminoAcid(d1); // jelenleg errort dob
+        return d1;  // placeholder megoldás, amíg nincs megírva a field
     }
 
     /**
@@ -274,7 +272,6 @@ public class Player {
      * @return Védőfelszerelések listája
      */
     public LinkedList<Equipment> showLoot() {
-        testerClass.print();
         return equipments;
     }
     //endregion
@@ -285,7 +282,6 @@ public class Player {
      * @param gc GeneticCode
      */
     public void addGeneticCode(GeneticCode gc) {
-        testerClass.print();
         knownGeneticCodes.add(gc);
     }
 
@@ -406,13 +402,32 @@ public class Player {
         //castableAgent.takeEffect(this);
     }
 
+    /**
+     * Kenhető ágens eltávolítása
+     *
+     * @param castableAgent kenhető ágens
+     */
     public void removeCastableAgent(Agent castableAgent) {
         castableAgents.remove(castableAgent);
     }
 
+    /**
+     * Létrehoz egy ágenst
+     *
+     * @param geneticCode a genetikai kód, amiből az ágenst létrehozzuk
+     */
     public void makeAgent(GeneticCode geneticCode) {
         geneticCode.makeAgent(this.inventory);
     }
 
+    /**
+     * A játékos meghalásáért felel
+     */
+    public void die() {
+        location.leave(this);
+        game.removePlayer(this);
+    }
+
     //endregion
+    public String ToString(){return "Wizard";}
 }
