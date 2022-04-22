@@ -725,6 +725,8 @@ public class testerClass {
      * @param args bemeneti argumentumok (nem használt)
      */
     public static void main(String[] args) {
+        Game C=Game.getInstance();
+        /*
         testerClass ts = new testerClass();
         boolean quit = false;
         while (!quit) {
@@ -806,7 +808,7 @@ public class testerClass {
                 case 16:
                     ts.Test_TakeGlovesFromSafehouse();
                     break;
-                /*case 17:
+                case 17:
                     ts.normalCharacterMoves();
                     break;
                 case 18:
@@ -814,12 +816,12 @@ public class testerClass {
                     break;
                 case 19:
                     ts.paralyzedCharacterMoves();
-                    break;*/
+                    break;
                 case 20:
                     ts.createAgent();
                     break;
             }
 
-        }
+        }*/
     }
 }

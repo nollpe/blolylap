@@ -1,24 +1,20 @@
 package character;
 
-import agents.Agent;
-import agents.GeneticCode;
-import cast.Cast;
-import cast.CastNormal;
-import equipment.Equipment;
-import field.Direction;
-import field.Field;
-import field.Warehouse;
-import game.Game;
-import getCastOn.GetCastOn;
-import getCastOn.GetCastOnNormal;
+import agents.*;
+import cast.*;
+import equipment.*;
+import field.*;
+import game.*;
+import getCastOn.*;
 import getLootTakenFrom.GetLootTakenFrom;
 import getLootTakenFrom.LootTakenNormal;
-import loot.Loot;
-import loot.LootNormal;
+import loot.*;
 import movement.*;
 import tester.testerClass;
 
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.LinkedList;
 
 public class Player {
@@ -137,12 +133,39 @@ public class Player {
     //region vezerles, player kore
     public void vezerles_playerTurn(BufferedReader br)
     {
+        String input = "ribancos kifli";
+        while (!input.equals("exit")) {
+            String[] split = new String[1];//placeholder a new String
+            try {
+                input = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            switch(split[0])
+            {
+                case("moveto"):
+
+                    break;
+                case("loot"):
+
+                    break;
+                case("makeagent"):
+
+                    break;
+                case("castagent"):
+
+                    break;
+                case("slay"):
+
+                    break;
+            }
+        }
         /*
         TODO: input majd annak kezelése (nem neked todo zsolt)
          (boolok arra hogy mit csinált már?)
 
          */
-
+        this.tick();
     }
     //endregion
 
@@ -160,6 +183,7 @@ public class Player {
                 agent.loseEffect(this);
             }
         }
+
     }
 
     //region lootolnak tole

@@ -213,28 +213,28 @@ public class Game {
 
                     int temp;
                     switch (split[0]) {
-                        case("Field"):
+                        case("field"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
                                 fields.add(new Field());
                             }
                             break;
-                        case("Laboratory"):
+                        case("laboratory"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
                                 laboratories.add(new Laboratory());
                             }
                             break;
-                        case("Warehouse"):
+                        case("warehouse"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
                                 warehouses.add(new Warehouse());
                             }
                             break;
-                        case("Safehouse"):
+                        case("safehouse"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
@@ -257,17 +257,30 @@ public class Game {
                             vezerles_playerAdd(split);
                             break;
                     }
+
                     }
+                    LinkedList<Field> map=new LinkedList<>();
+                    map.addAll(0,fields);
+                    map.addAll(0,warehouses);
+                    map.addAll(0,safehouses);
+                    map.addAll(0,laboratories);
+                    break;
                 case("playerturn"):
                     for(Player p:allPlayers)
                     {
                         if(p.getName().equals(split[1]))
                         {
-                            p.tick();
+                            p.vezerles_playerTurn(br);
                             break;
                         }
                     }
                     break;
+
+                case("exit"):
+                    return;
+                default:      
+                    break;
+
             }
 
         }
