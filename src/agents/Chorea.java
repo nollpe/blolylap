@@ -1,6 +1,5 @@
 package agents;
 
-import agents.Agent;
 import cast.CastImpared;
 import cast.CastNormal;
 import character.Player;
@@ -8,8 +7,10 @@ import loot.LootImpared;
 import loot.LootNormal;
 import movement.MovementChorea;
 import movement.MovementNormal;
-import tester.testerClass;
 
+/**
+ * A vitustáncot okozó ágens osztálya
+ */
 public class Chorea extends Agent {
     /**
      * Agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.

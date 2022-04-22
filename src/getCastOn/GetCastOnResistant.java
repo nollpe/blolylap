@@ -8,11 +8,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Az agens kenes elszenvedeset kezelo osztaly sebezhetetlen esetben
+ * Az agens kenes elszenvedeset kezelo osztaly köpenyes esetben
  */
 public class GetCastOnResistant implements GetCastOn {
     /**
-     * A játékos, aki stratégiája ez
+     * A játékos, akihez a stratégia tartozik
      */
     protected final Player owner;
 
