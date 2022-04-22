@@ -33,6 +33,7 @@ public class Safehouse extends Field {
      */
     public void showLoot() {
         testerClass.print();
+        System.out.println(stored.toString());
     }
 
     /**
@@ -83,6 +84,7 @@ public class Safehouse extends Field {
      */
     public void takeEquipment(Equipment e) {
         testerClass.print();
+        stored=null;
     }
 
     /**

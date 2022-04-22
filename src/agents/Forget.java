@@ -32,4 +32,5 @@ public class Forget extends Agent {
         testerClass.print();
         player.removeActiveAgent(this);
     }
+    public String ToString(){return "Forget";}
 }
