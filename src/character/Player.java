@@ -431,4 +431,5 @@ public class Player {
     }
 
     //endregion
+    public String ToString(){return "Wizard";}
 }

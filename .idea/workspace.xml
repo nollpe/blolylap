@@ -1,28 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="blolylap:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bc3df23-b00a-461b-8d63-01fb02b19a7c" name="Changes" comment="én már nem is">
-      <change afterPath="$PROJECT_DIR$/src/equipment/BrokenAxe.java" afterDir="false" />
+    <list default="true" id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="én már nem is">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Axe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/equipment/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Bag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/equipment/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Equipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/Loot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/Loot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/LootImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootImpared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="289kjJ5dKdK8H4x0XIQfYzMXLFR" />
+  <component name="ProjectId" id="26pEl74jbbYwDzduLTZGwrlgUAu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,21 +65,41 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/blolylap_jar/blolylap.jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="equipment" />
-    </key>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game_classes.main" />
+      <module name="blolylap" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game_classes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tester.testerClass" />
+      <module name="blolylap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tester.testerClass" />
       <module name="blolylap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tester.*" />
+          <option name="PATTERN" value="game_classes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,19 +110,36 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.testerClass" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4bc3df23-b00a-461b-8d63-01fb02b19a7c" name="Changes" comment="én már nem is" />
-      <created>1650636334281</created>
+      <changelist id="865c1c01-6d3b-4659-bd61-38115f6e52e7" name="Changes" comment="" />
+      <created>1648112278081</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1650636334281</updated>
-      <workItem from="1650636341976" duration="313000" />
-      <workItem from="1650644622873" duration="2490000" />
+      <updated>1648112278081</updated>
+      <workItem from="1648112280196" duration="3594000" />
+      <workItem from="1648115924300" duration="429000" />
+      <workItem from="1648121177402" duration="16000" />
+      <workItem from="1648148305918" duration="1039000" />
+      <workItem from="1648313729031" duration="16589000" />
+      <workItem from="1648394554077" duration="9928000" />
+      <workItem from="1648404630823" duration="10742000" />
+      <workItem from="1648983979085" duration="1939000" />
+      <workItem from="1649063987268" duration="1412000" />
+      <workItem from="1649258596682" duration="64000" />
+      <workItem from="1649316195397" duration="2488000" />
+      <workItem from="1649576257327" duration="5443000" />
+      <workItem from="1649585564627" duration="1462000" />
+      <workItem from="1650539425536" duration="361000" />
+      <workItem from="1650559507021" duration="16624000" />
     </task>
     <servers />
   </component>

@@ -48,4 +48,5 @@ public class GeneticCode {
     public GeneticCode clone() {
         return new GeneticCode(agent, requiredAminoAcid, requiredNucleotide);
     }
+    public String ToString(){return null;}
 }
