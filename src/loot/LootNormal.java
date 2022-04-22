@@ -12,7 +12,9 @@ import java.util.Scanner;
  * Lootolás osztálya alapesetben, amikor nincsen lebénulva a játékos.
  */
 public class LootNormal implements Loot {
+
     public final Player owner;
+
     public LootNormal(Player p ){
         owner =p;
     }
