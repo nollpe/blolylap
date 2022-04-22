@@ -41,10 +41,10 @@ public class Player {
         inventory = new Inventory(10);
         equipments = new LinkedList<Equipment>();
         movement = new MovementNormal(this);
-        cast = new CastNormal(this);
+        //cast = new CastNormal(this);
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
-        loot = new LootNormal(this);
+        //loot = new LootNormal(this);
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
         //location=game.spawnPlayer(this);
@@ -132,12 +132,14 @@ public class Player {
 
     //region vezerles, player kore
 
-
-
     public void vezerles_playerTurn(BufferedReader br)
     {
         String input = "ribancos kifli";
-        boolean 
+        boolean canMove=true;
+        boolean canCast=true;
+        boolean canMake=true;
+        boolean canAttack=true;
+        boolean canLoot=true;
         while (!input.equals("exit")) {
             String[] split = new String[1];//placeholder a new String
             try {
@@ -145,30 +147,46 @@ public class Player {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            switch(split[0])
-            {
-                case("moveto"):
-
+            switch(split[0]) {
+                case ("moveto"):
+                    if(canMove)
+                    {
+                        this.move(game.vezerles_determineField(split[1]));
+                    }
                     break;
                 case("loot"):
-
+                    if(canLoot)
+                        //TODO: azt meg tudom adni, hogy mit és honnan lootol de foggalmam sincs hogyan lehet mgoldani
                     break;
                 case("makeagent"):
-
+                    if(canMake)
+                        /*
+                        * TODO: azt meg tudom adni, hogy mit akar csinálni
+                        *  ahoz genetic code ot nem tudom még hogyan tudok rendelni
+                        * */
                     break;
                 case("castagent"):
-
+                    if(canCast)
+                    {
+                        LinkedList<Player> temp=this.location.getInhabitants();
+                        for(Player p:temp)
+                        {
+                            if(p.getName().equals(split[1]))
+                            {
+                                //TODO: itt meg tudom adni, hogy mit akar castolni de azt hogy van-e neki azt nem
+                            }
+                        }
+                    }
                     break;
                 case("slay"):
+                    if(canAttack)
+                    {
+                        //TODO: van-e baltája? nemtudom hogy meg tudom-e nézni hogy van-e neki baltája
+                    }
 
                     break;
             }
         }
-        /*
-        TODO: input majd annak kezelése (nem neked todo zsolt)
-         (boolok arra hogy mit csinált már?)
-
-         */
         this.tick();
     }
     //endregion
