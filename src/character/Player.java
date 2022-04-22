@@ -380,6 +380,8 @@ public class Player {
         //castableAgent.takeEffect(this);
     }
 
+    //TODO deleteCastableAgent(Agent a) vagy valami haosnlo fuggveny, hogy ha az agens lejar, ki tudja magat toroltetni
+
     public void makeAgent(GeneticCode geneticCode) {
         geneticCode.makeAgent(this.inventory);
     }
