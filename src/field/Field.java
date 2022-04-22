@@ -9,6 +9,7 @@ import java.util.LinkedList;
 public class Field {
     private LinkedList<Field> neighbours;
     private LinkedList<Player> inhabitants;
+    private String Name;
 
     public Field() {
         testerClass.print();

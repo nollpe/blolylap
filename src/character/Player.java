@@ -18,6 +18,7 @@ import loot.LootNormal;
 import movement.*;
 import tester.testerClass;
 
+import java.io.BufferedReader;
 import java.util.LinkedList;
 
 public class Player {
@@ -121,6 +122,27 @@ public class Player {
     public void getCastOn(Agent a, Player c) {
         testerClass.print();
         getCastOn.getCastOn(a, c);
+    }
+    //endregion
+
+    //region sima getter setterek
+
+    public String getName()
+    {
+        return Name;
+    }
+
+    //endregion
+
+    //region vezerles, player kore
+    public void vezerles_playerTurn(BufferedReader br)
+    {
+        /*
+        TODO: input majd annak kezelése (nem neked todo zsolt)
+         (boolok arra hogy mit csinált már?)
+
+         */
+
     }
     //endregion
 
