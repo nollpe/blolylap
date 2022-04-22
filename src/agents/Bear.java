@@ -44,6 +44,6 @@ public class Bear extends Agent {
         player.setCast(new CastNormal(player));
         player.setMovement(new MovementNormal(player));
         player.removeActiveAgent(this);
-        player.deleteActiveAgent(this);
+        player.removeActiveAgent(this);
     }
 }

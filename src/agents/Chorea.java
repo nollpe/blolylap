@@ -37,11 +37,10 @@ public class Chorea extends Agent {
      * @param player A jatekos akinek a karakteren van az agens
      */
     public void loseEffect(Player player) {
-        testerClass.print();
-        player.setCast(new CastNormal());
+        player.setCast(new CastNormal(player));
         player.setMovement(new MovementNormal(player));
-        player.setLoot(new LootNormal());
+        player.setLoot(new LootNormal(player));
         player.removeActiveAgent(this);
-        player.deleteActiveAgent(this);
+        player.removeActiveAgent(this);
     }
 }
