@@ -314,6 +314,9 @@ public class Game {
         testerClass.print();
         city = c;
     }
+
+    public void removePlayer(Player player) {
+    }
 }
 /*
  Azért, hogy singleton legyen:
