@@ -32,7 +32,7 @@ public class LootTakenStunned implements GetLootTakenFrom {
     @Override
     public boolean getEquipmentTakenFrom(Equipment e) {
         testerClass.print();
-        return owner.takeLoot(e);
+        return owner.removeLoot(e);
     }
 
     /**

@@ -12,12 +12,8 @@ import field.*;
 import game.Game;
 import game.Timer;
 import getCastOn.GetCastOnInvulnerable;
-import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.LootTakenStunned;
 import loot.LootImpared;
-import movement.MovementChorea;
-import movement.MovementNormal;
-import movement.MovementParalyzed;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -531,7 +527,7 @@ public class testerClass {
         location.setStored(stored);
         //test
         Equipment eq = ((Safehouse) location).getStored();
-        c.takeLoot(eq);
+        c.removeLoot(eq);
     }
 
     /**
@@ -551,7 +547,7 @@ public class testerClass {
         location.setStored(stored);
         //test
         Equipment eq = ((Safehouse) location).getStored();
-        c.takeLoot(eq);
+        c.removeLoot(eq);
 
     }
 
@@ -572,7 +568,7 @@ public class testerClass {
         location.setStored(stored);
         //test
         Equipment eq = ((Safehouse) location).getStored();
-        c.takeLoot(eq);
+        c.removeLoot(eq);
     }
     //endregion
 
