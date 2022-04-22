@@ -14,7 +14,6 @@ public class Equipment {
      * @param c A karakter, aki megszerezte a felszerelést.
      */
     public void takeEffect(Player c) {
-        testerClass.print();
     }
 
     /**
@@ -24,6 +23,14 @@ public class Equipment {
      * @param c A karakter, aki elvesztette a felszerelést.
      */
     public void loseEffect(Player c) {
-        testerClass.print();
+    }
+
+    /**
+     * Használja a felszerelést egy játékoson
+     * Nincs Hatása
+     *
+     * @param p A megcélzott játékos
+     */
+    public void useOn(Player p) {
     }
 }
