@@ -11,22 +11,23 @@ import movement.MovementNormal;
 import tester.testerClass;
 
 public class Chorea extends Agent {
-    public Chorea() {
-        super();
+    public Chorea(Player p) {
+        super(p);
         testerClass.print();
     }
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
      *
-     * @param player A jatekos akinek a karakterere rekentek az agenst
+     * @param p A jatekos akinek a karakterere rekentek az agenst
      */
-    public void takeEffect(Player player) {
-        testerClass.print();
+    public void takeEffect(Player p) {
+        player = p;
         player.setCast(new CastImpared());
         player.setMovement(new MovementChorea(player));
         player.setLoot(new LootImpared());
         player.addActiveAgent(this);
+        timeToLive = 5;
     }
 
     /**
@@ -40,6 +41,6 @@ public class Chorea extends Agent {
         player.setMovement(new MovementNormal(player));
         player.setLoot(new LootNormal());
         player.removeActiveAgent(this);
-
+        player.deleteActiveAgent(this);
     }
 }

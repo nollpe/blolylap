@@ -98,6 +98,7 @@ public class Game {
         switch(agentName)
         {
             case("chorea"):
+                //TODO az agnesn konstruktoranak meg kell adni hogy kihez tartozik az agens
                 return new Chorea();
             case("Bear"):
                 return new Bear();

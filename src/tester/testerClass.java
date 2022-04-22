@@ -72,7 +72,7 @@ public class testerClass {
         Player player = new Player();
         game.spawnPlayer(player);
 
-        Agent chorea = new Chorea();
+        Agent chorea = new Chorea(player);
         Agent forget = new Forget();
         Agent invulnerable = new Invulnerable();
         Agent paralyzing = new Paralyzing();
@@ -124,7 +124,7 @@ public class testerClass {
                     agent = new Invulnerable();
                     break;
                 case (3):
-                    agent = new Chorea();
+                    agent = new Chorea(player);
                     break;
                 case (4):
                     agent = new Forget();
@@ -329,7 +329,7 @@ public class testerClass {
 
         invulnerable = new Invulnerable();
         forget = new Forget();
-        chorea = new Chorea();
+        chorea = new Chorea(character1);
         paralyzing = new Paralyzing();
         character1.addCastableAgent(invulnerable);
         character1.addCastableAgent(forget);
@@ -703,7 +703,7 @@ public class testerClass {
                 agent = new Paralyzing();
                 break;
             default:
-                agent = new Chorea();
+                agent = new Chorea(player);
                 break;
         }
 

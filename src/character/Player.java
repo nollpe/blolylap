@@ -426,6 +426,22 @@ public class Player {
         //castableAgent.takeEffect(this);
     }
 
+    /**
+     * Kitörli az castolható ágensek közül a kapott ágenset
+     * @param a az ágens, amit ki kell törölni
+     */
+    public void deleteCastableAgent(Agent a){
+        castableAgents.remove(a);
+    }
+
+    /**
+     * Kitörli az aktív ágensek közül a kapott ágenset
+     * @param a az ágens, amit ki kell törölni
+     */
+    public void deleteActiveAgent(Agent a){
+        activeAgents.remove(a);
+    }
+
     public void makeAgent(GeneticCode geneticCode) {
         geneticCode.makeAgent(this.inventory);
     }
