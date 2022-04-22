@@ -403,6 +403,15 @@ public class Player {
     }
 
     /**
+     * Kenhető ágens eltávolítása
+     *
+     * @param castableAgent kenhető ágens
+     */
+    public void removeCastableAgent(Agent castableAgent) {
+        castableAgents.remove(castableAgent);
+    }
+
+    /**
      * Létrehoz egy ágenst
      *
      * @param geneticCode a genetikai kód, amiből az ágenst létrehozzuk
