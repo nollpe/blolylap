@@ -58,7 +58,7 @@ public class Agent {
                 loseEffect(player);
             }
             else{
-                player.deleteCastableAgent(this);
+                player.removeCastableAgent(this);
             }
         }
     }
