@@ -7,6 +7,8 @@ import character.Player;
  * Az agens kenes elszenvedeset kezelo osztaly sebezhetetlen esetben
  */
 public interface GetCastOn {
+    Player player = null;
+    
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
      *
