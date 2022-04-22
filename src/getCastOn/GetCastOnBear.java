@@ -4,7 +4,7 @@ import agents.Agent;
 import character.Player;
 import tester.testerClass;
 
-public class GetCastOnBear {
+public class GetCastOnBear implements GetCastOn{
     protected final Player owner;
 
     /**
@@ -16,15 +16,12 @@ public class GetCastOnBear {
     }
 
     /**
-     * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
-     *
+     * Az agens kenes elszenvedeset vegzo fuggveny medve vírusos esete, a kenes nem sikerul.
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */
     @Override
-    public void getCastOn(Agent a, Player attacker) {
-        testerClass.print();
-        owner.setGetCastOn(new GetCastOnNormal(owner));
-        attacker.getCastOn(a, owner);
+    public void getCastOn(Agent a, Player attacker){
+
     }
 }
