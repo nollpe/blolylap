@@ -70,8 +70,8 @@ public class testerClass {
 
         Agent chorea = new Chorea(player);
         Agent forget = new Forget(player);
-        Agent invulnerable = new Invulnerable();
-        Agent paralyzing = new Paralyzing();
+        Agent invulnerable = new Invulnerable(player);
+        Agent paralyzing = new Paralyzing(player);
         player.addCastableAgent(chorea);
         player.addCastableAgent(forget);
         player.addCastableAgent(invulnerable);
@@ -114,10 +114,10 @@ public class testerClass {
             //chosen=getchar();
             switch (chosen) {
                 case (1):
-                    agent = new Invulnerable();
+                    agent = new Invulnerable(player);
                     break;
                 case (2):
-                    agent = new Invulnerable();
+                    agent = new Invulnerable(player);
                     break;
                 case (3):
                     agent = new Chorea(player);
@@ -323,10 +323,10 @@ public class testerClass {
          */
         character4.setCast(new CastImpared(character4));
 
-        invulnerable = new Invulnerable();
+        invulnerable = new Invulnerable(character1);
         forget = new Forget(character1);
         chorea = new Chorea(character1);
-        paralyzing = new Paralyzing();
+        paralyzing = new Paralyzing(character1);
         character1.addCastableAgent(invulnerable);
         character1.addCastableAgent(forget);
         character1.addCastableAgent(chorea);
@@ -693,10 +693,10 @@ public class testerClass {
                 agent = new Forget(player);
                 break;
             case 3:
-                agent = new Invulnerable();
+                agent = new Invulnerable(player);
                 break;
             case 4:
-                agent = new Paralyzing();
+                agent = new Paralyzing(player);
                 break;
             default:
                 agent = new Chorea(player);

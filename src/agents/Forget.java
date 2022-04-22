@@ -7,6 +7,10 @@ import tester.testerClass;
 import java.util.LinkedList;
 
 public class Forget extends Agent {
+    /**
+     * Forget agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
+     * @param p A jatekos, akihez tartozik az agens
+     */
     public Forget(Player p) {
         super(p);
         testerClass.print();
