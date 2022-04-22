@@ -15,7 +15,6 @@ public class GetCastOnNormal implements GetCastOn {
 
     /**
      * Alap konstruktor
-     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnNormal(Player p) {
@@ -24,13 +23,12 @@ public class GetCastOnNormal implements GetCastOn {
 
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
-     *
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */
     @Override
     public void getCastOn(Agent a, Player attacker) {
-        testerClass.print();
         a.takeEffect(owner);
+        owner.addActiveAgent(a);
     }
 }

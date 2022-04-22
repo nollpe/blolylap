@@ -17,7 +17,7 @@ public class Gloves extends Equipment {
      * @param c A karakter, aki megszerezte a kesztyűt.
      */
     public void takeEffect(Player c) {
-        c.setGetCastOn(new GetCastOnGloves(c));
+        c.setGetCastOn(new GetCastOnGloves(c, this));
     }
 
     /**
@@ -39,5 +39,6 @@ public class Gloves extends Equipment {
      */
     public void useOn(Player p) {
     }
+    //TODO kell nekem valami amivel csökkenthetem a kesztyű élettartamát
     public String ToString(){return "Gloves";}
 }
