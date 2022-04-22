@@ -57,6 +57,8 @@ public class City {
 
     /**
      * generál egy 4 mezőből álló pályát amiben mindenféle mező megjelenik és mindegyik szomszédja mindegyiknek
+     * szóval majd lesz egy ilyen amikor kell
+     * random pályát fog csinálni
      */
     public void generateMap() {
         /*
