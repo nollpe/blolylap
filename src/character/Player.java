@@ -45,10 +45,10 @@ public class Player {
         inventory = new Inventory(10);
         equipments = new LinkedList<Equipment>();
         movement = new MovementNormal(this);
-        cast = new CastNormal();
+        cast = new CastNormal(this);
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
-        loot = new LootNormal();
+        loot = new LootNormal(this);
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
         //location=game.spawnPlayer(this);
