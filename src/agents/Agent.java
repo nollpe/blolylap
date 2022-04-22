@@ -8,10 +8,19 @@ import tester.testerClass;
  */
 
 public class Agent {
-    int timeToLive;
+    protected Player player;
+    protected boolean active;
+    protected int timeToLive;
 
-    public Agent() {
-        testerClass.print();
+    /**
+     * Agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
+     * @param p A jatekos, akihez tartozik az agens
+     */
+    public Agent(Player p) {
+
+        player = p;
+        active = false;
+        timeToLive = 2;
     }
 
     public int getTimeToLive() {
@@ -24,31 +33,34 @@ public class Agent {
 
     //TODO: kéne egy normális copykonstruktor
     public Agent(Agent cp) {
+        this.player = cp.player;
         this.timeToLive = cp.getTimeToLive();
     }
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
-     *
      * @param player A jatekos akinek a karakterere rekentek az agenst
      */
-    public void takeEffect(Player player) {
-        testerClass.print();
-    }
+    public void takeEffect(Player player) { }
 
     /**
      * Az agens hatasa lejar
      *
      * @param player A jatekos akinek a karakteren van az agens
      */
-    public void loseEffect(Player player) {
-        testerClass.print();
-    }
+    //TODO: kell a looseEffectnek parameter?
+    public void loseEffect(Player player) { }
 
     public void tick() {
-        testerClass.print();
         timeToLive--;
+        if(timeToLive <= 0){
+            if(active){
+                loseEffect(player);
+            }
+            else{
+                //nincs meg implementalva
+                //player.deleteCastableAgent(this);
+            }
+        }
     }
-
-    public String ToString(){return null;}
 }

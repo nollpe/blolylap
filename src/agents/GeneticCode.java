@@ -48,5 +48,12 @@ public class GeneticCode {
     public GeneticCode clone() {
         return new GeneticCode(agent, requiredAminoAcid, requiredNucleotide);
     }
+
+    public String getAgentType()
+    {
+        //return this.agent.name();
+        return "playeholder";
+    }
+
     public String ToString(){return null;}
 }
