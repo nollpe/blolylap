@@ -39,7 +39,6 @@ public class Agent {
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
-     *
      * @param player A jatekos akinek a karakterere rekentek az agenst
      */
     public void takeEffect(Player player) { }
