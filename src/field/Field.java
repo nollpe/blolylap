@@ -8,7 +8,8 @@ import equipment.Equipment;
 import java.util.EnumMap;
 import java.util.LinkedList;
 
-public abstract class Field {
+
+public class Field {
     private LinkedList<Field> neighbours;
     private LinkedList<Player> inhabitants;
     private String Name;

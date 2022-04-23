@@ -43,6 +43,7 @@ public class Safehouse extends Field {
         testerClass.print();
         super.tick();
 
+        //TODO ezt am basszuk már ki innen és generáljon random eséllyel ha nincs benne semmi
         if (stored == null) {
             System.out.println("Mit generáljon a safehouse?\n1:kesztyű\n2:köpeny\n3:tatyó\n0:semmit");
             int chosen = 0;

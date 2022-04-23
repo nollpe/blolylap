@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
+import java.util.Locale;
 
 public class Game {
     private Timer timer;
@@ -28,6 +29,11 @@ public class Game {
         city = new City();
         vezerles();
 
+    }
+
+    public void removePlayer(Player p)
+    {
+        allPlayers.remove(p);
     }
 
     //input a protohoz csak ahoz kell amugy meg actionlistenerek lesznek ezek helyett
@@ -51,7 +57,7 @@ public class Game {
     public Field vezerles_determineField(String fieldName)
     {
         int index = Integer.parseInt(String.valueOf(fieldName.charAt(1)));
-        switch(fieldName.charAt(0))
+        switch(fieldName.toLowerCase(Locale.ROOT).charAt(0))
         {
             case('f'):
                 return fields.get(index);
@@ -73,7 +79,7 @@ public class Game {
      */
     public Equipment vezerles_determineLoot(String eqName)
     {
-        switch(eqName)
+        switch(eqName.toLowerCase(Locale.ROOT))
         {
             case("axe"):
                 return new Axe();
@@ -93,21 +99,20 @@ public class Game {
      * @param agentName az ágens neve, ezt a felhasználó adja meg
      * @return azt az ágenst amit a felhasználó kért
      */
-    public Agent vezerles_determineAgent(String agentName)
+    public Agent vezerles_determineAgent(String agentName,Player anyatok)
     {
-        switch(agentName)
+        switch(agentName.toLowerCase(Locale.ROOT))
         {
             case("chorea"):
-                //TODO az agnesn konstruktoranak meg kell adni hogy kihez tartozik az agens
-                return new Chorea();
-            case("Bear"):
-                return new Bear();
-            case("Forget"):
-                return new Forget();
-            case("Invulnerable"):
-                return new Invulnerable();
-            case("Paralyzing"):
-                return new Paralyzing();
+                return new Chorea(anyatok);
+            case("bear"):
+                return new Bear(anyatok);
+            case("forget"):
+                return new Forget(anyatok);
+            case("invulnerable"):
+                return new Invulnerable(anyatok);
+            case("paralyzing"):
+                return new Paralyzing(anyatok);
             default:
                 return null;
 
@@ -137,7 +142,7 @@ public class Game {
                 break;
             case('l'):
                 //TODO: meg kéne oldani hogy mindegyik genetikai kód annyi ágenst kérjen amennyit meghatároztunk
-                laboratories.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).init(new GeneticCode(vezerles_determineAgent(split[2]),2,2));
+                laboratories.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).init(new GeneticCode(vezerles_determineAgent(split[2],null),2,2));
             default:
                 return;
         }
@@ -164,7 +169,7 @@ public class Game {
                     p.addEquipment(Eqtemp);
                     return;
                 }
-                Agent Agtemp=vezerles_determineAgent(split[2]);
+                Agent Agtemp=vezerles_determineAgent(split[2],p);
                 if(Agtemp!=null)
                 {
                     if(split[3].equals("active"))

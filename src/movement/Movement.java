@@ -1,7 +1,6 @@
 package movement;
 
 import character.Player;
-import field.Direction;
 import field.Field;
 
 /**

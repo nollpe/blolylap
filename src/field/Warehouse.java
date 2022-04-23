@@ -34,6 +34,7 @@ public class Warehouse extends Field {
         testerClass.print();
         super.tick();
 
+        //TODO ezt am basszuk már ki innen és generáljon random eséllyel ha nincs benne semmi
         System.out.println("mennyi amino acid és nucleotide termelődjön(1-5)?: \n<int>\n<int>");
 
         int nuc = 0;
