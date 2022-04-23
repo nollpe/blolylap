@@ -55,4 +55,5 @@ public class GeneticCode {
         return "playeholder";
     }
 
+    public String ToString(){return null;}
 }

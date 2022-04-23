@@ -9,13 +9,12 @@ import character.Player;
  */
 public class GetCastOnInvulnerable implements GetCastOn {
     /**
-     * A játékos, aki stratégiája ez
+     * A játékos, akihez a stratégia tartozik
      */
     protected final Player owner;
 
     /**
      * Alap konstruktor
-     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnInvulnerable(Player p) {
@@ -24,12 +23,9 @@ public class GetCastOnInvulnerable implements GetCastOn {
 
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
-     *
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */
     @Override
-    public void getCastOn(Agent a, Player attacker) {
-        testerClass.print();
-    }
+    public void getCastOn(Agent a, Player attacker) {    }
 }

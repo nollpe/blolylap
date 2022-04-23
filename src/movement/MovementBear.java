@@ -25,7 +25,7 @@ public class MovementBear extends MovementChorea {
         super.move(field);
         Field location = owner.getLocation();
         for (Player p : location.getInhabitants()) {
-            p.getCastOn(new Bear(), owner);
+            p.getCastOn(new Bear(p), owner);
         }
         // jelenleg nincs implementálva a takeNukleotide és a takeAminoacid fv. minden fieldre
         // location.takeNukleotide(n);
