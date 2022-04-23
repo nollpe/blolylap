@@ -6,7 +6,6 @@ import tester.testerClass;
 /**
  * Agens amit a jatekosok egymasra kenhetnek
  */
-
 public class Agent {
     protected Player player;
     protected boolean active;
@@ -23,10 +22,18 @@ public class Agent {
         timeToLive = 2;
     }
 
+    /**
+     * Visszaadja az ágens hátralevő idejét
+     * @return a hátralév idő
+     */
     public int getTimeToLive() {
         return timeToLive;
     }
 
+    /**
+     * Beálltja az ágens hátralevő idejét
+     * @param i hátralév idő
+     */
     public void setTimeToLive(int i) {
         timeToLive = i;
     }
@@ -45,7 +52,6 @@ public class Agent {
 
     /**
      * Az agens hatasa lejar
-     *
      * @param player A jatekos akinek a karakteren van az agens
      */
     //TODO: kell a looseEffectnek parameter?
@@ -58,8 +64,7 @@ public class Agent {
                 loseEffect(player);
             }
             else{
-                //nincs meg implementalva
-                //player.deleteCastableAgent(this);
+                player.removeCastableAgent(this);
             }
         }
     }

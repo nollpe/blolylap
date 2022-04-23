@@ -1,35 +1,36 @@
 package agents;
 
-import agents.Agent;
 import character.Player;
 import tester.testerClass;
 
-import java.util.LinkedList;
-
+/**
+ * A felejtést okozó ágens osztálya
+ */
 public class Forget extends Agent {
-    public Forget() {
-        super();
+    /**
+     * Forget agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
+     * @param p A jatekos, akihez tartozik az agens
+     */
+    public Forget(Player p) {
+        super(p);
         testerClass.print();
     }
     //LinkedList<GeneticCode> forgotten;
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
-     *
-     * @param player A jatekos akinek a karakterere rekentek az agenst
+     * @param p A jatekos akinek a karakterere rekentek az agenst
      */
-    public void takeEffect(Player player) {
-        testerClass.print();
+    public void takeEffect(Player p) {
+        player = p;
         player.forgetAllGeneticCodes();
     }
 
     /**
      * Az agens hatasa lejar
-     *
      * @param player A jatekos akinek a karakteren van az agens
      */
     public void loseEffect(Player player) {
-        testerClass.print();
         player.removeActiveAgent(this);
     }
     public String ToString(){return "Forget";}
