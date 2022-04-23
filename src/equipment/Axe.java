@@ -40,4 +40,9 @@ public class Axe extends Equipment {
         p.die();
     }
 
+    public String toString()
+    {
+        return "Axe";
+    }
+
 }

@@ -30,7 +30,7 @@ public class Paralyzing extends Agent {
      */
     public void takeEffect(Player p) {
         player = p;
-        player.setLoot(new LootImpared(player);
+        player.setLoot(new LootImpared(player));
         player.setMovement(new MovementParalyzed(player));
         player.setCast(new CastImpared(player));
         player.setGetLootTakenFrom(new LootTakenStunned(player));

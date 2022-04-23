@@ -13,9 +13,11 @@ import movement.*;
 import tester.testerClass;
 
 
+import java.beans.FeatureDescriptor;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Locale;
 
 public class Player {
     //region variables
@@ -54,6 +56,14 @@ public class Player {
     {
         this();
         Name=name;
+    }
+
+    public void die()
+    {
+        game.removePlayer(this);
+        location.leave(this);
+        //TODO hogy a faszba kell megszüntetni egy ilyen gecit?
+        //TODO also az összes cuccát ami van
     }
 
     //region strategy pattern setter getter
@@ -132,6 +142,160 @@ public class Player {
 
     //region vezerles, player kore
 
+    /**
+     *
+     * @param split a parancs amit beírt a felhasználó
+     * @return ha sikerült végrehajtani a parancsot true ha nem sikerült false;
+     */
+    public boolean vezerles_attack(String[] split)
+    {
+        for(Equipment eq:equipments)
+        {
+            if(eq.toString().equals("Axe"))
+            {
+                LinkedList<Player> temp=this.location.getInhabitants();
+                for(Player p:temp)
+                {
+                    if(p.getName().equals(split[1]))
+                    {
+                        p.die();
+                        equipments.remove(eq);
+                        equipments.add(new BrokenAxe());
+                        return true;
+
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param split a parancs amit beírt a felhasználó
+     * @return ha sikerült végrehajtani a parancsot true ha nem sikerült false;
+     */
+    public boolean vezerles_castAgent(String[] split)
+    {
+        LinkedList<Player> temp=this.location.getInhabitants();
+        for(Player p:temp)
+        {
+            if(p.getName().equals(split[1]))
+            {
+                for(Agent casted:castableAgents)
+                {
+                    if(casted.toString().equals(split[2]))
+                    {
+                        p.getCastOn.getCastOn(casted,this);
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param split a parancs amit beírt a felhasználó
+     * @return ha sikerült végrehajtani a parancsot true ha nem sikerült false;
+     */
+    public boolean vezerles_makeagent(String[] split)
+    {
+        for (GeneticCode gen : knownGeneticCodes)
+        {
+            if(split[1].equals(gen.getAgentType()))
+            {
+                Agent temp=gen.makeAgent(inventory);
+                if(temp!=null)
+                {
+                    castableAgents.add(temp);
+                    return true;
+                }
+                else
+                {
+                    System.out.println("can't make " + split[1]);
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean vezerles_loot(String[] split)
+    {
+        if(split[1].equals("feild"))
+        {
+            switch (split[2].toLowerCase(Locale.ROOT))
+            {
+                case("nucleotide"):
+                    int taken=location.takeNukleotide(Integer.parseInt(split[3]));
+                    int addedToInventory=inventory.addNucleotide(taken);
+                    if(addedToInventory!=taken && taken !=0)
+                    {
+                        Warehouse xd=(Warehouse)location;
+                        xd.getStored().addNucleotide(taken-addedToInventory);
+                        //mert akkor nem tudja belerakni az inventoryba ezért visszarakjuk a helyére
+                        //hogy ne lehessen csak úgy elvinni mindent
+                        //öljetek meg
+                    }
+                    break;
+                case("aminoacid"):
+                    int takena=location.takeAminoAcid(Integer.parseInt(split[3]));
+                    int addedToInventorya=inventory.addAminoAcid(takena);
+                    if(addedToInventorya!=takena && takena !=0)
+                    {
+                        Warehouse xd=(Warehouse)location;
+                        xd.getStored().addAminoAcid(takena-addedToInventorya);
+
+                    }
+                    break;
+                case("geneticcode"):
+                    GeneticCode EEEEEE=location.readGeneticCode();
+                    if(EEEEEE!=null)
+                    {
+                        for(GeneticCode genc:knownGeneticCodes)
+                        {
+                            if(EEEEEE.getAgentType().equals(genc.getAgentType()))
+                            {
+                                System.out.println("you already know this GeneticCode B");
+                                return false;
+                            }
+                        }
+                        knownGeneticCodes.add(EEEEEE.clone());//ha ugye nem tudja még csak akkor adjuk hozzá
+                    }
+                    break;
+                default:
+                    Safehouse safewtrngt=(Safehouse)location;
+                    if(safewtrngt.getStored().ToString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT)))
+                    {
+                        location.takeEquipment(safewtrngt.getStored());
+                    }
+
+                    break;
+            }
+
+        }
+        else
+        {
+            for(Player ppl:location.getInhabitants())
+            {
+                if(ppl.getName().equals(split[2]))
+                {
+                    for(Equipment tequimpent:ppl.getStored())
+                    {
+                        if(tequimpent.toString().equals(split[1]))
+                        {
+                            loot.lootEquipment(ppl,tequimpent);
+                            return true;
+                        }
+                    }
+                }
+            }
+            System.out.println("nem sikerült a lootolás");
+        }
+        return false;
+    }
+
     public void vezerles_playerTurn(BufferedReader br)
     {
         String input = "ribancos kifli";
@@ -149,41 +313,40 @@ public class Player {
             }
             switch(split[0]) {
                 case ("moveto"):
-                    if(canMove)
-                    {
+                    if (canMove) {
                         this.move(game.vezerles_determineField(split[1]));
                     }
                     break;
-                case("loot"):
-                    if(canLoot)
-                        //TODO: azt meg tudom adni, hogy mit és honnan lootol de foggalmam sincs hogyan lehet mgoldani
+                case ("loot"):
+                    if (canLoot)
+                    {
+                        canLoot=!this.vezerles_loot(split);
+                    }
                     break;
-                case("makeagent"):
-                    if(canMake)
-                        /*
-                        * TODO: azt meg tudom adni, hogy mit akar csinálni
-                        *  ahoz genetic code ot nem tudom még hogyan tudok rendelni
-                        * */
+                case ("makeagent"):
+                    if (canMake)
+                        ;canMake=!this.vezerles_makeagent(split);
                     break;
                 case("castagent"):
                     if(canCast)
                     {
-                        LinkedList<Player> temp=this.location.getInhabitants();
-                        for(Player p:temp)
-                        {
-                            if(p.getName().equals(split[1]))
-                            {
-                                //TODO: itt meg tudom adni, hogy mit akar castolni de azt hogy van-e neki azt nem
-                            }
-                        }
+                        ;canCast=!this.vezerles_castAgent(split);
                     }
                     break;
                 case("slay"):
                     if(canAttack)
                     {
-                        //TODO: van-e baltája? nemtudom hogy meg tudom-e nézni hogy van-e neki baltája
+                        ;canAttack=!this.vezerles_attack(split);
                     }
+                    break;
+                case("drop"):
+                    equipments.removeIf(eq -> eq.toString().equals(split[1]));
+                    break;
 
+                case("endturn"):
+                    return;
+                default:
+                    System.out.println("invalid command");
                     break;
             }
         }
@@ -242,7 +405,7 @@ public class Player {
     public void loot() {
 
         testerClass.print();
-        loot.loot(this);
+        loot.loot(this);//?
 
     }
 

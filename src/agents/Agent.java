@@ -22,6 +22,11 @@ public class Agent {
         timeToLive = 2;
     }
 
+    public String toString()
+    {
+        return null;
+    }
+
     /**
      * Visszaadja az ágens hátralevő idejét
      * @return a hátralév idő

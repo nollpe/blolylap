@@ -26,7 +26,7 @@ public class Bear extends Agent {
      */
     public void takeEffect(Player p) {
         player = p;
-        player.setGetCastOn((new GetCastOnBear(player));
+        player.setGetCastOn((new GetCastOnBear(player)));
         player.setMovement(new MovementBear(player));
         player.addActiveAgent(this);
         timeToLive = 5;

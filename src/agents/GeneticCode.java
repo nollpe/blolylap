@@ -51,8 +51,8 @@ public class GeneticCode {
 
     public String getAgentType()
     {
-        //return this.agent.name();
-        return "playeholder";
+        return this.agent.toString();
+
     }
 
     public String ToString(){return null;}
