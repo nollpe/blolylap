@@ -31,23 +31,23 @@ public class Player {
     private GetLootTakenFrom getLootTakenFrom;
     private Loot loot;
     private LinkedList<GeneticCode> knownGeneticCodes;
-    private Game game;
+    private final Game game;
     private Field location;
     private String Name;
 
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     public Player() {
-        activeAgents = new LinkedList<Agent>();
-        castableAgents = new LinkedList<Agent>();
+        activeAgents = new LinkedList<>();
+        castableAgents = new LinkedList<>();
         inventory = new Inventory(10);
-        equipments = new LinkedList<Equipment>();
+        equipments = new LinkedList<>();
         movement = new MovementNormal(this);
         cast = new CastNormal(this);
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
         loot = new LootNormal(this);
-        knownGeneticCodes = new LinkedList<GeneticCode>();
+        knownGeneticCodes = new LinkedList<>();
         game = Game.getInstance();
         location = game.spawnPlayer(this);
     }
@@ -412,10 +412,10 @@ public class Player {
      *
      * @param target akitől lootolni akar
      * @param n      amennyit lootolni akar
-     * @return sikeres volt-e
+     * @return amennyit sikerült lootolni
      */
-    public boolean lootAminoAcid(Player target, int n) {
-        return loot.lootAminoAcid(target, n);
+    public int lootAminoAcid(Player target, int n) {
+        return inventory.addAminoAcid(loot.lootAminoAcid(target, n));
     }
 
     /**
@@ -423,10 +423,10 @@ public class Player {
      *
      * @param target akitől lootolni akar
      * @param n      amennyit lootolni akar
-     * @return sikeres volt-e
+     * @return amennyit sikerült lootolni
      */
-    public boolean lootNucleotide(Player target, int n) {
-        return loot.lootNucleotide(target, n);
+    public int lootNucleotide(Player target, int n) {
+        return inventory.addNucleotide(loot.lootNucleotide(target, n));
     }
 
     /**
@@ -436,8 +436,7 @@ public class Player {
      * @return Sikeres volt-e
      */
     public boolean removeLoot(Equipment e) {
-        equipments.remove(e);
-        return true;
+        return equipments.remove(e);
     }
 
     /**
@@ -447,9 +446,7 @@ public class Player {
      * @return - hányat tudtunk elvenni
      */
     public int takeNucleotide(int d1) {
-        Warehouse wh = (Warehouse) location;
-        int d2 = location.takeNucleotide(d1);
-        return inventory.addNucleotide(d2);
+        return inventory.takeNucleotide(d1);
     }
 
     /**
@@ -459,9 +456,27 @@ public class Player {
      * @return ennyit tudunk elvenni
      */
     public int takeAminoAcid(int d1) {
-        Warehouse wh = (Warehouse) location;
-        int d2 = wh.getStored().takeAminoAcid(d1);
-        return inventory.addAminoAcid(d2);
+        return inventory.takeAminoAcid(d1);
+    }
+
+    /**
+     * A játékostól nukleotidot akarnak lootolni
+     *
+     * @param taken Amennyit el akarnak venni
+     * @return Amennyit sikerül
+     */
+    public int getNucleotideTakenFrom(int taken) {
+        return getLootTakenFrom.getNucleotideTakenFrom(taken);
+    }
+
+    /**
+     * A játékostól aminosavat akarnak lootolni
+     *
+     * @param taken Amennyit el akarnak venni
+     * @return Amennyit sikerül
+     */
+    public int getAminoAcidTakenFrom(int taken) {
+        return getLootTakenFrom.getAminoAcidTakenFrom(taken);
     }
 
     /**
@@ -593,7 +608,6 @@ public class Player {
      */
     public void addCastableAgent(Agent castableAgent) {
         castableAgents.add(castableAgent);
-        //castableAgent.takeEffect(this);
     }
 
     /**

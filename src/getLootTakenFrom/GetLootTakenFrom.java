@@ -17,7 +17,19 @@ public interface GetLootTakenFrom {
      */
     boolean getEquipmentTakenFrom(Equipment e);
 
+    /**
+     * Nucleotide lootolás elszenvedésének függvénye
+     *
+     * @param taken Amennyit el akarnak venni
+     * @return Amennyit sikerül
+     */
     int getNucleotideTakenFrom(int taken);
 
+    /**
+     * Aminosav lootolás elszenvedésének függvénye
+     *
+     * @param taken Amennyit el akarnak venni
+     * @return Amennyit sikerül
+     */
     int getAminoAcidTakenFrom(int taken);
 }
