@@ -37,7 +37,6 @@ public class Forget extends Agent {
         player.removeActiveAgent(this);
     }
 
-    public String ToString() {
-        return "Forget";
-    }
+    public String toString(){return "Forget";}
+
 }

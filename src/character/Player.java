@@ -246,22 +246,45 @@ public class Player {
                     }
                     break;
                 default:
-                    Safehouse safewtrngt = (Safehouse) location;
-                    if (safewtrngt.getStored().ToString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT))) {
+
+                    Safehouse safewtrngt=(Safehouse)location;
+                    if(safewtrngt.getStored().toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT)))
+                    {
+
                         location.takeEquipment(safewtrngt.getStored());
                     }
 
                     break;
             }
 
-        } else {
-            for (Player ppl : location.getInhabitants()) {
-                if (ppl.getName().equals(split[1])) {
-                    if (loot.lootEquipment(ppl, game.vezerles_determineLoot(split[2]))) break;
-                    if (split[2].toLowerCase(Locale.ROOT).equals("aminoacid")) {
-                        loot.lootAminoAcid(ppl, Integer.parseInt(split[3]));
-                    } else {
-                        loot.lootNucleotide(ppl, Integer.parseInt(split[3]));
+
+        }
+        else
+        {
+            for(Player ppl:location.getInhabitants())//megkeresi a jatekost
+            {
+                if(ppl.getName().equals(split[1]))
+                {
+                    for(Equipment eqsch:ppl.getStored())//megkersi az equipmentet
+                    {
+                        if(eqsch.toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT)))
+                        {
+                            if(loot.lootEquipment(ppl,eqsch))//megnezi, hogy elveheti-e
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    if(split[2].toLowerCase(Locale.ROOT).equals("aminoacid"))
+                    {
+                        loot.lootAminoAcid(ppl,Integer.parseInt(split[3]));
+                        return true;
+                    }
+                    else if(split[2].toLowerCase(Locale.ROOT).equals("nucleotide"))
+                    {
+                        loot.lootNukleotide(ppl,Integer.parseInt(split[3]));
+                        return true;
+
                     }
 
                 }
@@ -436,7 +459,11 @@ public class Player {
      * @return Sikeres volt-e
      */
     public boolean removeLoot(Equipment e) {
-        return equipments.remove(e);
+
+        equipments.remove(e);
+        testerClass.print();
+        return true;
+
     }
 
     /**

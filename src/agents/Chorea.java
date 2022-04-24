@@ -21,9 +21,8 @@ public class Chorea extends Agent {
         super(p);
     }
 
-    public String ToString() {
-        return "Chorea";
-    }
+    public String toString(){return "Chorea";}
+
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat

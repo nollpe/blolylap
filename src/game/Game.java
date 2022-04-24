@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Locale;
+import java.util.Objects;
 
 public class Game {
     private Timer timer;
@@ -150,19 +151,29 @@ public class Game {
      *
      * @param split az inputcommand argumentumokkal, szavanként szétválasztva
      */
-    public void vezerles_playerAdd(String[] split) {
-        for (Player p : allPlayers) {
-            if (p.getName().equals(split[0])) {
-                Equipment Eqtemp = vezerles_determineLoot(split[2]);
-                if (Eqtemp != null) {
+
+    public void vezerles_playerAdd(String[] split)
+    {
+        for(Player p :allPlayers)
+        {
+            if(p.getName().equals(split[0]))
+            {
+                Equipment Eqtemp=vezerles_determineLoot(split[2]);
+                if(!Objects.isNull(Eqtemp))
+                {
                     p.addEquipment(Eqtemp);
                     return;
                 }
-                Agent Agtemp = vezerles_determineAgent(split[2], p);
-                if (Agtemp != null) {
-                    if (split[3].equals("active")) {
-                        p.addActiveAgent(Agtemp);
-                    } else if (split[3].equals("castable")) {
+                Agent Agtemp=vezerles_determineAgent(split[2],p);
+                if(!Objects.isNull(Agtemp))
+                {
+                    if(split[3].equals("active"))
+                    {
+                        p.getCastOn(Agtemp, new Player());
+                    }
+                    else if(split[3].equals("castable"))
+                    {
+
                         p.addCastableAgent(Agtemp);
                     }
                     return;

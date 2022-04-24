@@ -20,9 +20,8 @@ public class Bear extends Agent {
         super(p);
     }
 
-    public String ToString() {
-        return "Bear";
-    }
+    public String toString(){return "Bear";}
+
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat

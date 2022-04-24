@@ -40,7 +40,6 @@ public class Invulnerable extends Agent {
         player.removeActiveAgent(this);
     }
 
-    public String ToString() {
-        return "Invulnerable";
-    }
+    public String toString(){return "Invulnerable";}
+
 }
