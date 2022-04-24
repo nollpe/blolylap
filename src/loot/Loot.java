@@ -15,6 +15,8 @@ public interface Loot {
      * @return A lootolás sikeressége.
      */
     public boolean lootEquipment(Player target, Equipment e);
+
     public boolean lootAminoAcid(Player target, int taken);
-    public boolean lootNukleotide(Player target, int taken);
+
+    public boolean lootNucleotide(Player target, int taken);
 }

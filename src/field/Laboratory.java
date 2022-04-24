@@ -20,10 +20,9 @@ public class Laboratory extends Field {
         testerClass.print();
     }
 
-    public Laboratory(String n)
-    {
+    public Laboratory(String n) {
         this();
-        Name=n;
+        Name = n;
     }
 
     /**

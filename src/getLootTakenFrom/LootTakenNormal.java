@@ -36,7 +36,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
     }
 
     /**
-     * Nukleotide elvétele karaktertől normál állapotban. Mivel nincs lebénulva, nem lehet tőle lootolni.
+     * Nucleotide elvétele karaktertől normál állapotban. Mivel nincs lebénulva, nem lehet tőle lootolni.
      *
      * @param takenTry Ennyit próbálnak meg elvenni tőle
      * @return Amennyit sikerült elvenni tőle. Ebben az esetben 0.

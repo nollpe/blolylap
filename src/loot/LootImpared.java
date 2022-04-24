@@ -10,9 +10,11 @@ import tester.testerClass;
 public class LootImpared implements Loot {
 
     public final Player owner;
-    public LootImpared(Player p ){
-       owner =p;
+
+    public LootImpared(Player p) {
+        owner = p;
     }
+
     /**
      * A lootolást végző függvény. Mivel a karakter le van bénulva, nem történik semmi.
      *
@@ -24,12 +26,14 @@ public class LootImpared implements Loot {
         testerClass.print();
         return false;
     }
+
     @Override
-    public boolean lootAminoAcid(Player player, int taken){
+    public boolean lootAminoAcid(Player player, int taken) {
         return false;
     }
+
     @Override
-    public boolean lootNukleotide(Player player, int taken){
+    public boolean lootNucleotide(Player player, int taken) {
         return false;
     }
 }

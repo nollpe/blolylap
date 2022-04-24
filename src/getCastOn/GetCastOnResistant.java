@@ -18,6 +18,7 @@ public class GetCastOnResistant implements GetCastOn {
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnResistant(Player p) {
@@ -26,6 +27,7 @@ public class GetCastOnResistant implements GetCastOn {
 
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
+     *
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */
@@ -33,7 +35,7 @@ public class GetCastOnResistant implements GetCastOn {
     public void getCastOn(Agent a, Player attacker) {
         Random rand = new Random();
         int random = rand.nextInt(1000);
-        if(random > 823){
+        if (random > 823) {
             /**
              * Ha nem védte meg a köpeny:
              */

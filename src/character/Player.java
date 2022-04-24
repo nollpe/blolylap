@@ -49,21 +49,17 @@ public class Player {
         loot = new LootNormal(this);
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
-        location=game.spawnPlayer(this);
+        location = game.spawnPlayer(this);
     }
 
-    public Player(String name)
-    {
+    public Player(String name) {
         this();
-        Name=name;
+        Name = name;
     }
 
-    public void die()
-    {
+    public void die() {
         game.removePlayer(this);
         location.leave(this);
-        //TODO hogy a faszba kell megszüntetni egy ilyen gecit?
-        //TODO also az összes cuccát ami van
     }
 
     //region strategy pattern setter getter
@@ -83,7 +79,7 @@ public class Player {
         return getCastOn;
     }
 
-    public Cast getCase() {
+    public Cast getCast() {
         testerClass.print();
         return cast;
     }
@@ -120,12 +116,24 @@ public class Player {
     //endregion
 
     //region spellcasting
-    public void castSpell() {
-        testerClass.print();
-        //TODO ??
-        //cast.cast(this);
+
+    /**
+     * A karakter felken egy ágenst
+     *
+     * @param player A játékos akit kennek
+     * @param agent  A felkent ágens
+     * @return A kenés sikeressége
+     */
+    boolean cast(Player player, Agent agent) {
+        return cast.cast(player, agent);
     }
 
+    /**
+     * A karakterre felkennek egy ágenst
+     *
+     * @param a Amit kennek
+     * @param c Aki keni
+     */
     public void getCastOn(Agent a, Player c) {
         testerClass.print();
         getCastOn.getCastOn(a, c);
@@ -134,8 +142,7 @@ public class Player {
 
     //region sima getter setterek
 
-    public String getName()
-    {
+    public String getName() {
         return Name;
     }
 
@@ -144,21 +151,15 @@ public class Player {
     //region vezerles, player kore
 
     /**
-     *
      * @param split a parancs amit beírt a felhasználó
      * @return ha sikerült végrehajtani a parancsot true ha nem sikerült false;
      */
-    public boolean vezerles_attack(String[] split)
-    {
-        for(Equipment eq:equipments)
-        {
-            if(eq.toString().equals("Axe"))
-            {
-                LinkedHashSet<Player> temp=this.location.getInhabitants();
-                for(Player p:temp)
-                {
-                    if(p.getName().equals(split[1]))
-                    {
+    public boolean vezerles_attack(String[] split) {
+        for (Equipment eq : equipments) {
+            if (eq.toString().equals("Axe")) {
+                LinkedHashSet<Player> temp = this.location.getInhabitants();
+                for (Player p : temp) {
+                    if (p.getName().equals(split[1])) {
                         p.die();
                         equipments.remove(eq);
                         equipments.add(new BrokenAxe());
@@ -172,22 +173,16 @@ public class Player {
     }
 
     /**
-     *
      * @param split a parancs amit beírt a felhasználó
      * @return ha sikerült végrehajtani a parancsot true ha nem sikerült false;
      */
-    public boolean vezerles_castAgent(String[] split)
-    {
-        LinkedHashSet<Player> temp=this.location.getInhabitants();
-        for(Player p:temp)
-        {
-            if(p.getName().equals(split[1]))
-            {
-                for(Agent casted:castableAgents)
-                {
-                    if(casted.toString().equals(split[2]))
-                    {
-                        p.getCastOn.getCastOn(casted,this);
+    public boolean vezerles_castAgent(String[] split) {
+        LinkedHashSet<Player> temp = this.location.getInhabitants();
+        for (Player p : temp) {
+            if (p.getName().equals(split[1])) {
+                for (Agent casted : castableAgents) {
+                    if (casted.toString().equals(split[2])) {
+                        p.getCastOn.getCastOn(casted, this);
                         return true;
                     }
                 }
@@ -197,24 +192,17 @@ public class Player {
     }
 
     /**
-     *
      * @param split a parancs amit beírt a felhasználó
      * @return ha sikerült végrehajtani a parancsot true ha nem sikerült false;
      */
-    public boolean vezerles_makeagent(String[] split)
-    {
-        for (GeneticCode gen : knownGeneticCodes)
-        {
-            if(split[1].equals(gen.getAgentType()))
-            {
-                Agent temp=gen.makeAgent(inventory);
-                if(temp!=null)
-                {
+    public boolean vezerles_makeagent(String[] split) {
+        for (GeneticCode gen : knownGeneticCodes) {
+            if (split[1].equals(gen.getAgentType())) {
+                Agent temp = gen.makeAgent(inventory);
+                if (temp != null) {
                     castableAgents.add(temp);
                     return true;
-                }
-                else
-                {
+                } else {
                     System.out.println("can't make " + split[1]);
                 }
             }
@@ -222,42 +210,34 @@ public class Player {
         return false;
     }
 
-    public boolean vezerles_loot(String[] split)
-    {
-        if(split[1].equals("feild"))
-        {
-            switch (split[2].toLowerCase(Locale.ROOT))
-            {
-                case("nucleotide"):
-                    int taken=location.takeNukleotide(Integer.parseInt(split[3]));
-                    int addedToInventory=inventory.addNucleotide(taken);
-                    if(addedToInventory!=taken && taken !=0)
-                    {
-                        Warehouse xd=(Warehouse)location;
-                        xd.getStored().addNucleotide(taken-addedToInventory);
+    public boolean vezerles_loot(String[] split) {
+        if (split[1].equals("feild")) {
+            switch (split[2].toLowerCase(Locale.ROOT)) {
+                case ("nucleotide"):
+                    int taken = location.takeNucleotide(Integer.parseInt(split[3]));
+                    int addedToInventory = inventory.addNucleotide(taken);
+                    if (addedToInventory != taken && taken != 0) {
+                        Warehouse xd = (Warehouse) location;
+                        xd.getStored().addNucleotide(taken - addedToInventory);
                         //mert akkor nem tudja belerakni az inventoryba ezért visszarakjuk a helyére
                         //hogy ne lehessen csak úgy elvinni mindent
                         //öljetek meg
                     }
                     break;
-                case("aminoacid"):
-                    int takena=location.takeAminoAcid(Integer.parseInt(split[3]));
-                    int addedToInventorya=inventory.addAminoAcid(takena);
-                    if(addedToInventorya!=takena && takena !=0)
-                    {
-                        Warehouse xd=(Warehouse)location;
-                        xd.getStored().addAminoAcid(takena-addedToInventorya);
+                case ("aminoacid"):
+                    int takena = location.takeAminoAcid(Integer.parseInt(split[3]));
+                    int addedToInventorya = inventory.addAminoAcid(takena);
+                    if (addedToInventorya != takena && takena != 0) {
+                        Warehouse xd = (Warehouse) location;
+                        xd.getStored().addAminoAcid(takena - addedToInventorya);
 
                     }
                     break;
-                case("geneticcode"):
-                    GeneticCode EEEEEE=location.readGeneticCode();
-                    if(EEEEEE!=null)
-                    {
-                        for(GeneticCode genc:knownGeneticCodes)
-                        {
-                            if(EEEEEE.getAgentType().equals(genc.getAgentType()))
-                            {
+                case ("geneticcode"):
+                    GeneticCode EEEEEE = location.readGeneticCode();
+                    if (EEEEEE != null) {
+                        for (GeneticCode genc : knownGeneticCodes) {
+                            if (EEEEEE.getAgentType().equals(genc.getAgentType())) {
                                 System.out.println("you already know this GeneticCode B");
                                 return false;
                             }
@@ -266,30 +246,22 @@ public class Player {
                     }
                     break;
                 default:
-                    Safehouse safewtrngt=(Safehouse)location;
-                    if(safewtrngt.getStored().ToString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT)))
-                    {
+                    Safehouse safewtrngt = (Safehouse) location;
+                    if (safewtrngt.getStored().ToString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT))) {
                         location.takeEquipment(safewtrngt.getStored());
                     }
 
                     break;
             }
 
-        }
-        else
-        {
-            for(Player ppl:location.getInhabitants())
-            {
-                if(ppl.getName().equals(split[1]))
-                {
-                    if(loot.lootEquipment(ppl, game.vezerles_determineLoot(split[2])))break;
-                    if(split[2].toLowerCase(Locale.ROOT).equals("aminoacid"))
-                    {
-                        loot.lootAminoAcid(ppl,Integer.parseInt(split[3]));
-                    }
-                    else
-                    {
-                        loot.lootNukleotide(ppl,Integer.parseInt(split[3]));
+        } else {
+            for (Player ppl : location.getInhabitants()) {
+                if (ppl.getName().equals(split[1])) {
+                    if (loot.lootEquipment(ppl, game.vezerles_determineLoot(split[2]))) break;
+                    if (split[2].toLowerCase(Locale.ROOT).equals("aminoacid")) {
+                        loot.lootAminoAcid(ppl, Integer.parseInt(split[3]));
+                    } else {
+                        loot.lootNucleotide(ppl, Integer.parseInt(split[3]));
                     }
 
                 }
@@ -299,41 +271,35 @@ public class Player {
         return false;
     }
 
-    public void vezerles_getstat()
-    {
+    public void vezerles_getstat() {
         System.out.println("Location:\n\t" + location.getName());
         System.out.println("Active agents:");
-        for(Agent a:activeAgents)
-        {
+        for (Agent a : activeAgents) {
             System.out.println("\t" + a.toString());
         }
         System.out.println("Castable agents:");
-        for(Agent a:castableAgents)
-        {
+        for (Agent a : castableAgents) {
             System.out.println("\t" + a.toString());
         }
         System.out.println("Equipments:");
-        for(Equipment a:equipments)
-        {
+        for (Equipment a : equipments) {
             System.out.println("\t" + a.toString());
         }
-        System.out.println("Resources:\n\taminoacid: " + inventory.getAminoAcid() + "\n\tnucleotide: "+inventory.getNukleotide());
+        System.out.println("Resources:\n\taminoacid: " + inventory.getAminoAcid() + "\n\tnucleotide: " + inventory.getNucleotide());
         System.out.println("Known genetic codes:");
-        for(GeneticCode a:knownGeneticCodes)
-        {
+        for (GeneticCode a : knownGeneticCodes) {
             System.out.println("\t" + a.toString());
         }
     }
 
-    public void vezerles_playerTurn(BufferedReader br)
-    {
+    public void vezerles_playerTurn(BufferedReader br) {
         System.out.println("playerturn:");
         String input = "ribancos kifli";
-        boolean canMove=true;
-        boolean canCast=true;
-        boolean canMake=true;
-        boolean canAttack=true;
-        boolean canLoot=true;
+        boolean canMove = true;
+        boolean canCast = true;
+        boolean canMake = true;
+        boolean canAttack = true;
+        boolean canLoot = true;
         while (!input.equals("exit")) {
             String[] split = new String[1];//placeholder a new String
             try {
@@ -342,55 +308,51 @@ public class Player {
                 e.printStackTrace();
             }
             split = input.split(" ");
-            switch(split[0]) {
+            switch (split[0]) {
                 case ("moveto"):
                     if (canMove) {
                         this.move(game.vezerles_determineField(split[1]));
                     }
                     break;
                 case ("loot"):
-                    if (canLoot)
-                    {
-                        canLoot=!this.vezerles_loot(split);
+                    if (canLoot) {
+                        canLoot = !this.vezerles_loot(split);
                     }
                     break;
                 case ("makeagent"):
                     if (canMake)
-                        ;canMake=!this.vezerles_makeagent(split);
+                        ;
+                    canMake = !this.vezerles_makeagent(split);
                     break;
-                case("castagent"):
-                    if(canCast)
-                    {
-                        ;canCast=!this.vezerles_castAgent(split);
+                case ("castagent"):
+                    if (canCast) {
+                        ;
+                        canCast = !this.vezerles_castAgent(split);
                     }
                     break;
-                case("slay"):
-                    if(canAttack)
-                    {
-                        ;canAttack=!this.vezerles_attack(split);
+                case ("slay"):
+                    if (canAttack) {
+                        ;
+                        canAttack = !this.vezerles_attack(split);
                     }
                     break;
-                case("drop"):
+                case ("drop"):
                     String[] finalSplit = split;
                     equipments.removeIf(eq -> eq.toString().equals(finalSplit[1]));
                     break;
-                case("getstat"):
-                    if(split[1].length()==2)
-                    {
+                case ("getstat"):
+                    if (split[1].length() == 2) {
                         game.vezerles_determineField(split[2]).vezerles_getstat();
-                    }
-                    else
-                    {
-                        for(Player p:game.getAllPlayers())
-                        {
-                            if(p.getName().equals(split[1]))
-                            {
-                                p.vezerles_getstat();break;
+                    } else {
+                        for (Player p : game.getAllPlayers()) {
+                            if (p.getName().equals(split[1])) {
+                                p.vezerles_getstat();
+                                break;
                             }
                         }
                     }
                     break;
-                case("endturn"):
+                case ("endturn"):
                     return;
                 default:
                     System.out.println("invalid command");
@@ -401,6 +363,9 @@ public class Player {
     }
     //endregion
 
+    /**
+     * Egy kör múlásáért felel, az ágensek időtartamát csökkentik
+     */
     public void tick() {
         testerClass.print();
         for (Agent agent : activeAgents) {
@@ -415,23 +380,9 @@ public class Player {
                 agent.loseEffect(this);
             }
         }
-
     }
 
     //region lootolnak tole
-
-    /**
-     * A játékostól elvesznek egy védőfelszerelést, ezért törli mgaáról a hatását és kitörli az felszerelései közül.
-     *
-     * @param e A védőfelszerelést amit elvettek.
-     * @return Az elvétel sikeressége.
-     */
-    public boolean takeLoot(Equipment e) {
-        testerClass.print();
-        e.loseEffect(this);
-        equipments.remove(e);
-        return true;
-    }
 
 
     /**
@@ -442,19 +393,40 @@ public class Player {
      */
     public boolean getLootTakenFrom(Equipment e) {
         testerClass.print();
-        boolean succes = getLootTakenFrom.getEquipmentTakenFrom(e);
-        return succes;
+        return getLootTakenFrom.getEquipmentTakenFrom(e);
     }
 
     /**
-     * A karakter lootolni akar. Meghívja a lootolásért felelős osztályt.
+     * A karakter lootolni akar egy felszerelést. Meghívja a lootolásért felelős osztályt.
+     *
+     * @param target akitől lootolni akar
+     * @param eq     amit lootolni akar
+     * @return sikeres volt-e
      */
-    public void loot() {
+    public boolean lootEquipment(Player target, Equipment eq) {
+        return loot.lootEquipment(target, eq);
+    }
 
-        testerClass.print();
-        //TODO ??
-        //loot.loot(this);//?
+    /**
+     * A karakter lootolni akar amino savat. Meghívja a lootolásért felelős osztályt.
+     *
+     * @param target akitől lootolni akar
+     * @param n      amennyit lootolni akar
+     * @return sikeres volt-e
+     */
+    public boolean lootAminoAcid(Player target, int n) {
+        return loot.lootAminoAcid(target, n);
+    }
 
+    /**
+     * A karakter lootolni akar nukleotidot. Meghívja a lootolásért felelős osztályt.
+     *
+     * @param target akitől lootolni akar
+     * @param n      amennyit lootolni akar
+     * @return sikeres volt-e
+     */
+    public boolean lootNucleotide(Player target, int n) {
+        return loot.lootNucleotide(target, n);
     }
 
     /**
@@ -464,8 +436,8 @@ public class Player {
      * @return Sikeres volt-e
      */
     public boolean removeLoot(Equipment e) {
-        testerClass.print();
-        return false;
+        equipments.remove(e);
+        return true;
     }
 
     /**
@@ -474,13 +446,10 @@ public class Player {
      * @param d1 - hányat akarunk elvenni
      * @return - hányat tudtunk elvenni
      */
-    public int takeNukleotide(int d1) {
-        testerClass.print();
+    public int takeNucleotide(int d1) {
         Warehouse wh = (Warehouse) location;
-        int d2 = wh.getStored().takeNucleotide(d1);
-        int d3 = inventory.addNucleotide(d2);
-        return d3;
-
+        int d2 = location.takeNucleotide(d1);
+        return inventory.addNucleotide(d2);
     }
 
     /**
@@ -490,12 +459,9 @@ public class Player {
      * @return ennyit tudunk elvenni
      */
     public int takeAminoAcid(int d1) {
-        testerClass.print();
         Warehouse wh = (Warehouse) location;
         int d2 = wh.getStored().takeAminoAcid(d1);
-        int d3 = inventory.addAminoAcid(d2);
-        testerClass.print();
-        return d3;
+        return inventory.addAminoAcid(d2);
     }
 
     /**
@@ -504,7 +470,6 @@ public class Player {
      * @return Védőfelszerelések listája
      */
     public LinkedList<Equipment> showLoot() {
-        testerClass.print();
         return equipments;
     }
     //endregion
@@ -515,7 +480,6 @@ public class Player {
      * @param gc GeneticCode
      */
     public void addGeneticCode(GeneticCode gc) {
-        testerClass.print();
         knownGeneticCodes.add(gc);
     }
 
@@ -526,8 +490,7 @@ public class Player {
      * @param field a megadott égtáj
      */
     public void move(Field field) {
-        testerClass.print();
-        getMovement().move(field);
+        movement.move(field);
     }
 
     //region adderek removerek
@@ -538,7 +501,6 @@ public class Player {
      * @param eq védőfelszerelés
      */
     public void addEquipment(Equipment eq) {
-        testerClass.print();
         equipments.add(eq);
         eq.takeEffect(this);
     }
@@ -565,7 +527,7 @@ public class Player {
      * Minden genetikus kódot elfelejtett a játékossal
      */
     public void forgetAllGeneticCodes() {
-        knownGeneticCodes = new LinkedList<GeneticCode>();
+        knownGeneticCodes = new LinkedList<>();
     }
 
     /**
@@ -594,7 +556,6 @@ public class Player {
      * @return A védőfelszerlések listája.
      */
     public LinkedList<Equipment> getStored() {
-        testerClass.print();
         return equipments;
     }
 
@@ -604,14 +565,13 @@ public class Player {
      * @param i A karakterhez tartozó inventory.
      */
     public void setInventory(Inventory i) {
-        testerClass.print();
         inventory = i;
     }
 
     /**
      * Megadja karakterhez tartozó inventoryt.
      *
-     * @returni A karakterhez tartozó inventory.
+     * @return A karakterhez tartozó inventory.
      */
     public Inventory getInventory() {
         return inventory;
@@ -632,16 +592,16 @@ public class Player {
      * @param castableAgent kenhető ágens
      */
     public void addCastableAgent(Agent castableAgent) {
-        testerClass.print();
         castableAgents.add(castableAgent);
         //castableAgent.takeEffect(this);
     }
 
     /**
      * Kitörli az castolható ágensek közül a kapott ágenset
+     *
      * @param a az ágens, amit ki kell törölni
      */
-    public void removeCastableAgent(Agent a){
+    public void removeCastableAgent(Agent a) {
         castableAgents.remove(a);
     }
 

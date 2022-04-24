@@ -36,7 +36,7 @@ public class LootTakenStunned implements GetLootTakenFrom {
     }
 
     /**
-     * Nukleotide elvétele a karaktertől.
+     * Nucleotide elvétele a karaktertől.
      *
      * @param takenTry Ennyit próbálnak meg elvenni tőle
      * @return Amennyit sikerült elvenni tőle (ha többet próbálnak elvenni tőle, mint amennyi van nála, akkor annyit ad
@@ -44,10 +44,7 @@ public class LootTakenStunned implements GetLootTakenFrom {
      */
     @Override
     public int getNucleotideTakenFrom(int takenTry) {
-        testerClass.print();
-        Inventory inventory = owner.getInventory();
-        int takenActual = inventory.takeNucleotide(takenTry);
-        return takenActual;
+        return owner.takeNucleotide(takenTry);
     }
 
     /**
@@ -59,9 +56,6 @@ public class LootTakenStunned implements GetLootTakenFrom {
      */
     @Override
     public int getAminoAcidTakenFrom(int takenTry) {
-        testerClass.print();
-        Inventory inventory = owner.getInventory();
-        int takenActual = inventory.takeAminoAcid(takenTry);
-        return takenActual;
+        return owner.takeAminoAcid(takenTry);
     }
 }
