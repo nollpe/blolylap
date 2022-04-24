@@ -14,15 +14,19 @@ import movement.MovementNormal;
 public class Chorea extends Agent {
     /**
      * Agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
+     *
      * @param p A jatekos, akihez tartozik az agens
      */
     public Chorea(Player p) {
         super(p);
     }
+
     public String toString(){return "Chorea";}
+
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
+     *
      * @param p A jatekos akinek a karakterere rekentek az agenst
      */
     public void takeEffect(Player p) {
@@ -36,6 +40,7 @@ public class Chorea extends Agent {
 
     /**
      * Az agens hatasa lejar
+     *
      * @param player A jatekos akinek a karakteren van az agens
      */
     public void loseEffect(Player player) {

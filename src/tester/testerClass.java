@@ -13,7 +13,6 @@ import game.Game;
 import game.Timer;
 import getCastOn.GetCastOnInvulnerable;
 import getLootTakenFrom.LootTakenStunned;
-import loot.LootImpared;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -362,10 +361,10 @@ public class testerClass {
          */
         switch (n) {
             case 1:
-                character1.loot();
+                //character1.loot();
                 break;
             case 2:
-                character2.loot();
+                //character2.loot();
                 break;
             default:
                 System.out.println("Ilyen nincsen. ");
@@ -396,10 +395,10 @@ public class testerClass {
          */
         switch (n) {
             case 1:
-                character1.castSpell();
+                //character1.cast();
                 break;
             case 2:
-                character4.castSpell();
+                //character4.cast();
                 break;
             default:
                 System.out.println("Ilyen nincsen. ");
@@ -425,7 +424,7 @@ public class testerClass {
         location.enter(c);
         location.getStored().addNucleotide(2);
         //test
-        c.takeNukleotide(1);
+        c.takeNucleotide(1);
     }
 
     /**

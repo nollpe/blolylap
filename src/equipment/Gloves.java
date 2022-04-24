@@ -11,6 +11,16 @@ import tester.testerClass;
  */
 public class Gloves extends Equipment {
     /**
+     * A kesztyű élettartama
+     */
+    int durability = 3;
+
+    /**
+     * A kesztyű tulajdonosa
+     */
+    Player owner;
+
+    /**
      * A kesztyű megszerzését (aktiválását) kezeli.
      * Beállítja a karakternek a castolás elszenvedésének állapotát.
      *
@@ -18,6 +28,7 @@ public class Gloves extends Equipment {
      */
     public void takeEffect(Player c) {
         c.setGetCastOn(new GetCastOnGloves(c, this));
+        owner = c;
     }
 
     /**
@@ -39,6 +50,20 @@ public class Gloves extends Equipment {
      */
     public void useOn(Player p) {
     }
+
     //TODO kell nekem valami amivel csökkenthetem a kesztyű élettartamát
     public String toString(){return "Gloves";}
+
+
+    /**
+     * Csökkenti a kesztyű élettartamát
+     */
+    public void decreaseDurability() {
+        durability--;
+        if (durability == 0) {
+            loseEffect(owner);
+            owner.removeLoot(this);
+        }
+    }
+
 }

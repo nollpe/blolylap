@@ -1,6 +1,7 @@
 package field;
 
 import agents.GeneticCode;
+import character.Inventory;
 import character.Player;
 import tester.testerClass;
 import equipment.Equipment;
@@ -14,21 +15,20 @@ public class Field {
     private LinkedHashSet<Player> inhabitants;
     protected String Name;
 
+
     public Field() {
         testerClass.print();
         this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedHashSet<Player>();
     }
 
-    public Field(String n)
-    {
+    public Field(String n) {
         this();
-        Name=n;
+        Name = n;
     }
 
-    public String getName()
-    {
-        return  Name;
+    public String getName() {
+        return Name;
     }
 
     /**
@@ -90,27 +90,39 @@ public class Field {
         testerClass.print();
         return inhabitants;
     }
-    public int takeNukleotide(int n) {
+
+    public int takeNucleotide(int n) {
         return 0;
     }
-    public int takeAminoAcid(int n){
+
+    public int takeAminoAcid(int n) {
         return 0;
     }
-    public void takeEquipment(Equipment e){}
-    public GeneticCode readGeneticCode(){return null;}
+
+    public void takeEquipment(Equipment e) {
+    }
+
+    public GeneticCode readGeneticCode() {
+        return null;
+    }
+
+    public int getNucleotide() {
+        return 0;
+    }
+
+    public int getAminoAcid() {
+        return 0;
+    }
 
 
-    public void vezerles_getstat()
-    {
+    public void vezerles_getstat() {
         System.out.println("Neighbours:");
-        for(Field f:neighbours)
-        {
-            System.out.println('\t'+f.getName());
+        for (Field f : neighbours) {
+            System.out.println('\t' + f.getName());
         }
         System.out.println("Players:");
-        for(Player p:inhabitants)
-        {
-            System.out.println('\t'+p.getName());
+        for (Player p : inhabitants) {
+            System.out.println('\t' + p.getName());
         }
     }
 

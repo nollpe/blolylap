@@ -36,4 +36,5 @@ public class Equipment {
 
 
     public String toString(){return null;}
+
 }

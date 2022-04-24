@@ -28,10 +28,9 @@ public class Safehouse extends Field {
         testerClass.print();
     }
 
-    public Safehouse(String n)
-    {
+    public Safehouse(String n) {
         this();
-        Name=n;
+        Name = n;
     }
 
     /**
@@ -91,7 +90,7 @@ public class Safehouse extends Field {
      */
     public void takeEquipment(Equipment e) {
         testerClass.print();
-        stored=null;
+        stored = null;
     }
 
     /**
