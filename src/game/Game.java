@@ -84,18 +84,18 @@ public class Game {
      * @param agentName az ágens neve, ezt a felhasználó adja meg
      * @return azt az ágenst amit a felhasználó kért
      */
-    public Agent vezerles_determineAgent(String agentName, Player anyatok) {
+    public Agent vezerles_determineAgent(String agentName, Player player) {
         switch (agentName.toLowerCase(Locale.ROOT)) {
             case ("chorea"):
-                return new Chorea(anyatok);
+                return new Chorea(player);
             case ("bear"):
-                return new Bear(anyatok);
+                return new Bear(player);
             case ("forget"):
-                return new Forget(anyatok);
+                return new Forget(player);
             case ("invulnerable"):
-                return new Invulnerable(anyatok);
+                return new Invulnerable(player);
             case ("paralyzing"):
-                return new Paralyzing(anyatok);
+                return new Paralyzing(player);
             default:
                 return null;
 
@@ -178,7 +178,7 @@ public class Game {
     }
 
     public void vezerles() {
-        String input = "ribancos kifli";
+        String input = "";
         while (!input.equals("exit")) {
             System.out.println("sima vezerles:");
             String[] split = new String[1];//placeholder a new String
