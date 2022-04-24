@@ -34,7 +34,6 @@ public class GetCastOnGloves implements GetCastOn {
     @Override
     public void getCastOn(Agent a, Player attacker) {
         attacker.getCastOn(a, owner);
-        //TODO nincs még implementálva
-        //gloves.decreaseDurability();
+        gloves.decreaseDurability();
     }
 }
