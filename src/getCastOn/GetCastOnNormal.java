@@ -31,6 +31,5 @@ public class GetCastOnNormal implements GetCastOn {
     @Override
     public void getCastOn(Agent a, Player attacker) {
         a.takeEffect(owner);
-        owner.addActiveAgent(a);
     }
 }

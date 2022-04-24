@@ -36,6 +36,7 @@ public class Paralyzing extends Agent {
         player.setMovement(new MovementParalyzed(player));
         player.setCast(new CastImpared(player));
         player.setGetLootTakenFrom(new LootTakenStunned(player));
+        player.addActiveAgent(this);
         timeToLive = 5;
     }
 
