@@ -36,5 +36,5 @@ public class Invulnerable extends Agent {
         player.setGetCastOn(new GetCastOnNormal(player));
         player.removeActiveAgent(this);
     }
-    public String ToString(){return "Invulnerable";}
+    public String toString(){return "Invulnerable";}
 }

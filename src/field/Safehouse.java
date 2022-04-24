@@ -116,6 +116,6 @@ public class Safehouse extends Field {
     public void vezerles_getstat() {
         super.vezerles_getstat();
         System.out.println("Loot:");
-        System.out.println(stored.ToString());
+        System.out.println(stored.toString());
     }
 }

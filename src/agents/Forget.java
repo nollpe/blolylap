@@ -33,5 +33,5 @@ public class Forget extends Agent {
     public void loseEffect(Player player) {
         player.removeActiveAgent(this);
     }
-    public String ToString(){return "Forget";}
+    public String toString(){return "Forget";}
 }

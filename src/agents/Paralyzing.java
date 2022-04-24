@@ -50,5 +50,5 @@ public class Paralyzing extends Agent {
         player.setGetLootTakenFrom(new LootTakenNormal(player));
         player.removeActiveAgent(this);
     }
-    public String ToString(){return "Paralyzing";}
+    public String toString(){return "Paralyzing";}
 }

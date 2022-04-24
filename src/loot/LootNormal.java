@@ -27,8 +27,12 @@ public class LootNormal implements Loot {
     @Override
     public boolean lootEquipment(Player target, Equipment e) {
         testerClass.print();
-        target.getLootTakenFrom(e);
-        return true;
+        if(target.getLootTakenFrom(e))
+        {
+            owner.addEquipment(e);
+            return true;
+        }
+        return false;
     }
 
     @Override
