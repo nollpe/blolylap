@@ -17,6 +17,7 @@ public class GetCastOnGloves implements GetCastOn {
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnGloves(Player p, Gloves g) {
@@ -26,6 +27,7 @@ public class GetCastOnGloves implements GetCastOn {
 
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny kesztyűs esete, a kenes nem sikerul és a kesztyű élettartama csökken
+     *
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */

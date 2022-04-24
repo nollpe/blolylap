@@ -37,4 +37,7 @@ public class BrokenAxe extends Equipment {
     public void useOn(Player p) {
     }
 
+    public String toString() {
+        return "BrokenAxe";
+    }
 }

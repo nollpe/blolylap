@@ -1,22 +1,34 @@
 package field;
 
 import agents.GeneticCode;
+import character.Inventory;
 import character.Player;
 import tester.testerClass;
 import equipment.Equipment;
 
-import java.util.EnumMap;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
-public abstract class Field {
+
+public class Field {
     private LinkedList<Field> neighbours;
-    private LinkedList<Player> inhabitants;
-    private String Name;
+    private LinkedHashSet<Player> inhabitants;
+    protected String Name;
+
 
     public Field() {
         testerClass.print();
         this.neighbours = new LinkedList<>();
-        this.inhabitants = new LinkedList<>();
+        this.inhabitants = new LinkedHashSet<Player>();
+    }
+
+    public Field(String n) {
+        this();
+        Name = n;
+    }
+
+    public String getName() {
+        return Name;
     }
 
     /**
@@ -74,17 +86,44 @@ public abstract class Field {
         testerClass.print();
     }
 
-    public LinkedList<Player> getInhabitants() {
+    public LinkedHashSet<Player> getInhabitants() {
         testerClass.print();
         return inhabitants;
     }
-    public int takeNukleotide(int n) {
+
+    public int takeNucleotide(int n) {
         return 0;
     }
-    public int takeAminoAcid(int n){
+
+    public int takeAminoAcid(int n) {
         return 0;
     }
-    public void takeEquipment(Equipment e){}
-    public GeneticCode readGeneticCode(){return null;}
+
+    public void takeEquipment(Equipment e) {
+    }
+
+    public GeneticCode readGeneticCode() {
+        return null;
+    }
+
+    public int getNucleotide() {
+        return 0;
+    }
+
+    public int getAminoAcid() {
+        return 0;
+    }
+
+
+    public void vezerles_getstat() {
+        System.out.println("Neighbours:");
+        for (Field f : neighbours) {
+            System.out.println('\t' + f.getName());
+        }
+        System.out.println("Players:");
+        for (Player p : inhabitants) {
+            System.out.println('\t' + p.getName());
+        }
+    }
 
 }

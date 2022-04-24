@@ -20,6 +20,11 @@ public class Laboratory extends Field {
         testerClass.print();
     }
 
+    public Laboratory(String n) {
+        this();
+        Name = n;
+    }
+
     /**
      * Megmutatja a laborban található lootot
      */
@@ -66,5 +71,10 @@ public class Laboratory extends Field {
         testerClass.print();
     }
 
-
+    @Override
+    public void vezerles_getstat() {
+        super.vezerles_getstat();
+        System.out.println("Loot:");
+        System.out.println(readableGeneticCode.ToString());
+    }
 }

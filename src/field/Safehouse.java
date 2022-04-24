@@ -28,6 +28,11 @@ public class Safehouse extends Field {
         testerClass.print();
     }
 
+    public Safehouse(String n) {
+        this();
+        Name = n;
+    }
+
     /**
      * Megmutatja a tartalmazott lootot
      */
@@ -43,6 +48,7 @@ public class Safehouse extends Field {
         testerClass.print();
         super.tick();
 
+        //TODO ezt am basszuk már ki innen és generáljon random eséllyel ha nincs benne semmi
         if (stored == null) {
             System.out.println("Mit generáljon a safehouse?\n1:kesztyű\n2:köpeny\n3:tatyó\n0:semmit");
             int chosen = 0;
@@ -84,7 +90,7 @@ public class Safehouse extends Field {
      */
     public void takeEquipment(Equipment e) {
         testerClass.print();
-        stored=null;
+        stored = null;
     }
 
     /**
@@ -103,5 +109,12 @@ public class Safehouse extends Field {
      */
     public Equipment getStored() {
         return stored;
+    }
+
+    @Override
+    public void vezerles_getstat() {
+        super.vezerles_getstat();
+        System.out.println("Loot:");
+        System.out.println(stored.ToString());
     }
 }

@@ -17,6 +17,7 @@ import tester.testerClass;
 public class Paralyzing extends Agent {
     /**
      * Forget agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
+     *
      * @param p A jatekos, akihez tartozik az agens
      */
     public Paralyzing(Player p) {
@@ -26,11 +27,12 @@ public class Paralyzing extends Agent {
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
+     *
      * @param p A jatekos akinek a karakterere rekentek az agenst
      */
     public void takeEffect(Player p) {
         player = p;
-        player.setLoot(new LootImpared(player);
+        player.setLoot(new LootImpared(player));
         player.setMovement(new MovementParalyzed(player));
         player.setCast(new CastImpared(player));
         player.setGetLootTakenFrom(new LootTakenStunned(player));
@@ -50,5 +52,8 @@ public class Paralyzing extends Agent {
         player.setGetLootTakenFrom(new LootTakenNormal(player));
         player.removeActiveAgent(this);
     }
-    public String ToString(){return "Paralyzing";}
+
+    public String ToString() {
+        return "Paralyzing";
+    }
 }

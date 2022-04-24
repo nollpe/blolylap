@@ -15,6 +15,7 @@ public class GetCastOnNormal implements GetCastOn {
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnNormal(Player p) {
@@ -23,6 +24,7 @@ public class GetCastOnNormal implements GetCastOn {
 
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny normál esete, a kenes sikerull.
+     *
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */

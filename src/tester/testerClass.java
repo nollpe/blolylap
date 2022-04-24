@@ -13,7 +13,6 @@ import game.Game;
 import game.Timer;
 import getCastOn.GetCastOnInvulnerable;
 import getLootTakenFrom.LootTakenStunned;
-import loot.LootImpared;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +32,7 @@ public class testerClass {
         int depth1 = new Exception().getStackTrace().length;
         String filler = "\t".repeat(depth1 - 3);
 
-        System.out.println(filler + className + " " + methodName1);
+        //System.out.println(filler + className + " " + methodName1);
     }
 
     //region norbi tesztek
@@ -270,7 +269,7 @@ public class testerClass {
          * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
          */
         character2.setGetLootTakenFrom(new LootTakenStunned(character2));
-        character2.setLoot(new LootImpared());
+        //character2.setLoot(new LootImpared());
     }
 
     /**
@@ -362,10 +361,10 @@ public class testerClass {
          */
         switch (n) {
             case 1:
-                character1.loot();
+                //character1.loot();
                 break;
             case 2:
-                character2.loot();
+                //character2.loot();
                 break;
             default:
                 System.out.println("Ilyen nincsen. ");
@@ -396,10 +395,10 @@ public class testerClass {
          */
         switch (n) {
             case 1:
-                character1.castSpell();
+                //character1.cast();
                 break;
             case 2:
-                character4.castSpell();
+                //character4.cast();
                 break;
             default:
                 System.out.println("Ilyen nincsen. ");
@@ -425,7 +424,7 @@ public class testerClass {
         location.enter(c);
         location.getStored().addNucleotide(2);
         //test
-        c.takeNukleotide(1);
+        c.takeNucleotide(1);
     }
 
     /**
@@ -471,7 +470,7 @@ public class testerClass {
     private void Test_ViewGeneticCodeOfLaboratory() {
         //init
         Laboratory location = new Laboratory();
-        location.init(new GeneticCode(new Forget(), 1, 1));
+        //location.init(new GeneticCode(new Forget(), 1, 1));
         //test
         location.showLoot();
     }
@@ -722,6 +721,7 @@ public class testerClass {
      */
     public static void main(String[] args) {
         Game C = Game.getInstance();
+        C.vezerles();
         /*
         testerClass ts = new testerClass();
         boolean quit = false;

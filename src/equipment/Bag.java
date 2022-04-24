@@ -78,5 +78,8 @@ public class Bag extends Equipment {
      */
     public void useOn(Player p) {
     }
-    public String ToString(){return "Bag";}
+
+    public String ToString() {
+        return "Bag";
+    }
 }

@@ -16,14 +16,17 @@ public class Warehouse extends Field {
         testerClass.print();             //csajse
     }
 
+    public Warehouse(String n) {
+        this();
+        Name = n;
+    }
+
     /**
      * Megmutatja melyik alapanyagból mennyi található itt
      */
     public void showLoot() {
         testerClass.print();
-        System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNukleotide());
-        /*int AminoAcids = stored.getAminoAcid();
-        int Nukleotides = stored.getNukleotide();*/
+        System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNucleotide());
     }
 
 
@@ -34,6 +37,7 @@ public class Warehouse extends Field {
         testerClass.print();
         super.tick();
 
+        //TODO ezt am basszuk már ki innen és generáljon random eséllyel ha nincs benne semmi
         System.out.println("mennyi amino acid és nucleotide termelődjön(1-5)?: \n<int>\n<int>");
 
         int nuc = 0;
@@ -81,5 +85,21 @@ public class Warehouse extends Field {
         this.stored = stored;
     }
 
+    @Override
+    public int getNucleotide() {
+        return stored.getNucleotide();
+    }
+
+    @Override
+    public int getAminoAcid() {
+        return stored.getAminoAcid();
+    }
+
+    @Override
+    public void vezerles_getstat() {
+        super.vezerles_getstat();
+        System.out.println("Loot:");
+        System.out.println("nucleotide: " + stored.getNucleotide() + " aminoacid: " + stored.getAminoAcid());
+    }
 }
 
