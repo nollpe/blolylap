@@ -15,10 +15,10 @@ public class Warehouse extends Field {
         stored = new Inventory(50);   //igazából mindegy mekkora
         testerClass.print();             //csajse
     }
-    public Warehouse(String n)
-    {
+
+    public Warehouse(String n) {
         this();
-        Name=n;
+        Name = n;
     }
 
     /**
@@ -26,7 +26,7 @@ public class Warehouse extends Field {
      */
     public void showLoot() {
         testerClass.print();
-        System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNukleotide());
+        System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNucleotide());
     }
 
 
@@ -86,10 +86,20 @@ public class Warehouse extends Field {
     }
 
     @Override
+    public int getNucleotide() {
+        return stored.getNucleotide();
+    }
+
+    @Override
+    public int getAminoAcid() {
+        return stored.getAminoAcid();
+    }
+
+    @Override
     public void vezerles_getstat() {
         super.vezerles_getstat();
         System.out.println("Loot:");
-        System.out.println("nucleotide: " + stored.getNukleotide() + " aminoacid: " + stored.getAminoAcid());
+        System.out.println("nucleotide: " + stored.getNucleotide() + " aminoacid: " + stored.getAminoAcid());
     }
 }
 

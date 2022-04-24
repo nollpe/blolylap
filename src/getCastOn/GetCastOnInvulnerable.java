@@ -15,6 +15,7 @@ public class GetCastOnInvulnerable implements GetCastOn {
 
     /**
      * Alap konstruktor
+     *
      * @param p a játékos, aki stratégiája ez
      */
     public GetCastOnInvulnerable(Player p) {
@@ -23,9 +24,11 @@ public class GetCastOnInvulnerable implements GetCastOn {
 
     /**
      * Az agens kenes elszenvedeset vegzo fuggveny sebezhetetetlen esete, a kenes nem sikerul.
+     *
      * @param a        Agens, amit felkennek a karakterre.
      * @param attacker A jatekos, aki keni az agenst.
      */
     @Override
-    public void getCastOn(Agent a, Player attacker) {    }
+    public void getCastOn(Agent a, Player attacker) {
+    }
 }

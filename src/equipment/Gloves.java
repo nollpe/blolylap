@@ -39,6 +39,9 @@ public class Gloves extends Equipment {
      */
     public void useOn(Player p) {
     }
+
     //TODO kell nekem valami amivel csökkenthetem a kesztyű élettartamát
-    public String ToString(){return "Gloves";}
+    public String ToString() {
+        return "Gloves";
+    }
 }

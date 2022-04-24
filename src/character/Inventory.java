@@ -1,6 +1,5 @@
 package character;
 
-import equipment.Bag;
 import tester.testerClass;
 
 public class Inventory {
@@ -87,7 +86,7 @@ public class Inventory {
      *
      * @return Nukleotidok száma
      */
-    public int getNukleotide() {
+    public int getNucleotide() {
         return nucleotide;
     }
 

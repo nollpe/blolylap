@@ -21,8 +21,8 @@ public class City {
     public void setMap(LinkedList<Field> ll) {
         map = ll;
     }
-    public LinkedList<Field> getMap()
-    {
+
+    public LinkedList<Field> getMap() {
         return map;
     }
 
@@ -33,8 +33,7 @@ public class City {
      * @param f2 a másik mező
      */
     public void makeNeighbours(Field f1, Field f2) {
-        if(f1==null||f2==null)
-        {
+        if (f1 == null || f2 == null) {
             System.out.println("null valamelyik");
             return;
         }

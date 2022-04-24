@@ -13,6 +13,7 @@ public class Agent {
 
     /**
      * Agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
+     *
      * @param p A jatekos, akihez tartozik az agens
      */
     public Agent(Player p) {
@@ -22,13 +23,13 @@ public class Agent {
         timeToLive = 2;
     }
 
-    public String toString()
-    {
+    public String toString() {
         return null;
     }
 
     /**
      * Visszaadja az ágens hátralevő idejét
+     *
      * @return a hátralév idő
      */
     public int getTimeToLive() {
@@ -37,6 +38,7 @@ public class Agent {
 
     /**
      * Beálltja az ágens hátralevő idejét
+     *
      * @param i hátralév idő
      */
     public void setTimeToLive(int i) {
@@ -51,24 +53,27 @@ public class Agent {
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
+     *
      * @param player A jatekos akinek a karakterere rekentek az agenst
      */
-    public void takeEffect(Player player) { }
+    public void takeEffect(Player player) {
+    }
 
     /**
      * Az agens hatasa lejar
+     *
      * @param player A jatekos akinek a karakteren van az agens
      */
     //TODO: kell a looseEffectnek parameter?
-    public void loseEffect(Player player) { }
+    public void loseEffect(Player player) {
+    }
 
     public void tick() {
         timeToLive--;
-        if(timeToLive <= 0){
-            if(active){
+        if (timeToLive <= 0) {
+            if (active) {
                 loseEffect(player);
-            }
-            else{
+            } else {
                 player.removeCastableAgent(this);
             }
         }

@@ -49,13 +49,14 @@ public class GeneticCode {
         return new GeneticCode(agent, requiredAminoAcid, requiredNucleotide);
     }
 
-    public String getAgentType()
-    {
+    public String getAgentType() {
         return this.agent.toString();
 
     }
 
-    public String ToString(){return null;}
+    public String ToString() {
+        return null;
+    }
 
 
 }
