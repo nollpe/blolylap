@@ -13,9 +13,9 @@ import movement.*;
 import tester.testerClass;
 
 
-import java.beans.FeatureDescriptor;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Locale;
 
@@ -43,13 +43,13 @@ public class Player {
         inventory = new Inventory(10);
         equipments = new LinkedList<Equipment>();
         movement = new MovementNormal(this);
-        //cast = new CastNormal(this);
+        cast = new CastNormal(this);
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
-        //loot = new LootNormal(this);
+        loot = new LootNormal(this);
         knownGeneticCodes = new LinkedList<GeneticCode>();
         game = Game.getInstance();
-        //location=game.spawnPlayer(this);
+        location=game.spawnPlayer(this);
     }
 
     public Player(String name)
@@ -122,7 +122,8 @@ public class Player {
     //region spellcasting
     public void castSpell() {
         testerClass.print();
-        cast.cast(this);
+        //TODO ??
+        //cast.cast(this);
     }
 
     public void getCastOn(Agent a, Player c) {
@@ -153,7 +154,7 @@ public class Player {
         {
             if(eq.toString().equals("Axe"))
             {
-                LinkedList<Player> temp=this.location.getInhabitants();
+                LinkedHashSet<Player> temp=this.location.getInhabitants();
                 for(Player p:temp)
                 {
                     if(p.getName().equals(split[1]))
@@ -177,7 +178,7 @@ public class Player {
      */
     public boolean vezerles_castAgent(String[] split)
     {
-        LinkedList<Player> temp=this.location.getInhabitants();
+        LinkedHashSet<Player> temp=this.location.getInhabitants();
         for(Player p:temp)
         {
             if(p.getName().equals(split[1]))
@@ -279,16 +280,18 @@ public class Player {
         {
             for(Player ppl:location.getInhabitants())
             {
-                if(ppl.getName().equals(split[2]))
+                if(ppl.getName().equals(split[1]))
                 {
-                    for(Equipment tequimpent:ppl.getStored())
+                    if(loot.lootEquipment(ppl, game.vezerles_determineLoot(split[2])))break;
+                    if(split[2].toLowerCase(Locale.ROOT).equals("aminoacid"))
                     {
-                        if(tequimpent.toString().equals(split[1]))
-                        {
-                            loot.lootEquipment(ppl,tequimpent);
-                            return true;
-                        }
+                        loot.lootAminoAcid(ppl,Integer.parseInt(split[3]));
                     }
+                    else
+                    {
+                        loot.lootNukleotide(ppl,Integer.parseInt(split[3]));
+                    }
+
                 }
             }
             System.out.println("nem sikerült a lootolás");
@@ -296,8 +299,35 @@ public class Player {
         return false;
     }
 
+    public void vezerles_getstat()
+    {
+        System.out.println("Location:\n\t" + location.getName());
+        System.out.println("Active agents:");
+        for(Agent a:activeAgents)
+        {
+            System.out.println("\t" + a.toString());
+        }
+        System.out.println("Castable agents:");
+        for(Agent a:castableAgents)
+        {
+            System.out.println("\t" + a.toString());
+        }
+        System.out.println("Equipments:");
+        for(Equipment a:equipments)
+        {
+            System.out.println("\t" + a.toString());
+        }
+        System.out.println("Resources:\n\taminoacid: " + inventory.getAminoAcid() + "\n\tnucleotide: "+inventory.getNukleotide());
+        System.out.println("Known genetic codes:");
+        for(GeneticCode a:knownGeneticCodes)
+        {
+            System.out.println("\t" + a.toString());
+        }
+    }
+
     public void vezerles_playerTurn(BufferedReader br)
     {
+        System.out.println("playerturn:");
         String input = "ribancos kifli";
         boolean canMove=true;
         boolean canCast=true;
@@ -311,6 +341,7 @@ public class Player {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            split = input.split(" ");
             switch(split[0]) {
                 case ("moveto"):
                     if (canMove) {
@@ -340,9 +371,25 @@ public class Player {
                     }
                     break;
                 case("drop"):
-                    equipments.removeIf(eq -> eq.toString().equals(split[1]));
+                    String[] finalSplit = split;
+                    equipments.removeIf(eq -> eq.toString().equals(finalSplit[1]));
                     break;
-
+                case("getstat"):
+                    if(split[1].length()==2)
+                    {
+                        game.vezerles_determineField(split[2]).vezerles_getstat();
+                    }
+                    else
+                    {
+                        for(Player p:game.getAllPlayers())
+                        {
+                            if(p.getName().equals(split[1]))
+                            {
+                                p.vezerles_getstat();break;
+                            }
+                        }
+                    }
+                    break;
                 case("endturn"):
                     return;
                 default:
@@ -405,7 +452,8 @@ public class Player {
     public void loot() {
 
         testerClass.print();
-        loot.loot(this);//?
+        //TODO ??
+        //loot.loot(this);//?
 
     }
 

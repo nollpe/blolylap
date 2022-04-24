@@ -33,7 +33,7 @@ public class testerClass {
         int depth1 = new Exception().getStackTrace().length;
         String filler = "\t".repeat(depth1 - 3);
 
-        System.out.println(filler + className + " " + methodName1);
+        //System.out.println(filler + className + " " + methodName1);
     }
 
     //region norbi tesztek
@@ -270,7 +270,7 @@ public class testerClass {
          * Ehhez a lottolás és a lootolás elszenvedésének strategy patternjét is beállítja.
          */
         character2.setGetLootTakenFrom(new LootTakenStunned(character2));
-        character2.setLoot(new LootImpared());
+        //character2.setLoot(new LootImpared());
     }
 
     /**
@@ -471,7 +471,7 @@ public class testerClass {
     private void Test_ViewGeneticCodeOfLaboratory() {
         //init
         Laboratory location = new Laboratory();
-        location.init(new GeneticCode(new Forget(), 1, 1));
+        //location.init(new GeneticCode(new Forget(), 1, 1));
         //test
         location.showLoot();
     }
@@ -722,6 +722,7 @@ public class testerClass {
      */
     public static void main(String[] args) {
         Game C = Game.getInstance();
+        C.vezerles();
         /*
         testerClass ts = new testerClass();
         boolean quit = false;

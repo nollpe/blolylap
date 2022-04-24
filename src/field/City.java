@@ -14,12 +14,16 @@ public class City {
 
     public City() {
         testerClass.print();
-        map = null;
+        map = new LinkedList<Field>();
 
     }
 
     public void setMap(LinkedList<Field> ll) {
         map = ll;
+    }
+    public LinkedList<Field> getMap()
+    {
+        return map;
     }
 
     /**
@@ -29,6 +33,11 @@ public class City {
      * @param f2 a másik mező
      */
     public void makeNeighbours(Field f1, Field f2) {
+        if(f1==null||f2==null)
+        {
+            System.out.println("null valamelyik");
+            return;
+        }
         f1.addNeighbour(f2);
         f2.addNeighbour(f1);
     }

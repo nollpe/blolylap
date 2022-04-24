@@ -27,8 +27,8 @@ public class Game {
         AllGeneticCodes = new GeneticCode[4];
         allPlayers = new LinkedList<Player>();
         city = new City();
-        vezerles();
-
+        //vezerles();
+        //worst idea ever a vezerlest iderakni xd
     }
 
     public void removePlayer(Player p)
@@ -40,12 +40,6 @@ public class Game {
 
     //region vezerles
 
-    // a pálya előkészítéséhez vannak ezek a változók
-    LinkedList<Field> fields=new LinkedList<>();
-    LinkedList<Warehouse> warehouses=new LinkedList<>();
-    LinkedList<Safehouse> safehouses=new LinkedList<>();
-    LinkedList<Laboratory> laboratories=new LinkedList<>();
-
 
     //megkap egy kétkarakteres stringet pl:F2 es erre visszaadja az ennek megfelelő mezőt, pl: erre a 2 es számú fieldet
 
@@ -56,20 +50,14 @@ public class Game {
      */
     public Field vezerles_determineField(String fieldName)
     {
-        int index = Integer.parseInt(String.valueOf(fieldName.charAt(1)));
-        switch(fieldName.toLowerCase(Locale.ROOT).charAt(0))
+        for(Field f:city.getMap())
         {
-            case('f'):
-                return fields.get(index);
-            case('s'):
-                return safehouses.get(index);
-            case('w'):
-                return warehouses.get(index);
-            case('l'):
-                return laboratories.get(index);
-            default:
-                return null;
+            if(fieldName.toLowerCase(Locale.ROOT).equals(f.getName().toLowerCase(Locale.ROOT)))
+            {
+                return f;
+            }
         }
+        return null;
     }
 
     /**
@@ -119,39 +107,57 @@ public class Game {
         }
     }
 
+    public void vezerles_getstat(String[] split)
+    {
+        if(split[1].length()==2)
+        {
+            vezerles_determineField(split[1]).vezerles_getstat();
+        }
+        else
+        {
+            for(Player p:allPlayers)
+            {
+                if(p.getName().equals(split[1]))
+                {
+                    p.vezerles_getstat();break;
+                }
+            }
+        }
+    }
+
     /**
      * egy mezőhöz hozzáadunk egy lootot
      * @param split az inputcommand argumentumokkal, szavanként szétválasztva
      */
     public void vezerles_addLoot(String[] split)
     {
+        Field f=vezerles_determineField(split[1]);
         switch(split[1].charAt(0))
         {
             case('s'):
-                safehouses.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).setStored(vezerles_determineLoot(split[2]));
+                Safehouse s=(Safehouse)f;
+                s.setStored(vezerles_determineLoot(split[2]));
                 break;
             case('w'):
+                Warehouse w=(Warehouse) f;
                 if(split[2].equals("aminoacid"))
                 {
-                    warehouses.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).getStored().addAminoAcid(Integer.parseInt(String.valueOf(split[3])));
+                    w.getStored().addAminoAcid(Integer.parseInt(String.valueOf(split[3])));
                 }
                 else if(split[2].equals("nucleotide"))
                 {
-                    warehouses.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).getStored().addNucleotide(Integer.parseInt(String.valueOf(split[3])));
+                    w.getStored().addNucleotide(Integer.parseInt(String.valueOf(split[3])));
                 }
                 break;
             case('l'):
+                Laboratory l=(Laboratory)f;
                 //TODO: meg kéne oldani hogy mindegyik genetikai kód annyi ágenst kérjen amennyit meghatároztunk
-                laboratories.get(Integer.parseInt(String.valueOf(split[1].charAt(1)))).init(new GeneticCode(vezerles_determineAgent(split[2],null),2,2));
+                l.init(new GeneticCode(vezerles_determineAgent(split[2],null),2,2));
             default:
                 return;
         }
     }
 
-    public void vezerles_playerCommands()
-    {
-        //TODO:ez a geci maj playerturn ami valójába na player tickje ami asszem nem az én dolgom
-    }
 
     /**
      * a playerhez hozzáad egy felszerelést vagy ágenst vagy alapanyagot
@@ -199,6 +205,7 @@ public class Game {
     {
         String input = "ribancos kifli";
         while (!input.equals("exit")) {
+            System.out.println("sima vezerles:");
             String[] split = new String[1];//placeholder a new String
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
@@ -209,42 +216,42 @@ public class Game {
             split = input.split(" ");
             switch (split[0]) {
                 case ("createmap"):
-                    while (input != "done") {
+                    System.out.println("createmap:");
+                    while (!input.equals("done")) {
                         try {
                             input = br.readLine();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                         split = input.split(" ");
-
                     int temp;
-                    switch (split[0]) {
+                    switch (split[0].toLowerCase(Locale.ROOT)) {
                         case("field"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
-                                fields.add(new Field());
+                                city.getMap().add(new Field("f"+String.valueOf(i+1)));
                             }
                             break;
                         case("laboratory"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
-                                laboratories.add(new Laboratory());
+                                city.getMap().add(new Laboratory("l"+String.valueOf(i+1)));
                             }
                             break;
                         case("warehouse"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
-                                warehouses.add(new Warehouse());
+                                city.getMap().add(new Warehouse("w"+String.valueOf(i+1)));
                             }
                             break;
                         case("safehouse"):
                             temp=Integer.parseInt(split[1]);
                             for(int i=0;i<temp;i++)
                             {
-                                safehouses.add(new Safehouse());
+                                city.getMap().add(new Safehouse("s"+String.valueOf(i+1)));
                             }
                             break;
                         case("addneighbours"):
@@ -254,10 +261,15 @@ public class Game {
                             vezerles_addLoot(split);
                             break;
                         case("spawnplayer"):
+                            if(split[2].length()<3)
+                            {
+                                System.out.println("player name too short must be at least 3 characters");
+                                break;
+                            }
                             Player tempPlayer=new Player(split[2]);
                             Field location=vezerles_determineField(split[1]);
                             location.enter(tempPlayer);
-                            tempPlayer.setLocation(location);
+                            allPlayers.add(tempPlayer);
                             break;
                         default:
                             vezerles_playerAdd(split);
@@ -265,11 +277,6 @@ public class Game {
                     }
 
                     }
-                    LinkedList<Field> map=new LinkedList<>();
-                    map.addAll(0,fields);
-                    map.addAll(0,warehouses);
-                    map.addAll(0,safehouses);
-                    map.addAll(0,laboratories);
                     break;
                 case("playerturn"):
                     for(Player p:allPlayers)
@@ -284,6 +291,9 @@ public class Game {
 
                 case("exit"):
                     return;
+                case("getstat"):
+                    vezerles_getstat(split);
+                    break;
                 default:      
                     break;
 
@@ -345,6 +355,12 @@ public class Game {
         testerClass.print();
         city = c;
     }
+
+    public LinkedList<Player> getAllPlayers()
+    {
+        return allPlayers;
+    }
+
 }
 /*
  Azért, hogy singleton legyen:
