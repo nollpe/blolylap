@@ -183,6 +183,7 @@ public class Player {
                 for (Agent casted : castableAgents) {
                     if (casted.toString().equals(split[2])) {
                         p.getCastOn.getCastOn(casted, this);
+                        cast(p, casted);
                         return true;
                     }
                 }
