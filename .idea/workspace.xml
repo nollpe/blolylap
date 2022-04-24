@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="proto-zsoltii" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,12 +39,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/0Egyetem/4felev/projlab/9_beadas_2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/0Egyetem/4felev/projlab/9_beadas_2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
@@ -81,6 +84,8 @@
       <workItem from="1650789748422" duration="5983000" />
       <workItem from="1650819140056" duration="2340000" />
       <workItem from="1650835602753" duration="289000" />
+      <workItem from="1650838885567" duration="32000" />
+      <workItem from="1650838967328" duration="270000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>

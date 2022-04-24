@@ -27,6 +27,7 @@ public class Invulnerable extends Agent {
     public void takeEffect(Player p) {
         player = p;
         player.setGetCastOn(new GetCastOnInvulnerable(player));
+        player.addActiveAgent(this);
         timeToLive = 5;
     }
 
