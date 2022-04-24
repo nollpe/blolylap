@@ -15,6 +15,11 @@ public class Warehouse extends Field {
         stored = new Inventory(50);   //igazából mindegy mekkora
         testerClass.print();             //csajse
     }
+    public Warehouse(String n)
+    {
+        this();
+        Name=n;
+    }
 
     /**
      * Megmutatja melyik alapanyagból mennyi található itt
@@ -22,8 +27,6 @@ public class Warehouse extends Field {
     public void showLoot() {
         testerClass.print();
         System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNukleotide());
-        /*int AminoAcids = stored.getAminoAcid();
-        int Nukleotides = stored.getNukleotide();*/
     }
 
 
@@ -82,5 +85,11 @@ public class Warehouse extends Field {
         this.stored = stored;
     }
 
+    @Override
+    public void vezerles_getstat() {
+        super.vezerles_getstat();
+        System.out.println("Loot:");
+        System.out.println("nucleotide: " + stored.getNukleotide() + " aminoacid: " + stored.getAminoAcid());
+    }
 }
 

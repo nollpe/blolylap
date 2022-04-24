@@ -6,21 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="valami">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/GeneticCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/GeneticCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/build/program.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/cast/Cast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/cast/Cast.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Laboratory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Laboratory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Safehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Safehouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Warehouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/getCastOn/GetCastOn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/loot/Loot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/loot/Loot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Axe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/BrokenAxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/BrokenAxe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +88,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4bc3df23-b00a-461b-8d63-01fb02b19a7c" name="Changes" comment="én már nem is" />
+      <changelist id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="valami" />
       <created>1650636334281</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650636334281</updated>
       <workItem from="1650636341976" duration="313000" />
       <workItem from="1650644622873" duration="2490000" />
+      <workItem from="1650789748422" duration="5983000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -116,5 +125,24 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="valami" />
     <option name="LAST_COMMIT_MESSAGE" value="valami" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/field/City.java</url>
+          <line>34</line>
+          <properties class="field.City" method="makeNeighbours">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
+          <line>227</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -56,4 +56,6 @@ public class GeneticCode {
     }
 
     public String ToString(){return null;}
+
+
 }

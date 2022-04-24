@@ -28,6 +28,12 @@ public class Safehouse extends Field {
         testerClass.print();
     }
 
+    public Safehouse(String n)
+    {
+        this();
+        Name=n;
+    }
+
     /**
      * Megmutatja a tartalmazott lootot
      */
@@ -104,5 +110,12 @@ public class Safehouse extends Field {
      */
     public Equipment getStored() {
         return stored;
+    }
+
+    @Override
+    public void vezerles_getstat() {
+        super.vezerles_getstat();
+        System.out.println("Loot:");
+        System.out.println(stored.ToString());
     }
 }

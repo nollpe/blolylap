@@ -5,19 +5,30 @@ import character.Player;
 import tester.testerClass;
 import equipment.Equipment;
 
-import java.util.EnumMap;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
 
 public class Field {
     private LinkedList<Field> neighbours;
-    private LinkedList<Player> inhabitants;
-    private String Name;
+    private LinkedHashSet<Player> inhabitants;
+    protected String Name;
 
     public Field() {
         testerClass.print();
         this.neighbours = new LinkedList<>();
-        this.inhabitants = new LinkedList<>();
+        this.inhabitants = new LinkedHashSet<Player>();
+    }
+
+    public Field(String n)
+    {
+        this();
+        Name=n;
+    }
+
+    public String getName()
+    {
+        return  Name;
     }
 
     /**
@@ -75,7 +86,7 @@ public class Field {
         testerClass.print();
     }
 
-    public LinkedList<Player> getInhabitants() {
+    public LinkedHashSet<Player> getInhabitants() {
         testerClass.print();
         return inhabitants;
     }
@@ -87,5 +98,20 @@ public class Field {
     }
     public void takeEquipment(Equipment e){}
     public GeneticCode readGeneticCode(){return null;}
+
+
+    public void vezerles_getstat()
+    {
+        System.out.println("Neighbours:");
+        for(Field f:neighbours)
+        {
+            System.out.println('\t'+f.getName());
+        }
+        System.out.println("Players:");
+        for(Player p:inhabitants)
+        {
+            System.out.println('\t'+p.getName());
+        }
+    }
 
 }
