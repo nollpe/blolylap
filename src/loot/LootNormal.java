@@ -29,14 +29,12 @@ public class LootNormal implements Loot {
     }
 
     @Override
-    public boolean lootAminoAcid(Player target, int taken) {
-        target.takeAminoAcid(taken);
-        return true;
+    public int lootAminoAcid(Player target, int taken) {
+        return target.getAminoAcidTakenFrom(taken);
     }
 
     @Override
-    public boolean lootNucleotide(Player target, int taken) {
-        target.takeNucleotide(taken);
-        return true;
+    public int lootNucleotide(Player target, int taken) {
+        return target.getNucleotideTakenFrom(taken);
     }
 }

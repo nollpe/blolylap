@@ -16,7 +16,7 @@ public interface Loot {
      */
     public boolean lootEquipment(Player target, Equipment e);
 
-    public boolean lootAminoAcid(Player target, int taken);
+    public int lootAminoAcid(Player target, int taken);
 
-    public boolean lootNucleotide(Player target, int taken);
+    public int lootNucleotide(Player target, int taken);
 }

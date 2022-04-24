@@ -28,12 +28,12 @@ public class LootImpared implements Loot {
     }
 
     @Override
-    public boolean lootAminoAcid(Player player, int taken) {
-        return false;
+    public int lootAminoAcid(Player player, int taken) {
+        return 0;
     }
 
     @Override
-    public boolean lootNucleotide(Player player, int taken) {
-        return false;
+    public int lootNucleotide(Player player, int taken) {
+        return 0;
     }
 }
