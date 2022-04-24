@@ -52,7 +52,9 @@ public class Gloves extends Equipment {
     }
 
     //TODO kell nekem valami amivel csökkenthetem a kesztyű élettartamát
-    public String toString(){return "Gloves";}
+    public String toString() {
+        return "Gloves";
+    }
 
 
     /**

@@ -53,6 +53,8 @@ public class Paralyzing extends Agent {
         player.removeActiveAgent(this);
     }
 
-    public String toString(){return "Paralyzing";}
+    public String toString() {
+        return "Paralyzing";
+    }
 
 }
