@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="valami">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
