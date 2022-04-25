@@ -25,8 +25,7 @@ public class Paralyzing extends Agent {
         testerClass.print();
     }
 
-    public Paralyzing(Paralyzing p)
-    {
+    public Paralyzing(Paralyzing p) {
         super(p);
     }
 

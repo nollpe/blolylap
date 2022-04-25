@@ -24,8 +24,7 @@ public class Bear extends Agent {
         return "Bear";
     }
 
-    public Bear(Bear b)
-    {
+    public Bear(Bear b) {
         super(b);
     }
 
