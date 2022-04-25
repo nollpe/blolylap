@@ -355,7 +355,7 @@ public class Player {
                     break;
                 case ("drop"):
                     String[] finalSplit = split;
-                    equipments.removeIf(eq -> eq.toString().equals(finalSplit[1]));
+                    equipments.removeIf(eq -> eq.toString().toLowerCase(Locale.ROOT).equals(finalSplit[1].toLowerCase(Locale.ROOT)));
                     break;
                 case ("getstat"):
                     if (split[1].length() == 2) {
