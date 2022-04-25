@@ -304,7 +304,7 @@ public class Player {
         System.out.println("Resources:\n\taminoacid: " + inventory.getAminoAcid() + "\n\tnucleotide: " + inventory.getNucleotide());
         System.out.println("Known genetic codes:");
         for (GeneticCode a : knownGeneticCodes) {
-            System.out.println("\t" + a.toString());
+            System.out.println("\t" + a.getAgentType());
         }
     }
 
