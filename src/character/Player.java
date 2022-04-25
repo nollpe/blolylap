@@ -370,13 +370,13 @@ public class Player {
                     }
                     break;
                 case ("endturn"):
+                    this.tick();
                     return;
                 default:
                     System.out.println("invalid command");
                     break;
             }
         }
-        this.tick();
     }
     //endregion
 
@@ -387,15 +387,9 @@ public class Player {
         testerClass.print();
         for (Agent agent : activeAgents) {
             agent.tick();
-            if (agent.getTimeToLive() == 0) {
-                agent.loseEffect(this);
-            }
         }
         for (Agent agent : castableAgents) {
             agent.tick();
-            if (agent.getTimeToLive() == 0) {
-                agent.loseEffect(this);
-            }
         }
     }
 
@@ -548,6 +542,7 @@ public class Player {
      */
     public void addActiveAgent(Agent agent) {
         activeAgents.add(agent);
+        agent.setActive(true);
     }
 
     /**
