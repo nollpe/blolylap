@@ -194,6 +194,7 @@ public class Game {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            input=input.toLowerCase(Locale.ROOT);
             split = input.split(" ");
             switch (split[0]) {
                 case ("createmap"):
@@ -280,8 +281,8 @@ public class Game {
 
     public void Tick() {
 
-        for (int i = 0; i < allPlayers.size(); i++) {
-            allPlayers.get(i).tick();
+        for (Player allPlayer : allPlayers) {
+            allPlayer.tick();
         }
         city.tick();
     }
