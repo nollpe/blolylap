@@ -24,7 +24,7 @@ public class Agent {
     }
 
     public String toString() {
-        return null;
+        return "Agent";
     }
 
     /**
@@ -49,6 +49,7 @@ public class Agent {
     public Agent(Agent cp) {
         this.player = cp.player;
         this.timeToLive = cp.getTimeToLive();
+        this.active=false;
     }
 
     /**

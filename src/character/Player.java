@@ -182,7 +182,6 @@ public class Player {
             if (p.getName().equals(split[1])) {
                 for (Agent casted : castableAgents) {
                     if (casted.toString().equals(split[2])) {
-                        p.getCastOn.getCastOn(casted, this);
                         cast(p, casted);
                         return true;
                     }
@@ -201,6 +200,7 @@ public class Player {
             if (split[1].equals(gen.getAgentType())) {
                 Agent temp = gen.makeAgent(inventory);
                 if (temp != null) {
+                    System.out.println(temp.toString());
                     castableAgents.add(temp);
                     return true;
                 } else {
@@ -212,7 +212,7 @@ public class Player {
     }
 
     public boolean vezerles_loot(String[] split) {
-        if (split[1].equals("feild")) {
+        if (split[1].equals("field")) {
             switch (split[2].toLowerCase(Locale.ROOT)) {
                 case ("nucleotide"):
                     int taken = location.takeNucleotide(Integer.parseInt(split[3]));
@@ -302,7 +302,7 @@ public class Player {
             System.out.println("\t" + a.toString());
         }
         System.out.println("Resources:\n\taminoacid: " + inventory.getAminoAcid() + "\n\tnucleotide: " + inventory.getNucleotide());
-        System.out.println("Known genetic codes:");
+        System.out.println("Known genetic codes:" + knownGeneticCodes.size());
         for (GeneticCode a : knownGeneticCodes) {
             System.out.println("\t" + a.getAgentType());
         }
@@ -337,12 +337,10 @@ public class Player {
                     break;
                 case ("makeagent"):
                     if (canMake)
-                        ;
                     canMake = !this.vezerles_makeagent(split);
                     break;
                 case ("castagent"):
                     if (canCast) {
-                        ;
                         canCast = !this.vezerles_castAgent(split);
                     }
                     break;
