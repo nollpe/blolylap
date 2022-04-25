@@ -61,6 +61,7 @@
       <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
 
+
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +194,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/character/Player.java</url>
           <line>197</line>
-          <properties class="character.Player" method="vezerles_makeagent">
+          <properties class="character.Player">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="7" />
