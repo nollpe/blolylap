@@ -167,6 +167,9 @@ public class Game {
                     } else if (split[3].equals("castable")) {
 
                         p.addCastableAgent(Agtemp);
+                    } else if(split[1].toLowerCase(Locale.ROOT).equals("addgeneticcode"))
+                    {
+                        p.addGeneticCode(new GeneticCode(Agtemp,Integer.parseInt(split[4]),Integer.parseInt(split[3])));
                     }
                     return;
                 }

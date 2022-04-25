@@ -16,7 +16,11 @@ public class Forget extends Agent {
         super(p);
         testerClass.print();
     }
-    //LinkedList<GeneticCode> forgotten;
+
+    public Forget(Forget f)
+    {
+        super(f);
+    }
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
