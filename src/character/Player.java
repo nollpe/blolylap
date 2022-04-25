@@ -272,7 +272,7 @@ public class Player {
                         }
                     }
                     if (split[2].toLowerCase(Locale.ROOT).equals("aminoacid")) {
-                        this.lootAminoAcid(ppl,Integer.parseInt(split[3]));
+                        this.lootAminoAcid(ppl, Integer.parseInt(split[3]));
                         //loot.lootAminoAcid(ppl, Integer.parseInt(split[3]));
                         return true;
                     } else if (split[2].toLowerCase(Locale.ROOT).equals("nucleotide")) {
@@ -325,7 +325,7 @@ public class Player {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            input=input.toLowerCase(Locale.ROOT);
+            input = input.toLowerCase(Locale.ROOT);
             split = input.split(" ");
             switch (split[0]) {
                 case ("moveto"):
@@ -340,7 +340,7 @@ public class Player {
                     break;
                 case ("makeagent"):
                     if (canMake)
-                    canMake = !this.vezerles_makeagent(split);
+                        canMake = !this.vezerles_makeagent(split);
                     break;
                 case ("castagent"):
                     if (canCast) {

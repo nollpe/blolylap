@@ -25,8 +25,7 @@ public class Chorea extends Agent {
         return "Chorea";
     }
 
-    public Chorea(Chorea c)
-    {
+    public Chorea(Chorea c) {
         super(c);
     }
 
