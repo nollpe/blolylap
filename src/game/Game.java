@@ -163,7 +163,7 @@ public class Game {
                 Agent Agtemp = vezerles_determineAgent(split[2], p);
                 if (!Objects.isNull(Agtemp)) {
                     if (split[3].equals("active")) {
-                        p.getCastOn(Agtemp, new Player());
+                        Agtemp.takeEffect(p);
                     } else if (split[3].equals("castable")) {
 
                         p.addCastableAgent(Agtemp);
