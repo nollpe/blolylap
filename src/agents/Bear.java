@@ -20,7 +20,9 @@ public class Bear extends Agent {
         super(p);
     }
 
-    public String toString(){return "Bear";}
+    public String toString() {
+        return "Bear";
+    }
 
 
     /**

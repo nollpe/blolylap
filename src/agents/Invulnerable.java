@@ -27,6 +27,7 @@ public class Invulnerable extends Agent {
     public void takeEffect(Player p) {
         player = p;
         player.setGetCastOn(new GetCastOnInvulnerable(player));
+        player.addActiveAgent(this);
         timeToLive = 5;
     }
 
@@ -40,6 +41,8 @@ public class Invulnerable extends Agent {
         player.removeActiveAgent(this);
     }
 
-    public String toString(){return "Invulnerable";}
+    public String toString() {
+        return "Invulnerable";
+    }
 
 }

@@ -183,6 +183,7 @@ public class Player {
                 for (Agent casted : castableAgents) {
                     if (casted.toString().equals(split[2])) {
                         p.getCastOn.getCastOn(casted, this);
+                        cast(p, casted);
                         return true;
                     }
                 }
@@ -247,9 +248,8 @@ public class Player {
                     break;
                 default:
 
-                    Safehouse safewtrngt=(Safehouse)location;
-                    if(safewtrngt.getStored().toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT)))
-                    {
+                    Safehouse safewtrngt = (Safehouse) location;
+                    if (safewtrngt.getStored().toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT))) {
 
                         location.takeEquipment(safewtrngt.getStored());
                     }
@@ -258,31 +258,24 @@ public class Player {
             }
 
 
-        }
-        else
-        {
-            for(Player ppl:location.getInhabitants())//megkeresi a jatekost
+        } else {
+            for (Player ppl : location.getInhabitants())//megkeresi a jatekost
             {
-                if(ppl.getName().equals(split[1]))
-                {
-                    for(Equipment eqsch:ppl.getStored())//megkersi az equipmentet
+                if (ppl.getName().equals(split[1])) {
+                    for (Equipment eqsch : ppl.getStored())//megkersi az equipmentet
                     {
-                        if(eqsch.toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT)))
-                        {
-                            if(loot.lootEquipment(ppl,eqsch))//megnezi, hogy elveheti-e
+                        if (eqsch.toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT))) {
+                            if (loot.lootEquipment(ppl, eqsch))//megnezi, hogy elveheti-e
                             {
                                 return true;
                             }
                         }
                     }
-                    if(split[2].toLowerCase(Locale.ROOT).equals("aminoacid"))
-                    {
-                        loot.lootAminoAcid(ppl,Integer.parseInt(split[3]));
+                    if (split[2].toLowerCase(Locale.ROOT).equals("aminoacid")) {
+                        loot.lootAminoAcid(ppl, Integer.parseInt(split[3]));
                         return true;
-                    }
-                    else if(split[2].toLowerCase(Locale.ROOT).equals("nucleotide"))
-                    {
-                        loot.lootNukleotide(ppl,Integer.parseInt(split[3]));
+                    } else if (split[2].toLowerCase(Locale.ROOT).equals("nucleotide")) {
+                        loot.lootNucleotide(ppl, Integer.parseInt(split[3]));
                         return true;
 
                     }

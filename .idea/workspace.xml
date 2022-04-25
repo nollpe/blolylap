@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="valami" />
-
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="proto-zsoltii" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,12 +37,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/0Egyetem/4felev/projlab/9_beadas_2&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
@@ -78,10 +79,11 @@
       <updated>1650636334281</updated>
       <workItem from="1650636341976" duration="313000" />
       <workItem from="1650644622873" duration="2490000" />
-
-      <workItem from="1650789748422" duration="7693000" />
-      <workItem from="1650820596362" duration="3926000" />
-
+      <workItem from="1650789748422" duration="5983000" />
+      <workItem from="1650819140056" duration="2340000" />
+      <workItem from="1650835602753" duration="289000" />
+      <workItem from="1650838885567" duration="32000" />
+      <workItem from="1650838967328" duration="2623000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -97,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650800330592</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="getcaston javitas">
+      <created>1650839283154</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650839283154</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +126,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="valami" />
     <MESSAGE value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
-    <option name="LAST_COMMIT_MESSAGE" value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
+    <MESSAGE value="getcaston javitas" />
+    <option name="LAST_COMMIT_MESSAGE" value="getcaston javitas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -130,13 +140,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>364</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-
       </breakpoints>
     </breakpoint-manager>
   </component>
