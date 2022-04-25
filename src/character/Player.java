@@ -181,7 +181,7 @@ public class Player {
         for (Player p : temp) {
             if (p.getName().equals(split[1])) {
                 for (Agent casted : castableAgents) {
-                    if (casted.toString().equals(split[2])) {
+                    if (casted.toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT))) {
                         cast(p, casted);
                         return true;
                     }
@@ -197,7 +197,7 @@ public class Player {
      */
     public boolean vezerles_makeagent(String[] split) {
         for (GeneticCode gen : knownGeneticCodes) {
-            if (split[1].equals(gen.getAgentType())) {
+            if (split[1].toLowerCase(Locale.ROOT).equals(gen.getAgentType().toLowerCase(Locale.ROOT))) {
                 Agent temp = gen.makeAgent(inventory);
                 if (temp != null) {
                     System.out.println(temp.toString());
