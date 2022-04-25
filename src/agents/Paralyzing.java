@@ -25,6 +25,11 @@ public class Paralyzing extends Agent {
         testerClass.print();
     }
 
+    public Paralyzing(Paralyzing p)
+    {
+        super(p);
+    }
+
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
      *

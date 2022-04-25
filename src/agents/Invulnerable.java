@@ -19,6 +19,11 @@ public class Invulnerable extends Agent {
         testerClass.print();
     }
 
+    public Invulnerable(Invulnerable i)
+    {
+        super(i);
+    }
+
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
      *
