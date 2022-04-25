@@ -19,8 +19,7 @@ public class Invulnerable extends Agent {
         testerClass.print();
     }
 
-    public Invulnerable(Invulnerable i)
-    {
+    public Invulnerable(Invulnerable i) {
         super(i);
     }
 

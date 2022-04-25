@@ -17,8 +17,7 @@ public class Forget extends Agent {
         testerClass.print();
     }
 
-    public Forget(Forget f)
-    {
+    public Forget(Forget f) {
         super(f);
     }
 
