@@ -25,6 +25,10 @@ public class Chorea extends Agent {
         return "Chorea";
     }
 
+    public Chorea(Chorea c)
+    {
+        super(c);
+    }
 
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat

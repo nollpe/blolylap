@@ -54,7 +54,7 @@ public class GeneticCode {
 
     }
 
-    public String ToString() {
+    public String toString() {
         return null;
     }
 

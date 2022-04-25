@@ -30,7 +30,7 @@ public class Laboratory extends Field {
      */
     public void showLoot() {
         testerClass.print();
-        System.out.println(readableGeneticCode.ToString());
+        System.out.println(readableGeneticCode.getAgentType());
     }
 
     /**
@@ -75,6 +75,6 @@ public class Laboratory extends Field {
     public void vezerles_getstat() {
         super.vezerles_getstat();
         System.out.println("Loot:");
-        System.out.println(readableGeneticCode.ToString());
+        System.out.println(readableGeneticCode.getAgentType());
     }
 }

@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +42,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/0Egyetem/4felev/projlab/9_beadas_2&quot;
-  }
-}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
@@ -122,6 +121,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="valami" />
@@ -135,10 +135,18 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/field/City.java</url>
           <line>34</line>
-          <properties class="field.City" method="makeNeighbours">
+          <properties class="field.City">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/character/Player.java</url>
+          <line>197</line>
+          <properties class="character.Player" method="vezerles_makeagent">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
