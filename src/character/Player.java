@@ -181,7 +181,7 @@ public class Player {
         for (Player p : temp) {
             if (p.getName().equals(split[1])) {
                 for (Agent casted : castableAgents) {
-                    if (casted.toString().equals(split[2])) {
+                    if (casted.toString().toLowerCase(Locale.ROOT).equals(split[2].toLowerCase(Locale.ROOT))) {
                         cast(p, casted);
                         return true;
                     }
@@ -197,7 +197,7 @@ public class Player {
      */
     public boolean vezerles_makeagent(String[] split) {
         for (GeneticCode gen : knownGeneticCodes) {
-            if (split[1].equals(gen.getAgentType())) {
+            if (split[1].toLowerCase(Locale.ROOT).equals(gen.getAgentType().toLowerCase(Locale.ROOT))) {
                 Agent temp = gen.makeAgent(inventory);
                 if (temp != null) {
                     System.out.println(temp.toString());
@@ -272,10 +272,12 @@ public class Player {
                         }
                     }
                     if (split[2].toLowerCase(Locale.ROOT).equals("aminoacid")) {
-                        loot.lootAminoAcid(ppl, Integer.parseInt(split[3]));
+                        this.lootAminoAcid(ppl, Integer.parseInt(split[3]));
+                        //loot.lootAminoAcid(ppl, Integer.parseInt(split[3]));
                         return true;
                     } else if (split[2].toLowerCase(Locale.ROOT).equals("nucleotide")) {
-                        loot.lootNucleotide(ppl, Integer.parseInt(split[3]));
+                        this.lootNucleotide(ppl, Integer.parseInt(split[3]));
+                        //loot.lootNucleotide(ppl, Integer.parseInt(split[3]));
                         return true;
 
                     }
@@ -323,6 +325,7 @@ public class Player {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            input = input.toLowerCase(Locale.ROOT);
             split = input.split(" ");
             switch (split[0]) {
                 case ("moveto"):
@@ -337,7 +340,7 @@ public class Player {
                     break;
                 case ("makeagent"):
                     if (canMake)
-                    canMake = !this.vezerles_makeagent(split);
+                        canMake = !this.vezerles_makeagent(split);
                     break;
                 case ("castagent"):
                     if (canCast) {
@@ -352,7 +355,7 @@ public class Player {
                     break;
                 case ("drop"):
                     String[] finalSplit = split;
-                    equipments.removeIf(eq -> eq.toString().equals(finalSplit[1]));
+                    equipments.removeIf(eq -> eq.toString().toLowerCase(Locale.ROOT).equals(finalSplit[1].toLowerCase(Locale.ROOT)));
                     break;
                 case ("getstat"):
                     if (split[1].length() == 2) {
@@ -367,13 +370,13 @@ public class Player {
                     }
                     break;
                 case ("endturn"):
+                    this.tick();
                     return;
                 default:
                     System.out.println("invalid command");
                     break;
             }
         }
-        this.tick();
     }
     //endregion
 
@@ -384,15 +387,9 @@ public class Player {
         testerClass.print();
         for (Agent agent : activeAgents) {
             agent.tick();
-            if (agent.getTimeToLive() == 0) {
-                agent.loseEffect(this);
-            }
         }
         for (Agent agent : castableAgents) {
             agent.tick();
-            if (agent.getTimeToLive() == 0) {
-                agent.loseEffect(this);
-            }
         }
     }
 
@@ -545,6 +542,7 @@ public class Player {
      */
     public void addActiveAgent(Agent agent) {
         activeAgents.add(agent);
+        agent.setActive(true);
     }
 
     /**

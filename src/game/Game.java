@@ -167,9 +167,8 @@ public class Game {
                     } else if (split[3].equals("castable")) {
 
                         p.addCastableAgent(Agtemp);
-                    } else if(split[1].toLowerCase(Locale.ROOT).equals("addgeneticcode"))
-                    {
-                        p.addGeneticCode(new GeneticCode(Agtemp,Integer.parseInt(split[4]),Integer.parseInt(split[3])));
+                    } else if (split[1].toLowerCase(Locale.ROOT).equals("addgeneticcode")) {
+                        p.addGeneticCode(new GeneticCode(Agtemp, Integer.parseInt(split[4]), Integer.parseInt(split[3])));
                     }
                     return;
                 }
@@ -194,6 +193,7 @@ public class Game {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            input = input.toLowerCase(Locale.ROOT);
             split = input.split(" ");
             switch (split[0]) {
                 case ("createmap"):
@@ -280,8 +280,8 @@ public class Game {
 
     public void Tick() {
 
-        for (int i = 0; i < allPlayers.size(); i++) {
-            allPlayers.get(i).tick();
+        for (Player allPlayer : allPlayers) {
+            allPlayer.tick();
         }
         city.tick();
     }

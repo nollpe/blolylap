@@ -1,7 +1,6 @@
 package agents;
 
 import character.Player;
-import tester.testerClass;
 
 /**
  * Agens amit a jatekosok egymasra kenhetnek
@@ -49,7 +48,7 @@ public class Agent {
     public Agent(Agent cp) {
         this.player = cp.player;
         this.timeToLive = cp.getTimeToLive();
-        this.active=false;
+        this.active = false;
     }
 
     /**
@@ -78,5 +77,13 @@ public class Agent {
                 player.removeCastableAgent(this);
             }
         }
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean b) {
+        active = b;
     }
 }
