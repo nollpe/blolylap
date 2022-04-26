@@ -4,6 +4,7 @@ import agents.Agent;
 import character.Player;
 import tester.testerClass;
 
+import java.io.BufferedReader;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -34,13 +35,20 @@ public class GetCastOnResistant implements GetCastOn {
     @Override
     public void getCastOn(Agent a, Player attacker) {
         Random rand = new Random();
-        int random = rand.nextInt(1000);
-        if (random > 823) {
+        System.out.println("Kerek egy random szamot: 1 - 1000 kozott");
+
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        int num = Integer.parseInt(s);
+        while(!(num > 0 && num <= 1000)){
+            s = in.nextLine();
+            num = Integer.parseInt(s);
+        }
+        if (num> 823) {
             /**
              * Ha nem védte meg a köpeny:
              */
             a.takeEffect(owner);
-            player.addActiveAgent(a);
         }
     }
 }

@@ -34,7 +34,7 @@ public class CastNormal implements Cast {
     @Override
     public boolean cast(Player player, Agent agent) {
         if (player.getLocation() == owner.getLocation()) {
-            player.getCastOn(agent, player);
+            player.getCastOn(agent, owner);
             owner.removeCastableAgent(agent);
             return true;
         } else {
