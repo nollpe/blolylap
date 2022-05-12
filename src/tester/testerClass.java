@@ -13,6 +13,7 @@ import game.Game;
 import game.Timer;
 import getCastOn.GetCastOnInvulnerable;
 import getLootTakenFrom.LootTakenStunned;
+import graphics.GraphicsConstroller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -721,7 +722,8 @@ public class testerClass {
      */
     public static void main(String[] args) {
         Game C = Game.getInstance();
-        C.vezerles();
+        C.startGame();
+
         /*
         testerClass ts = new testerClass();
         boolean quit = false;

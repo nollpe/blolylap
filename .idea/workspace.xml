@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
-      <change afterPath="$PROJECT_DIR$/src/graphics/FIeldView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/FieldControll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/IControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/PlayerView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/FieldControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,14 +158,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/field/City.java</url>
-          <line>34</line>
-          <properties class="field.City" method="makeNeighbours">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/character/Player.java</url>
           <line>204</line>

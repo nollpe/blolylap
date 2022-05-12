@@ -384,13 +384,14 @@ public class Player {
      * Egy kör múlásáért felel, az ágensek időtartamát csökkentik
      */
     public void tick() {
-        testerClass.print();
         for (Agent agent : activeAgents) {
             agent.tick();
         }
         for (Agent agent : castableAgents) {
             agent.tick();
         }
+        //TODO kéne egy thread ami itt csak alszik amíg nem nincs endturn és akkor lehet kattintgatni a graphics controllerrel
+        //legalábbis ez az ötletem
     }
 
     //region lootolnak tole

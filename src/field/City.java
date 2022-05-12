@@ -69,7 +69,7 @@ public class City {
      * random pályát fog csinálni
      */
     public void generateMap() {
-        /*
+
         map = new LinkedList<>();
 
         //létrehozzuk a fieldeket
@@ -85,14 +85,17 @@ public class City {
         map.add(warehouse);
 
         //szomszédok lettek
-        makeNeighbours(basicField, laboratory, Direction.NORTH);
-        makeNeighbours(basicField, safehouse, Direction.WEST);
+        makeNeighbours(basicField, laboratory);
+        makeNeighbours(basicField, safehouse);
+        makeNeighbours(basicField, warehouse);
 
-        makeNeighbours(laboratory, warehouse, Direction.WEST);
-        makeNeighbours(safehouse, warehouse, Direction.NORTH);
+        makeNeighbours(laboratory, warehouse);
+        makeNeighbours(safehouse, warehouse);
+
+        makeNeighbours(safehouse,laboratory);
 
         testerClass.print();
-        */
+
     }
 
     /**

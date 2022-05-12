@@ -334,6 +334,13 @@ public class Game {
         return allPlayers;
     }
 
+
+    public void startGame()
+    {
+        city.generateMap();
+        this.Tick();
+    }
+
 }
 /*
  Azért, hogy singleton legyen:
