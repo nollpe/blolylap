@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
+      <change afterPath="$PROJECT_DIR$/src/graphics/FIeldView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/FieldControll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/IControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -37,6 +48,10 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -80,6 +95,10 @@
       <workItem from="1650835602753" duration="289000" />
       <workItem from="1650838885567" duration="32000" />
       <workItem from="1650838967328" duration="2623000" />
+      <workItem from="1651047045024" duration="772000" />
+      <workItem from="1651048077565" duration="81000" />
+      <workItem from="1651437823314" duration="2104000" />
+      <workItem from="1652361927075" duration="3568000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -125,6 +144,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="valami" />
@@ -146,8 +166,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>197</line>
-          <properties class="character.Player" method="vezerles_makeagent">
+          <line>204</line>
+          <properties class="character.Player">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="7" />
