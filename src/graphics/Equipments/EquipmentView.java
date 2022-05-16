@@ -4,7 +4,7 @@ import graphics.IView;
 
 public class EquipmentView implements IView
 {
-    EquipmentControll control;
+    EquipmentControl control;
 
     public void Update()
     {

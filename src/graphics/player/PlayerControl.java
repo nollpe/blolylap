@@ -3,11 +3,11 @@ package graphics.player;
 import character.Player;
 import graphics.IControl;
 
-public class PlayerControll implements IControl
+public class PlayerControl implements IControl
 {
     Player owner;
 
-    public PlayerControll(Player player) {
+    public PlayerControl(Player player) {
 
     }
 

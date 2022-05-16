@@ -4,7 +4,7 @@ import character.Player;
 import equipment.Equipment;
 import graphics.IControl;
 
-public class EquipmentControll implements IControl
+public class EquipmentControl implements IControl
 {
     EquipmentView view;
     Equipment owner;
