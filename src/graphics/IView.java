@@ -4,9 +4,9 @@ import javax.swing.*;
 
 public interface IView {
 
-    public  JLabel getLabel();
+    JLabel getLabel();
 
-    public void Update();
+    void Update();
 
-    public void Event();
+    void Event();
 }

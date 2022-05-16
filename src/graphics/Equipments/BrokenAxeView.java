@@ -13,6 +13,6 @@ public class BrokenAxeView extends EquipmentView {
      * Meghivja az os konstuktorat az aktualis keppel
      */
     public BrokenAxeView(Rectangle r, String ImageName, Equipment e) {
-        super(r, "kepek/broken_axe.png", e);
+        super(r, "kepek/brokenaxe.png", e);
     }
 }

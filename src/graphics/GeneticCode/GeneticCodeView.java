@@ -30,8 +30,7 @@ public class GeneticCodeView implements IView {
         label.addMouseListener(a);
     }
 
-    public  JLabel getLabel()
-    {
+    public JLabel getLabel() {
         return label;
     }
 

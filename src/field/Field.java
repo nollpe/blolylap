@@ -3,10 +3,10 @@ package field;
 import agents.GeneticCode;
 import character.Player;
 import equipment.Equipment;
-import equipment.Equipment;
 import graphics.IView;
 import graphics.fields.FIeldView;
-
+import graphics.loot.FieldLootView;
+import graphics.loot.LootView;
 
 import java.awt.*;
 import java.util.LinkedHashSet;
@@ -18,6 +18,7 @@ public class Field {
     private LinkedHashSet<Player> inhabitants;
     protected String Name;
     protected IView view;
+    protected LootView lootView;
 
 
     public Field() {
@@ -25,6 +26,7 @@ public class Field {
         this.inhabitants = new LinkedHashSet<Player>();
         Rectangle r = new Rectangle(0, 0, 60, 60);
         view = new FIeldView(r, "kepek/field.png", this);
+        lootView = new FieldLootView();
     }
 
     public IView getView() {
@@ -128,4 +130,7 @@ public class Field {
         }
     }
 
+    public LootView getLootView() {
+        return lootView;
+    }
 }
