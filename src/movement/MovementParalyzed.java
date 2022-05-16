@@ -2,7 +2,6 @@ package movement;
 
 import character.Player;
 import field.Field;
-import tester.testerClass;
 
 /**
  * A mozgást kezelő osztály, ha a játékos le van bénulva

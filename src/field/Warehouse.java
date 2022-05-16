@@ -1,11 +1,6 @@
 package field;
 
 import character.Inventory;
-import tester.testerClass;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Warehouse extends Field {
     private Inventory stored;

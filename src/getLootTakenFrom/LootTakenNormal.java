@@ -2,7 +2,6 @@ package getLootTakenFrom;
 
 import character.Player;
 import equipment.Equipment;
-import tester.testerClass;
 
 /**
  * A lootolás elszenvedésének osztálya normál esetben. Ilyenkor nem lehet a karaktertől loootlni.

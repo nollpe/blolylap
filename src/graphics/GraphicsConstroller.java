@@ -4,12 +4,9 @@ import agents.Agent;
 import character.Player;
 import equipment.Equipment;
 import field.Field;
-import graphics.GeneticCode.GeneticCodeView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;

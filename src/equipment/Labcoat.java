@@ -1,11 +1,9 @@
 package equipment;
 
 import character.Player;
-import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import getCastOn.GetCastOnResistant;
 import graphics.Equipments.LabcoatView;
-import tester.testerClass;
 
 import java.awt.*;
 

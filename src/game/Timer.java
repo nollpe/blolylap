@@ -1,7 +1,5 @@
 package game;
 
-import tester.testerClass;
-
 /**
  * A játékban körökért felelős osztály
  */

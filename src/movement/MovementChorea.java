@@ -2,7 +2,6 @@ package movement;
 
 import character.Player;
 import field.Field;
-import tester.testerClass;
 
 import java.util.Random;
 

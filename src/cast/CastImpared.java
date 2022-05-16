@@ -2,7 +2,6 @@ package cast;
 
 import agents.Agent;
 import character.Player;
-import tester.testerClass;
 
 /**
  * Az ágens kenés vezéréléséért felelős osztály lebénult állapotban. Ilyenkor az ágens felkenése nem lehetséges.

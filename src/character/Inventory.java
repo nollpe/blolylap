@@ -1,7 +1,5 @@
 package character;
 
-import tester.testerClass;
-
 public class Inventory {
     private int aminoAcid;
     private int nucleotide;

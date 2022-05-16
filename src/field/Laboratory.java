@@ -1,8 +1,6 @@
 package field;
 
 import agents.GeneticCode;
-import equipment.Equipment;
-import tester.testerClass;
 
 public class Laboratory extends Field {
     /**

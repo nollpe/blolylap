@@ -1,13 +1,7 @@
 package field;
 
-import equipment.*;
-import field.Field;
-import tester.testerClass;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.LinkedList;
+import equipment.Axe;
+import equipment.Equipment;
 
 public class Safehouse extends Field {
     /**

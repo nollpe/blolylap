@@ -2,7 +2,6 @@ package loot;
 
 import character.Player;
 import equipment.Equipment;
-import tester.testerClass;
 
 /**
  * Lootolás osztálya alapesetben, amikor nincsen lebénulva a játékos.

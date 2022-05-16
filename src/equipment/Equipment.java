@@ -3,7 +3,6 @@ package equipment;
 import character.Player;
 import graphics.Equipments.EquipmentView;
 import graphics.IView;
-import tester.testerClass;
 
 /**
  * A védőfeszerlések ősosztálya, ami lehetővé teszi az egységes kezelést.

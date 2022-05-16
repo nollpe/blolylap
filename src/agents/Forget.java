@@ -1,7 +1,6 @@
 package agents;
 
 import character.Player;
-import tester.testerClass;
 
 /**
  * A felejtést okozó ágens osztálya

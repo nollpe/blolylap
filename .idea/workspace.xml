@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="bagcontrol jó">
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="idk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/tester/testerClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cast/CastImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cast/CastImpared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cast/CastNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cast/CastNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Bag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Equipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/LootImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootImpared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movement/MovementChorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementChorea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +53,8 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="RunManager">
-    <configuration name="testerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tester.testerClass" />
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tester.Program" />
       <module name="blolylap" />
       <extension name="coverage">
         <pattern>
@@ -55,7 +68,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
   </component>
@@ -67,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652710617894</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="idk">
+      <created>1652711836794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652711836794</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bagcontrol jó" />
-    <option name="LAST_COMMIT_MESSAGE" value="bagcontrol jó" />
+    <MESSAGE value="idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk" />
   </component>
 </project>
