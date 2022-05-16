@@ -2,7 +2,6 @@ package getCastOn;
 
 import agents.Agent;
 import character.Player;
-import tester.testerClass;
 
 /**
  * Az agens kenes elszenvedeset kezelo osztaly normál esetben

@@ -1,7 +1,6 @@
 package agents;
 
 import character.Player;
-import tester.testerClass;
 
 /**
  * A felejtést okozó ágens osztálya
@@ -14,7 +13,6 @@ public class Forget extends Agent {
      */
     public Forget(Player p) {
         super(p);
-        testerClass.print();
     }
 
     public Forget(Forget f) {

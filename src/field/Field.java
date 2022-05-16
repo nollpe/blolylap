@@ -1,11 +1,14 @@
 package field;
 
 import agents.GeneticCode;
-import character.Inventory;
 import character.Player;
-import tester.testerClass;
 import equipment.Equipment;
+import graphics.IView;
+import graphics.fields.FIeldView;
+import graphics.loot.FieldLootView;
+import graphics.loot.LootView;
 
+import java.awt.*;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
@@ -14,12 +17,20 @@ public class Field {
     private LinkedList<Field> neighbours;
     private LinkedHashSet<Player> inhabitants;
     protected String Name;
+    protected IView view;
+    protected LootView lootView;
 
 
     public Field() {
-        testerClass.print();
         this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedHashSet<Player>();
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new FIeldView(r, "kepek/field.png", this);
+        lootView = new FieldLootView();
+    }
+
+    public IView getView() {
+        return view;
     }
 
     public Field(String n) {
@@ -60,34 +71,27 @@ public class Field {
     }
 
     public void enter(Player c) {
-        testerClass.print();
         inhabitants.add(c);
         c.setLocation(this);
     }
 
     public void leave(Player c) {
-        testerClass.print();
         inhabitants.remove(c);
     }
 
     public void showLoot() {
-        testerClass.print();
+
     }
 
     public void tick() {
-        testerClass.print();
         //ne hívja meg a játékosokét mart jobb ha a game csinálja azt mert akkor a tick a játékos köre
         /*for (Player character : inhabitants) {
             character.tick();
         }*/
     }
 
-    public void takeLoot() {
-        testerClass.print();
-    }
 
     public LinkedHashSet<Player> getInhabitants() {
-        testerClass.print();
         return inhabitants;
     }
 
@@ -126,4 +130,7 @@ public class Field {
         }
     }
 
+    public LootView getLootView() {
+        return lootView;
+    }
 }

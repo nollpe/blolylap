@@ -7,7 +7,7 @@ import java.awt.*;
 /**
  * A kesztyu megjeleniteseert felelos osztaly
  */
-public class GlovesView extends EquipmentView{
+public class GlovesView extends EquipmentView {
     /**
      * Meghivja az os konstuktorat az aktualis keppel
      */

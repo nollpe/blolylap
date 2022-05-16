@@ -5,8 +5,6 @@ import character.Player;
 import equipment.*;
 import field.*;
 import graphics.GraphicsConstroller;
-import graphics.IView;
-import tester.testerClass;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -299,7 +297,7 @@ public class Game {
 
     //ezzel tudjuk lekérni az egyedet
     public static Game getInstance() {
-        testerClass.print();
+
         //ha még nem létezik létrehozzuk
         if (singleInstance == null)
             singleInstance = new Game();
@@ -334,7 +332,7 @@ public class Game {
      * @param c A várost, ami a játékhoz tartozik.
      */
     public void setCity(City c) {
-        testerClass.print();
+
         city = c;
     }
 

@@ -1,12 +1,16 @@
 package equipment;
 
 import character.Player;
+import graphics.Equipments.AxeView;
+
+import java.awt.*;
 
 public class Axe extends Equipment {
     private Player owner;
 
     public Axe() {
-        super();
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new AxeView(r, "kepek/Axe.png", this);
     }
 
     /**

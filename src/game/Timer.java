@@ -1,7 +1,5 @@
 package game;
 
-import tester.testerClass;
-
 /**
  * A játékban körökért felelős osztály
  */
@@ -9,12 +7,12 @@ public class Timer {
     private Game game;
 
     public void tick() {
-        testerClass.print();
+
         game.Tick();
     }
 
     private Timer() {
-        testerClass.print();
+
         game = Game.getInstance();
     }
 

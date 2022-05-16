@@ -1,16 +1,23 @@
 package equipment;
 
 import character.Player;
-import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import getCastOn.GetCastOnResistant;
-import tester.testerClass;
+import graphics.Equipments.LabcoatView;
+
+import java.awt.*;
 
 /**
  * A védőköpeny védőfelszerelés osztálya.
  * Hatására a játékosra valamekkora eséllyel nem hatnak az ágensek.
  */
 public class Labcoat extends Equipment {
+
+    public Labcoat() {
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new LabcoatView(r, "kepek/Labcoat.png", this);
+    }
+
     /**
      * A védőköpeny megszerzését (aktiválását) kezeli.
      * Beállítja a karakternek a castolás elszenvedésének állapotát.

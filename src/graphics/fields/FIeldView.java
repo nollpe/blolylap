@@ -5,12 +5,14 @@ import graphics.IView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.io.Serializable;
 
 public class FIeldView implements IView {
-    Field field;
+    protected Field field;
+    protected JLabel label = new JLabel();
+
+    public JLabel getLabel() {
+        return label;
+    }
 
     public FIeldView(Rectangle r, String ImageName, Field f) {
 

@@ -2,7 +2,6 @@ package loot;
 
 import character.Player;
 import equipment.Equipment;
-import tester.testerClass;
 
 /**
  * Lootolás osztálya lebénult esetben.
@@ -23,7 +22,7 @@ public class LootImpared implements Loot {
      */
     @Override
     public boolean lootEquipment(Player player, Equipment e) {
-        testerClass.print();
+
         return false;
     }
 

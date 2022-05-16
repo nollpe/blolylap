@@ -1,12 +1,20 @@
 package equipment;
 
 import character.Player;
-import tester.testerClass;
+import graphics.Equipments.EquipmentView;
+import graphics.IView;
 
 /**
  * A védőfeszerlések ősosztálya, ami lehetővé teszi az egységes kezelést.
  */
 public class Equipment {
+
+    EquipmentView view;
+
+    public Equipment() {
+        //view=new EquipmentView();
+    }
+
     /**
      * A védőfelszerelések megszerzésekor (aktiválódásakor) hívódik meg.
      * Módosítja a karakter állapotát az adott védőfelszerelést hatásának megfelelően.
@@ -34,6 +42,9 @@ public class Equipment {
     public void useOn(Player p) {
     }
 
+    public IView getView() {
+        return view;
+    }
 
     public String toString() {
         return null;

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="pápópé">
+      <change afterPath="$PROJECT_DIR$/kepek/combined_resources.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/loot/FieldLootView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/loot/LootView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kepek/broken_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/kepek/brokenaxe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="zsuzsi4" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,10 +56,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="graphics.Equipments" />
@@ -65,8 +73,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="testerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tester.testerClass" />
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tester.Program" />
       <module name="blolylap" />
       <extension name="coverage">
         <pattern>
@@ -80,16 +88,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testerClass" />
-        <item itemvalue="Application.testerClass" />
-        <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.Program" />
+        <item itemvalue="Application.Program" />
+        <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="valami" />
+      <changelist id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="édes istenem" />
       <created>1650636334281</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -107,6 +115,7 @@
       <workItem from="1652361927075" duration="3568000" />
       <workItem from="1652675170090" duration="2669000" />
       <workItem from="1652695492986" duration="1648000" />
+      <workItem from="1652727495068" duration="2466000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -213,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652694495862</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="pápópé">
+      <created>1652727710146</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652727710146</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,30 +247,18 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="valami" />
-    <MESSAGE value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
-    <MESSAGE value="getcaston javitas" />
-    <MESSAGE value="xd" />
-    <MESSAGE value="equipment view" />
-    <MESSAGE value="axe view" />
-    <MESSAGE value="broken axe view" />
-    <MESSAGE value="gloves view" />
-    <MESSAGE value="labcoat view" />
-    <MESSAGE value="bag view" />
-    <MESSAGE value="kommentek" />
-    <MESSAGE value="kepek" />
-    <option name="LAST_COMMIT_MESSAGE" value="kepek" />
+    <MESSAGE value="bagcontrol jó" />
+    <MESSAGE value="idk" />
+    <MESSAGE value="pápópé" />
+    <option name="LAST_COMMIT_MESSAGE" value="pápópé" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>218</line>
-          <properties class="character.Player">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/field/City.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

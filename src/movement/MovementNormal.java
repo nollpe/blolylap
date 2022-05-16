@@ -2,7 +2,6 @@ package movement;
 
 import character.Player;
 import field.Field;
-import tester.testerClass;
 
 /**
  * A mozgást kezelő osztály, ha a játékoson nincs semmi hatás
@@ -29,7 +28,7 @@ public class MovementNormal implements Movement {
      */
     @Override
     public void move(Field field) {
-        testerClass.print();
+
         if (!owner.getLocation().getNeighbours().contains(field)) {
             return;
         }

@@ -1,7 +1,6 @@
 package getCastOn;
 
 import agents.Agent;
-import tester.testerClass;
 import character.Player;
 
 /**

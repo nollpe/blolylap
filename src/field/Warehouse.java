@@ -1,19 +1,21 @@
 package field;
 
 import character.Inventory;
-import tester.testerClass;
+import graphics.fields.WarehouseView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.awt.*;
+
 
 public class Warehouse extends Field {
     private Inventory stored;
 
     public Warehouse() {
         super();
-        stored = new Inventory(50);   //igazából mindegy mekkora
-        testerClass.print();             //csajse
+
+        stored = new Inventory(50);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new WarehouseView(r, "kepek/warehouse.png", this);
+
     }
 
     public Warehouse(String n) {
@@ -25,7 +27,7 @@ public class Warehouse extends Field {
      * Megmutatja melyik alapanyagból mennyi található itt
      */
     public void showLoot() {
-        testerClass.print();
+
         System.out.println("aminosav :" + stored.getAminoAcid() + "\nnukleotid: " + stored.getNucleotide());
     }
 
@@ -34,7 +36,7 @@ public class Warehouse extends Field {
      * minden körben van esély, hogy "termelődik" új aminosav és nukleotid
      */
     public void tick() {
-        testerClass.print();
+
         super.tick();
 
 
@@ -45,7 +47,7 @@ public class Warehouse extends Field {
     }
 
     public void takeLoot() {
-        testerClass.print();
+
     }
 
     public Inventory getStored() {
@@ -57,7 +59,7 @@ public class Warehouse extends Field {
      * @return ennyi nukleotidot sikerült kivenni
      */
     public int takeNucleotide(int taken) {
-        testerClass.print();
+
         return stored.takeNucleotide(taken);
     }
 
@@ -66,7 +68,7 @@ public class Warehouse extends Field {
      * @return ennyi aminosavat sikerült kivenni
      */
     public int takeAminoAcid(int taken) {
-        testerClass.print();
+
         return stored.takeAminoAcid(taken);
     }
 

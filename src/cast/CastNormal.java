@@ -2,10 +2,6 @@ package cast;
 
 import agents.Agent;
 import character.Player;
-import tester.testerClass;
-
-import java.util.LinkedList;
-import java.util.Scanner;
 
 /**
  * Az ágens kenés vezéréléséért felelős osztály normál állapotban. Ilyenkor az ágens felkenése lehetséges.

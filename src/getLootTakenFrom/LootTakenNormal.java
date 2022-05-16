@@ -2,7 +2,6 @@ package getLootTakenFrom;
 
 import character.Player;
 import equipment.Equipment;
-import tester.testerClass;
 
 /**
  * A lootolás elszenvedésének osztálya normál esetben. Ilyenkor nem lehet a karaktertől loootlni.
@@ -31,7 +30,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
      */
     @Override
     public boolean getEquipmentTakenFrom(Equipment e) {
-        testerClass.print();
+
         return false;
     }
 
@@ -43,7 +42,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
      */
     @Override
     public int getNucleotideTakenFrom(int takenTry) {
-        testerClass.print();
+
         return 0;
     }
 
@@ -55,7 +54,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
      */
     @Override
     public int getAminoAcidTakenFrom(int takenTry) {
-        testerClass.print();
+
         return 0;
     }
 }

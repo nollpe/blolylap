@@ -3,7 +3,9 @@ package equipment;
 import character.Player;
 import getCastOn.GetCastOnGloves;
 import getCastOn.GetCastOnNormal;
-import tester.testerClass;
+import graphics.Equipments.GlovesView;
+
+import java.awt.*;
 
 /**
  * A kesztyű védőfelszerelés osztálya.
@@ -14,6 +16,11 @@ public class Gloves extends Equipment {
      * A kesztyű élettartama
      */
     int durability = 3;
+
+    public Gloves() {
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new GlovesView(r, "kepek/Gloves.png", this);
+    }
 
     /**
      * A kesztyű tulajdonosa

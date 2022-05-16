@@ -1,9 +1,8 @@
 package getCastOn;
 
 import agents.Agent;
-import equipment.Gloves;
-import tester.testerClass;
 import character.Player;
+import equipment.Gloves;
 
 /**
  * Az agens kenes elszenvedeset kezelo osztaly kesztyűs esetben
