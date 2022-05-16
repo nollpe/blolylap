@@ -49,11 +49,9 @@ public class GeneticCode {
     }
 
     public GeneticCode() {
-        testerClass.print();
     }
 
     public GeneticCode(Agent a, int ami, int nuc) {
-        testerClass.print();
         agent = a;
         requiredNucleotide = nuc;
         requiredAminoAcid = ami;

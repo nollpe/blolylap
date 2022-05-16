@@ -17,7 +17,7 @@ public class Laboratory extends Field {
      */
     public Laboratory() {
         super();
-        testerClass.print();
+
     }
 
     public Laboratory(String n) {
@@ -29,7 +29,7 @@ public class Laboratory extends Field {
      * Megmutatja a laborban található lootot
      */
     public void showLoot() {
-        testerClass.print();
+
         System.out.println(readableGeneticCode.getAgentType());
     }
 
@@ -38,7 +38,7 @@ public class Laboratory extends Field {
      */
     public void tick() {
         super.tick();
-        testerClass.print();
+
 
     }
 
@@ -46,7 +46,7 @@ public class Laboratory extends Field {
      * Loot elvétele a laboratóriumból
      */
     public void takeLoot() {
-        testerClass.print();
+
     }
 
     /**
@@ -55,7 +55,7 @@ public class Laboratory extends Field {
      * @return labor genetikus kódjának klónja
      */
     public GeneticCode readGeneticCode() {
-        testerClass.print();
+
         GeneticCode gc = readableGeneticCode.clone();
         return readableGeneticCode;
     }
@@ -68,7 +68,7 @@ public class Laboratory extends Field {
      */
     public void init(GeneticCode gc) {
         readableGeneticCode = gc;
-        testerClass.print();
+
     }
 
     @Override

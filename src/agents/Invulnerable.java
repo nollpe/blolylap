@@ -16,7 +16,6 @@ public class Invulnerable extends Agent {
      */
     public Invulnerable(Player p) {
         super(p);
-        testerClass.print();
     }
 
     public Invulnerable(Invulnerable i) {

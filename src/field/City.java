@@ -13,7 +13,7 @@ public class City {
 
 
     public City() {
-        testerClass.print();
+
         map = new LinkedList<Field>();
 
     }
@@ -42,14 +42,14 @@ public class City {
     }
 
     public void tick() {
-        testerClass.print();
+
         for (Field f : map) {
             f.tick();
         }
     }
 
     public void showCity() {
-        testerClass.print();
+
     }
 
     /*

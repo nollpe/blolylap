@@ -23,7 +23,7 @@ public class LootImpared implements Loot {
      */
     @Override
     public boolean lootEquipment(Player player, Equipment e) {
-        testerClass.print();
+
         return false;
     }
 
