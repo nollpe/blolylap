@@ -1,4 +1,4 @@
 package graphics.Equipments;
 
-public class BagControll {
+public class BagControl {
 }

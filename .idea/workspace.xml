@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/IControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IControl.java" afterDir="false" />
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="meg akarom ölni magam">
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FieldControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650876950275</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="meg akarom ölni magam">
+      <created>1652689401707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652689401707</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +162,8 @@
     <MESSAGE value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
     <MESSAGE value="getcaston javitas" />
     <MESSAGE value="xd" />
-    <option name="LAST_COMMIT_MESSAGE" value="xd" />
+    <MESSAGE value="meg akarom ölni magam" />
+    <option name="LAST_COMMIT_MESSAGE" value="meg akarom ölni magam" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

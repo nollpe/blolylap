@@ -11,8 +11,4 @@ public interface IView
     }
     public void Update();
     public void Event();
-
-
-
-
 }

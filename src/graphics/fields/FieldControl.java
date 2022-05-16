@@ -2,7 +2,7 @@ package graphics.fields;
 
 import character.Player;
 
-public class FieldControll
+public class FieldControl
 {
     Player owner;//
 
