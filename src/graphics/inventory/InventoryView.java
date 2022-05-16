@@ -4,7 +4,7 @@ import graphics.IView;
 
 public class InventoryView implements IView
 {
-    InventoryControll control;
+    InventoryControl control;
 
 
 

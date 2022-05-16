@@ -7,8 +7,4 @@ import java.io.Serializable;
 public interface IControl
 {
     public void handleEvent(/*event?*/);
-
-
-
-
 }

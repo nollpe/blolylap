@@ -2,7 +2,7 @@ package graphics.agents;
 
 public class AgentView
 {
-    AgentControll control;
+    AgentControl control;
 
     public void Update()
     {

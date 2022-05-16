@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="uj branch nekem">
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +150,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="valami" />
