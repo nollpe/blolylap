@@ -12,7 +12,6 @@ import java.awt.event.MouseListener;
 
 public class PlayerView implements IView
 {
-    JavaMouseDeer ml;
     Player player;
 
 
@@ -30,7 +29,6 @@ public class PlayerView implements IView
     {
 
         player=p;
-        ml= new JavaMouseDeer();
 
         label.setBounds(250,250,60,120);
         Image image = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
@@ -40,22 +38,4 @@ public class PlayerView implements IView
     }
 
 
-
-
-    static class JavaMouseDeer implements MouseListener
-    {
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            //valami
-        }
-        @Override
-        public void mousePressed(MouseEvent e) {}
-        @Override
-        public void mouseEntered(MouseEvent e){}
-        @Override
-        public void mouseExited(MouseEvent e){}
-        @Override
-        public void mouseReleased(MouseEvent e){}
-    }
 }
