@@ -31,7 +31,7 @@ public class LootTakenStunned implements GetLootTakenFrom {
      */
     @Override
     public boolean getEquipmentTakenFrom(Equipment e) {
-        testerClass.print();
+
         return owner.removeLoot(e);
     }
 

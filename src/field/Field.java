@@ -17,7 +17,6 @@ public class Field {
 
 
     public Field() {
-        testerClass.print();
         this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedHashSet<Player>();
     }
@@ -60,34 +59,27 @@ public class Field {
     }
 
     public void enter(Player c) {
-        testerClass.print();
         inhabitants.add(c);
         c.setLocation(this);
     }
 
     public void leave(Player c) {
-        testerClass.print();
         inhabitants.remove(c);
     }
 
     public void showLoot() {
-        testerClass.print();
+
     }
 
     public void tick() {
-        testerClass.print();
         //ne hívja meg a játékosokét mart jobb ha a game csinálja azt mert akkor a tick a játékos köre
         /*for (Player character : inhabitants) {
             character.tick();
         }*/
     }
 
-    public void takeLoot() {
-        testerClass.print();
-    }
 
     public LinkedHashSet<Player> getInhabitants() {
-        testerClass.print();
         return inhabitants;
     }
 

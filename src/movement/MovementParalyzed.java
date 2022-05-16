@@ -29,7 +29,7 @@ public class MovementParalyzed implements Movement {
      */
     @Override
     public void move(Field field) {
-        testerClass.print();
+
         return;
     }
 }

@@ -29,7 +29,7 @@ public class MovementNormal implements Movement {
      */
     @Override
     public void move(Field field) {
-        testerClass.print();
+
         if (!owner.getLocation().getNeighbours().contains(field)) {
             return;
         }

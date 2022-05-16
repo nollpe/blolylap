@@ -22,7 +22,6 @@ public class Paralyzing extends Agent {
      */
     public Paralyzing(Player p) {
         super(p);
-        testerClass.print();
     }
 
     public Paralyzing(Paralyzing p) {
@@ -50,7 +49,6 @@ public class Paralyzing extends Agent {
      * @param player A jatekos akinek a karakteren van az agens
      */
     public void loseEffect(Player player) {
-        testerClass.print();
         player.setLoot(new LootNormal(player));
         player.setMovement(new MovementNormal(player));
         player.setCast(new CastNormal(player));

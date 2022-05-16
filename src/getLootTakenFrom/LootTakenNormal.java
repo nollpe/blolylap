@@ -31,7 +31,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
      */
     @Override
     public boolean getEquipmentTakenFrom(Equipment e) {
-        testerClass.print();
+
         return false;
     }
 
@@ -43,7 +43,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
      */
     @Override
     public int getNucleotideTakenFrom(int takenTry) {
-        testerClass.print();
+
         return 0;
     }
 
@@ -55,7 +55,7 @@ public class LootTakenNormal implements GetLootTakenFrom {
      */
     @Override
     public int getAminoAcidTakenFrom(int takenTry) {
-        testerClass.print();
+
         return 0;
     }
 }
