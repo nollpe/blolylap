@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="equipment view">
-      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="graphics.Equipments" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
     </key>
@@ -135,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652690256655</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="equipment view">
+      <created>1652690637075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690637075</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
