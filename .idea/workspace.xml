@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="bag view">
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="kommentek">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/AxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/AxeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/LabcoatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/LabcoatView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652691927659</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="kommentek">
+      <created>1652692269904</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652692269904</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +229,8 @@
     <MESSAGE value="gloves view" />
     <MESSAGE value="labcoat view" />
     <MESSAGE value="bag view" />
-    <option name="LAST_COMMIT_MESSAGE" value="bag view" />
+    <MESSAGE value="kommentek" />
+    <option name="LAST_COMMIT_MESSAGE" value="kommentek" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
