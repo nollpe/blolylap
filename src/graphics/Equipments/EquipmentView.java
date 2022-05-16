@@ -49,6 +49,8 @@ public class EquipmentView implements IView {
         public void mousePressed(MouseEvent e) {
         }
 
+
+
         @Override
         public void mouseEntered(MouseEvent e) {
         }
