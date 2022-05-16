@@ -11,7 +11,7 @@ public class WarehouseLootView implements LootView {
 
     @Override
     public JLabel getLabel() {
-        return null;
+        return label;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class WarehouseLootView implements LootView {
         label.setBounds(r);
         field = f;
         Image image = Toolkit.getDefaultToolkit().getImage("kepek/combined_resources.png");
-        image = image.getScaledInstance(80, 60, Image.SCALE_SMOOTH);
+        image = image.getScaledInstance(60, 60, Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
         label.setIcon(icon);
     }

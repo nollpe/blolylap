@@ -17,11 +17,12 @@ public class EquipmentControl implements IControl {
 
     /**
      * Ha egy felszerelesre kattint a felhasznalo, akkor kijeloli azt.(es a kesobbi akciok ezzel a felszerelessel fognak megtortenni.
+     *
      * @param e az esemeny
      */
     @Override
     public void handleEvent(MouseEvent e) {
-        if(!selected){
+        if (!selected) {
             selected = true;
             playercontrol.handleEvent(e);
         }
