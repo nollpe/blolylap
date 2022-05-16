@@ -24,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="zsuzsi4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +41,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="289kjJ5dKdK8H4x0XIQfYzMXLFR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,6 +53,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="graphics.Equipments" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
     </key>
@@ -96,6 +102,7 @@
       <workItem from="1651048077565" duration="81000" />
       <workItem from="1651437823314" duration="2104000" />
       <workItem from="1652361927075" duration="3568000" />
+      <workItem from="1652675170090" duration="2669000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -125,12 +132,75 @@
       <option name="project" value="LOCAL" />
       <updated>1650876950275</updated>
     </task>
-    <task id="LOCAL-00005" summary="meg akarom ölni magam">
-      <created>1652689401707</created>
+    <task id="LOCAL-00005" summary="equipment view">
+      <created>1652690256655</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1652689401707</updated>
+      <updated>1652690256655</updated>
+    </task>
+    <task id="LOCAL-00006" summary="equipment view">
+      <created>1652690637075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690637075</updated>
+    </task>
+    <task id="LOCAL-00007" summary="equipment view">
+      <created>1652690724433</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690724433</updated>
+    </task>
+    <task id="LOCAL-00008" summary="axe view">
+      <created>1652690982838</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690982838</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bag view">
+      <created>1652691164888</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691164888</updated>
+    </task>
+    <task id="LOCAL-00010" summary="broken axe view">
+      <created>1652691373222</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691373222</updated>
+    </task>
+    <task id="LOCAL-00011" summary="gloves view">
+      <created>1652691504372</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691504372</updated>
+    </task>
+    <task id="LOCAL-00012" summary="labcoat view">
+      <created>1652691662089</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691662089</updated>
+    </task>
+    <task id="LOCAL-00013" summary="bag view">
+      <created>1652691927659</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691927659</updated>
+    </task>
+    <task id="LOCAL-00014" summary="kommentek">
+      <created>1652692269904</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652692269904</updated>
     </task>
     <task id="LOCAL-00006" summary="controll xd">
       <created>1652689866806</created>
@@ -178,7 +248,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>204</line>
+          <line>218</line>
           <properties class="character.Player">
             <option name="EMULATED" value="true" />
           </properties>
