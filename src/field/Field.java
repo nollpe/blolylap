@@ -1,9 +1,7 @@
 package field;
 
 import agents.GeneticCode;
-import character.Inventory;
 import character.Player;
-import tester.testerClass;
 import equipment.Equipment;
 
 import java.util.LinkedHashSet;

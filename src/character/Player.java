@@ -1,19 +1,25 @@
 package character;
 
-import agents.*;
-import cast.*;
-import equipment.*;
-import field.*;
-import game.*;
-import getCastOn.*;
+import agents.Agent;
+import agents.GeneticCode;
+import cast.Cast;
+import cast.CastNormal;
+import equipment.BrokenAxe;
+import equipment.Equipment;
+import field.Field;
+import field.Safehouse;
+import field.Warehouse;
+import game.Game;
+import getCastOn.GetCastOn;
+import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.GetLootTakenFrom;
 import getLootTakenFrom.LootTakenNormal;
 import graphics.player.PlayerControl;
 import graphics.player.PlayerView;
-import loot.*;
-import movement.*;
-import tester.testerClass;
-
+import loot.Loot;
+import loot.LootNormal;
+import movement.Movement;
+import movement.MovementNormal;
 
 import java.io.BufferedReader;
 import java.io.IOException;

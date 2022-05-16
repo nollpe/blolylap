@@ -4,7 +4,6 @@ import character.Player;
 import getCastOn.GetCastOnGloves;
 import getCastOn.GetCastOnNormal;
 import graphics.Equipments.GlovesView;
-import tester.testerClass;
 
 import java.awt.*;
 

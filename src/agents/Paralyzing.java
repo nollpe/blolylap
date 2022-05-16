@@ -9,7 +9,6 @@ import loot.LootImpared;
 import loot.LootNormal;
 import movement.MovementNormal;
 import movement.MovementParalyzed;
-import tester.testerClass;
 
 /**
  * A bénulást okozó ágens osztálya

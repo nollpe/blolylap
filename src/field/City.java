@@ -1,9 +1,6 @@
 package field;
 
 import character.Player;
-import field.Field;
-import game.Timer;
-import tester.testerClass;
 
 import java.util.LinkedList;
 import java.util.Random;

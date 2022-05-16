@@ -2,9 +2,7 @@ package getCastOn;
 
 import agents.Agent;
 import character.Player;
-import tester.testerClass;
 
-import java.io.BufferedReader;
 import java.util.Random;
 import java.util.Scanner;
 

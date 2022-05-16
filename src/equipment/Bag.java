@@ -1,12 +1,8 @@
 package equipment;
 
 import character.Inventory;
-
 import character.Player;
-import equipment.Equipment;
-import getCastOn.GetCastOnNormal;
 import graphics.Equipments.BagView;
-import tester.testerClass;
 
 import java.awt.*;
 

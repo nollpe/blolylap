@@ -1,6 +1,5 @@
 package getLootTakenFrom;
 
-import character.Player;
 import equipment.Equipment;
 
 /**

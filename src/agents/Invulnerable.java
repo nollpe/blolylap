@@ -3,7 +3,6 @@ package agents;
 import character.Player;
 import getCastOn.GetCastOnInvulnerable;
 import getCastOn.GetCastOnNormal;
-import tester.testerClass;
 
 /**
  * A sebezhetetetlenséget okozó ágens osztálya
