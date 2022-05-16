@@ -117,6 +117,8 @@ public class GraphicsConstroller {
         //főzősmcs
         GeneticCodeView makeAgent=new GeneticCodeView(turnOf);
         panel.add(makeAgent.getLabel());
+            //fozosmcs hez combobox
+            panel.add(makeAgent.getCombobox());
 
         //lootview
         if(turnOf.getLocation().getLootView()!=null)

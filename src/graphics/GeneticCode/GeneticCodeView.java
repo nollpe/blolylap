@@ -37,6 +37,7 @@ public class GeneticCodeView implements IView {
             geneticCodesString[i] = geneticCodes.get(i).getAgentType();
         }
         combobox = new JComboBox(geneticCodesString);
+        combobox.setBounds(780,20,100,20);
 
         //combobox.setSelectedIndex(0);
         //?? ez igy eleg?
