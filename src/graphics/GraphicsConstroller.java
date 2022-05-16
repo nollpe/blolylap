@@ -91,16 +91,17 @@ public class GraphicsConstroller {
 
         for(Equipment eq:turnOf.getStored())
         {
-            //views.add(eq.getView());
+            views.add(eq.getView());
             eq.getView().getLabel().setBounds(200+i*80,100,60,60);i++;
             //equimpemntLabels.add(eq.getView().getLabel());
         }
 
         //szomszédok tm
-        //LinkedList<JLabel> neighbours=new LinkedList<>();
-        for(Field f:turnOf.getLocation().getNeighbours())
+        LinkedList<Field> neighbours=turnOf.getLocation().getNeighbours();
+        neighbours.add(turnOf.getLocation());
+        for(Field f:neighbours)
         {
-            //views.add( f.getView());
+            views.add( f.getView());
             f.getView().getLabel().setBounds(i*60,i*60,60,60);i++;
 
         }
