@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
     </list>
-
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +106,7 @@
       <workItem from="1651437823314" duration="2104000" />
       <workItem from="1652361927075" duration="3568000" />
       <workItem from="1652675170090" duration="2669000" />
+      <workItem from="1652695492986" duration="1648000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
