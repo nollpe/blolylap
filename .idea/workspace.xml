@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
-    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="lootview basz">
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="equipment eventek csak idk hogy kellc csinálni">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +47,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="graphics.Equipments" />
@@ -110,7 +106,8 @@
       <workItem from="1652361927075" duration="3568000" />
       <workItem from="1652675170090" duration="2669000" />
       <workItem from="1652695492986" duration="1648000" />
-      <workItem from="1652727495068" duration="3007000" />
+      <workItem from="1652727495068" duration="165000" />
+      <workItem from="1652729243616" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -217,19 +214,19 @@
       <option name="project" value="LOCAL" />
       <updated>1652694495862</updated>
     </task>
-    <task id="LOCAL-00016" summary="pápópé">
-      <created>1652727710146</created>
+    <task id="LOCAL-00016" summary="equipment eventek csak idk hogy kellc csinálni">
+      <created>1652729338886</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1652727710146</updated>
+      <updated>1652729338886</updated>
     </task>
-    <task id="LOCAL-00017" summary="lootview basz">
-      <created>1652730145154</created>
+    <task id="LOCAL-00017" summary="equipment eventek csak idk hogy kellc csinálni">
+      <created>1652729420877</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1652730145154</updated>
+      <updated>1652729420877</updated>
     </task>
     <option name="localTasksCounter" value="18" />
     <servers />
@@ -251,8 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bagcontrol jó" />
     <MESSAGE value="idk" />
-    <MESSAGE value="pápópé" />
-    <MESSAGE value="lootview basz" />
-    <option name="LAST_COMMIT_MESSAGE" value="lootview basz" />
+    <MESSAGE value="equipment eventek csak idk hogy kellc csinálni" />
+    <option name="LAST_COMMIT_MESSAGE" value="equipment eventek csak idk hogy kellc csinálni" />
   </component>
 </project>

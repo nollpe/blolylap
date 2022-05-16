@@ -15,6 +15,7 @@ public class GeneticCodeView implements IView {
     Player ownerPlayer;
     LinkedList<GeneticCode> owner;
     JLabel label;
+    JComboBox combobox;
 
     public GeneticCodeView(Player ow)
     {
@@ -28,6 +29,21 @@ public class GeneticCodeView implements IView {
         label.setIcon(icon2);
         MouseListener a=new JavaMouseDeer();
         label.addMouseListener(a);
+
+        /** ComboBox az elkeszitheto genetikai kodok kilistázásához**/
+        LinkedList<GeneticCode> geneticCodes = ownerPlayer.getGeneticCodes();
+        String geneticCodesString[] = new String[geneticCodes.size()];
+        for(int i = 0; i < geneticCodes.size(); i++){
+            geneticCodesString[i] = geneticCodes.get(i).getAgentType();
+        }
+        combobox = new JComboBox(geneticCodesString);
+
+        //combobox.setSelectedIndex(0);
+        //?? ez igy eleg?
+    }
+
+    public JComboBox getCombobox() {
+        return combobox;
     }
 
     public JLabel getLabel() {
