@@ -35,33 +35,6 @@ public class EquipmentView implements IView {
     }
 
     public void Event() {
-
-
-    }
-
-    class JavaMouseDeer implements MouseListener {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-            control.handleEvent(e);
-        }
-
-        @Override
-        public void mousePressed(MouseEvent e) {
-        }
-
-
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-        }
     }
 
 }
