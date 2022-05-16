@@ -1,10 +1,7 @@
 package field;
 
 import agents.GeneticCode;
-
-import equipment.Equipment;
 import graphics.fields.LaboratoryView;
-
 
 import java.awt.*;
 
@@ -22,8 +19,8 @@ public class Laboratory extends Field {
     public Laboratory() {
         super();
 
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new LaboratoryView(r,"kepek/laboratory.png",this);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new LaboratoryView(r, "kepek/laboratory.png", this);
 
     }
 

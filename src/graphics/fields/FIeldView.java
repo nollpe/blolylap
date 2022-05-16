@@ -7,11 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class FIeldView implements IView {
-    Field field;
-    JLabel label = new JLabel();
+    protected Field field;
+    protected JLabel label = new JLabel();
 
-    public  JLabel getLabel()
-    {
+    public JLabel getLabel() {
         return label;
     }
 

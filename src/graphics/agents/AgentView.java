@@ -6,8 +6,7 @@ public class AgentView {
     AgentControl control;
     JLabel label = new JLabel();
 
-    public  JLabel getLabel()
-    {
+    public JLabel getLabel() {
         return label;
     }
 

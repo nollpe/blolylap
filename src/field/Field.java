@@ -3,10 +3,8 @@ package field;
 import agents.GeneticCode;
 import character.Player;
 import equipment.Equipment;
-import equipment.Equipment;
 import graphics.IView;
 import graphics.fields.FIeldView;
-
 
 import java.awt.*;
 import java.util.LinkedHashSet;

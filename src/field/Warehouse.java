@@ -1,7 +1,6 @@
 package field;
 
 import character.Inventory;
-import graphics.fields.LaboratoryView;
 import graphics.fields.WarehouseView;
 
 import java.awt.*;
