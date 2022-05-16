@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="het">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/IControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,22 +239,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bagcontrol jó" />
     <MESSAGE value="idk" />
     <MESSAGE value="het" />
     <option name="LAST_COMMIT_MESSAGE" value="het" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/field/City.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
