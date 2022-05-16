@@ -1,5 +1,6 @@
 package graphics;
 
+import character.Player;
 import field.Field;
 
 import javax.swing.*;
@@ -14,6 +15,15 @@ public class GraphicsConstroller
 {
     Set<IControl> controllers;
     Set<IView> views;
+    Player turnOf=new Player();
+
+    public Player getTurnOf() {
+        return turnOf;
+    }
+
+    public void setTurnOf(Player turnOf) {
+        this.turnOf = turnOf;
+    }
 
     //region adderek removerek
 
@@ -48,16 +58,28 @@ public class GraphicsConstroller
     }
 
     JFrame frame;
-    JPanel panel;
+    JPanel panel = new JPanel(){@Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        int sides=turnOf.getLocation().getNeighbours().size();
+
+        JLabel label=new JLabel();
+        label.setBounds(0,0,1000,600);
+        String s="kepek/playerx.png";
+        String nev = s.substring(0,12)+((char)(sides+48))+s.substring(13);
+        System.out.println(nev);
+        Image image = Toolkit.getDefaultToolkit().getImage(nev);
+        image = image.getScaledInstance(60,120,Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(image);
+        label.setIcon(icon);
+
+    }
+    };
 
     public void Update()
     {
         frame.getContentPane().removeAll();
-        panel=new JPanel(){@Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-        }
-        };
         /*for(IView iv:views)
         {
             iv.Update();
