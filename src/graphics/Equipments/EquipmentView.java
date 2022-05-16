@@ -5,6 +5,8 @@ import graphics.IView;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  * A védőfelszerelések megjeleniteseert felelos osztalyok ose.
@@ -35,5 +37,21 @@ public class EquipmentView implements IView
 
     }
 
+    static class JavaMouseDeer implements MouseListener
+    {
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            //meghívja a field (vagy fieldView nemtudom) megfelelő függvényét
+        }
+        @Override
+        public void mousePressed(MouseEvent e) {}
+        @Override
+        public void mouseEntered(MouseEvent e){}
+        @Override
+        public void mouseExited(MouseEvent e){}
+        @Override
+        public void mouseReleased(MouseEvent e){}
+    }
 
 }
