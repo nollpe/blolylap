@@ -168,4 +168,6 @@ public class BagControl extends EquipmentControl {
         playerNucleotideLabel.setText(String.valueOf(playerInventory.getNucleotide()));
     }
 
+
 }
+

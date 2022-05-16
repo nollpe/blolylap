@@ -160,6 +160,11 @@ public class Player {
         return Name;
     }
 
+    public LinkedList<GeneticCode> getGeneticCodes()
+    {
+        return knownGeneticCodes;
+    }
+
     //endregion
 
     //region vezerles, player kore

@@ -6,6 +6,8 @@ import getCastOn.GetCastOnNormal;
 import graphics.Equipments.GlovesView;
 import tester.testerClass;
 
+import java.awt.*;
+
 /**
  * A kesztyű védőfelszerelés osztálya.
  * Hatására a játékos vissza tudja pattintani az ágenseket.
@@ -18,7 +20,8 @@ public class Gloves extends Equipment {
 
     public Gloves()
     {
-        view=new GlovesView();
+        Rectangle r=new Rectangle(0,0,60,60);
+        view=new GlovesView(r,"kepek/Gloves.png",this);
     }
 
     /**
