@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="kommentek">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-    </list>
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="kepek" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +52,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="graphics.Equipments" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\0Egyetem\4felev\projlab\blolylap\kepek" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652692269904</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="kepek">
+      <created>1652694495862</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652694495862</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +237,8 @@
     <MESSAGE value="labcoat view" />
     <MESSAGE value="bag view" />
     <MESSAGE value="kommentek" />
-    <option name="LAST_COMMIT_MESSAGE" value="kommentek" />
+    <MESSAGE value="kepek" />
+    <option name="LAST_COMMIT_MESSAGE" value="kepek" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
