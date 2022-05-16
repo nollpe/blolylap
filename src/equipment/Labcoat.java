@@ -7,6 +7,8 @@ import getCastOn.GetCastOnResistant;
 import graphics.Equipments.LabcoatView;
 import tester.testerClass;
 
+import java.awt.*;
+
 /**
  * A védőköpeny védőfelszerelés osztálya.
  * Hatására a játékosra valamekkora eséllyel nem hatnak az ágensek.
@@ -15,7 +17,8 @@ public class Labcoat extends Equipment {
 
     public Labcoat()
     {
-        view=new LabcoatView();
+        Rectangle r=new Rectangle(0,0,60,60);
+        view=new LabcoatView(r,"kepek/Labcoat.png",this);
     }
     /**
      * A védőköpeny megszerzését (aktiválását) kezeli.

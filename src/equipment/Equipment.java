@@ -13,7 +13,7 @@ public class Equipment {
     EquipmentView view;
     public Equipment()
     {
-        view=new EquipmentView();
+        //view=new EquipmentView();
     }
     /**
      * A védőfelszerelések megszerzésekor (aktiválódásakor) hívódik meg.

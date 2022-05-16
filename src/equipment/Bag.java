@@ -8,6 +8,8 @@ import getCastOn.GetCastOnNormal;
 import graphics.Equipments.BagView;
 import tester.testerClass;
 
+import java.awt.*;
+
 /**
  * A táska védőfelszerelés osztálya.
  * Hatására több dolog lehet a játékosnál.
@@ -38,7 +40,8 @@ public class Bag extends Equipment {
 
     public Bag() {
         inventory = new Inventory(5);
-        view=new BagView();
+        Rectangle r=new Rectangle(0,0,60,60);
+        view=new BagView(r,"kepek/Bag.png",this);
     }
 
     /**

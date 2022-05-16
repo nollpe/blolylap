@@ -4,6 +4,7 @@ import agents.Agent;
 import character.Player;
 import equipment.Equipment;
 import field.Field;
+import graphics.GeneticCode.GeneticCodeView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,39 +72,50 @@ public class GraphicsConstroller {
             String s="kepek/playerx.png";
             String nev = s.substring(0,12)+((char)(sides+48))+s.substring(13);
             Image image = Toolkit.getDefaultToolkit().getImage(nev);
-            image = image.getScaledInstance(60,120,Image.SCALE_SMOOTH);
+            image = image.getScaledInstance(1000,600,Image.SCALE_SMOOTH);
             ImageIcon icon = new ImageIcon(image);
             label.setIcon(icon);
+            this.add(label);
 
         }
         };
 
-
-        /*for(IView iv:views)
-        {
-            iv.Update();
-        }*/
         panel.setLayout(null);
 
-
+        //equipmentek
         LinkedList<JLabel> equimpemntLabels=new LinkedList<>();
         for(Equipment eq:turnOf.getStored())
         {
-            equimpemntLabels.add(eq.getView().getLabel());
+            //equimpemntLabels.add(eq.getView().getLabel());
         }
-        LinkedList<JLabel> CastableLabels=new LinkedList<>();
+        //castolható shitek
+        LinkedList<JLabel> castableLabels=new LinkedList<>();
         for(Agent a:turnOf.getCastableAgents())
         {
-            CastableLabels.add(a.)
+            //CastableLabels.add(a.);//TODO
+        }
+        //szomszédok tm
+        LinkedList<Label> neighbours=new LinkedList<>();
+        for(Field f:turnOf.getLocation().getNeighbours())
+        {
+            //neighbours.add(f.getView());
         }
 
+        //inventory TODO
 
-        for(IView iv:views)
+        //főzős
+        JLabel fozos=new JLabel();
+        //fozos.add(new MouseListener());
+        // TODO kell mouslistener amire megjelenik egy combobox ami tartalmazza a csinálható ágenseket, ha rákattintasz megcsinálja
+
+
+
+
+        /*for(IView iv:views)
         {
-
             panel.add(iv.getLabel());
 
-        }
+        }*/
 
         frame.setSize(1000, 600);
         frame.add(panel);
