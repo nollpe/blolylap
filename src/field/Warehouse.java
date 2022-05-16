@@ -2,6 +2,7 @@ package field;
 
 import character.Inventory;
 import graphics.fields.LaboratoryView;
+import graphics.fields.WarehouseView;
 
 import java.awt.*;
 
@@ -14,7 +15,7 @@ public class Warehouse extends Field {
 
         stored = new Inventory(50);
         Rectangle r = new Rectangle(0, 0, 60, 60);
-        view = new LaboratoryView(r, "kepek/warehouse.png", this);
+        view = new WarehouseView(r, "kepek/warehouse.png", this);
 
     }
 

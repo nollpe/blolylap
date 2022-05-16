@@ -4,6 +4,7 @@ package field;
 import equipment.*;
 import field.Field;
 import graphics.fields.LaboratoryView;
+import graphics.fields.SafehouseView;
 
 import java.awt.*;
 import java.io.BufferedReader;
@@ -27,7 +28,7 @@ public class Safehouse extends Field {
         stored = null;
 
         Rectangle r=new Rectangle(0,0,60,60);
-        view=new LaboratoryView(r,"kepek/safehouse.png",this);
+        view=new SafehouseView(r,"kepek/safehouse.png",this);
 
     }
 

@@ -1,5 +1,6 @@
 package graphics;
 
+import agents.Agent;
 import agents.Chorea;
 import character.Player;
 import equipment.Equipment;
@@ -8,7 +9,9 @@ import field.Field;
 
 import javax.swing.*;
 import java.awt.*;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 public class GraphicsConstroller {
@@ -57,14 +60,7 @@ public class GraphicsConstroller {
 
 
     public void Update() {
-        panel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-
-            }
-
-        };
+        panel = new JPanel();
 
         turnOf.addEquipment(new Gloves());
         turnOf.addCastableAgent(new Chorea(turnOf));
@@ -88,7 +84,7 @@ public class GraphicsConstroller {
 
 
         for (Equipment eq : turnOf.getStored()) {
-            //views.add(eq.getView());
+            views.add(eq.getView());
             eq.getView().getLabel().setBounds(200 + i * 80, 100, 60, 60);
             i++;
 
@@ -102,8 +98,6 @@ public class GraphicsConstroller {
         {
             views.add( f.getView());
             f.getView().getLabel().setBounds(i*60,i*60,60,60);i++;
-
-
         }
 
         //inventory TODO
@@ -116,6 +110,20 @@ public class GraphicsConstroller {
         System.out.println(views.size());
         for (IView iv : views) {
             panel.add(iv.getLabel());
+
+            /*Class<? extends IView> aClass = iv.getClass();
+            try {
+                IView aClass1 = aClass.getDeclaredConstructor(iv.getClass()).newInstance(iv);
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+            System.out.println(aClass.toString());*/
 
         }
         panel.add(backgroung);
