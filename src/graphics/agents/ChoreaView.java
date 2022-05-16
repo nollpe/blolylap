@@ -1,4 +1,4 @@
 package graphics.agents;
 
-public class ChoreaView {
+public class ChoreaView extends AgentView {
 }

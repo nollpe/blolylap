@@ -20,7 +20,7 @@ public class FIeldView extends JLabel
         field=f;
 
         setBounds(r);
-        Image image = Toolkit.getDefaultToolkit().getImage("kepek/"+ImageName);
+        Image image = Toolkit.getDefaultToolkit().getImage(ImageName);
         image = image.getScaledInstance(80,80,Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
         this.setIcon(icon);

@@ -1,4 +1,4 @@
 package graphics.agents;
 
-public class InvulnerableView {
+public class InvulnerableView extends AgentView{
 }
