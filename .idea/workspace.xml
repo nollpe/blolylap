@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="idk">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="equipment eventek csak idk hogy kellc csinálni">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="zsuzsi4" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,7 +105,7 @@
       <workItem from="1652675170090" duration="2669000" />
       <workItem from="1652695492986" duration="1648000" />
       <workItem from="1652727495068" duration="165000" />
-      <workItem from="1652729243616" duration="67000" />
+      <workItem from="1652729243616" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -214,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652694495862</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="equipment eventek csak idk hogy kellc csinálni">
+      <created>1652729338886</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652729338886</updated>
+    </task>
+    <task id="LOCAL-00017" summary="equipment eventek csak idk hogy kellc csinálni">
+      <created>1652729420877</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652729420877</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +246,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bagcontrol jó" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="equipment eventek csak idk hogy kellc csinálni" />
+    <option name="LAST_COMMIT_MESSAGE" value="equipment eventek csak idk hogy kellc csinálni" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
