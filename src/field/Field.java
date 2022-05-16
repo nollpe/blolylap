@@ -2,7 +2,7 @@ package field;
 
 import agents.GeneticCode;
 import character.Player;
-
+import equipment.Equipment;
 import equipment.Equipment;
 import graphics.IView;
 import graphics.fields.FIeldView;
@@ -23,8 +23,8 @@ public class Field {
     public Field() {
         this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedHashSet<Player>();
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new FIeldView(r,"kepek/field.png",this);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new FIeldView(r, "kepek/field.png", this);
     }
 
     public IView getView() {
