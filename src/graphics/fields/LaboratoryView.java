@@ -1,7 +1,6 @@
 package graphics.fields;
 
 import field.Field;
-import graphics.IView;
 
 import java.awt.*;
 
