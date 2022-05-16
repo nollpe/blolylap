@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="bag view">
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" afterDir="false" />
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="broken axe view">
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652691164888</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="broken axe view">
+      <created>1652691373222</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691373222</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +197,8 @@
     <MESSAGE value="equipment view" />
     <MESSAGE value="axe view" />
     <MESSAGE value="bag view" />
-    <option name="LAST_COMMIT_MESSAGE" value="bag view" />
+    <MESSAGE value="broken axe view" />
+    <option name="LAST_COMMIT_MESSAGE" value="broken axe view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
