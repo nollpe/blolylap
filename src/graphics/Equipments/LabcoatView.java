@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * A laborkopeny megjeleniteseert felelos osztaly
  */
-public class LabcoatView extends EquipmentView{
+public class LabcoatView extends EquipmentView {
     /**
      * Meghivja az os konstuktorat az aktualis keppel
      */

@@ -4,10 +4,11 @@ package graphics.Equipments;
 import equipment.Equipment;
 
 import java.awt.*;
+
 /**
  * A taska megjeleniteseert felelos osztaly
  */
-public class BagView  extends  EquipmentView {
+public class BagView extends EquipmentView {
     /**
      * Meghivja az os konstuktorat az aktualis keppel
      */
