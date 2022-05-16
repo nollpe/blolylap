@@ -2,7 +2,6 @@ package graphics;
 
 import javax.swing.*;
 
-public class endTurnButton extends JLabel
-{
+public class endTurnButton extends JLabel {
 
 }

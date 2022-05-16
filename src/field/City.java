@@ -92,7 +92,7 @@ public class City {
         makeNeighbours(laboratory, warehouse);
         makeNeighbours(safehouse, warehouse);
 
-        makeNeighbours(safehouse,laboratory);
+        makeNeighbours(safehouse, laboratory);
 
     }
 

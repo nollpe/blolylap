@@ -27,13 +27,11 @@ public class EquipmentView implements IView
         label.setIcon(icon);
     }
 
-    public void Update()
-    {
+    public void Update() {
 
     }
 
-    public void Event()
-    {
+    public void Event() {
 
     }
 

@@ -40,11 +40,11 @@ public class GetCastOnResistant implements GetCastOn {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
         int num = Integer.parseInt(s);
-        while(!(num > 0 && num <= 1000)){
+        while (!(num > 0 && num <= 1000)) {
             s = in.nextLine();
             num = Integer.parseInt(s);
         }
-        if (num> 823) {
+        if (num > 823) {
             /**
              * Ha nem védte meg a köpeny:
              */
