@@ -1,6 +1,5 @@
 package graphics.agents;
 
-public class ParalyzingView extends AgentView
-{
+public class ParalyzingView extends AgentView {
 
 }
