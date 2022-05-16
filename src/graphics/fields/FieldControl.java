@@ -17,5 +17,6 @@ public class FieldControl {
     public void handleEvent() {
         Game.getInstance().gc.getTurnOf().move(field);
         Game.getInstance().gc.Update();
+        Game.getInstance().inTurn = false;
     }
 }

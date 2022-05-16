@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="pápópé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/inventory/InventoryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/inventory/InventoryView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/fields/FieldControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/fields/FieldControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +41,5 @@
   </component>
   <component name="TaskManager">
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/graphics/fields/FieldControl.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
