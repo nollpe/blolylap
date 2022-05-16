@@ -83,4 +83,8 @@ public class Bag extends Equipment {
         return "Bag";
     }
 
+    public Inventory getInventory() {
+        return inventory;
+    }
+
 }

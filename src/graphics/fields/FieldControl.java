@@ -2,12 +2,10 @@ package graphics.fields;
 
 import character.Player;
 
-public class FieldControll
-{
+public class FieldControl {
     Player owner;//
 
-    public void handleEvent(/*event?*/)
-    {
+    public void handleEvent(/*event?*/) {
 
     }
 }

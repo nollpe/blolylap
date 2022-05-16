@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="proto-zsoltii" />
+        <entry key="$PROJECT_DIR$" value="zsuzsi4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +57,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="graphics.Equipments" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\0Egyetem\4felev\projlab\blolylap\kepek" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
     </key>
@@ -130,7 +138,84 @@
       <option name="project" value="LOCAL" />
       <updated>1650876950275</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="equipment view">
+      <created>1652690256655</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690256655</updated>
+    </task>
+    <task id="LOCAL-00006" summary="equipment view">
+      <created>1652690637075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690637075</updated>
+    </task>
+    <task id="LOCAL-00007" summary="equipment view">
+      <created>1652690724433</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690724433</updated>
+    </task>
+    <task id="LOCAL-00008" summary="axe view">
+      <created>1652690982838</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690982838</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bag view">
+      <created>1652691164888</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691164888</updated>
+    </task>
+    <task id="LOCAL-00010" summary="broken axe view">
+      <created>1652691373222</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691373222</updated>
+    </task>
+    <task id="LOCAL-00011" summary="gloves view">
+      <created>1652691504372</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691504372</updated>
+    </task>
+    <task id="LOCAL-00012" summary="labcoat view">
+      <created>1652691662089</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691662089</updated>
+    </task>
+    <task id="LOCAL-00013" summary="bag view">
+      <created>1652691927659</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691927659</updated>
+    </task>
+    <task id="LOCAL-00014" summary="kommentek">
+      <created>1652692269904</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652692269904</updated>
+    </task>
+    <task id="LOCAL-00015" summary="kepek">
+      <created>1652694495862</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652694495862</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,14 +231,21 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="valami" />
     <MESSAGE value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
     <MESSAGE value="getcaston javitas" />
     <MESSAGE value="xd" />
-    <option name="LAST_COMMIT_MESSAGE" value="xd" />
+    <MESSAGE value="equipment view" />
+    <MESSAGE value="axe view" />
+    <MESSAGE value="broken axe view" />
+    <MESSAGE value="gloves view" />
+    <MESSAGE value="labcoat view" />
+    <MESSAGE value="bag view" />
+    <MESSAGE value="kommentek" />
+    <MESSAGE value="kepek" />
+    <option name="LAST_COMMIT_MESSAGE" value="kepek" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

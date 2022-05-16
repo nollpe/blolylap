@@ -46,11 +46,10 @@ public class Safehouse extends Field {
         super.tick();
 
         if (stored == null) {
-            int gen=(int) Math.random()*4;
-            switch(gen)
-            {
-                case(0):
-                    stored=new Axe();
+            int gen = (int) Math.random() * 4;
+            switch (gen) {
+                case (0):
+                    stored = new Axe();
                     break;
             }
 

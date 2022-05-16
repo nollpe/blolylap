@@ -1,4 +1,4 @@
 package graphics.agents;
 
-public class ForgetView extends AgentView{
+public class ForgetView extends AgentView {
 }

@@ -2,8 +2,7 @@ package graphics.GeneticCode;
 
 import graphics.IView;
 
-public class GeneticCodeView implements IView
-{
+public class GeneticCodeView implements IView {
     GeneticCodeControll control;
 
     @Override
