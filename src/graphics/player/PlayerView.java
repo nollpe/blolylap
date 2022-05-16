@@ -1,4 +1,4 @@
-package graphics;
+package graphics.player;
 
 import character.Player;
 import field.Field;

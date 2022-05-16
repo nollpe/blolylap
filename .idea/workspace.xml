@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
-      <change afterPath="$PROJECT_DIR$/src/graphics/PlayerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/AxeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Equipments/LabcoatView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/agents/AgentVIew.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/agents/ChoreaView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/agents/InvulnerableView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/agents/ParalyzingView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryControll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/FieldControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/testerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +63,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="289kjJ5dKdK8H4x0XIQfYzMXLFR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,6 +120,7 @@
       <workItem from="1651048077565" duration="81000" />
       <workItem from="1651437823314" duration="2104000" />
       <workItem from="1652361927075" duration="3568000" />
+      <workItem from="1652675170090" duration="1877000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
