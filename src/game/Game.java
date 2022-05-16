@@ -342,12 +342,11 @@ public class Game {
     }
 
 
-    public void startGame()
-    {
+    public void startGame() {
         city.generateMap();
-        Player player=new Player("rib");
+        Player player = new Player("rib");
         allPlayers.add(player);
-        gc=new GraphicsConstroller();
+        gc = new GraphicsConstroller();
         this.Tick();
     }
 

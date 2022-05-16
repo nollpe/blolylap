@@ -9,18 +9,16 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.Serializable;
 
-public class FIeldView implements IView
-{
+public class FIeldView implements IView {
     Field field;
 
-    public FIeldView(Rectangle r,String ImageName,Field f)
-    {
-        
+    public FIeldView(Rectangle r, String ImageName, Field f) {
+
         label.setBounds(r);
-        field=f;
+        field = f;
 
         Image image = Toolkit.getDefaultToolkit().getImage(ImageName);
-        image = image.getScaledInstance(80,80,Image.SCALE_SMOOTH);
+        image = image.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
         label.setIcon(icon);
     }
@@ -34,6 +32,4 @@ public class FIeldView implements IView
     public void Event() {
 
     }
-
-
 }

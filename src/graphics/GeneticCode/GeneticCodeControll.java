@@ -4,8 +4,7 @@ import agents.GeneticCode;
 import character.Player;
 import graphics.IControl;
 
-public class GeneticCodeControll implements IControl
-{
+public class GeneticCodeControll implements IControl {
     GeneticCode owner;
     Player ownerPlayer;
     GeneticCodeView view;
