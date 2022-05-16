@@ -4,7 +4,9 @@ import agents.Chorea;
 import character.Player;
 import equipment.Equipment;
 import equipment.Gloves;
+import equipment.Labcoat;
 import field.Field;
+import graphics.GeneticCode.GeneticCodeView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -68,7 +70,9 @@ public class GraphicsConstroller {
         };
 
         turnOf.addEquipment(new Gloves());
+        turnOf.addEquipment(new Labcoat());
         turnOf.addCastableAgent(new Chorea(turnOf));
+
         //háttér betöltése
         int sides = turnOf.getLocation().getNeighbours().size();
 
@@ -89,28 +93,37 @@ public class GraphicsConstroller {
 
 
         for (Equipment eq : turnOf.getStored()) {
-            //views.add(eq.getView());
-            eq.getView().getLabel().setBounds(200 + i * 80, 100, 60, 60);
+
+            views.add(eq.getView());
+            eq.getView().getLabel().setBounds(20, 40+80*i, 60, 60);
+
             i++;
 
             //equimpemntLabels.add(eq.getView().getLabel());
         }
 
         //szomszédok tm
-        LinkedList<Field> neighbours = turnOf.getLocation().getNeighbours();
-        neighbours.add(turnOf.getLocation());
-        for (Field f : neighbours) {
-            views.add(f.getView());
-            f.getView().getLabel().setBounds(i * 60, i * 60, 60, 60);
-            i++;
 
+        LinkedList<Field> neighbours=turnOf.getLocation().getNeighbours();
+        i=0;
+        double theta = 2 * Math.PI / sides;
+
+        for(Field f:neighbours)
+        {
+            double x = Math.cos(theta * i-Math.PI/(sides*sides));
+            double y = Math.sin(theta * i-Math.PI/(sides*sides));
+            views.add( f.getView());
+            f.getView().getLabel().setBounds(500+(int)(250*x),300+(int)(200*y),60,60);i++;
 
         }
 
+        //főzősmcs
+        GeneticCodeView makeAgent=new GeneticCodeView(turnOf);
+        panel.add(makeAgent.getLabel());
+
         //inventory TODO
 
-        //főzős
-        JLabel fozos = new JLabel();
+
         //fozos.add(new MouseListener());
         // TODO kell mouslistener amire megjelenik egy combobox ami tartalmazza a csinálható ágenseket, ha rákattintasz megcsinálja
 

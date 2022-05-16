@@ -4,6 +4,7 @@ package field;
 import equipment.Axe;
 import equipment.Equipment;
 import graphics.fields.SafehouseView;
+import graphics.loot.SafehouseLootView;
 
 import java.awt.*;
 
@@ -98,6 +99,7 @@ public class Safehouse extends Field {
     public void takeEquipment(Equipment e) {
 
         stored = null;
+        lootView = null;
     }
 
     /**
@@ -107,6 +109,8 @@ public class Safehouse extends Field {
      */
     public void setStored(Equipment newStored) {
         stored = newStored;
+        String equipmentName = "kepek/" + stored.toString().toLowerCase() + ".png";
+        lootView = new SafehouseLootView(new Rectangle(0, 0, 60, 60), equipmentName, this);
     }
 
     /**
