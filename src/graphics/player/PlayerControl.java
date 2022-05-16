@@ -3,6 +3,8 @@ package graphics.player;
 import character.Player;
 import graphics.IControl;
 
+import java.awt.event.MouseEvent;
+
 public class PlayerControl implements IControl {
     Player owner;
 
@@ -11,7 +13,7 @@ public class PlayerControl implements IControl {
     }
 
     @Override
-    public void handleEvent() {
+    public void handleEvent(MouseEvent e) {
 
     }
 }

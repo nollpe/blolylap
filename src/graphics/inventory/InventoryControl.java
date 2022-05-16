@@ -4,6 +4,8 @@ import character.Inventory;
 import character.Player;
 import graphics.IControl;
 
+import java.awt.event.MouseEvent;
+
 public class InventoryControl implements IControl {
     Player ownerPlayer;
     InventoryView view;
@@ -11,7 +13,7 @@ public class InventoryControl implements IControl {
 
 
     @Override
-    public void handleEvent() {
+    public void handleEvent(MouseEvent e) {
 
     }
 }

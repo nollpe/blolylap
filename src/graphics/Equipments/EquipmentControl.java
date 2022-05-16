@@ -4,6 +4,8 @@ import character.Player;
 import equipment.Equipment;
 import graphics.IControl;
 
+import java.awt.event.MouseEvent;
+
 public class EquipmentControl implements IControl {
     EquipmentView view;
     Equipment owner;
@@ -11,7 +13,7 @@ public class EquipmentControl implements IControl {
 
 
     @Override
-    public void handleEvent() {
+    public void handleEvent(MouseEvent e) {
 
     }
 }

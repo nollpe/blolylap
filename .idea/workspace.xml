@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="idk">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="het">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/IControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="zsuzsi4" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,10 +53,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="graphics.Equipments" />
@@ -86,7 +94,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="valami" />
+      <changelist id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="idk" />
       <created>1650636334281</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -104,6 +112,7 @@
       <workItem from="1652361927075" duration="3568000" />
       <workItem from="1652675170090" duration="2669000" />
       <workItem from="1652695492986" duration="1648000" />
+      <workItem from="1652722654595" duration="1797000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -210,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652694495862</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="het">
+      <created>1652722846875</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652722846875</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +246,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bagcontrol jó" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="het" />
+    <option name="LAST_COMMIT_MESSAGE" value="het" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

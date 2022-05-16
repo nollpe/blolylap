@@ -12,7 +12,7 @@ import java.awt.event.MouseListener;
  * A védőfelszerelések megjeleniteseert felelos osztalyok ose.
  */
 public class EquipmentView implements IView {
-    EquipmentControll control;
+    EquipmentControl control;
     Equipment equipment;
     JLabel label = new JLabel();
 
@@ -37,12 +37,13 @@ public class EquipmentView implements IView {
 
     public void Event() {
 
+
     }
 
-    static class JavaMouseDeer implements MouseListener {
+    class JavaMouseDeer implements MouseListener {
         @Override
         public void mouseClicked(MouseEvent e) {
-            //meghívja a field (vagy fieldView nemtudom) megfelelő függvényét
+            control.handleEvent(e);
         }
 
         @Override
