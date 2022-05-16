@@ -14,6 +14,12 @@ import java.awt.event.MouseListener;
 public class EquipmentView implements IView {
     EquipmentControll control;
     Equipment equipment;
+    JLabel label = new JLabel();
+
+    public  JLabel getLabel()
+    {
+        return label;
+    }
 
     public EquipmentView(Rectangle r, String ImageName, Equipment e) {
 

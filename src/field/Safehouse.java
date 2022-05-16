@@ -4,7 +4,6 @@ package field;
 import equipment.*;
 import field.Field;
 import graphics.fields.LaboratoryView;
-import tester.testerClass;
 
 import java.awt.*;
 import java.io.BufferedReader;
@@ -29,7 +28,6 @@ public class Safehouse extends Field {
 
         Rectangle r=new Rectangle(0,0,60,60);
         view=new LaboratoryView(r,"kepek/safehouse.png",this);
-        testerClass.print();
 
     }
 

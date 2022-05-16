@@ -3,9 +3,9 @@ package field;
 import agents.GeneticCode;
 import character.Player;
 
+import equipment.Equipment;
 import graphics.IView;
 import graphics.fields.FIeldView;
-import tester.testerClass;
 
 
 import java.awt.*;
