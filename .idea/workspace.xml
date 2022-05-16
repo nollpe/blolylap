@@ -4,19 +4,8 @@
     <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="idk">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +47,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="graphics.Equipments" />
@@ -118,6 +107,7 @@
       <workItem from="1652675170090" duration="2669000" />
       <workItem from="1652695492986" duration="1648000" />
       <workItem from="1652727495068" duration="165000" />
+      <workItem from="1652729243616" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
