@@ -55,7 +55,7 @@ public class Player {
         game = Game.getInstance();
         location = game.spawnPlayer(this);
         view = new PlayerView(this);
-        control= new PlayerControl(this);
+        control = new PlayerControl(this);
     }
 
     public Player(String name) {
