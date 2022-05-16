@@ -20,7 +20,7 @@ public class Game {
     private GeneticCode[] AllGeneticCodes;
     private LinkedList<Player> allPlayers;
     public GraphicsConstroller gc;
-    private boolean inTurn;
+    public boolean inTurn;
     //privát konstruktor
 
     /**
@@ -288,12 +288,7 @@ public class Game {
             gc.Update();
             gc.setTurnOf(allPlayer);
             allPlayer.tick();
-            int i = 0;
             while (Game.getInstance().inTurn) {
-                i++;
-                if(i > 100) {
-                    Game.getInstance().inTurn = false;
-                }
                 try {
                     Thread.sleep(20);
                 } catch (InterruptedException e) {
@@ -361,6 +356,8 @@ public class Game {
         city.generateMap();
         Player player = new Player("rib");
         allPlayers.add(player);
+        Player player2 = new Player("rib2");
+        allPlayers.add(player2);
         gc = new GraphicsConstroller();
         this.Tick();
     }
