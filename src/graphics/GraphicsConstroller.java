@@ -8,6 +8,7 @@ import equipment.Labcoat;
 import field.Field;
 import game.Game;
 import graphics.GeneticCode.GeneticCodeView;
+import graphics.inventory.InventoryView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -133,6 +134,7 @@ public class GraphicsConstroller {
 
 
         //inventory TODO
+        InventoryView inventoryView = new InventoryView(turnOf, panel);
 
         //add to panel
         for (IView iv : views) {
