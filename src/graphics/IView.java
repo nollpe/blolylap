@@ -5,7 +5,7 @@ import javax.swing.*;
 public interface IView {
     public JLabel label = new JLabel();
 
-    public static JLabel getLabel() {
+    public default JLabel getLabel() {
         return label;
     }
 

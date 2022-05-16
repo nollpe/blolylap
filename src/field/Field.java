@@ -2,8 +2,13 @@ package field;
 
 import agents.GeneticCode;
 import character.Player;
-import equipment.Equipment;
 
+import graphics.IView;
+import graphics.fields.FIeldView;
+import tester.testerClass;
+
+
+import java.awt.*;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
@@ -12,11 +17,18 @@ public class Field {
     private LinkedList<Field> neighbours;
     private LinkedHashSet<Player> inhabitants;
     protected String Name;
+    protected IView view;
 
 
     public Field() {
         this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedHashSet<Player>();
+        Rectangle r=new Rectangle(0,0,60,60);
+        view=new FIeldView(r,"kepek/field.png",this);
+    }
+
+    public IView getView() {
+        return view;
     }
 
     public Field(String n) {
