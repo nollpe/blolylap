@@ -121,13 +121,21 @@ public class GraphicsConstroller {
         GeneticCodeView makeAgent=new GeneticCodeView(turnOf);
         panel.add(makeAgent.getLabel());
 
+        //lootview
+        if(turnOf.getLocation().getLootView()!=null)
+        {
+            JLabel tempforlootview=turnOf.getLocation().getLootView().getLabel();
+            if(tempforlootview!=null)
+            {
+                tempforlootview.setBounds(460,360,60,60);
+                panel.add(tempforlootview);
+            }
+        }
+
+
         //inventory TODO
 
-
-        //fozos.add(new MouseListener());
-        // TODO kell mouslistener amire megjelenik egy combobox ami tartalmazza a csinálható ágenseket, ha rákattintasz megcsinálja
-
-        System.out.println(views.size());
+        //add to panel
         for (IView iv : views) {
             panel.add(iv.getLabel());
 
