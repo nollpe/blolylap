@@ -3,7 +3,6 @@ package field;
 import character.Inventory;
 
 import graphics.fields.LaboratoryView;
-import tester.testerClass;
 
 import java.awt.*;
 import java.io.BufferedReader;

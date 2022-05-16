@@ -8,6 +8,12 @@ import java.awt.*;
 
 public class FIeldView implements IView {
     Field field;
+    JLabel label = new JLabel();
+
+    public  JLabel getLabel()
+    {
+        return label;
+    }
 
     public FIeldView(Rectangle r, String ImageName, Field f) {
 
