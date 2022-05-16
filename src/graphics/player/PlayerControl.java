@@ -16,7 +16,7 @@ public class PlayerControl implements IControl {
 
     @Override
     public void handleEvent(MouseEvent e) {
-        if(false /*hogy azonositjuk h equipmentre kattintott? getComponent() valami*/){
+        if (false /*hogy azonositjuk h equipmentre kattintott? getComponent() valami*/) {
             //selectedEquipment = valami.
         }
     }

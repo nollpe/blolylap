@@ -11,7 +11,7 @@ public class LaboratoryLootView implements LootView {
 
     @Override
     public JLabel getLabel() {
-        return null;
+        return label;
     }
 
     @Override

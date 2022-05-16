@@ -1,6 +1,7 @@
 package field;
 
 import character.Player;
+import equipment.BrokenAxe;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -73,6 +74,7 @@ public class City {
         Field basicField = new Field();
         Laboratory laboratory = new Laboratory();
         Safehouse safehouse = new Safehouse();
+        safehouse.setStored(new BrokenAxe());
         Warehouse warehouse = new Warehouse();
 
         //belerakjuk a mappba

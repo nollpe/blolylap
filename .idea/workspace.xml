@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="pápópé">
-      <change afterPath="$PROJECT_DIR$/kepek/combined_resources.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/loot/FieldLootView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/loot/LootView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="lootview basz">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kepek/broken_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/kepek/brokenaxe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,7 @@
       <workItem from="1652361927075" duration="3568000" />
       <workItem from="1652675170090" duration="2669000" />
       <workItem from="1652695492986" duration="1648000" />
-      <workItem from="1652727495068" duration="2466000" />
+      <workItem from="1652727495068" duration="3007000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -229,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652727710146</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="lootview basz">
+      <created>1652730145154</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652730145154</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,17 +254,7 @@
     <MESSAGE value="bagcontrol jó" />
     <MESSAGE value="idk" />
     <MESSAGE value="pápópé" />
-    <option name="LAST_COMMIT_MESSAGE" value="pápópé" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/field/City.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="lootview basz" />
+    <option name="LAST_COMMIT_MESSAGE" value="lootview basz" />
   </component>
 </project>
