@@ -1,6 +1,7 @@
 package field;
 
 import character.Inventory;
+import game.Game;
 import graphics.fields.WarehouseView;
 import graphics.loot.WarehouseLootView;
 

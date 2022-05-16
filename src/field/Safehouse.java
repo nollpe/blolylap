@@ -3,6 +3,7 @@ package field;
 
 import equipment.Axe;
 import equipment.Equipment;
+import game.Game;
 import graphics.fields.SafehouseView;
 import graphics.loot.SafehouseLootView;
 
