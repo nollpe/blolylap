@@ -40,8 +40,8 @@ public class Bag extends Equipment {
 
     public Bag() {
         inventory = new Inventory(5);
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new BagView(r,"kepek/Bag.png",this);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new BagView(r, "kepek/Bag.png", this);
     }
 
     /**

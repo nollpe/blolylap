@@ -11,13 +11,12 @@ public class GeneticCodeView implements IView {
     Player ownerPlayer;
     GeneticCode owner;
 
-    public GeneticCodeView(GeneticCode o,Player p)
-    {
-        owner=o;ownerPlayer=p;
+    public GeneticCodeView(GeneticCode o, Player p) {
+        owner = o;
+        ownerPlayer = p;
     }
 
-    public LinkedList<GeneticCode> getGeneticCodes()
-    {
+    public LinkedList<GeneticCode> getGeneticCodes() {
         return ownerPlayer.getGeneticCodes();
     }
 

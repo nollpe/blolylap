@@ -11,10 +11,11 @@ import tester.testerClass;
 public class Equipment {
 
     EquipmentView view;
-    public Equipment()
-    {
+
+    public Equipment() {
         //view=new EquipmentView();
     }
+
     /**
      * A védőfelszerelések megszerzésekor (aktiválódásakor) hívódik meg.
      * Módosítja a karakter állapotát az adott védőfelszerelést hatásának megfelelően.
@@ -42,8 +43,7 @@ public class Equipment {
     public void useOn(Player p) {
     }
 
-    public IView getView()
-    {
+    public IView getView() {
         return view;
     }
 

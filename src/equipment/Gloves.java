@@ -18,10 +18,9 @@ public class Gloves extends Equipment {
      */
     int durability = 3;
 
-    public Gloves()
-    {
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new GlovesView(r,"kepek/Gloves.png",this);
+    public Gloves() {
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new GlovesView(r, "kepek/Gloves.png", this);
     }
 
     /**

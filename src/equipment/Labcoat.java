@@ -15,11 +15,11 @@ import java.awt.*;
  */
 public class Labcoat extends Equipment {
 
-    public Labcoat()
-    {
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new LabcoatView(r,"kepek/Labcoat.png",this);
+    public Labcoat() {
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new LabcoatView(r, "kepek/Labcoat.png", this);
     }
+
     /**
      * A védőköpeny megszerzését (aktiválását) kezeli.
      * Beállítja a karakternek a castolás elszenvedésének állapotát.
