@@ -26,7 +26,7 @@ public class PlayerView implements IView {
 
         player = p;
 
-        label=new JLabel();
+        //label=new JLabel();
         label.setBounds(470, 240, 60, 120);
         Image image = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
         image = image.getScaledInstance(60, 120, Image.SCALE_SMOOTH);
