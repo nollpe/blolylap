@@ -1,6 +1,7 @@
 package field;
 
 import agents.GeneticCode;
+import game.Game;
 import graphics.fields.LaboratoryView;
 import graphics.loot.LaboratoryLootView;
 

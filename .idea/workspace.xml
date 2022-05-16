@@ -246,4 +246,14 @@
     <MESSAGE value="equipment eventek csak idk hogy kellc csinálni" />
     <option name="LAST_COMMIT_MESSAGE" value="equipment eventek csak idk hogy kellc csinálni" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="12" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>
