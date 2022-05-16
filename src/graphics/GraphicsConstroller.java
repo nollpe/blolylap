@@ -132,6 +132,7 @@ public class GraphicsConstroller {
             }
         }
 
+
         //inventory TODO
         InventoryView inventoryView = new InventoryView(turnOf, panel);
 
