@@ -6,6 +6,7 @@ import equipment.Equipment;
 import equipment.Gloves;
 import equipment.Labcoat;
 import field.Field;
+import game.Game;
 import graphics.GeneticCode.GeneticCodeView;
 
 import javax.swing.*;
@@ -60,30 +61,26 @@ public class GraphicsConstroller {
 
 
     public void Update() {
-        panel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
+        views.clear();
+        frame.getContentPane().removeAll();
+        panel = new JPanel();
 
-            }
+        for (Player player : Game.getInstance().getAllPlayers()) {
+            views.add(player.getView());
+        }
 
-        };
-
-        turnOf.addEquipment(new Gloves());
-        turnOf.addEquipment(new Labcoat());
-        turnOf.addCastableAgent(new Chorea(turnOf));
 
         //háttér betöltése
         int sides = turnOf.getLocation().getNeighbours().size();
 
-        JLabel backgroung = new JLabel();
-        backgroung.setBounds(0, 0, 1000, 600);
+        JLabel background = new JLabel();
+        background.setBounds(0, 0, 1000, 600);
         String s = "kepek/fieldx.png";
         String nev = s.substring(0, 11) + ((char) (sides + 48)) + s.substring(12);
         Image image = Toolkit.getDefaultToolkit().getImage(nev);
         image = image.getScaledInstance(1000, 600, Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
-        backgroung.setIcon(icon);
+        background.setIcon(icon);
 
 
         panel.setLayout(null);
@@ -142,7 +139,7 @@ public class GraphicsConstroller {
             panel.add(iv.getLabel());
 
         }
-        panel.add(backgroung);
+        panel.add(background);
 
         frame.setSize(1000, 600);
         frame.add(panel);
