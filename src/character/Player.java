@@ -8,6 +8,7 @@ import game.*;
 import getCastOn.*;
 import getLootTakenFrom.GetLootTakenFrom;
 import getLootTakenFrom.LootTakenNormal;
+import graphics.IView;
 import graphics.player.PlayerControl;
 import graphics.player.PlayerView;
 import loot.*;
@@ -36,7 +37,7 @@ public class Player {
     private final Game game;
     private Field location;
     private String Name;
-    public PlayerView view;
+    public IView view;
     public PlayerControl control;
 
     //endregion
@@ -148,7 +149,7 @@ public class Player {
 
     //region sima getter setterek
 
-    public PlayerView getView() {
+    public IView getView() {
         return view;
     }
 
