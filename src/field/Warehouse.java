@@ -37,20 +37,9 @@ public class Warehouse extends Field {
         testerClass.print();
         super.tick();
 
-        //TODO ezt am basszuk már ki innen és generáljon random eséllyel ha nincs benne semmi
-        System.out.println("mennyi amino acid és nucleotide termelődjön(1-5)?: \n<int>\n<int>");
 
-        int nuc = 0;
-        int ami = 0;
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            nuc = Integer.parseInt(br.readLine());
-            ami = Integer.parseInt(br.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stored.addAminoAcid(ami);
-        stored.addNucleotide(nuc);
+        stored.addAminoAcid((int) (Math.random() * 2));
+        stored.addNucleotide((int) (Math.random() * 2));
 
 
     }

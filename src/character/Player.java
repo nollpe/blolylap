@@ -8,6 +8,8 @@ import game.*;
 import getCastOn.*;
 import getLootTakenFrom.GetLootTakenFrom;
 import getLootTakenFrom.LootTakenNormal;
+import graphics.player.PlayerControll;
+import graphics.player.PlayerView;
 import loot.*;
 import movement.*;
 import tester.testerClass;
@@ -34,6 +36,8 @@ public class Player {
     private final Game game;
     private Field location;
     private String Name;
+    public PlayerView view;
+    public PlayerControll control;
 
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -50,6 +54,8 @@ public class Player {
         knownGeneticCodes = new LinkedList<>();
         game = Game.getInstance();
         location = game.spawnPlayer(this);
+        view = new PlayerView(this);
+        control= new PlayerControll(this);
     }
 
     public Player(String name) {
@@ -141,6 +147,14 @@ public class Player {
     //endregion
 
     //region sima getter setterek
+
+    public PlayerView getView() {
+        return view;
+    }
+
+    public PlayerControll getControl() {
+        return control;
+    }
 
     public String getName() {
         return Name;
@@ -390,6 +404,8 @@ public class Player {
         for (Agent agent : castableAgents) {
             agent.tick();
         }
+
+
         //TODO kéne egy thread ami itt csak alszik amíg nem nincs endturn és akkor lehet kattintgatni a graphics controllerrel
         //legalábbis ez az ötletem
     }

@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="getcaston javitas">
+      <change afterPath="$PROJECT_DIR$/src/graphics/endTurnButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentVIew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ChoreaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ChoreaView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/InvulnerableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/InvulnerableView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ParalyzingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ParalyzingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +169,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>204</line>
+          <line>218</line>
           <properties class="character.Player">
             <option name="EMULATED" value="true" />
           </properties>

@@ -1,9 +1,6 @@
 package field;
 
-import equipment.Bag;
-import equipment.Equipment;
-import equipment.Gloves;
-import equipment.Labcoat;
+import equipment.*;
 import field.Field;
 import tester.testerClass;
 
@@ -48,9 +45,18 @@ public class Safehouse extends Field {
         testerClass.print();
         super.tick();
 
-        //TODO ezt am basszuk már ki innen és generáljon random eséllyel ha nincs benne semmi
         if (stored == null) {
-            System.out.println("Mit generáljon a safehouse?\n1:kesztyű\n2:köpeny\n3:tatyó\n0:semmit");
+            int gen=(int) Math.random()*4;
+            switch(gen)
+            {
+                case(0):
+                    stored=new Axe();
+                    break;
+            }
+
+
+
+            /*System.out.println("Mit generáljon a safehouse?\n1:kesztyű\n2:köpeny\n3:tatyó\n0:semmit");
             int chosen = 0;
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
@@ -72,7 +78,7 @@ public class Safehouse extends Field {
                     break;
                 default:
                     System.out.println("ez nem jött be bruhtyókám");
-            }
+            }*/
         }
     }
 
