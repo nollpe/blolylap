@@ -167,4 +167,5 @@ public class BagControl extends EquipmentControl {
         playerAminoAcidLabel.setText(String.valueOf(playerInventory.getAminoAcid()));
         playerNucleotideLabel.setText(String.valueOf(playerInventory.getNucleotide()));
     }
+
 }

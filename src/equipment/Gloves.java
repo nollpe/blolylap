@@ -3,6 +3,7 @@ package equipment;
 import character.Player;
 import getCastOn.GetCastOnGloves;
 import getCastOn.GetCastOnNormal;
+import graphics.Equipments.GlovesView;
 import tester.testerClass;
 
 /**
@@ -14,6 +15,11 @@ public class Gloves extends Equipment {
      * A kesztyű élettartama
      */
     int durability = 3;
+
+    public Gloves()
+    {
+        view=new GlovesView();
+    }
 
     /**
      * A kesztyű tulajdonosa

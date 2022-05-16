@@ -5,6 +5,7 @@ import character.Inventory;
 import character.Player;
 import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
+import graphics.Equipments.BagView;
 import tester.testerClass;
 
 /**
@@ -12,6 +13,8 @@ import tester.testerClass;
  * Hatására több dolog lehet a játékosnál.
  */
 public class Bag extends Equipment {
+
+
     /**
      * Az inventory, amiben a táskában lévő dolgokat lehet tárolni.
      */
@@ -35,6 +38,7 @@ public class Bag extends Equipment {
 
     public Bag() {
         inventory = new Inventory(5);
+        view=new BagView();
     }
 
     /**

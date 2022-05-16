@@ -4,6 +4,7 @@ import character.Player;
 import equipment.Equipment;
 import getCastOn.GetCastOnNormal;
 import getCastOn.GetCastOnResistant;
+import graphics.Equipments.LabcoatView;
 import tester.testerClass;
 
 /**
@@ -11,6 +12,11 @@ import tester.testerClass;
  * Hatására a játékosra valamekkora eséllyel nem hatnak az ágensek.
  */
 public class Labcoat extends Equipment {
+
+    public Labcoat()
+    {
+        view=new LabcoatView();
+    }
     /**
      * A védőköpeny megszerzését (aktiválását) kezeli.
      * Beállítja a karakternek a castolás elszenvedésének állapotát.

@@ -1,12 +1,13 @@
 package equipment;
 
 import character.Player;
+import graphics.Equipments.AxeView;
 
 public class Axe extends Equipment {
     private Player owner;
 
     public Axe() {
-        super();
+        view =new AxeView();
     }
 
     /**
