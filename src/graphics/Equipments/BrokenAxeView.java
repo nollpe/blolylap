@@ -3,10 +3,11 @@ package graphics.Equipments;
 import equipment.Equipment;
 
 import java.awt.*;
+
 /**
  * Az elhasznalt fejsze megjeleniteseert felelos osztaly
  */
-public class BrokenAxeView extends EquipmentView{
+public class BrokenAxeView extends EquipmentView {
     /**
      * Meghivja az os konstuktorat az aktualis keppel
      */

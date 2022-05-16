@@ -8,7 +8,7 @@ import java.awt.*;
  * A fejsze megjeleniteseert felelos osztaly
  */
 
-public class AxeView extends EquipmentView{
+public class AxeView extends EquipmentView {
     /**
      * Meghivja az os konstuktorat az aktualis keppel
      */

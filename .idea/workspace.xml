@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="bagcontrol xd">
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="bagcontrol talán kész">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/AxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/AxeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BrokenAxeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/GlovesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/LabcoatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/LabcoatView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +87,7 @@
         <item itemvalue="Application.testerClass" />
         <item itemvalue="Application.testerClass" />
         <item itemvalue="Application.testerClass" />
+        <item itemvalue="Application.testerClass" />
       </list>
     </recent_temporary>
   </component>
@@ -139,19 +147,19 @@
       <option name="project" value="LOCAL" />
       <updated>1652690256655</updated>
     </task>
-    <task id="LOCAL-00006" summary="equipment view">
-      <created>1652690637075</created>
+    <task id="LOCAL-00006" summary="controll xd">
+      <created>1652689866806</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1652690637075</updated>
+      <updated>1652689866806</updated>
     </task>
-    <task id="LOCAL-00007" summary="equipment view">
-      <created>1652690724433</created>
+    <task id="LOCAL-00007" summary="bagcontrol xd">
+      <created>1652692585027</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1652690724433</updated>
+      <updated>1652692585027</updated>
     </task>
     <task id="LOCAL-00008" summary="axe view">
       <created>1652690982838</created>
@@ -202,20 +210,6 @@
       <option name="project" value="LOCAL" />
       <updated>1652692269904</updated>
     </task>
-    <task id="LOCAL-00006" summary="controll xd">
-      <created>1652689866806</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1652689866806</updated>
-    </task>
-    <task id="LOCAL-00007" summary="bagcontrol xd">
-      <created>1652692585027</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1652692585027</updated>
-    </task>
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
@@ -241,7 +235,8 @@
     <MESSAGE value="meg akarom ölni magam" />
     <MESSAGE value="controll xd" />
     <MESSAGE value="bagcontrol xd" />
-    <option name="LAST_COMMIT_MESSAGE" value="bagcontrol xd" />
+    <MESSAGE value="bagcontrol talán kész" />
+    <option name="LAST_COMMIT_MESSAGE" value="bagcontrol talán kész" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

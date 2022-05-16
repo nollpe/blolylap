@@ -4,6 +4,7 @@ import character.Inventory;
 import equipment.Bag;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -13,14 +14,14 @@ public class BagControl extends EquipmentControl {
     private Bag bag;
     private Inventory playerInventory;
     private Inventory bagInventory;
-    private JPanel bagAminoAcid = new JPanel();
-    private JPanel bagNucleotide = new JPanel();
-    private JPanel playerAminoAcid = new JPanel();
-    private JPanel playerNucleotide = new JPanel();
-    private JPanel aminoIncrease = new JPanel();
-    private JPanel aminoDecrease = new JPanel();
-    private JPanel nucleotideIncrease = new JPanel();
-    private JPanel nucleotideDecrease = new JPanel();
+    private JLabel bagAminoAcid = new JLabel();
+    private JLabel bagNucleotide = new JLabel();
+    private JLabel playerAminoAcid = new JLabel();
+    private JLabel playerNucleotide = new JLabel();
+    private JLabel aminoIncrease = new JLabel();
+    private JLabel aminoDecrease = new JLabel();
+    private JLabel nucleotideIncrease = new JLabel();
+    private JLabel nucleotideDecrease = new JLabel();
     private JLabel bagAminoAcidLabel = new JLabel();
     private JLabel bagNucleotideLabel = new JLabel();
     private JLabel playerAminoAcidLabel = new JLabel();
@@ -31,6 +32,47 @@ public class BagControl extends EquipmentControl {
     }
 
     public BagControl(Bag bag, Inventory playerInventory) {
+
+        Image playerAminoImage = Toolkit.getDefaultToolkit().getImage("kepek/amino_acid.png");
+        playerAminoImage = playerAminoImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon playerAminoIcon = new ImageIcon(playerAminoImage);
+        playerAminoAcid.setIcon(playerAminoIcon);
+
+        Image bagAminoImage = Toolkit.getDefaultToolkit().getImage("kepek/amino_acid.png");
+        bagAminoImage = bagAminoImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon bagAminoIcon = new ImageIcon(bagAminoImage);
+        bagAminoAcid.setIcon(bagAminoIcon);
+
+        Image playerNucleotideImage = Toolkit.getDefaultToolkit().getImage("kepek/nucleotide.png");
+        playerNucleotideImage = playerNucleotideImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon playerNucleotideIcon = new ImageIcon(playerNucleotideImage);
+        playerNucleotide.setIcon(playerNucleotideIcon);
+
+        Image bagNucleotideImage = Toolkit.getDefaultToolkit().getImage("kepek/nucleotide.png");
+        bagNucleotideImage = bagNucleotideImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon bagNucleotideIcon = new ImageIcon(bagNucleotideImage);
+        bagNucleotide.setIcon(bagNucleotideIcon);
+
+        Image aminoIncreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/up.png");
+        aminoIncreaseImage = aminoIncreaseImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon aminoIncreaseIcon = new ImageIcon(aminoIncreaseImage);
+        aminoIncrease.setIcon(aminoIncreaseIcon);
+
+        Image nucleotideIncreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/up.png");
+        nucleotideIncreaseImage = nucleotideIncreaseImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon nucleotideIncreaseIcon = new ImageIcon(nucleotideIncreaseImage);
+        nucleotideIncrease.setIcon(nucleotideIncreaseIcon);
+
+        Image aminoDecreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/down.png");
+        aminoDecreaseImage = aminoDecreaseImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon aminoDecreaseIcon = new ImageIcon(aminoDecreaseImage);
+        aminoDecrease.setIcon(aminoDecreaseIcon);
+
+        Image nucleotideDecreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/down.png");
+        nucleotideDecreaseImage = nucleotideDecreaseImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon nucleotideDecreaseIcon = new ImageIcon(nucleotideDecreaseImage);
+        nucleotideDecrease.setIcon(nucleotideDecreaseIcon);
+
         this.bag = bag;
         this.bagInventory = bag.getInventory();
         this.playerInventory = playerInventory;
@@ -46,6 +88,11 @@ public class BagControl extends EquipmentControl {
 
         playerNucleotide.setBounds(10, 220, 50, 50);
         playerAminoAcid.setBounds(240, 220, 50, 50);
+
+        bagNucleotideLabel.setBounds(45, 45, 5, 5);
+        bagAminoAcidLabel.setBounds(45, 45, 5, 5);
+        playerNucleotideLabel.setBounds(45, 45, 5, 5);
+        playerAminoAcidLabel.setBounds(45, 45, 5, 5);
 
         Update();
 
@@ -119,5 +166,5 @@ public class BagControl extends EquipmentControl {
         bagNucleotideLabel.setText(String.valueOf(bagInventory.getNucleotide()));
         playerAminoAcidLabel.setText(String.valueOf(playerInventory.getAminoAcid()));
         playerNucleotideLabel.setText(String.valueOf(playerInventory.getNucleotide()));
-
     }
+}
