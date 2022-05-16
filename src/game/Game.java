@@ -14,12 +14,13 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class Game {
+
     private Timer timer;
     private City city;
     private GeneticCode[] AllGeneticCodes;
     private LinkedList<Player> allPlayers;
     public GraphicsConstroller gc;
-
+    private boolean inTurn;
     //privát konstruktor
 
     /**
@@ -29,6 +30,7 @@ public class Game {
         AllGeneticCodes = new GeneticCode[4];
         allPlayers = new LinkedList<Player>();
         city = new City();
+        inTurn = true;
         //vezerles();
         //worst idea ever a vezerlest iderakni xd
     }
@@ -286,7 +288,23 @@ public class Game {
             gc.Update();
             gc.setTurnOf(allPlayer);
             allPlayer.tick();
+            int i = 0;
+            while (Game.getInstance().inTurn) {
+                i++;
+                if(i > 100) {
+                    Game.getInstance().inTurn = false;
+                }
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            Game.getInstance().inTurn = true;
+            //ide várni amig lenyomjuk az end turn gombot
+            System.out.println("HALLO");
         }
+        System.out.println("F");
         city.tick();
     }
 
