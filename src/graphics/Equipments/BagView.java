@@ -1,4 +1,4 @@
 package graphics.Equipments;
 
-public class BagView {
+public class BagView extends EquipmentView{
 }

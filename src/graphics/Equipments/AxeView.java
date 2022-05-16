@@ -1,4 +1,4 @@
 package graphics.Equipments;
 
-public class AxeView {
+public class AxeView extends EquipmentView{
 }

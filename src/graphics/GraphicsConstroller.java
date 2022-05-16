@@ -1,6 +1,8 @@
 package graphics;
 
+import agents.Agent;
 import character.Player;
+import equipment.Equipment;
 import field.Field;
 
 import javax.swing.*;
@@ -58,33 +60,45 @@ public class GraphicsConstroller
     }
 
     JFrame frame;
-    JPanel panel = new JPanel(){@Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
-        int sides=turnOf.getLocation().getNeighbours().size();
-
-        JLabel label=new JLabel();
-        label.setBounds(0,0,1000,600);
-        String s="kepek/playerx.png";
-        String nev = s.substring(0,12)+((char)(sides+48))+s.substring(13);
-        System.out.println(nev);
-        Image image = Toolkit.getDefaultToolkit().getImage(nev);
-        image = image.getScaledInstance(60,120,Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(image);
-        label.setIcon(icon);
-
-    }
-    };
+    JPanel panel;
 
     public void Update()
     {
+        panel=new JPanel(){@Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            int sides=turnOf.getLocation().getNeighbours().size();
+
+            JLabel label=new JLabel();
+            label.setBounds(0,0,1000,600);
+            String s="kepek/playerx.png";
+            String nev = s.substring(0,12)+((char)(sides+48))+s.substring(13);
+            Image image = Toolkit.getDefaultToolkit().getImage(nev);
+            image = image.getScaledInstance(60,120,Image.SCALE_SMOOTH);
+            ImageIcon icon = new ImageIcon(image);
+            label.setIcon(icon);
+
+        }
+        };
         frame.getContentPane().removeAll();
         /*for(IView iv:views)
         {
             iv.Update();
         }*/
         panel.setLayout(null);
+
+        LinkedList<JLabel> equimpemntLabels=new LinkedList<>();
+        for(Equipment eq:turnOf.getStored())
+        {
+            equimpemntLabels.add(eq.getView().getLabel());
+        }
+        LinkedList<JLabel> CastableLabels=new LinkedList<>();
+        for(Agent a:turnOf.getCastableAgents())
+        {
+            CastableLabels.add(a.)
+        }
+
 
         for(IView iv:views)
         {
