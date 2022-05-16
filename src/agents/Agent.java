@@ -24,6 +24,10 @@ public class Agent {
         timeToLive = 2;
     }
 
+    public Agent() {
+
+    }
+
     public String toString() {
         return "Agent";
     }

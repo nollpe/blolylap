@@ -17,27 +17,26 @@ public class GeneticCodeView implements IView {
     JLabel label;
     JComboBox combobox;
 
-    public GeneticCodeView(Player ow)
-    {
-        ownerPlayer=ow;
-        owner=ow.getGeneticCodes();
+    public GeneticCodeView(Player ow) {
+        ownerPlayer = ow;
+        owner = ow.getGeneticCodes();
         label = new JLabel();
-        label.setBounds(880,20,80,80);
+        label.setBounds(880, 20, 80, 80);
         Image image = Toolkit.getDefaultToolkit().getImage("kepek/agent_make.png");
         image = image.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon icon2 = new ImageIcon(image);
         label.setIcon(icon2);
-        MouseListener a=new JavaMouseDeer();
+        MouseListener a = new JavaMouseDeer();
         label.addMouseListener(a);
 
         /** ComboBox az elkeszitheto genetikai kodok kilistázásához**/
         LinkedList<GeneticCode> geneticCodes = ownerPlayer.getGeneticCodes();
         String geneticCodesString[] = new String[geneticCodes.size()];
-        for(int i = 0; i < geneticCodes.size(); i++){
+        for (int i = 0; i < geneticCodes.size(); i++) {
             geneticCodesString[i] = geneticCodes.get(i).getAgentType();
         }
         combobox = new JComboBox(geneticCodesString);
-        combobox.setBounds(780,20,100,20);
+        combobox.setBounds(780, 20, 100, 20);
 
         //combobox.setSelectedIndex(0);
         //?? ez igy eleg?
@@ -70,8 +69,7 @@ public class GeneticCodeView implements IView {
 
     }
 
-    private class JavaMouseDeer implements MouseListener
-    {
+    private class JavaMouseDeer implements MouseListener {
 
         @Override
         public void mouseClicked(MouseEvent e) {

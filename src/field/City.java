@@ -1,7 +1,11 @@
 package field;
 
+import agents.Agent;
+import agents.Forget;
+import agents.GeneticCode;
 import character.Player;
 import equipment.BrokenAxe;
+import equipment.Gloves;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -73,10 +77,12 @@ public class City {
         //létrehozzuk a fieldeket
         Field basicField = new Field();
         Laboratory laboratory = new Laboratory();
+        laboratory.init(new GeneticCode(new Forget(), 2, 2));
         Safehouse safehouse = new Safehouse();
-        safehouse.setStored(new BrokenAxe());
+        safehouse.setStored(new Gloves());
         Warehouse warehouse = new Warehouse();
-
+        warehouse.addNucleotide(5);
+        warehouse.addAminoAcid(5);
         //belerakjuk a mappba
         map.add(basicField);
         map.add(laboratory);
