@@ -4,6 +4,8 @@ import agents.*;
 import character.Player;
 import equipment.*;
 import field.*;
+import graphics.GraphicsConstroller;
+import graphics.IView;
 import tester.testerClass;
 
 import java.io.BufferedReader;
@@ -18,6 +20,7 @@ public class Game {
     private City city;
     private GeneticCode[] AllGeneticCodes;
     private LinkedList<Player> allPlayers;
+    public GraphicsConstroller gc;
 
     //privát konstruktor
 
@@ -281,7 +284,11 @@ public class Game {
     public void Tick() {
 
         for (Player allPlayer : allPlayers) {
+            //TODO szóval a player dolgait kirajzolni és kattintgathatóvá tenni
+            gc.addView(allPlayer.getView());
+            gc.Update();
             allPlayer.tick();
+            gc.removeView(allPlayer.getView());
         }
         city.tick();
     }
@@ -338,6 +345,9 @@ public class Game {
     public void startGame()
     {
         city.generateMap();
+        Player player=new Player("rib");
+        allPlayers.add(player);
+        gc=new GraphicsConstroller();
         this.Tick();
     }
 

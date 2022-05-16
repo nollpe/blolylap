@@ -1,12 +1,15 @@
 package graphics;
 
 import javax.swing.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public interface IView
 {
+    public JLabel label = new JLabel();
 
+    public default JLabel getLabel()
+    {
+        return label;
+    }
     public void Update();
     public void Event();
 

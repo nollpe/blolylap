@@ -94,8 +94,6 @@ public class City {
 
         makeNeighbours(safehouse,laboratory);
 
-        testerClass.print();
-
     }
 
     /**

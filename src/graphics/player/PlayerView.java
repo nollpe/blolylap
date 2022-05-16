@@ -2,6 +2,7 @@ package graphics.player;
 
 import character.Player;
 import field.Field;
+import graphics.IView;
 import graphics.fields.FIeldView;
 
 import javax.swing.*;
@@ -9,10 +10,11 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class PlayerView extends JLabel
+public class PlayerView implements IView
 {
     JavaMouseDeer ml;
     Player player;
+
 
     public void Update()
     {
@@ -24,18 +26,17 @@ public class PlayerView extends JLabel
 
     }
 
-    public PlayerView(Rectangle r, String ImageName,Player p)
+    public PlayerView(Player p)
     {
 
         player=p;
         ml= new JavaMouseDeer();
-        setBounds(r);
 
-        setBounds(r);
-        Image image = Toolkit.getDefaultToolkit().getImage("kepek/"+ImageName);
-        image = image.getScaledInstance(80,80,Image.SCALE_SMOOTH);
+        label.setBounds(250,250,60,120);
+        Image image = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
+        image = image.getScaledInstance(60,120,Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
-        this.setIcon(icon);
+        label.setIcon(icon);
     }
 
 
