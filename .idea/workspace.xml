@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="meg akarom ölni magam">
-      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
+    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="equipment view">
       <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FieldControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="zsuzsi4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,6 +40,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="289kjJ5dKdK8H4x0XIQfYzMXLFR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,6 +52,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tesztgecisfasz2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="graphics.Equipments" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="equipment" />
     </key>
@@ -104,6 +100,7 @@
       <workItem from="1651048077565" duration="81000" />
       <workItem from="1651437823314" duration="2104000" />
       <workItem from="1652361927075" duration="3568000" />
+      <workItem from="1652675170090" duration="2669000" />
     </task>
     <task id="LOCAL-00001" summary="valami">
       <created>1650656755725</created>
@@ -133,14 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650876950275</updated>
     </task>
-    <task id="LOCAL-00005" summary="meg akarom ölni magam">
-      <created>1652689401707</created>
+    <task id="LOCAL-00005" summary="equipment view">
+      <created>1652690256655</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1652689401707</updated>
+      <updated>1652690256655</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="equipment view">
+      <created>1652690637075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652690637075</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,15 +166,15 @@
     <MESSAGE value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
     <MESSAGE value="getcaston javitas" />
     <MESSAGE value="xd" />
-    <MESSAGE value="meg akarom ölni magam" />
-    <option name="LAST_COMMIT_MESSAGE" value="meg akarom ölni magam" />
+    <MESSAGE value="equipment view" />
+    <option name="LAST_COMMIT_MESSAGE" value="equipment view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>204</line>
+          <line>218</line>
           <properties class="character.Player">
             <option name="EMULATED" value="true" />
           </properties>
