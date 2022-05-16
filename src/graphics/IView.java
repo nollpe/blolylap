@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public interface IView {
 
-    public  JLabel getLabel();
+    public JLabel getLabel();
 
     public void Update();
 

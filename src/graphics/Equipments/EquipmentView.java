@@ -16,8 +16,7 @@ public class EquipmentView implements IView {
     Equipment equipment;
     JLabel label = new JLabel();
 
-    public  JLabel getLabel()
-    {
+    public JLabel getLabel() {
         return label;
     }
 

@@ -1,16 +1,11 @@
 package field;
 
 
-import equipment.*;
-import field.Field;
-import graphics.fields.LaboratoryView;
+import equipment.Axe;
+import equipment.Equipment;
 import graphics.fields.SafehouseView;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.LinkedList;
 
 
 public class Safehouse extends Field {
@@ -27,8 +22,8 @@ public class Safehouse extends Field {
         super();
         stored = null;
 
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new SafehouseView(r,"kepek/safehouse.png",this);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new SafehouseView(r, "kepek/safehouse.png", this);
 
     }
 

@@ -13,8 +13,7 @@ public class GeneticCodeView implements IView {
     GeneticCode owner;
     JLabel label = new JLabel();
 
-    public  JLabel getLabel()
-    {
+    public JLabel getLabel() {
         return label;
     }
 
