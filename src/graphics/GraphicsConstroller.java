@@ -52,7 +52,6 @@ public class GraphicsConstroller
 
     public void Update()
     {
-        System.out.println("gcupdate");
         frame.getContentPane().removeAll();
         panel=new JPanel(){@Override
         protected void paintComponent(Graphics g) {
@@ -67,7 +66,6 @@ public class GraphicsConstroller
 
         for(IView iv:views)
         {
-            System.out.println("for");
             panel.add(iv.getLabel());
 
         }
