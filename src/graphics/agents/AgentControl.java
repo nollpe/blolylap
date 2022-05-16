@@ -4,8 +4,7 @@ import agents.Agent;
 import character.Player;
 import graphics.IControl;
 
-public class AgentControll implements IControl
-{
+public class AgentControl implements IControl {
     Player ownerPlayer;
     Agent owner;
     AgentView view;

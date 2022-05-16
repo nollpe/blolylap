@@ -13,8 +13,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
-public class GraphicsConstroller
-{
+public class GraphicsConstroller {
     Set<IControl> controllers;
     Set<IView> views;
     Player turnOf=new Player();
@@ -29,38 +28,34 @@ public class GraphicsConstroller
 
     //region adderek removerek
 
-    public void addView(IView e)
-    {
+    public void addView(IView e) {
         views.add(e);
     }
 
-    public void addController(IControl c)
-    {
+    public void addController(IControl c) {
         controllers.add(c);
     }
 
-    public void removeView(IView e)
-    {
+    public void removeView(IView e) {
         views.remove(e);
     }
 
-    public void removeController(IControl c)
-    {
+    public void removeController(IControl c) {
         controllers.remove(c);
     }
 
     //endregion
 
-    public GraphicsConstroller()
-    {
-        controllers=new HashSet<IControl>();
-        views=new HashSet<IView>();
-        frame=new JFrame("viribirigeci");
+    public GraphicsConstroller() {
+        controllers = new HashSet<IControl>();
+        views = new HashSet<IView>();
+        frame = new JFrame("viribirigeci");
         //views=new endTurnButton();
     }
 
     JFrame frame;
     JPanel panel;
+
 
     public void Update()
     {
@@ -81,12 +76,14 @@ public class GraphicsConstroller
 
         }
         };
-        frame.getContentPane().removeAll();
+
+
         /*for(IView iv:views)
         {
             iv.Update();
         }*/
         panel.setLayout(null);
+
 
         LinkedList<JLabel> equimpemntLabels=new LinkedList<>();
         for(Equipment eq:turnOf.getStored())
@@ -102,31 +99,27 @@ public class GraphicsConstroller
 
         for(IView iv:views)
         {
+
             panel.add(iv.getLabel());
 
         }
 
-        frame.setSize(1000,600);
+        frame.setSize(1000, 600);
         frame.add(panel);
 
 
         frame.setVisible(true);
     }
 
-    public void Create()
-    {
+    public void Create() {
 
     }
 
     //ahogy elképzelem:
     //ezt hívja meg egy field ha rákattintanak
-    public void fieldClicked(Field f)
-    {
+    public void fieldClicked(Field f) {
         //igazából itt "kijelölté" válik a field
     }
-
-
-
 
 
 }

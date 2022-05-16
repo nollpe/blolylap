@@ -8,7 +8,7 @@ import game.*;
 import getCastOn.*;
 import getLootTakenFrom.GetLootTakenFrom;
 import getLootTakenFrom.LootTakenNormal;
-import graphics.player.PlayerControll;
+import graphics.player.PlayerControl;
 import graphics.player.PlayerView;
 import loot.*;
 import movement.*;
@@ -37,7 +37,7 @@ public class Player {
     private Field location;
     private String Name;
     public PlayerView view;
-    public PlayerControll control;
+    public PlayerControl control;
 
     //endregion
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -55,7 +55,7 @@ public class Player {
         game = Game.getInstance();
         location = game.spawnPlayer(this);
         view = new PlayerView(this);
-        control= new PlayerControll(this);
+        control = new PlayerControl(this);
     }
 
     public Player(String name) {
@@ -152,7 +152,7 @@ public class Player {
         return view;
     }
 
-    public PlayerControll getControl() {
+    public PlayerControl getControl() {
         return control;
     }
 

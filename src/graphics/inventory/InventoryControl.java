@@ -4,8 +4,7 @@ import character.Inventory;
 import character.Player;
 import graphics.IControl;
 
-public class InventoryControll implements IControl
-{
+public class InventoryControl implements IControl {
     Player ownerPlayer;
     InventoryView view;
     Inventory owner;
