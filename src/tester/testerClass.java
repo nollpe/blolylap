@@ -13,6 +13,7 @@ import game.Game;
 import game.Timer;
 import getCastOn.GetCastOnInvulnerable;
 import getLootTakenFrom.LootTakenStunned;
+import graphics.Equipments.BagControl;
 import graphics.GraphicsConstroller;
 
 import java.io.BufferedReader;

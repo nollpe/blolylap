@@ -17,7 +17,7 @@ import java.util.Set;
 public class GraphicsConstroller {
     Set<IControl> controllers;
     Set<IView> views;
-    Player turnOf=new Player();
+    Player turnOf = new Player();
 
     public Player getTurnOf() {
         return turnOf;
@@ -59,52 +59,49 @@ public class GraphicsConstroller {
     JPanel panel;
 
 
-    public void Update()
-    {
-        panel=new JPanel(){@Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
+    public void Update() {
+        panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
 
-            int sides=turnOf.getLocation().getNeighbours().size();
+                int sides = turnOf.getLocation().getNeighbours().size();
 
-            JLabel label=new JLabel();
-            label.setBounds(0,0,1000,600);
-            String s="kepek/playerx.png";
-            String nev = s.substring(0,12)+((char)(sides+48))+s.substring(13);
-            Image image = Toolkit.getDefaultToolkit().getImage(nev);
-            image = image.getScaledInstance(1000,600,Image.SCALE_SMOOTH);
-            ImageIcon icon = new ImageIcon(image);
-            label.setIcon(icon);
-            this.add(label);
+                JLabel label = new JLabel();
+                label.setBounds(0, 0, 1000, 600);
+                String s = "kepek/playerx.png";
+                String nev = s.substring(0, 12) + ((char) (sides + 48)) + s.substring(13);
+                Image image = Toolkit.getDefaultToolkit().getImage(nev);
+                image = image.getScaledInstance(1000, 600, Image.SCALE_SMOOTH);
+                ImageIcon icon = new ImageIcon(image);
+                label.setIcon(icon);
+                this.add(label);
 
-        }
+            }
         };
 
         panel.setLayout(null);
 
         //equipmentek
-        LinkedList<JLabel> equimpemntLabels=new LinkedList<>();
-        for(Equipment eq:turnOf.getStored())
-        {
+        LinkedList<JLabel> equimpemntLabels = new LinkedList<>();
+        for (Equipment eq : turnOf.getStored()) {
             //equimpemntLabels.add(eq.getView().getLabel());
         }
         //castolható shitek
-        LinkedList<JLabel> castableLabels=new LinkedList<>();
-        for(Agent a:turnOf.getCastableAgents())
-        {
+        LinkedList<JLabel> castableLabels = new LinkedList<>();
+        for (Agent a : turnOf.getCastableAgents()) {
             //CastableLabels.add(a.);//TODO
         }
         //szomszédok tm
-        LinkedList<Label> neighbours=new LinkedList<>();
-        for(Field f:turnOf.getLocation().getNeighbours())
-        {
+        LinkedList<Label> neighbours = new LinkedList<>();
+        for (Field f : turnOf.getLocation().getNeighbours()) {
             //neighbours.add(f.getView());
         }
 
         //inventory TODO
 
         //főzős
-        JLabel fozos=new JLabel();
+        JLabel fozos = new JLabel();
         //fozos.add(new MouseListener());
         // TODO kell mouslistener amire megjelenik egy combobox ami tartalmazza a csinálható ágenseket, ha rákattintasz megcsinálja
 

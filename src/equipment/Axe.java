@@ -9,8 +9,8 @@ public class Axe extends Equipment {
     private Player owner;
 
     public Axe() {
-        Rectangle r=new Rectangle(0,0,60,60);
-        view =new AxeView(r,"kepek/Axe.png",this);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new AxeView(r, "kepek/Axe.png", this);
     }
 
     /**

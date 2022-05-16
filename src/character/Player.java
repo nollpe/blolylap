@@ -160,8 +160,7 @@ public class Player {
         return Name;
     }
 
-    public LinkedList<GeneticCode> getGeneticCodes()
-    {
+    public LinkedList<GeneticCode> getGeneticCodes() {
         return knownGeneticCodes;
     }
 
