@@ -50,6 +50,7 @@ public class GraphicsConstroller {
         controllers = new HashSet<IControl>();
         views = new HashSet<IView>();
         frame = new JFrame("viribirigeci");
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //views=new endTurnButton();
     }
 
