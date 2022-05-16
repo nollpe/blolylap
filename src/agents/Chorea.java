@@ -21,6 +21,10 @@ public class Chorea extends Agent {
         super(p);
     }
 
+    public Chorea() {
+        super();
+    }
+
     public String toString() {
         return "Chorea";
     }

@@ -1,12 +1,17 @@
 package graphics.loot;
 
+import character.Player;
 import field.Field;
+import field.Warehouse;
+import game.Game;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class WarehouseLootView implements LootView {
-    private Field field;
+    private Warehouse field;
     private JLabel label = new JLabel();
 
     @Override
@@ -27,10 +32,20 @@ public class WarehouseLootView implements LootView {
     public WarehouseLootView(Rectangle r, String ImageName, Field f) {
 
         label.setBounds(r);
-        field = f;
+        field = (Warehouse) f;
         Image image = Toolkit.getDefaultToolkit().getImage("kepek/combined_resources.png");
         image = image.getScaledInstance(60, 60, Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
         label.setIcon(icon);
+        label.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                Player player = Game.getInstance().gc.getTurnOf();
+                player.takeAminoAcid(field.getAminoAcid());
+                player.takeNucleotide(field.getNucleotide());
+                Game.getInstance().inTurn = false;
+            }
+        });
     }
 }

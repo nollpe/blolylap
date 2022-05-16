@@ -23,6 +23,10 @@ public class Paralyzing extends Agent {
         super(p);
     }
 
+    public Paralyzing() {
+        super();
+    }
+
     public Paralyzing(Paralyzing p) {
         super(p);
     }

@@ -355,6 +355,7 @@ public class Game {
     public void startGame() {
         city.generateMap();
         Player player = new Player("rib");
+        player.addEquipment(new Bag());
         allPlayers.add(player);
         Player player2 = new Player("rib2");
         allPlayers.add(player2);

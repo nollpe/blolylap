@@ -17,6 +17,9 @@ public class Invulnerable extends Agent {
         super(p);
     }
 
+    public Invulnerable() {
+        super();
+    }
     public Invulnerable(Invulnerable i) {
         super(i);
     }

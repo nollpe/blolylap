@@ -22,9 +22,9 @@ public class InventoryView implements IView {
         label = new JLabel();
         label1 = new JLabel();
         label2 = new JLabel();
-        label.setBounds(20,450,80,20);
-        label1.setBounds(20,480,80,50);
-        label2.setBounds(20,500,80,80);
+        label.setBounds(20, 450, 80, 20);
+        label1.setBounds(20, 480, 80, 50);
+        label2.setBounds(20, 500, 80, 80);
         Update();
     }
 
