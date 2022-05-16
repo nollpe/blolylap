@@ -119,5 +119,5 @@ public class BagControl extends EquipmentControl {
         bagNucleotideLabel.setText(String.valueOf(bagInventory.getNucleotide()));
         playerAminoAcidLabel.setText(String.valueOf(playerInventory.getAminoAcid()));
         playerNucleotideLabel.setText(String.valueOf(playerInventory.getNucleotide()));
-
     }
+}
