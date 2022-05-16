@@ -6,6 +6,9 @@ import graphics.IView;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A védőfelszerelések megjeleniteseert felelos osztalyok ose.
+ */
 public class EquipmentView implements IView
 {
     EquipmentControll control;
@@ -16,7 +19,6 @@ public class EquipmentView implements IView
 
         label.setBounds(r);
         equipment=e;
-
         Image image = Toolkit.getDefaultToolkit().getImage(ImageName);
         image = image.getScaledInstance(80,80,Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
