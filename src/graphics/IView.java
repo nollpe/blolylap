@@ -7,7 +7,6 @@ import java.awt.event.MouseListener;
 public interface IView
 {
     public JLabel label = new JLabel();
-
     public default JLabel getLabel()
     {
         return label;
@@ -31,5 +30,6 @@ public interface IView
         @Override
         public void mouseReleased(MouseEvent e){}
     }
+
 
 }
