@@ -98,13 +98,18 @@ public class GraphicsConstroller {
 
         //szomszédok tm
         LinkedList<Field> neighbours = turnOf.getLocation().getNeighbours();
-        neighbours.add(turnOf.getLocation());
+        //neighbours.add(turnOf.getLocation());
         for (Field f : neighbours) {
             views.add(f.getView());
             f.getView().getLabel().setBounds(i * 60, i * 60, 60, 60);
             i++;
 
 
+        }
+
+        if (turnOf.getLocation().getLootView().getLabel() != null) {
+            views.add(turnOf.getLocation().getLootView());
+            turnOf.getLocation().getLootView().getLabel().setBounds(i * 60, i * 60, 60, 60);
         }
 
         //inventory TODO
