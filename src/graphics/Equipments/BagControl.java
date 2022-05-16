@@ -28,7 +28,7 @@ public class BagControl extends EquipmentControl {
     private JLabel playerNucleotideLabel = new JLabel();
 
     @Override
-    public void handleEvent() {
+    public void handleEvent(MouseEvent e) {
     }
 
     public BagControl(Bag bag, Inventory playerInventory) {
