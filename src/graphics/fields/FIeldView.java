@@ -21,7 +21,7 @@ public class FIeldView implements IView {
     }
 
     public FIeldView(Rectangle r, String ImageName, Field f) {
-        control = new FieldControl(this, field);
+        control = new FieldControl(this, f);
         label.setBounds(r);
         field = f;
 
