@@ -7,15 +7,25 @@ import graphics.IView;
 import javax.swing.*;
 import java.awt.*;
 
-
+/**
+ * Az inventory megjelnitessert felelos ostaly, kiirja hogy hany aminosav es nukleitod van a jatekosnal
+ */
 public class InventoryView implements IView {
     InventoryControl control;
-    JLabel label = new JLabel();
-    JLabel label1 = new JLabel();
-    JLabel label2 = new JLabel();
+    /**Az "anyagok" szoveg labele*/
+    JLabel label;
+    /**A kepek labele*/
+    JLabel label1;
+    /**Az ertekek labele*/
+    JLabel label2;
     JPanel panel;
     Player ownerPlayer;
 
+    /**
+     * Konstruktor, beallitja az inventoryhoz tartozo jatekost es a panelt amire kirakja a labeleket
+     * @param player jatekos
+     * @param p panel
+     */
     public InventoryView(Player player, JPanel p) {
         panel = p;
         ownerPlayer = player;
@@ -28,11 +38,17 @@ public class InventoryView implements IView {
         Update();
     }
 
-
+    /**
+     * Visszaadja az inventoryhoz tartozo labelt
+     * @return  a label
+     */
     public JLabel getLabel() {
         return label;
     }
 
+    /**
+     * Frissiti az anyagok kirajzolasat a kepernyot az aktualis adatok alapjan
+     */
     @Override
     public void Update() {
         Inventory inventory = ownerPlayer.getInventory();
