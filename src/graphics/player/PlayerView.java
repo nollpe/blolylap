@@ -33,5 +33,4 @@ public class PlayerView implements IView {
         label.setIcon(icon);
     }
 
-
 }
