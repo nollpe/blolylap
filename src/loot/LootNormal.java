@@ -2,7 +2,6 @@ package loot;
 
 import character.Player;
 import equipment.Equipment;
-import tester.testerClass;
 
 /**
  * Lootolás osztálya alapesetben, amikor nincsen lebénulva a játékos.
@@ -23,7 +22,7 @@ public class LootNormal implements Loot {
      */
     @Override
     public boolean lootEquipment(Player target, Equipment e) {
-        testerClass.print();
+
         if (target.getLootTakenFrom(e)) {
             owner.addEquipment(e);
             return true;

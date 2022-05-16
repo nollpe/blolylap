@@ -3,7 +3,6 @@ package agents;
 import character.Player;
 import getCastOn.GetCastOnInvulnerable;
 import getCastOn.GetCastOnNormal;
-import tester.testerClass;
 
 /**
  * A sebezhetetetlenséget okozó ágens osztálya
@@ -16,7 +15,6 @@ public class Invulnerable extends Agent {
      */
     public Invulnerable(Player p) {
         super(p);
-        testerClass.print();
     }
 
     public Invulnerable(Invulnerable i) {

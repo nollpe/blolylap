@@ -1,9 +1,7 @@
 package getLootTakenFrom;
 
-import character.Inventory;
 import character.Player;
 import equipment.Equipment;
-import tester.testerClass;
 
 /**
  * A lootolás elszenvedésének osztálya lebénult esetben. Ilyenkor lehet a karaktertől loootlni.
@@ -31,7 +29,7 @@ public class LootTakenStunned implements GetLootTakenFrom {
      */
     @Override
     public boolean getEquipmentTakenFrom(Equipment e) {
-        testerClass.print();
+
         return owner.removeLoot(e);
     }
 

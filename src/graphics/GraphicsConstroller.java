@@ -6,12 +6,9 @@ import character.Player;
 import equipment.Equipment;
 import equipment.Gloves;
 import field.Field;
-import graphics.GeneticCode.GeneticCodeView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -19,7 +16,7 @@ import java.util.Set;
 public class GraphicsConstroller {
     Set<IControl> controllers;
     Set<IView> views;
-    Player turnOf=new Player();
+    Player turnOf = new Player();
 
     public Player getTurnOf() {
         return turnOf;
@@ -61,13 +58,14 @@ public class GraphicsConstroller {
     JPanel panel;
 
 
-    public void Update()
-    {
-        panel=new JPanel(){@Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
+    public void Update() {
+        panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
 
         }
+
         };
 
         turnOf.addEquipment(new Gloves());
@@ -90,6 +88,7 @@ public class GraphicsConstroller {
         int i=1;
 
         //equipmentek
+
         for(Equipment eq:turnOf.getStored())
         {
             //views.add(eq.getView());
@@ -103,12 +102,13 @@ public class GraphicsConstroller {
         {
             //views.add( f.getView());
             f.getView().getLabel().setBounds(i*60,i*60,60,60);i++;
+
         }
 
         //inventory TODO
 
         //főzős
-        JLabel fozos=new JLabel();
+        JLabel fozos = new JLabel();
         //fozos.add(new MouseListener());
         // TODO kell mouslistener amire megjelenik egy combobox ami tartalmazza a csinálható ágenseket, ha rákattintasz megcsinálja
 

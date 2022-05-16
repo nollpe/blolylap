@@ -1,12 +1,8 @@
 package equipment;
 
 import character.Inventory;
-
 import character.Player;
-import equipment.Equipment;
-import getCastOn.GetCastOnNormal;
 import graphics.Equipments.BagView;
-import tester.testerClass;
 
 import java.awt.*;
 
@@ -40,8 +36,8 @@ public class Bag extends Equipment {
 
     public Bag() {
         inventory = new Inventory(5);
-        Rectangle r=new Rectangle(0,0,60,60);
-        view=new BagView(r,"kepek/Bag.png",this);
+        Rectangle r = new Rectangle(0, 0, 60, 60);
+        view = new BagView(r, "kepek/Bag.png", this);
     }
 
     /**

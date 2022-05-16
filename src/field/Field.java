@@ -2,10 +2,11 @@ package field;
 
 import agents.GeneticCode;
 import character.Player;
+
 import graphics.IView;
 import graphics.fields.FIeldView;
 import tester.testerClass;
-import equipment.Equipment;
+
 
 import java.awt.*;
 import java.util.LinkedHashSet;
@@ -20,7 +21,6 @@ public class Field {
 
 
     public Field() {
-        testerClass.print();
         this.neighbours = new LinkedList<>();
         this.inhabitants = new LinkedHashSet<Player>();
         Rectangle r=new Rectangle(0,0,60,60);
@@ -69,34 +69,27 @@ public class Field {
     }
 
     public void enter(Player c) {
-        testerClass.print();
         inhabitants.add(c);
         c.setLocation(this);
     }
 
     public void leave(Player c) {
-        testerClass.print();
         inhabitants.remove(c);
     }
 
     public void showLoot() {
-        testerClass.print();
+
     }
 
     public void tick() {
-        testerClass.print();
         //ne hívja meg a játékosokét mart jobb ha a game csinálja azt mert akkor a tick a játékos köre
         /*for (Player character : inhabitants) {
             character.tick();
         }*/
     }
 
-    public void takeLoot() {
-        testerClass.print();
-    }
 
     public LinkedHashSet<Player> getInhabitants() {
-        testerClass.print();
         return inhabitants;
     }
 

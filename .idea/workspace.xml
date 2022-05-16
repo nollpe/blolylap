@@ -1,56 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
+
   <component name="ChangeListManager">
-    <list default="true" id="1fe551dd-223d-4864-b001-7e253bdf219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f9894abf-b08f-4b2f-828a-2573665b27fb" name="Changes" comment="idk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Axe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Axe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Equipment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Gloves.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/equipment/Labcoat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Laboratory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Laboratory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Safehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Safehouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/field/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/field/Warehouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/AxeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/AxeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BagView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BrokenAxeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/BrokenAxeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/EquipmentView$JavaMouseDeer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/EquipmentView$JavaMouseDeer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/EquipmentView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/EquipmentView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/LabcoatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/Equipments/LabcoatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/fields/LaboratoryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/fields/LaboratoryView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/GeneticCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cast/CastImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cast/CastImpared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cast/CastNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cast/CastNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Bag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Equipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Gloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Gloves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/equipment/Labcoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/equipment/Labcoat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnGloves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnInvulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCastOn/GetCastOnResistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/getLootTakenFrom/LootTakenStunned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/LootImpared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootImpared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loot/LootNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loot/LootNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movement/MovementChorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementChorea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movement/MovementNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movement/MovementParalyzed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tester/testerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester/Program.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -63,10 +58,12 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="zsuzsi4" />
+
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -104,6 +101,7 @@
   <component name="RunManager">
     <configuration name="testerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tester.testerClass" />
+
       <module name="blolylap" />
       <extension name="coverage">
         <pattern>
@@ -117,6 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
+
         <item itemvalue="Application.testerClass" />
         <item itemvalue="Application.testerClass" />
         <item itemvalue="Application.testerClass" />
@@ -256,6 +255,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -266,40 +266,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="valami" />
-    <MESSAGE value="nucleotide nukleotide egyesítése (most már mindenhol nucleotide van), változtatások a playerben" />
-    <MESSAGE value="getcaston javitas" />
-    <MESSAGE value="xd" />
-    <MESSAGE value="equipment view" />
-    <MESSAGE value="axe view" />
-    <MESSAGE value="broken axe view" />
-    <MESSAGE value="gloves view" />
-    <MESSAGE value="labcoat view" />
-    <MESSAGE value="bag view" />
-    <MESSAGE value="kommentek" />
-    <MESSAGE value="kepek" />
-    <option name="LAST_COMMIT_MESSAGE" value="kepek" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>224</line>
-          <properties class="character.Player">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/character/Player.java</url>
-          <line>418</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="bagcontrol jó" />
+    <MESSAGE value="idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk" />
   </component>
 </project>

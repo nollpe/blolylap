@@ -1,20 +1,26 @@
 package character;
 
-import agents.*;
-import cast.*;
-import equipment.*;
-import field.*;
-import game.*;
-import getCastOn.*;
+import agents.Agent;
+import agents.GeneticCode;
+import cast.Cast;
+import cast.CastNormal;
+import equipment.BrokenAxe;
+import equipment.Equipment;
+import field.Field;
+import field.Safehouse;
+import field.Warehouse;
+import game.Game;
+import getCastOn.GetCastOn;
+import getCastOn.GetCastOnNormal;
 import getLootTakenFrom.GetLootTakenFrom;
 import getLootTakenFrom.LootTakenNormal;
 import graphics.IView;
 import graphics.player.PlayerControl;
 import graphics.player.PlayerView;
-import loot.*;
-import movement.*;
-import tester.testerClass;
-
+import loot.Loot;
+import loot.LootNormal;
+import movement.Movement;
+import movement.MovementNormal;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -72,52 +78,46 @@ public class Player {
     //region strategy pattern setter getter
 
     public Loot getLoot() {
-        testerClass.print();
         return loot;
     }
 
     public GetLootTakenFrom getGetLootTakenFrom() {
-        testerClass.print();
         return getLootTakenFrom;
     }
 
     public GetCastOn getGetCastOn() {
-        testerClass.print();
         return getCastOn;
     }
 
     public Cast getCast() {
-        testerClass.print();
         return cast;
     }
 
     public Movement getMovement() {
-        testerClass.print();
         return movement;
     }
 
     public void setGetLootTakenFrom(GetLootTakenFrom g) {
-        testerClass.print();
         getLootTakenFrom = g;
     }
 
     public void setGetCastOn(GetCastOn g) {
-        testerClass.print();
+
         getCastOn = g;
     }
 
     public void setLoot(Loot l) {
-        testerClass.print();
+
         loot = l;
     }
 
     public void setMovement(Movement m) {
-        testerClass.print();
+
         movement = m;
     }
 
     public void setCast(Cast c) {
-        testerClass.print();
+
         cast = c;
     }
     //endregion
@@ -142,7 +142,7 @@ public class Player {
      * @param c Aki keni
      */
     public void getCastOn(Agent a, Player c) {
-        testerClass.print();
+
         getCastOn.getCastOn(a, c);
     }
     //endregion
@@ -161,8 +161,7 @@ public class Player {
         return Name;
     }
 
-    public LinkedList<GeneticCode> getGeneticCodes()
-    {
+    public LinkedList<GeneticCode> getGeneticCodes() {
         return knownGeneticCodes;
     }
 
@@ -426,7 +425,7 @@ public class Player {
      * @return Az elvétel sikeressége.
      */
     public boolean getLootTakenFrom(Equipment e) {
-        testerClass.print();
+
         return getLootTakenFrom.getEquipmentTakenFrom(e);
     }
 
@@ -472,7 +471,7 @@ public class Player {
     public boolean removeLoot(Equipment e) {
 
         equipments.remove(e);
-        testerClass.print();
+
         return true;
 
     }
@@ -590,7 +589,7 @@ public class Player {
      * @return A mező
      */
     public Field getLocation() {
-        testerClass.print();
+
         return location;
     }
 
@@ -600,7 +599,7 @@ public class Player {
      * @param f A mező
      */
     public void setLocation(Field f) {
-        testerClass.print();
+
         location = f;
     }
 

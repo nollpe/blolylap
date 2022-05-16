@@ -1,7 +1,5 @@
 package character;
 
-import tester.testerClass;
-
 public class Inventory {
     private int aminoAcid;
     private int nucleotide;
@@ -11,7 +9,6 @@ public class Inventory {
      * @param max a maximum tárolási kapacitás, összesen ennyi alapanyag fér bele
      */
     public Inventory(int max) {
-        testerClass.print();
         aminoAcid = 0;
         nucleotide = 0;
         maxResource = max;
@@ -22,7 +19,6 @@ public class Inventory {
      * @return ennyi nukleotidot sikerült belerakni
      */
     public int addNucleotide(int added) {
-        testerClass.print();
         if (aminoAcid + nucleotide + added <= maxResource) {
             nucleotide += added;
             return added;
@@ -38,7 +34,6 @@ public class Inventory {
      * @return ennyi aminosavat sikerült belerakni
      */
     public int addAminoAcid(int added) {
-        testerClass.print();
         if (aminoAcid + nucleotide + added <= maxResource) {
             aminoAcid += added;
             return added;
@@ -54,7 +49,6 @@ public class Inventory {
      * @return ennyi aminosavat sikerült kivenni
      */
     public int takeAminoAcid(int take) {
-        testerClass.print();
         if (take <= aminoAcid) {
             aminoAcid -= take;
             return take;
@@ -70,7 +64,6 @@ public class Inventory {
      * @return ennyi nukleotidot sikerült kivenni
      */
     public int takeNucleotide(int take) {
-        testerClass.print();
         if (take <= nucleotide) {
             nucleotide -= take;
             return take;

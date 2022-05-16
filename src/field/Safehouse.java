@@ -1,5 +1,6 @@
 package field;
 
+
 import equipment.*;
 import field.Field;
 import graphics.fields.LaboratoryView;
@@ -10,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
+
 
 public class Safehouse extends Field {
     /**
@@ -24,9 +26,11 @@ public class Safehouse extends Field {
     public Safehouse() {
         super();
         stored = null;
+
         Rectangle r=new Rectangle(0,0,60,60);
         view=new LaboratoryView(r,"kepek/safehouse.png",this);
         testerClass.print();
+
     }
 
     public Safehouse(String n) {
@@ -38,7 +42,7 @@ public class Safehouse extends Field {
      * Megmutatja a tartalmazott lootot
      */
     public void showLoot() {
-        testerClass.print();
+
         System.out.println(stored.toString());
     }
 
@@ -46,7 +50,7 @@ public class Safehouse extends Field {
      * Időben lépteti a safehouset
      */
     public void tick() {
-        testerClass.print();
+
         super.tick();
 
         if (stored == null) {
@@ -89,7 +93,7 @@ public class Safehouse extends Field {
      * Elvesz valamilyen lootot a safehouseból
      */
     public void takeLoot() {
-        testerClass.print();
+
     }
 
     /**
@@ -98,7 +102,7 @@ public class Safehouse extends Field {
      * @param e elvevendő védőfelszerelés
      */
     public void takeEquipment(Equipment e) {
-        testerClass.print();
+
         stored = null;
     }
 

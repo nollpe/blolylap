@@ -1,14 +1,10 @@
 package graphics.player;
 
 import character.Player;
-import field.Field;
 import graphics.IView;
-import graphics.fields.FIeldView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class PlayerView implements IView {
     Player player;
