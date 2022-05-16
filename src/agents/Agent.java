@@ -1,6 +1,7 @@
 package agents;
 
 import character.Player;
+import graphics.agents.AgentView;
 
 /**
  * Agens amit a jatekosok egymasra kenhetnek
@@ -9,6 +10,7 @@ public class Agent {
     protected Player player;
     protected boolean active;
     protected int timeToLive;
+    AgentView view;
 
     /**
      * Agens konstruktora, beállítja a kapott játékost a payer változóban és alaphelyzetbe állítja a timeLeft számlálót.
