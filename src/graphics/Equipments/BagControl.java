@@ -4,6 +4,8 @@ import character.Inventory;
 import equipment.Bag;
 
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class BagControl extends EquipmentControl {
 
@@ -47,15 +49,76 @@ public class BagControl extends EquipmentControl {
 
         Update();
 
+        nucleotideIncrease.addMouseListener(new MouseAdapter() {
+            /**
+             * {@inheritDoc}
+             *
+             * @param e
+             */
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                int taken = playerInventory.takeNucleotide(1);
+                bagInventory.addNucleotide(taken);
+                Update();
+            }
+        });
+        aminoIncrease.addMouseListener(new MouseAdapter() {
+            /**
+             * {@inheritDoc}
+             *
+             * @param e
+             */
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                int taken = playerInventory.takeAminoAcid(1);
+                bagInventory.addAminoAcid(taken);
+                Update();
+            }
+        });
+        nucleotideDecrease.addMouseListener(new MouseAdapter() {
+            /**
+             * {@inheritDoc}
+             *
+             * @param e
+             */
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                int taken = bagInventory.takeNucleotide(1);
+                playerInventory.addNucleotide(taken);
+                Update();
+            }
+        });
+        aminoDecrease.addMouseListener(new MouseAdapter() {
+            /**
+             * {@inheritDoc}
+             *
+             * @param e
+             */
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                int taken = bagInventory.takeAminoAcid(1);
+                playerInventory.addAminoAcid(taken);
+                Update();
+            }
+        });
+
+        bagNucleotide.add(bagNucleotideLabel);
+        playerNucleotide.add(playerNucleotideLabel);
+        bagAminoAcid.add(bagAminoAcidLabel);
+        playerAminoAcid.add(playerAminoAcidLabel);
+
         frame.setVisible(true);
     }
 
     public void Update() {
-
         bagAminoAcidLabel.setText(String.valueOf(bagInventory.getAminoAcid()));
         bagNucleotideLabel.setText(String.valueOf(bagInventory.getNucleotide()));
         playerAminoAcidLabel.setText(String.valueOf(playerInventory.getAminoAcid()));
         playerNucleotideLabel.setText(String.valueOf(playerInventory.getNucleotide()));
-    }
 
+    }
 }
