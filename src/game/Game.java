@@ -283,11 +283,9 @@ public class Game {
 
         for (Player allPlayer : allPlayers) {
             //TODO szóval a player dolgait kirajzolni és kattintgathatóvá tenni
-            gc.addView(allPlayer.getView());
             gc.Update();
             gc.setTurnOf(allPlayer);
             allPlayer.tick();
-            gc.removeView(allPlayer.getView());
         }
         city.tick();
     }
