@@ -85,8 +85,9 @@ public class GraphicsConstroller {
 
         //játékosok a mezőn
         int n = 0;
-        int x1 = 470-turnOf.getLocation().getInhabitants().size()*60/2;
+        int x1 = 500-turnOf.getLocation().getInhabitants().size()*60/2;
         for(Player player : getTurnOf().getLocation().getInhabitants()) {
+            player.getView().getLabel().setBounds(x1+n*60,240,60,120);
             n++;
         }
       
