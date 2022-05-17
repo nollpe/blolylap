@@ -52,22 +52,22 @@ public class BagControl extends EquipmentControl {
         ImageIcon bagNucleotideIcon = new ImageIcon(bagNucleotideImage);
         bagNucleotide.setIcon(bagNucleotideIcon);
 
-        Image aminoIncreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
+        Image aminoIncreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player0.png");
         aminoIncreaseImage = aminoIncreaseImage.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
         ImageIcon aminoIncreaseIcon = new ImageIcon(aminoIncreaseImage);
         aminoIncrease.setIcon(aminoIncreaseIcon);
 
-        Image nucleotideIncreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
+        Image nucleotideIncreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player0.png");
         nucleotideIncreaseImage = nucleotideIncreaseImage.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
         ImageIcon nucleotideIncreaseIcon = new ImageIcon(nucleotideIncreaseImage);
         nucleotideIncrease.setIcon(nucleotideIncreaseIcon);
 
-        Image aminoDecreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
+        Image aminoDecreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player0.png");
         aminoDecreaseImage = aminoDecreaseImage.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
         ImageIcon aminoDecreaseIcon = new ImageIcon(aminoDecreaseImage);
         aminoDecrease.setIcon(aminoDecreaseIcon);
 
-        Image nucleotideDecreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
+        Image nucleotideDecreaseImage = Toolkit.getDefaultToolkit().getImage("kepek/player0.png");
         nucleotideDecreaseImage = nucleotideDecreaseImage.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
         ImageIcon nucleotideDecreaseIcon = new ImageIcon(nucleotideDecreaseImage);
         nucleotideDecrease.setIcon(nucleotideDecreaseIcon);
