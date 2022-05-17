@@ -10,9 +10,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+/**
+ * A laboratorium lootjainak megjeleniteseert felelos osztaly.
+ */
 public class LaboratoryLootView implements LootView {
+    /**
+     * A mezo amihez a megjelenites tartozik
+     */
     private Field field;
+    /**
+     * A label amire a loot kepe kerul
+     */
     private JLabel label = new JLabel();
 
     @Override
@@ -35,6 +43,13 @@ public class LaboratoryLootView implements LootView {
         return "kepek/agent.png";
     }
 
+
+    /**
+     * Megjeleniti a laboratioimbol szerehezo dolgokat
+     * @param r A megjelenites helye es meretete
+     * @param ImageName -
+     * @param f A mezo amihez a megjelenites tartozik
+     */
     public LaboratoryLootView(Rectangle r, String ImageName, Field f) {
 
         label.setBounds(r);

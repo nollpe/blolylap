@@ -1,12 +1,12 @@
 package field;
 
 
-import equipment.Axe;
-import equipment.Equipment;
+import equipment.*;
 import graphics.fields.SafehouseView;
 import graphics.loot.SafehouseLootView;
 
 import java.awt.*;
+import java.util.Random;
 
 
 public class Safehouse extends Field {
@@ -40,7 +40,7 @@ public class Safehouse extends Field {
 
         System.out.println(stored.toString());
     }
-
+    Random rand=new Random();
     /**
      * Időben lépteti a safehouset
      */
@@ -49,38 +49,26 @@ public class Safehouse extends Field {
         super.tick();
 
         if (stored == null) {
-            int gen = (int) Math.random() * 4;
+            System.out.println("generál valahova");
+            int gen = rand.nextInt(4);
             switch (gen) {
                 case (0):
                     stored = new Axe();
                     break;
-            }
-
-
-
-            /*System.out.println("Mit generáljon a safehouse?\n1:kesztyű\n2:köpeny\n3:tatyó\n0:semmit");
-            int chosen = 0;
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            try {
-                chosen = Integer.parseInt(br.readLine());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            switch (chosen) {
-                case (1):
-                    stored = new Gloves();
+                case(1):
+                    stored=new Labcoat();
                     break;
-                case (2):
-                    stored = new Gloves();
+                case(2):
+                    stored=new Gloves();
                     break;
-                case (3):
-                    stored = new Bag();
-                    break;
-                case (0):
+                case(3):
+                    stored=new Bag();
                     break;
                 default:
-                    System.out.println("ez nem jött be bruhtyókám");
-            }*/
+                    break;
+            }
+            System.out.println(stored.toString());
+
         }
     }
 

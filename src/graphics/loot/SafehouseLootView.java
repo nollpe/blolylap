@@ -9,9 +9,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+/**
+ * Az ovohely lootjainak megjeleniteseert felelos osztaly.
+ */
 public class SafehouseLootView implements LootView {
+    /**
+     * A mezo amihez a megjelenites tartozik
+     */
     private Safehouse field;
+    /**
+     * A label amire a loot kepe kerul
+     */
     private JLabel label = new JLabel();
 
     @Override
@@ -28,7 +36,12 @@ public class SafehouseLootView implements LootView {
     public void Event() {
 
     }
-
+    /**
+     * Az ovohelyrol szerezheto dolgok megjeleniteset vegzi
+     * @param r  A megjelenites helye es meretete
+     * @param ImageName -
+     * @param f A mezo amihez a megjelenites tartozik
+     */
     public SafehouseLootView(Rectangle r, String ImageName, Field f) {
 
         label.setBounds(r);
