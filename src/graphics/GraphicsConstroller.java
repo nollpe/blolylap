@@ -1,10 +1,7 @@
 package graphics;
 
-import agents.Chorea;
 import character.Player;
 import equipment.Equipment;
-import equipment.Gloves;
-import equipment.Labcoat;
 import field.Field;
 import game.Game;
 import graphics.GeneticCode.GeneticCodeView;
@@ -93,7 +90,7 @@ public class GraphicsConstroller {
         for (Equipment eq : turnOf.getStored()) {
 
             views.add(eq.getView());
-            eq.getView().getLabel().setBounds(20, 40+80*i, 60, 60);
+            eq.getView().getLabel().setBounds(20, 40 + 80 * i, 60, 60);
 
             i++;
 
@@ -102,32 +99,30 @@ public class GraphicsConstroller {
 
         //szomszédok tm
 
-        LinkedList<Field> neighbours=turnOf.getLocation().getNeighbours();
-        i=0;
+        LinkedList<Field> neighbours = turnOf.getLocation().getNeighbours();
+        i = 0;
         double theta = 2 * Math.PI / sides;
 
-        for(Field f:neighbours)
-        {
-            double x = Math.cos(theta * i-Math.PI/(sides*sides));
-            double y = Math.sin(theta * i-Math.PI/(sides*sides));
-            views.add( f.getView());
-            f.getView().getLabel().setBounds(500+(int)(250*x),300+(int)(200*y),60,60);i++;
+        for (Field f : neighbours) {
+            double x = Math.cos(theta * i - Math.PI / (sides * sides));
+            double y = Math.sin(theta * i - Math.PI / (sides * sides));
+            views.add(f.getView());
+            f.getView().getLabel().setBounds(500 + (int) (250 * x), 300 + (int) (200 * y), 60, 60);
+            i++;
 
         }
 
         //főzősmcs
-        GeneticCodeView makeAgent=new GeneticCodeView(turnOf);
+        GeneticCodeView makeAgent = new GeneticCodeView(turnOf);
         panel.add(makeAgent.getLabel());
-            //fozosmcs hez combobox
-            panel.add(makeAgent.getCombobox());
+        //fozosmcs hez combobox
+        panel.add(makeAgent.getCombobox());
 
         //lootview
-        if(turnOf.getLocation().getLootView()!=null)
-        {
-            JLabel tempforlootview=turnOf.getLocation().getLootView().getLabel();
-            if(tempforlootview!=null)
-            {
-                tempforlootview.setBounds(460,360,60,60);
+        if (turnOf.getLocation().getLootView() != null) {
+            JLabel tempforlootview = turnOf.getLocation().getLootView().getLabel();
+            if (tempforlootview != null) {
+                tempforlootview.setBounds(460, 360, 60, 60);
                 panel.add(tempforlootview);
             }
         }
