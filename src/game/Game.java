@@ -6,6 +6,10 @@ import equipment.*;
 import field.*;
 import graphics.GraphicsConstroller;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -354,14 +358,74 @@ public class Game {
         return allPlayers;
     }
 
+    /**
+     *
+     *
+     * @return amennyi playert akarunk
+     */
+    public int Menu()
+    {
+        final int[] revalue = {0};
+        JFrame manuframe=new JFrame();
+        JComboBox combobox;
+        String geneticCodesString[] = new String[5];
+        for (int i = 0; i < 5; i++) {
+            geneticCodesString[i] = String.valueOf(i+1);
+
+        }
+        combobox = new JComboBox(geneticCodesString);
+        JButton okbutton=new JButton();
+        okbutton.setText("ok");
+        okbutton.setEnabled(true);
+        okbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                revalue[0] = Integer.parseInt(String.valueOf(combobox.getSelectedItem()));
+            }
+        });
+
+        Image image = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
+        image = image.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
+        ImageIcon icon2 = new ImageIcon(image);
+        okbutton.setIcon(icon2);
+        manuframe.setSize(240,100);
+        combobox.setBounds(20,20,80,20);
+        okbutton.setBounds(120,20,60,20);
+        JPanel panel=new JPanel();
+        panel.setLayout(null);
+        panel.add(combobox);
+        panel.add(okbutton);
+        manuframe.add(panel);
+        manuframe.setVisible(true);
+        while(revalue[0]==0)
+        {
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        manuframe.dispose();
+
+        return revalue[0];
+    }
 
     public void startGame() {
+        int players=Menu();
         city.generateMap();
-        Player player = new Player("player1");
+
+        for(int i=0;i<players;i++)
+        {
+            Player tempPlayer=new Player("player"+(i+1));
+            allPlayers.add(tempPlayer);
+        }
+
+        /*Player player = new Player("rib");
         player.addEquipment(new Bag());
         allPlayers.add(player);
-        Player player2 = new Player("player2");
-        allPlayers.add(player2);
+        Player player2 = new Player("rib2");
+        allPlayers.add(player2);*/
+
         gc = new GraphicsConstroller();
         this.Tick();
     }
