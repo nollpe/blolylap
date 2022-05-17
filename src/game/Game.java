@@ -384,10 +384,7 @@ public class Game {
             }
         });
 
-        Image image = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
-        image = image.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
-        ImageIcon icon2 = new ImageIcon(image);
-        okbutton.setIcon(icon2);
+
         manuframe.setSize(240,100);
         combobox.setBounds(20,20,80,20);
         okbutton.setBounds(120,20,60,20);
