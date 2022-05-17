@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="geneticcodeview kommentek">
+    <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="equipmentview kommentek">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/EquipmentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/WarehouseView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <updated>1652738155080</updated>
       <workItem from="1652738156504" duration="621000" />
       <workItem from="1652772591808" duration="2896000" />
-      <workItem from="1652784035642" duration="1639000" />
+      <workItem from="1652784035642" duration="2353000" />
     </task>
     <task id="LOCAL-00001" summary="field view kommentek">
       <created>1652784255665</created>
@@ -77,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652784255665</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="equipmentview kommentek">
+      <created>1652785787728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652785787728</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,17 +105,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="field view kommentek" />
     <MESSAGE value="geneticcodeview kommentek" />
-    <option name="LAST_COMMIT_MESSAGE" value="geneticcodeview kommentek" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/graphics/fields/FieldControl.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="equipmentview kommentek" />
+    <option name="LAST_COMMIT_MESSAGE" value="equipmentview kommentek" />
   </component>
 </project>

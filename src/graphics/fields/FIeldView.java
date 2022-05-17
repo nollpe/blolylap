@@ -10,16 +10,29 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * A mezok view osztalyanak kozos ose
+ */
+
 public class FIeldView implements IView {
     protected Field field;
     protected FieldControl control;
     protected GraphicsConstroller graphicsController;
     protected JLabel label = new JLabel();
-
+    /**
+     * Visszaadja a hozza tartozo labelt
+     * @return
+     */
     public JLabel getLabel() {
         return label;
     }
 
+    /**
+     * Konstuktor, kirajzolja a mezot
+     * @param r A megjelenites helye es meretete
+     * @param ImageName A kep ami az ikonhoz tartozik
+     * @param f a  field
+     */
     public FIeldView(Rectangle r, String ImageName, Field f) {
         control = new FieldControl(this, f);
         label.setBounds(r);
@@ -39,12 +52,16 @@ public class FIeldView implements IView {
 
     }
 
-
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     @Override
     public void Update() {
 
     }
-
+    /**
+     * Esemenykezelo, tovabblepteti a soron kovetkezo jatekost
+     */
     @Override
     public void Event() {
 
