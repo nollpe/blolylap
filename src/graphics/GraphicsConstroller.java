@@ -14,8 +14,10 @@ import graphics.inventory.InventoryView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -188,6 +190,8 @@ public class GraphicsConstroller {
 
         frame.setVisible(true);
     }
+
+
 
     public void Create() {
 

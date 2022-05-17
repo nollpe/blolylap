@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
     <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="pápópé">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Bear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Bear.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Chorea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Chorea.class" afterDir="false" />
@@ -118,6 +118,7 @@
       <change beforePath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
 
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,11 +144,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+
   <component name="RunManager">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tester.Program" />
@@ -165,6 +168,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Program" />
+        <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
   </component>
@@ -181,24 +185,32 @@
     </task>
     <servers />
   </component>
+
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
 
 
+
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-
           <url>file://$PROJECT_DIR$/src/graphics/fields/FieldControl.java</url>
           <line>17</line>
           <option name="timeStamp" value="13" />
-
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
