@@ -1,12 +1,11 @@
 package field;
 
-import agents.Agent;
-import agents.Forget;
-import agents.GeneticCode;
+import agents.*;
 import character.Player;
 import equipment.BrokenAxe;
 import equipment.Gloves;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -35,8 +34,8 @@ public class City {
      * @param f2 a másik mező
      */
     public void makeNeighbours(Field f1, Field f2) {
-        if (f1 == null || f2 == null) {
-            System.out.println("null valamelyik");
+        if (f1 == null || f2 == null || f1.getNeighbours().size()>=6 || f2.getNeighbours().size()>=6) {
+
             return;
         }
         f1.addNeighbour(f2);
@@ -70,34 +69,58 @@ public class City {
      * szóval majd lesz egy ilyen amikor kell
      * random pályát fog csinálni
      */
-    public void generateMap() {
+    public void generateMap(int players) {
 
         map = new LinkedList<>();
 
-        //létrehozzuk a fieldeket
-        Field basicField = new Field();
-        Laboratory laboratory = new Laboratory();
-        laboratory.init(new GeneticCode(new Forget(), 2, 2));
-        Safehouse safehouse = new Safehouse();
-        safehouse.setStored(new Gloves());
-        Warehouse warehouse = new Warehouse();
-        warehouse.addNucleotide(5);
-        warehouse.addAminoAcid(5);
-        //belerakjuk a mappba
-        map.add(basicField);
-        map.add(laboratory);
-        map.add(safehouse);
-        map.add(warehouse);
+        //a 4 fajta lab ami kel (+majd bearlab de hát igen)
+        Laboratory forgetlab = new Laboratory();
+        forgetlab.init(new GeneticCode(new Forget(), 2, 2));
 
-        //szomszédok lettek
-        makeNeighbours(basicField, laboratory);
-        makeNeighbours(basicField, safehouse);
-        makeNeighbours(basicField, warehouse);
+        Laboratory chorealab=new Laboratory();
+        chorealab.init(new GeneticCode(new Chorea(), 2, 2));
 
-        makeNeighbours(laboratory, warehouse);
-        makeNeighbours(safehouse, warehouse);
+        Laboratory involab=new Laboratory();
+        involab.init(new GeneticCode(new Invulnerable(), 2, 2));
 
-        makeNeighbours(safehouse, laboratory);
+        Laboratory paralab=new Laboratory();
+        paralab.init(new GeneticCode(new Paralyzing(), 2, 2));
+
+        map.add(forgetlab);
+        map.add(chorealab);
+        map.add(involab);
+        map.add(paralab);
+
+        //a többiböl playerek száma szerint
+        //fieldből
+        for(int i=0;i<players*2;i++)
+        {
+            map.add(new Field());
+        }
+        //Safehouse és warehouse
+        for(int i=0;i<players/2+2;i++)
+        {
+            map.add(new Safehouse());
+            map.add(new Warehouse());
+        }
+        for(int j=0;j<2;j++)
+        {
+            //összekeverjük
+            Collections.shuffle(map);
+
+            //minenkinek legyen legalább egy szomszédja
+            //ezért az utánna és előtte lévővel szomszédosak lesznek, ami ugye random mert összekevert
+            makeNeighbours(map.getFirst(),map.getLast());
+            for(int i=0;i<map.size()-1;i++)
+            {
+                makeNeighbours(map.get(i),map.get(i+1));
+            }
+        }
+        Random rand=new Random();
+        for(int i=0;i<players;i++)
+        {
+            makeNeighbours(map.get(rand.nextInt(map.size())),map.get(rand.nextInt(map.size())));
+        }
 
     }
 

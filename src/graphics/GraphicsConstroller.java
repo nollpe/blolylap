@@ -131,13 +131,34 @@ public class GraphicsConstroller {
 
         double theta = 2 * Math.PI / sides;
 
-        for (Field f : neighbours) {
-            double x = Math.cos(theta * i - Math.PI / (sides * sides));
-            double y = Math.sin(theta * i - Math.PI / (sides * sides));
-            views.add(f.getView());
-            f.getView().getLabel().setBounds(500 + (int) (250 * x), 300 + (int) (200 * y), 60, 60);
-            i++;
+        //dont look there
+        //there lies madness
+        if(sides==3)
+        {
+            for (Field f : neighbours)
+            {
+                double x = Math.cos(theta * i+Math.PI / 2);
+                double y = Math.sin(theta * i+Math.PI / 2);
+                views.add(f.getView());
+                f.getView().getLabel().setBounds(500 + (int) (250 * x)-30, 300 + (int) (200 * y)-30, 60, 60);
+                i++;
+            }
         }
+        else
+        {
+            for (Field f : neighbours) {
+                double x = Math.cos(theta * i+Math.PI / (sides*6));
+                double y = Math.sin(theta * i+Math.PI / (sides*6));
+                views.add(f.getView());
+                f.getView().getLabel().setBounds(500 + (int) (250 * x)-30, 300 + (int) (200 * y)-30, 60, 60);
+                i++;
+                if(neighbours.size()==5 && i==2)
+                {
+                    f.getView().getLabel().setBounds(500 + (int) (250 * x)-90, 300 + (int) (200 * y), 60, 60);
+                }
+            }
+        }
+
 
         //főzősmcs
         GeneticCodeView makeAgent = new GeneticCodeView(turnOf);
