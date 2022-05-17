@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="pápópé">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -91,10 +92,12 @@
       <change beforePath="$PROJECT_DIR$/out/production/blolylap/tester/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/tester/Program.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Bear.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/field/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
@@ -114,6 +117,7 @@
       <change beforePath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,13 +183,20 @@
     </task>
     <servers />
   </component>
+
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+
           <url>file://$PROJECT_DIR$/src/graphics/fields/FieldControl.java</url>
           <line>17</line>
           <option name="timeStamp" value="13" />
+
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
