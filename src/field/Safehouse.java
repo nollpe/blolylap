@@ -1,8 +1,7 @@
 package field;
 
 
-import equipment.Axe;
-import equipment.Equipment;
+import equipment.*;
 import graphics.fields.SafehouseView;
 import graphics.loot.SafehouseLootView;
 
@@ -49,10 +48,19 @@ public class Safehouse extends Field {
         super.tick();
 
         if (stored == null) {
-            int gen = (int) Math.random() * 4;
+            int gen = (int) (Math.random() * 4);
             switch (gen) {
                 case (0):
-                    stored = new Axe();
+                    setStored(new Axe());
+                    break;
+                case (1):
+                    setStored(new Labcoat());
+                    break;
+                case (2):
+                    setStored(new Gloves());
+                    break;
+                case (3):
+                    setStored(new Bag());
                     break;
             }
 
