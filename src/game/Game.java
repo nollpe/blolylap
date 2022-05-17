@@ -21,6 +21,7 @@ public class Game {
     private LinkedList<Player> allPlayers;
     public GraphicsConstroller gc;
     public boolean inTurn;
+    public boolean inGame;
     //privát konstruktor
 
     /**
@@ -31,6 +32,7 @@ public class Game {
         allPlayers = new LinkedList<Player>();
         city = new City();
         inTurn = true;
+        inGame = true;
         //vezerles();
         //worst idea ever a vezerlest iderakni xd
     }
@@ -282,25 +284,26 @@ public class Game {
     //endregion
 
     public void Tick() {
+        while(inGame) {
+            for (Player allPlayer : allPlayers) {
+                //TODO szóval a player dolgait kirajzolni és kattintgathatóvá tenni
+                gc.setTurnOf(allPlayer);
+                gc.Update();
 
-        for (Player allPlayer : allPlayers) {
-            //TODO szóval a player dolgait kirajzolni és kattintgathatóvá tenni
-            gc.Update();
-            gc.setTurnOf(allPlayer);
-            allPlayer.tick();
-            while (Game.getInstance().inTurn) {
-                try {
-                    Thread.sleep(20);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                allPlayer.tick();
+
+                while (Game.getInstance().inTurn) {
+                    try {
+                        Thread.sleep(20);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
+                Game.getInstance().inTurn = true;
+                //ide várni amig lenyomjuk az end turn gombot
             }
-            Game.getInstance().inTurn = true;
-            //ide várni amig lenyomjuk az end turn gombot
-            System.out.println("HALLO");
+            city.tick();
         }
-        System.out.println("F");
-        city.tick();
     }
 
     //ebben tároljuk az egyedet
@@ -354,10 +357,10 @@ public class Game {
 
     public void startGame() {
         city.generateMap();
-        Player player = new Player("rib");
+        Player player = new Player("player1");
         player.addEquipment(new Bag());
         allPlayers.add(player);
-        Player player2 = new Player("rib2");
+        Player player2 = new Player("player2");
         allPlayers.add(player2);
         gc = new GraphicsConstroller();
         this.Tick();

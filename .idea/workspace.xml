@@ -103,12 +103,12 @@
       <change beforePath="$PROJECT_DIR$/src/field/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Laboratory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/field/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Warehouse.java" afterDir="false" />
+ 
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Equipments/BagView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FIeldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/player/PlayerView.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/LaboratoryView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/SafehouseView.java" afterDir="false" />
@@ -143,14 +143,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RunManager">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tester.Program" />
@@ -180,9 +177,14 @@
       <option name="presentableId" value="Default" />
       <updated>1652738155080</updated>
       <workItem from="1652738156504" duration="621000" />
+      <workItem from="1652772591808" duration="2896000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+
 
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
