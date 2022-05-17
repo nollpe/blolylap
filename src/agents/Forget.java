@@ -13,6 +13,10 @@ public class Forget extends Agent {
      *
      * @param p A jatekos, akihez tartozik az agens
      */
+
+    public Forget() {
+        super();
+    }
     public Forget(Player p) {
         super(p);
         view=new AgentView();

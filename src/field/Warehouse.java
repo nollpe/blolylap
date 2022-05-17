@@ -1,7 +1,6 @@
 package field;
 
 import character.Inventory;
-import game.Game;
 import graphics.fields.WarehouseView;
 import graphics.loot.WarehouseLootView;
 
@@ -94,6 +93,14 @@ public class Warehouse extends Field {
         super.vezerles_getstat();
         System.out.println("Loot:");
         System.out.println("nucleotide: " + stored.getNucleotide() + " aminoacid: " + stored.getAminoAcid());
+    }
+
+    public void addAminoAcid (int i) {
+        stored.addAminoAcid(i);
+    }
+
+    public void addNucleotide (int i) {
+        stored.addNucleotide(i);
     }
 }
 

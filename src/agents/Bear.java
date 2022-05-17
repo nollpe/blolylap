@@ -28,6 +28,10 @@ public class Bear extends Agent {
         super(b);
     }
 
+    public Bear() {
+        super();
+    }
+
     /**
      * Az agens fel lett kenve valakire elkezdi kifejeteni hatasat
      *

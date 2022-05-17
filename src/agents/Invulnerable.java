@@ -20,6 +20,9 @@ public class Invulnerable extends Agent {
         view=new AgentView();
     }
 
+    public Invulnerable() {
+        super();
+    }
     public Invulnerable(Invulnerable i) {
         super(i);
     }

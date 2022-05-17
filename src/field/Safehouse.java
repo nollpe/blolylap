@@ -3,7 +3,6 @@ package field;
 
 import equipment.Axe;
 import equipment.Equipment;
-import game.Game;
 import graphics.fields.SafehouseView;
 import graphics.loot.SafehouseLootView;
 
@@ -97,8 +96,7 @@ public class Safehouse extends Field {
      *
      * @param e elvevendő védőfelszerelés
      */
-    public void takeEquipment(Equipment e) {
-
+    public void takeEquipment() {
         stored = null;
         lootView = null;
     }

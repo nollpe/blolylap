@@ -31,6 +31,10 @@ public class Agent {
         view=new AgentView();
     }
 
+    public Agent() {
+
+    }
+
     public String toString() {
         return "Agent";
     }

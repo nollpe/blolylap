@@ -24,6 +24,10 @@ public class Chorea extends Agent {
         view=new AgentView();
     }
 
+    public Chorea() {
+        super();
+    }
+
     public String toString() {
         return "Chorea";
     }

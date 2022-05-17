@@ -3,7 +3,6 @@ package field;
 import agents.GeneticCode;
 import character.Player;
 import equipment.Equipment;
-import game.Game;
 import graphics.IView;
 import graphics.fields.FIeldView;
 import graphics.loot.FieldLootView;
@@ -134,4 +133,5 @@ public class Field {
     public LootView getLootView() {
         return lootView;
     }
+
 }

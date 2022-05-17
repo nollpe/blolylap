@@ -26,6 +26,10 @@ public class Paralyzing extends Agent {
         view=new AgentView();
     }
 
+    public Paralyzing() {
+        super();
+    }
+
     public Paralyzing(Paralyzing p) {
         super(p);
     }
