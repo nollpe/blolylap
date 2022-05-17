@@ -11,12 +11,29 @@ import java.awt.*;
  */
 public class EquipmentView implements IView {
     EquipmentControl control;
+    /**
+     * A felszereles amihez a megjelenites tartozik
+     */
     Equipment equipment;
+    /**
+     * A label amire a kep kerul
+     */
     JLabel label = new JLabel();
 
+    /**
+     * Visszaadja a hozza tartozo labelt
+     * @return
+     */
     public JLabel getLabel() {
         return label;
     }
+
+    /**
+     * Konstruktor, inicializalja az ikont
+     * @param r A megjelenites helye es meretete
+     * @param ImageName A kep ami az ikonhoz tartozik
+     * @param e A felszereles amit megjelenit
+     */
 
     public EquipmentView(Rectangle r, String ImageName, Equipment e) {
 
@@ -28,10 +45,16 @@ public class EquipmentView implements IView {
         label.setIcon(icon);
     }
 
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     public void Update() {
 
     }
 
+    /**
+     * Esemeny kezeles
+     */
     public void Event() {
     }
 

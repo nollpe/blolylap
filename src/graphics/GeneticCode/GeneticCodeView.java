@@ -11,13 +11,32 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.LinkedList;
 
+/**
+ * A genetikai kod megjeleniteesert felelos osztaly
+ */
 public class GeneticCodeView implements IView {
     GeneticCodeControll control;
+    /**
+     * A jatekos akihez a genetikai kod tartozik
+     */
     Player ownerPlayer;
+    /**
+     * A genetikai kodok listaja
+     */
     LinkedList<GeneticCode> owner;
+    /**
+     * A label amire a genetikai kod kepe kerul
+     */
     JLabel label;
+    /**
+     * Kombobox a genetikai kodok kilistazasara es kivalasztasra
+     */
     JComboBox combobox;
 
+    /**
+     * Konstruktor, beallitja a jatekost, kirajzolja az genetikai kodokat es a komboboxot amiben az elkeszitendo genetikai kodot lehet kivalasztani
+     * @param ow a jatekos
+     */
     public GeneticCodeView(Player ow) {
         ownerPlayer = ow;
         owner = ow.getGeneticCodes();
@@ -39,14 +58,20 @@ public class GeneticCodeView implements IView {
         combobox = new JComboBox(geneticCodesString);
         combobox.setBounds(780, 20, 100, 20);
 
-        //combobox.setSelectedIndex(0);
-        //?? ez igy eleg?
     }
 
+    /**
+     * Visszadja a comboboxot amiben a genetikai kodokat listazza ki
+     * @return
+     */
     public JComboBox getCombobox() {
         return combobox;
     }
 
+    /**
+     * Visszaadja a labelt amire a grafikus elemek kerulnek ki
+     * @return
+     */
     public JLabel getLabel() {
         return label;
     }
@@ -56,20 +81,32 @@ public class GeneticCodeView implements IView {
         ownerPlayer = p;
     }
 
+    /**
+     * Visszaadja a jatekosnal levo genetikai kodokat
+     */
     public LinkedList<GeneticCode> getGeneticCodes() {
         return ownerPlayer.getGeneticCodes();
     }
 
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     @Override
     public void Update() {
 
     }
 
+    /**
+     * Esemeny kezeles
+     */
     @Override
     public void Event() {
 
     }
 
+    /**
+     * MouseListener ami kezeli a genetikai kodra valo kattintast
+     */
     private class JavaMouseDeer implements MouseListener {
 
         @Override
