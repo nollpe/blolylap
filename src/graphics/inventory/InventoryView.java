@@ -67,6 +67,9 @@ public class InventoryView implements IView {
         panel.add(label2);
     }
 
+    /**
+     * Esemenykezelo
+     */
     @Override
     public void Event() {
 
