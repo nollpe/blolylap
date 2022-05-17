@@ -23,22 +23,34 @@ public class LaboratoryLootView implements LootView {
      */
     private JLabel label = new JLabel();
 
+    /**
+     * Visszaadja az inventoryhoz tartozo labelt
+     * @return  a label
+     */
     @Override
     public JLabel getLabel() {
         return label;
     }
 
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     @Override
     public void Update() {
 
     }
-
+    /**
+     * Esemeny kezeles
+     */
     @Override
     public void Event() {
 
     }
 
-
+    /**
+     * Visszaadja a kepet ami az ikonhoz tartozik
+     * @return
+     */
     public String getImage() {
         return "kepek/agent.png";
     }
@@ -67,6 +79,10 @@ public class LaboratoryLootView implements LootView {
         });
     }
 
+    /**
+     * Beallitja az ikon kepet
+     * @param agent Az agens aminek a kepet be kell allitani
+     */
     public void setImage(String agent) {
         Image image = Toolkit.getDefaultToolkit().getImage("kepek/" + agent + ".png");
         image = image.getScaledInstance(60, 60, Image.SCALE_SMOOTH);

@@ -22,16 +22,24 @@ public class SafehouseLootView implements LootView {
      */
     private JLabel label = new JLabel();
 
+    /**
+     * Visszaadja az inventoryhoz tartozo labelt
+     * @return  a label
+     */
     @Override
     public JLabel getLabel() {
         return label;
     }
-
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     @Override
     public void Update() {
 
     }
-
+    /**
+     * Esemeny kezeles
+     */
     @Override
     public void Event() {
 
