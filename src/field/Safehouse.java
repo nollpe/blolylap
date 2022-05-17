@@ -66,8 +66,6 @@ public class Safehouse extends Field {
                 default:
                     break;
             }
-            System.out.println(stored.toString());
-
         }
     }
 

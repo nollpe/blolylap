@@ -14,7 +14,7 @@ public class AgentView implements IView {
     public AgentView()
     {
         label=new JLabel();
-        Image image = Toolkit.getDefaultToolkit().getImage("kepek/agent.png");
+        Image image = Toolkit.getDefaultToolkit().getImage("kepek/Agent.png");
         image = image.getScaledInstance(60, 60, Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(image);
         label.setIcon(icon);

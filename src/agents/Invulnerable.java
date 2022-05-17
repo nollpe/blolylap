@@ -17,11 +17,12 @@ public class Invulnerable extends Agent {
      */
     public Invulnerable(Player p) {
         super(p);
-        view=new AgentView();
+        view=new InvulnerableView();
     }
 
     public Invulnerable() {
         super();
+        view=new InvulnerableView();
     }
     public Invulnerable(Invulnerable i) {
         super(i);

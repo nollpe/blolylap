@@ -6,6 +6,7 @@ import character.Player;
 import getLootTakenFrom.LootTakenNormal;
 import getLootTakenFrom.LootTakenStunned;
 import graphics.agents.AgentView;
+import graphics.agents.InvulnerableView;
 import graphics.agents.ParalyzingView;
 import loot.LootImpared;
 import loot.LootNormal;
@@ -28,10 +29,12 @@ public class Paralyzing extends Agent {
 
     public Paralyzing() {
         super();
+        view=new ParalyzingView();
     }
 
     public Paralyzing(Paralyzing p) {
         super(p);
+        view=new ParalyzingView();
     }
 
     /**

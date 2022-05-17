@@ -16,10 +16,11 @@ public class Forget extends Agent {
 
     public Forget() {
         super();
+        view=new ForgetView();
     }
     public Forget(Player p) {
         super(p);
-        view=new AgentView();
+        view=new ForgetView();
     }
 
     public Forget(Forget f) {

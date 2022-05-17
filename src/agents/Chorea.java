@@ -5,6 +5,7 @@ import cast.CastNormal;
 import character.Player;
 import graphics.agents.AgentView;
 import graphics.agents.ChoreaView;
+import graphics.agents.ForgetView;
 import loot.LootImpared;
 import loot.LootNormal;
 import movement.MovementChorea;
@@ -26,6 +27,7 @@ public class Chorea extends Agent {
 
     public Chorea() {
         super();
+        view=new ChoreaView();
     }
 
     public String toString() {
@@ -34,6 +36,7 @@ public class Chorea extends Agent {
 
     public Chorea(Chorea c) {
         super(c);
+        view=new ChoreaView();
     }
 
     /**
