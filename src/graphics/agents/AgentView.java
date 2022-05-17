@@ -7,10 +7,16 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * Az agen view osztalyok kozos ose
+ */
 public class AgentView implements IView {
     AgentControl control;
     JLabel label;
 
+    /**
+     * Konstruktor, beallitja az ikon kepet es mouselistenert
+     */
     public AgentView()
     {
         label=new JLabel();
@@ -27,14 +33,23 @@ public class AgentView implements IView {
         });
     }
 
+    /**
+     * Visszaadja a hozza tartozo labelt
+     * @return
+     */
     public JLabel getLabel() {
         return label;
     }
 
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     public void Update() {
 
     }
-
+    /**
+     * Esemeny kezeles
+     */
     public void Event() {
 
     }
