@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="pápópé">
+    <list default="true" id="05a5e5bf-d0a2-439b-87de-ee15ceabd3bb" name="Changes" comment="pápópé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/fields/FieldControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/fields/FieldControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/fields/FieldControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Chorea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Chorea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Forget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Forget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Invulnerable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Invulnerable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/agents/Paralyzing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/agents/Paralyzing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/character/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView$JavaMouseDeer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView$JavaMouseDeer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GeneticCode/GeneticCodeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/GraphicsConstroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/agents/AgentView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/agents/AgentView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/blolylap/graphics/agents/ForgetView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/blolylap/graphics/agents/ForgetView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Chorea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Chorea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Forget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Forget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Invulnerable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Invulnerable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agents/Paralyzing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents/Paralyzing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,5 +58,19 @@
   </component>
   <component name="TaskManager">
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/graphics/GraphicsConstroller.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

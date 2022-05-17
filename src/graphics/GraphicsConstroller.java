@@ -1,6 +1,9 @@
 package graphics;
 
+import agents.Agent;
 import agents.Chorea;
+import agents.Forget;
+import agents.GeneticCode;
 import character.Player;
 import equipment.Equipment;
 import equipment.Gloves;
@@ -15,6 +18,7 @@ import java.awt.*;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
+import java.util.concurrent.locks.StampedLock;
 
 public class GraphicsConstroller {
     Set<IControl> controllers;
@@ -70,6 +74,12 @@ public class GraphicsConstroller {
             views.add(player.getView());
         }
 
+        //TODO kivenni xd
+        turnOf.addGeneticCode(new GeneticCode(new Chorea(turnOf),2,2));
+        turnOf.addGeneticCode(new GeneticCode(new Forget(turnOf),3,3));
+        turnOf.getInventory().addAminoAcid(5);
+        turnOf.getInventory().addNucleotide(5);
+        //eddig
 
         //háttér betöltése
         int sides = turnOf.getLocation().getNeighbours().size();
@@ -88,8 +98,6 @@ public class GraphicsConstroller {
         int i = 1;
 
         //equipmentek
-
-
         for (Equipment eq : turnOf.getStored()) {
 
             views.add(eq.getView());
@@ -101,7 +109,6 @@ public class GraphicsConstroller {
         }
 
         //szomszédok tm
-
         LinkedList<Field> neighbours=turnOf.getLocation().getNeighbours();
         i=0;
         double theta = 2 * Math.PI / sides;
@@ -132,8 +139,27 @@ public class GraphicsConstroller {
             }
         }
 
+        //castolható agensek
+        LinkedList<Agent> csa=turnOf.getCastableAgents();
+        i=0;
+        for(Agent tempagent:csa)
+        {
+            if(tempagent==null)
+            {
+                System.out.println("tempagent==null");
+            }
+            if(tempagent.getView()==null)
+            {
+                System.out.println("tempagent.getView()==null");
+            }
+            JLabel templb= tempagent.getView().getLabel();
+            panel.add(templb);
+            templb.setBounds(920,200+i*80,60,60);
+            i++;
+        }
 
-        //inventory TODO
+
+        //inventory
         InventoryView inventoryView = new InventoryView(turnOf, panel);
 
         //add to panel

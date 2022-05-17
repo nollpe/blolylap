@@ -3,6 +3,8 @@ package agents;
 import character.Player;
 import getCastOn.GetCastOnInvulnerable;
 import getCastOn.GetCastOnNormal;
+import graphics.agents.AgentView;
+import graphics.agents.InvulnerableView;
 
 /**
  * A sebezhetetetlenséget okozó ágens osztálya
@@ -15,6 +17,7 @@ public class Invulnerable extends Agent {
      */
     public Invulnerable(Player p) {
         super(p);
+        view=new AgentView();
     }
 
     public Invulnerable(Invulnerable i) {
