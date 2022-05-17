@@ -2,7 +2,9 @@ package graphics.loot;
 
 import character.Player;
 import field.Field;
+import field.Laboratory;
 import game.Game;
+import graphics.fields.LaboratoryView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,6 +38,12 @@ public class LaboratoryLootView implements LootView {
 
     }
 
+
+    public String getImage() {
+        return "kepek/agent.png";
+    }
+
+
     /**
      * Megjeleniti a laboratioimbol szerehezo dolgokat
      * @param r A megjelenites helye es meretete
@@ -47,10 +55,7 @@ public class LaboratoryLootView implements LootView {
         label.setBounds(r);
         field = f;
 
-        Image image = Toolkit.getDefaultToolkit().getImage("kepek/agent.png");
-        image = image.getScaledInstance(60, 60, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(image);
-        label.setIcon(icon);
+
         label.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -60,5 +65,12 @@ public class LaboratoryLootView implements LootView {
                 Game.getInstance().inTurn = false;
             }
         });
+    }
+
+    public void setImage(String agent) {
+        Image image = Toolkit.getDefaultToolkit().getImage("kepek/" + agent + ".png");
+        image = image.getScaledInstance(60, 60, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(image);
+        label.setIcon(icon);
     }
 }

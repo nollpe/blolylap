@@ -74,7 +74,7 @@ public class Laboratory extends Field {
      */
     public void init(GeneticCode gc) {
         readableGeneticCode = gc;
-
+        ((LaboratoryLootView)lootView).setImage(gc.getAgentType().toString());
     }
 
     @Override
