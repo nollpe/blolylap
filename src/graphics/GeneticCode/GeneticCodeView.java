@@ -2,6 +2,7 @@ package graphics.GeneticCode;
 
 import agents.GeneticCode;
 import character.Player;
+import game.Game;
 import graphics.IView;
 
 import javax.swing.*;
@@ -73,7 +74,16 @@ public class GeneticCodeView implements IView {
 
         @Override
         public void mouseClicked(MouseEvent e) {
-            //TODO comboboxban lugro geciben hogy mit tud főzni
+            String chosentype= (String) combobox.getSelectedItem();
+            LinkedList<GeneticCode> gcs=ownerPlayer.getGeneticCodes();
+            for(GeneticCode g:gcs)
+            {
+                if(g.getAgentType().equals(chosentype))
+                {
+                    ownerPlayer.makeAgent(g);
+                }
+            }
+            Game.getInstance().gc.Update();
         }
 
         @Override

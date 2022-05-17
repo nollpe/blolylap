@@ -672,7 +672,11 @@ public class Player {
 
 
     public void makeAgent(GeneticCode geneticCode) {
-        geneticCode.makeAgent(this.inventory);
+        Agent temp=geneticCode.makeAgent(this.inventory);
+        if(temp!=null)
+        {
+            this.castableAgents.add(temp);
+        }
     }
 
     //endregion
