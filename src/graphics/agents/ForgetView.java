@@ -9,4 +9,5 @@ public class ForgetView extends AgentView {
     {
         super();
     }
+
 }
