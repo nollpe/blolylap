@@ -9,9 +9,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+/**
+ * Az raktart lootjainak megjeleniteseert felelos osztaly.
+ */
 public class WarehouseLootView implements LootView {
+    /**
+     * A mezo amihez a megjelenites tartozik
+     */
     private Warehouse field;
+    /**
+     * A label amire a loot kepe kerul
+     */
     private JLabel label = new JLabel();
 
     @Override
@@ -29,6 +37,12 @@ public class WarehouseLootView implements LootView {
 
     }
 
+    /**
+     * Az raktarbol szerezheto dolgok megjeleniteset vegzi.
+     * @param r A megjelenites helye es meretete.
+     * @param ImageName
+     * @param f A mezo amihez a megjelenites tartozik.
+     */
     public WarehouseLootView(Rectangle r, String ImageName, Field f) {
 
         label.setBounds(r);
