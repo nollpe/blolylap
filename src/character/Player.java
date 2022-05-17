@@ -39,7 +39,7 @@ public class Player {
     private GetCastOn getCastOn;
     private GetLootTakenFrom getLootTakenFrom;
     private Loot loot;
-    private LinkedList<GeneticCode> knownGeneticCodes;
+    private LinkedHashSet<GeneticCode> knownGeneticCodes;
     private final Game game;
     private Field location;
     private String Name;
@@ -58,7 +58,7 @@ public class Player {
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
         loot = new LootNormal(this);
-        knownGeneticCodes = new LinkedList<>();
+        knownGeneticCodes = new LinkedHashSet<>();
         game = Game.getInstance();
         location = game.spawnPlayer(this);
         view = new PlayerView(this);
@@ -76,7 +76,7 @@ public class Player {
         getCastOn = new GetCastOnNormal(this);
         getLootTakenFrom = new LootTakenNormal(this);
         loot = new LootNormal(this);
-        knownGeneticCodes = new LinkedList<>();
+        knownGeneticCodes = new LinkedHashSet<>();
         game = Game.getInstance();
         location = game.spawnPlayer(this);
         view = new PlayerView(this);
@@ -175,7 +175,13 @@ public class Player {
     }
 
     public LinkedList<GeneticCode> getGeneticCodes() {
-        return knownGeneticCodes;
+        LinkedList<GeneticCode> temp=new LinkedList<GeneticCode>();
+        for(GeneticCode itr:knownGeneticCodes)
+        {
+            temp.add(itr);
+        }
+
+        return temp;
     }
 
     //endregion
@@ -593,7 +599,7 @@ public class Player {
      * Minden genetikus kódot elfelejtett a játékossal
      */
     public void forgetAllGeneticCodes() {
-        knownGeneticCodes = new LinkedList<>();
+        knownGeneticCodes = new LinkedHashSet<>();
     }
 
     /**

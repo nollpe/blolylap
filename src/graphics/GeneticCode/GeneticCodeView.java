@@ -83,7 +83,7 @@ public class GeneticCodeView implements IView {
                     ownerPlayer.makeAgent(g);
                 }
             }
-            //Game.getInstance().gc.Update();
+            Game.getInstance().gc.Update();
         }
 
         @Override
