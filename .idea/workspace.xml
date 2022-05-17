@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="fieldview kommentek">
+    <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="mindehova is kommentek">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GeneticCode/GeneticCodeControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/inventory/InventoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/FieldLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/FieldLootView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/GraphicsConstroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/IControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/AgentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ChoreaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ChoreaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ForgetView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/InvulnerableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/InvulnerableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/agents/ParalyzingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/agents/ParalyzingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/endTurnButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/endTurnButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,7 @@
       <updated>1652738155080</updated>
       <workItem from="1652738156504" duration="621000" />
       <workItem from="1652772591808" duration="2896000" />
-      <workItem from="1652784035642" duration="2771000" />
+      <workItem from="1652784035642" duration="3476000" />
     </task>
     <task id="LOCAL-00001" summary="field view kommentek">
       <created>1652784255665</created>
@@ -94,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652786440536</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mindehova is kommentek">
+      <created>1652786869487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652786869487</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +126,7 @@
     <MESSAGE value="geneticcodeview kommentek" />
     <MESSAGE value="equipmentview kommentek" />
     <MESSAGE value="fieldview kommentek" />
-    <option name="LAST_COMMIT_MESSAGE" value="fieldview kommentek" />
+    <MESSAGE value="mindehova is kommentek" />
+    <option name="LAST_COMMIT_MESSAGE" value="mindehova is kommentek" />
   </component>
 </project>

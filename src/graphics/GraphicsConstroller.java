@@ -25,6 +25,9 @@ import java.util.LinkedList;
 import java.util.Set;
 import java.util.concurrent.locks.StampedLock;
 
+/**
+ * A grafikus kontroller osztaly, vezerli a tobbi kontrollert
+ */
 public class GraphicsConstroller {
     Set<IControl> controllers;
     Set<IView> views;
@@ -58,6 +61,9 @@ public class GraphicsConstroller {
 
     //endregion
 
+    /**
+     * Konsturktor
+     */
     public GraphicsConstroller() {
         controllers = new HashSet<IControl>();
         views = new HashSet<IView>();
@@ -77,6 +83,9 @@ public class GraphicsConstroller {
     JPanel panel;
 
 
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     public void Update() {
         views.clear();
         frame.getContentPane().removeAll();
