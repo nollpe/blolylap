@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="00c7f746-4138-4254-b9d7-53f2a7fa43a0" name="Changes" comment="pápópé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/field/Safehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/field/Safehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/FieldLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/FieldLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/LaboratoryLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/LootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/LootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/SafehouseLootView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/loot/WarehouseLootView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +33,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tester.Program" />
@@ -65,6 +69,7 @@
       <updated>1652738155080</updated>
       <workItem from="1652738156504" duration="621000" />
       <workItem from="1652772591808" duration="2896000" />
+      <workItem from="1652784035642" duration="193000" />
     </task>
     <servers />
   </component>
@@ -81,7 +86,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
