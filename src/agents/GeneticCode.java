@@ -1,6 +1,7 @@
 package agents;
 
 import character.Inventory;
+import game.Game;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -27,6 +28,8 @@ public class GeneticCode {
             Class<? extends Agent> aClass = agent.getClass();
             try {
                 Agent aClass1 = aClass.getDeclaredConstructor(agent.getClass()).newInstance(this.agent);
+                aClass1.player = Game.getInstance().gc.getTurnOf();
+                aClass1.timeToLive = 2;
                 return aClass1;
             } catch (InstantiationException e) {
                 e.printStackTrace();

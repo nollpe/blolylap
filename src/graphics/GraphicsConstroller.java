@@ -162,10 +162,12 @@ public class GraphicsConstroller {
             if(tempagent==null)
             {
                 System.out.println("tempagent==null");
+                break;
             }
             if(tempagent.getView()==null)
             {
                 System.out.println("tempagent.getView()==null");
+                break;
             }
             JLabel templb= tempagent.getView().getLabel();
             panel.add(templb);
