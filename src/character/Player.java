@@ -43,7 +43,7 @@ public class Player {
     private final Game game;
     private Field location;
     private String Name;
-    public IView view;
+    public PlayerView view;
     public PlayerControl control;
 
     //endregion
@@ -66,8 +66,21 @@ public class Player {
     }
 
     public Player(String name) {
-        this();
         Name = name;
+        activeAgents = new LinkedList<>();
+        castableAgents = new LinkedList<>();
+        inventory = new Inventory(10);
+        equipments = new LinkedList<>();
+        movement = new MovementNormal(this);
+        cast = new CastNormal(this);
+        getCastOn = new GetCastOnNormal(this);
+        getLootTakenFrom = new LootTakenNormal(this);
+        loot = new LootNormal(this);
+        knownGeneticCodes = new LinkedList<>();
+        game = Game.getInstance();
+        location = game.spawnPlayer(this);
+        view = new PlayerView(this);
+        control = new PlayerControl(this);
     }
 
     public void die() {

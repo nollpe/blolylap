@@ -9,6 +9,8 @@ import graphics.inventory.InventoryView;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -16,7 +18,7 @@ import java.util.Set;
 public class GraphicsConstroller {
     Set<IControl> controllers;
     Set<IView> views;
-    Player turnOf = new Player();
+    Player turnOf = null;
 
     public Player getTurnOf() {
         return turnOf;
@@ -49,8 +51,15 @@ public class GraphicsConstroller {
     public GraphicsConstroller() {
         controllers = new HashSet<IControl>();
         views = new HashSet<IView>();
-        frame = new JFrame("viribirigeci");
+        frame = new JFrame("valos_borso_koro");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                Game.getInstance().inGame = false;
+            }
+        });
         //views=new endTurnButton();
     }
 
@@ -63,9 +72,18 @@ public class GraphicsConstroller {
         frame.getContentPane().removeAll();
         panel = new JPanel();
 
-        for (Player player : Game.getInstance().getAllPlayers()) {
+        frame.setTitle(turnOf.getName());
+        for(Player player : getTurnOf().getLocation().getInhabitants()) {
             views.add(player.getView());
         }
+
+        //játékosok a mezőn
+        int n = 0;
+        int x1 = 470-turnOf.getLocation().getInhabitants().size()*60/2;
+        for(Player player : getTurnOf().getLocation().getInhabitants()) {
+            n++;
+        }
+
 
 
         //háttér betöltése
@@ -97,6 +115,7 @@ public class GraphicsConstroller {
             //equimpemntLabels.add(eq.getView().getLabel());
         }
 
+
         //szomszédok tm
 
         LinkedList<Field> neighbours = turnOf.getLocation().getNeighbours();
@@ -109,7 +128,6 @@ public class GraphicsConstroller {
             views.add(f.getView());
             f.getView().getLabel().setBounds(500 + (int) (250 * x), 300 + (int) (200 * y), 60, 60);
             i++;
-
         }
 
         //főzősmcs
@@ -128,8 +146,10 @@ public class GraphicsConstroller {
         }
 
 
-        //inventory TODO
+        //inventory
         InventoryView inventoryView = new InventoryView(turnOf, panel);
+
+
 
         //add to panel
         for (IView iv : views) {
