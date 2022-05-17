@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * A zsak control osztalya
+ */
 public class BagControl extends EquipmentControl {
 
     private JFrame frame = new JFrame();
@@ -27,10 +30,19 @@ public class BagControl extends EquipmentControl {
     private JLabel playerAminoAcidLabel = new JLabel();
     private JLabel playerNucleotideLabel = new JLabel();
 
+    /**
+     * Esemeny kezelo
+     * @param e az esemeny
+     */
     @Override
     public void handleEvent(MouseEvent e) {
     }
 
+    /**
+     * A szak inicializalasa, kepek, inventory, mouselistenerek hozzaadasa
+     * @param bag A zsak
+     * @param playerInventory Az inventory amihez a zsak tartozik
+     */
     public BagControl(Bag bag, Inventory playerInventory) {
         Image playerAminoImage = Toolkit.getDefaultToolkit().getImage("kepek/amino_acid.png");
         playerAminoImage = playerAminoImage.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
@@ -172,6 +184,9 @@ public class BagControl extends EquipmentControl {
         frame.setVisible(true);
     }
 
+    /**
+     * Adatok frissitese es kirajzolasa
+     */
     public void Update() {
         bagAminoAcidLabel.setText(String.valueOf(bagInventory.getAminoAcid()));
         bagNucleotideLabel.setText(String.valueOf(bagInventory.getNucleotide()));

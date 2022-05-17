@@ -7,6 +7,9 @@ import graphics.player.PlayerControl;
 
 import java.awt.event.MouseEvent;
 
+/**
+ * Az ekszkoz control osztalyok kozos ose.
+ */
 public class EquipmentControl implements IControl {
     EquipmentView view;
     Equipment owner;
