@@ -1,5 +1,6 @@
 package graphics.fields;
 
+import character.Player;
 import field.Field;
 import graphics.GraphicsConstroller;
 import graphics.IView;
@@ -35,6 +36,7 @@ public class FIeldView implements IView {
                 control.handleEvent();
             }
         });
+
     }
 
 
