@@ -14,6 +14,8 @@ import graphics.inventory.InventoryView;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -73,12 +75,6 @@ public class GraphicsConstroller {
             views.add(player.getView());
         }
 
-        //TODO kivenni xd
-        turnOf.addGeneticCode(new GeneticCode(new Chorea(turnOf),2,2));
-        turnOf.addGeneticCode(new GeneticCode(new Forget(turnOf),3,3));
-        turnOf.getInventory().addAminoAcid(5);
-        turnOf.getInventory().addNucleotide(5);
-        //eddig
 
         //háttér betöltése
         int sides = turnOf.getLocation().getNeighbours().size();
@@ -175,6 +171,8 @@ public class GraphicsConstroller {
 
         frame.setVisible(true);
     }
+
+
 
     public void Create() {
 
