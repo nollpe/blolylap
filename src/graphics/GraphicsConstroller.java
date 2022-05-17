@@ -1,5 +1,10 @@
 package graphics;
 
+
+import agents.Agent;
+import agents.Chorea;
+import agents.Forget;
+import agents.GeneticCode;
 import character.Player;
 import equipment.Equipment;
 import field.Field;
@@ -14,6 +19,7 @@ import java.awt.event.WindowEvent;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
+import java.util.concurrent.locks.StampedLock;
 
 public class GraphicsConstroller {
     Set<IControl> controllers;
@@ -83,9 +89,7 @@ public class GraphicsConstroller {
         for(Player player : getTurnOf().getLocation().getInhabitants()) {
             n++;
         }
-
-
-
+      
         //háttér betöltése
         int sides = turnOf.getLocation().getNeighbours().size();
 
@@ -103,8 +107,6 @@ public class GraphicsConstroller {
         int i = 1;
 
         //equipmentek
-
-
         for (Equipment eq : turnOf.getStored()) {
 
             views.add(eq.getView());
@@ -118,8 +120,10 @@ public class GraphicsConstroller {
 
         //szomszédok tm
 
+
         LinkedList<Field> neighbours = turnOf.getLocation().getNeighbours();
         i = 0;
+
         double theta = 2 * Math.PI / sides;
 
         for (Field f : neighbours) {
@@ -143,6 +147,25 @@ public class GraphicsConstroller {
                 tempforlootview.setBounds(460, 360, 60, 60);
                 panel.add(tempforlootview);
             }
+        }
+
+        //castolható agensek
+        LinkedList<Agent> csa=turnOf.getCastableAgents();
+        i=0;
+        for(Agent tempagent:csa)
+        {
+            if(tempagent==null)
+            {
+                System.out.println("tempagent==null");
+            }
+            if(tempagent.getView()==null)
+            {
+                System.out.println("tempagent.getView()==null");
+            }
+            JLabel templb= tempagent.getView().getLabel();
+            panel.add(templb);
+            templb.setBounds(920,200+i*80,60,60);
+            i++;
         }
 
 

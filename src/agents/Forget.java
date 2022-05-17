@@ -1,6 +1,8 @@
 package agents;
 
 import character.Player;
+import graphics.agents.AgentView;
+import graphics.agents.ForgetView;
 
 /**
  * A felejtést okozó ágens osztálya
@@ -17,6 +19,7 @@ public class Forget extends Agent {
     }
     public Forget(Player p) {
         super(p);
+        view=new AgentView();
     }
 
     public Forget(Forget f) {

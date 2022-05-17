@@ -5,6 +5,8 @@ import cast.CastNormal;
 import character.Player;
 import getLootTakenFrom.LootTakenNormal;
 import getLootTakenFrom.LootTakenStunned;
+import graphics.agents.AgentView;
+import graphics.agents.ParalyzingView;
 import loot.LootImpared;
 import loot.LootNormal;
 import movement.MovementNormal;
@@ -21,6 +23,7 @@ public class Paralyzing extends Agent {
      */
     public Paralyzing(Player p) {
         super(p);
+        view=new AgentView();
     }
 
     public Paralyzing() {

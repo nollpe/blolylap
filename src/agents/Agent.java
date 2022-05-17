@@ -1,6 +1,7 @@
 package agents;
 
 import character.Player;
+import graphics.IView;
 import graphics.agents.AgentView;
 
 /**
@@ -10,6 +11,11 @@ public class Agent {
     protected Player player;
     protected boolean active;
     protected int timeToLive;
+
+    public IView getView() {
+        return view;
+    }
+
     AgentView view;
 
     /**
@@ -22,6 +28,7 @@ public class Agent {
         player = p;
         active = false;
         timeToLive = 2;
+        view=new AgentView();
     }
 
     public Agent() {
@@ -55,6 +62,7 @@ public class Agent {
         this.player = cp.player;
         this.timeToLive = cp.getTimeToLive();
         this.active = false;
+        view= (AgentView) cp.getView();
     }
 
     /**
