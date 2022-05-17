@@ -368,8 +368,8 @@ public class Game {
         final int[] revalue = {0};
         JFrame manuframe=new JFrame();
         JComboBox combobox;
-        String geneticCodesString[] = new String[5];
-        for (int i = 0; i < 5; i++) {
+        String geneticCodesString[] = new String[7];
+        for (int i = 0; i < 7; i++) {
             geneticCodesString[i] = String.valueOf(i+1);
 
         }
@@ -384,10 +384,7 @@ public class Game {
             }
         });
 
-        Image image = Toolkit.getDefaultToolkit().getImage("kepek/player.png");
-        image = image.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
-        ImageIcon icon2 = new ImageIcon(image);
-        okbutton.setIcon(icon2);
+
         manuframe.setSize(240,100);
         combobox.setBounds(20,20,80,20);
         okbutton.setBounds(120,20,60,20);
@@ -412,11 +409,11 @@ public class Game {
 
     public void startGame() {
         int players=Menu();
-        city.generateMap();
+        city.generateMap(players);
 
         for(int i=0;i<players;i++)
         {
-            Player tempPlayer=new Player("player"+(i+1));
+            Player tempPlayer=new Player("player"+(i));
             allPlayers.add(tempPlayer);
         }
 

@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 
 public class Field {
-    private LinkedList<Field> neighbours;
+    private LinkedHashSet<Field> neighbours;
     private LinkedHashSet<Player> inhabitants;
     protected String Name;
     protected IView view;
@@ -22,7 +22,7 @@ public class Field {
 
 
     public Field() {
-        this.neighbours = new LinkedList<>();
+        this.neighbours = new LinkedHashSet<>();
         this.inhabitants = new LinkedHashSet<Player>();
         Rectangle r = new Rectangle(0, 0, 60, 60);
         view = new FIeldView(r, "kepek/field.png", this);
@@ -67,7 +67,13 @@ public class Field {
      * @return a mező szomszédjai
      */
     public LinkedList<Field> getNeighbours() {
-        return neighbours;
+        LinkedList<Field> temp=new LinkedList<Field>();
+        for(Field itr:neighbours)
+        {
+            temp.add(itr);
+        }
+
+        return temp;
     }
 
     public void enter(Player c) {
